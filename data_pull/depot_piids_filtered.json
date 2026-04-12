@@ -1,0 +1,797 @@
+{
+  "piids": [
+    {
+      "piid": "N0002419C4447",
+      "signed_date": "2024-03-04",
+      "obligated_amount": 15845753.65,
+      "total_obligated_amount": 447277921.3,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "USS CAPE ST GEORGE (CG-71) 237 DAY PIER SIDE EXTENSION (05MARCH24-28OCTOBER24).",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002424C4418",
+      "signed_date": "2024-03-21",
+      "obligated_amount": 311193234.0,
+      "total_obligated_amount": 338111936.0,
+      "vendor_name": "METRO MACHINE CORP.",
+      "description": "USS BATAAN (LHD 5)FY 24 DSRA",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N0002423C4408",
+      "signed_date": "2023-09-29",
+      "obligated_amount": 10000000.0,
+      "total_obligated_amount": 325421510.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "CNO AVAILABILITY FOR USS KEARSARGE FY23 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002425C4402",
+      "signed_date": "2025-12-22",
+      "obligated_amount": 95140217.0,
+      "total_obligated_amount": 273536166.0,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "TYCOM (1B4B)N00024-25-C-4402 USS KIDD (DDG 100)",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002418C4403",
+      "signed_date": "2020-04-27",
+      "obligated_amount": 25000000.0,
+      "total_obligated_amount": 239797609.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS TORTUGA (LSD-46) FY18 EDSRA SETTLED NEW WORK RCCS AND PERIOD OF PERFORMANCE EXTENSION.",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002423C4410",
+      "signed_date": "2024-07-01",
+      "obligated_amount": 33971479.83,
+      "total_obligated_amount": 239407153.56,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, LLC",
+      "description": "C420A USS MOMSEN (DDG 92) FY24 DMP BASE CHANGE DEFINITIZATION",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N0002421C4404",
+      "signed_date": "2021-07-28",
+      "obligated_amount": 11098584.0,
+      "total_obligated_amount": 234930096.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS WASP (LHD-1)DSRA ---- EXERCISE OPTIONS",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002424C4423",
+      "signed_date": "2025-07-01",
+      "obligated_amount": 41881252.0,
+      "total_obligated_amount": 213473902.83,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS HALSEY (DDG 97) DMP 1.5",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002422C4420",
+      "signed_date": "2024-03-29",
+      "obligated_amount": 12618999.0,
+      "total_obligated_amount": 210144877.96,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "THE PURPOSE OF THE MODIFICATION IS TO INCORPORATE, FULLY FUND, AND EXTEND THE USS ESSEX (LHD-2) FY22 DSRA AND KEY EVENT MILESTONES",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002426C4405",
+      "signed_date": "2026-01-08",
+      "obligated_amount": 204160189.0,
+      "total_obligated_amount": 204160189.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS IWO JIMA (LHD 7) FY26 SRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002420C4308",
+      "signed_date": "2020-03-27",
+      "obligated_amount": 200313206.0,
+      "total_obligated_amount": 202716933.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS BOXER DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002425C4404",
+      "signed_date": "2025-05-20",
+      "obligated_amount": 198955270.0,
+      "total_obligated_amount": 198961982.49,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "USS AMERICA (LHA 6) FY26 DOCKING SELECTED RESTRICTED AVAILABILITY",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002418C4439",
+      "signed_date": "2022-03-25",
+      "obligated_amount": 15595474.78,
+      "total_obligated_amount": 197826938.19,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "CODE 430A, USS COWPENS (CG 63), FY18 MODPRD, TPPC-CG63-SSSD18-\nCN01, FY22 EXTENSION MODIFICATION A00122",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002423C4412",
+      "signed_date": "2023-02-17",
+      "obligated_amount": 145264056.0,
+      "total_obligated_amount": 160086714.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "CNO AVAILABILITY USS NITZE (DDG 94) FY23 DMP",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002420C4460",
+      "signed_date": "2020-01-23",
+      "obligated_amount": 23630324.0,
+      "total_obligated_amount": 131127227.0,
+      "vendor_name": "METRO MACHINE CORP",
+      "description": "USS MASON (DDG-87)FY20 DMP--EXERCISE OPTIONS",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N0002425C4400",
+      "signed_date": "2025-04-18",
+      "obligated_amount": 127247319.0,
+      "total_obligated_amount": 130268910.0,
+      "vendor_name": "METRO MACHINE CORP.",
+      "description": "USS OAK HILL (LSD 51) FY25 DOCKING SELECTED RESTRICTED AVAILABILITY (DSRA)",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N0002423C4486",
+      "signed_date": "2022-12-13",
+      "obligated_amount": 119261837.0,
+      "total_obligated_amount": 129201756.83,
+      "vendor_name": "BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC",
+      "description": "USS LASSEN (DDG 82) DEPOT MODERNIZATION PERIOD (DMP)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002426C4403",
+      "signed_date": "2025-12-08",
+      "obligated_amount": 117702348.0,
+      "total_obligated_amount": 128813687.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS FORREST SHERMAN (DDG 98) FY26 DMP",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002421C4405",
+      "signed_date": "2021-09-21",
+      "obligated_amount": 12279290.0,
+      "total_obligated_amount": 127523629.5,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "CODE 430A USS COMSTOCK (LSD45) FY21 DSRA TPPC-LSD45-SWRMC21-CN01\nFUND OPTION ITEMS, 0031, 0041, 0042, 0022, 0025, 0027, 0044, 0045, UNILATERAL",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002422C4422",
+      "signed_date": "2022-09-30",
+      "obligated_amount": 10500591.0,
+      "total_obligated_amount": 124218826.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS ROSS (DDG 71) FY23 EDSRA - EXERCISE OPTIONS",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002421C4478",
+      "signed_date": "2021-08-12",
+      "obligated_amount": 18285271.0,
+      "total_obligated_amount": 120814605.17,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "C430A MODIFICATION TO EXERCISE OPTION CLINS IN SUPPORT OF THE USS PINCKNEY (DDG 91) FY22 DMP",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002425C4427",
+      "signed_date": "2025-04-03",
+      "obligated_amount": 21735171.0,
+      "total_obligated_amount": 118026621.01,
+      "vendor_name": "METRO MACHINE CORP.",
+      "description": "USS PORTER DDG-78 N00024-25-C-4427 EXERCISE OPTIONS CLINS 0008, 0039, 0055, 0056, 0087",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N0002422C4485",
+      "signed_date": "2022-03-28",
+      "obligated_amount": 90270763.0,
+      "total_obligated_amount": 115170233.39,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS MUSTIN (DDG 89) FY22 DEPOT MODERNIZATION PERIOD (DMP)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002420C4400",
+      "signed_date": "2020-08-13",
+      "obligated_amount": 103590841.0,
+      "total_obligated_amount": 113298481.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS PREBLE (DDG 88) DEPOT MODERNIZATION PERIOD (DMP).",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002420C4467",
+      "signed_date": "2020-08-05",
+      "obligated_amount": 106923080.0,
+      "total_obligated_amount": 112429871.0,
+      "vendor_name": "METRO MACHINE CORP",
+      "description": "USS BATAAN (LHD-5) FY20 SELECTED RESTRICTED AVAILABILITY",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N0002425C4421",
+      "signed_date": "2025-05-07",
+      "obligated_amount": 108569670.0,
+      "total_obligated_amount": 110121776.73,
+      "vendor_name": "BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC",
+      "description": "USS THE SULLIVANS (DDG 68) FY25 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002421C4442",
+      "signed_date": "2021-06-11",
+      "obligated_amount": 90267436.0,
+      "total_obligated_amount": 109707428.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS SAN DIEGO (LPD 22) FY21 DOCKING SELECTED RESTRICTED AVAILABILITY (DSRA)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5005426FC005",
+      "signed_date": "2025-12-11",
+      "obligated_amount": 93560001.0,
+      "total_obligated_amount": 104916979.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS COLE (DDG-67) FY26 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002425C4430",
+      "signed_date": "2024-10-18",
+      "obligated_amount": 87581070.0,
+      "total_obligated_amount": 100799845.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS WASP (LHD 1) FY25 SELECTED RESTRICTED AVAILABILITY (SRA)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002424C4407",
+      "signed_date": "2024-08-28",
+      "obligated_amount": 76102395.0,
+      "total_obligated_amount": 97079320.73,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "USS JOHN S MCCAIN (DDG 56) DSRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002424C4414",
+      "signed_date": "2024-04-29",
+      "obligated_amount": 87284916.0,
+      "total_obligated_amount": 91419884.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "USS CARTER HALL (LSD 50) DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002424C4417",
+      "signed_date": "2023-11-01",
+      "obligated_amount": 82980622.0,
+      "total_obligated_amount": 86082921.0,
+      "vendor_name": "BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC",
+      "description": "USS RAMAGE (DDG 61) FY24 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523621F8167",
+      "signed_date": "2021-01-15",
+      "obligated_amount": 49845338.0,
+      "total_obligated_amount": 80750543.85,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "C480, USS GABRIELLE GIFFORDS (LCS-10) FY21 DSRA, SSP: TPPC-LCS10-SSSD21-CNO1, BASE DELIVERY ORDER",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002423C4407",
+      "signed_date": "2023-03-09",
+      "obligated_amount": 68189805.0,
+      "total_obligated_amount": 77554832.51,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "CHIEF OF NAVAL OPERATIONS USS ANCHORAGE (LPD 23) FY23 DOCKING SELECTED RESTRICTED AVAILABILITY",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002423C4404",
+      "signed_date": "2023-05-11",
+      "obligated_amount": 66854587.0,
+      "total_obligated_amount": 75123422.98,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "CNO AVAILABILITY USS MAKIN ISLAND (LHD 8) FY23 SRA.",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N5523621F8244",
+      "signed_date": "2022-08-24",
+      "obligated_amount": 10662434.0,
+      "total_obligated_amount": 74232501.07,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "C440B CMSD EXECUTION\nUSS OMAHA (LCS-12) DSRA DRY DOCK AND AVAIL EXTENSION, RCC(S) 119G-144NG.\nSCLIN: 003AA/AC",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N5523622C0001",
+      "signed_date": "2022-01-24",
+      "obligated_amount": 47672061.14,
+      "total_obligated_amount": 71574727.39,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "C420A USS CURTIS WILBUR (DDG-54) FY22 DRY DOCKING SELECTED RESTRICTED AVAILABILITY TYCOM BASE WORK ITEMS",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002420C2320",
+      "signed_date": "2022-08-26",
+      "obligated_amount": 10102184.0,
+      "total_obligated_amount": 70431430.0,
+      "vendor_name": "BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC",
+      "description": "LCS 23 POST SHAKEDOWN AVAILABILITY",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002425C4422",
+      "signed_date": "2025-03-28",
+      "obligated_amount": 63877252.0,
+      "total_obligated_amount": 64044989.0,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "USS HARPERS FERRY (LSD 49) FY25 SELECTED RESTRICTED AVAILABILITY",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002425C4406",
+      "signed_date": "2025-08-07",
+      "obligated_amount": 64116818.0,
+      "total_obligated_amount": 64017368.7,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS OKANE (DDG 77) FY26 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002421C4408",
+      "signed_date": "2020-12-09",
+      "obligated_amount": 57134922.0,
+      "total_obligated_amount": 63580043.0,
+      "vendor_name": "MARINE HYDRAULICS INTERNATIONAL, LLC",
+      "description": "USS OAK HILL SRA REPAIR AND MODERNIZATION",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002420C4401",
+      "signed_date": "2020-10-21",
+      "obligated_amount": 25152684.0,
+      "total_obligated_amount": 61919778.39,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "OPTION EXERCISE IN SUPPORT OF USS LAKE ERIE FY21 SRA",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N5523622F8286",
+      "signed_date": "2022-03-08",
+      "obligated_amount": 37565202.55,
+      "total_obligated_amount": 61347687.71,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "C420A, USS TULSA (LCS-16) FY22 DSRA DELIVERY ORDER",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002426C4409",
+      "signed_date": "2025-12-18",
+      "obligated_amount": 61307019.0,
+      "total_obligated_amount": 61307019.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS STOCKDALE (DDG 106) FY26 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002425C4409",
+      "signed_date": "2024-12-20",
+      "obligated_amount": 55881631.0,
+      "total_obligated_amount": 55881631.0,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "USS GABRIELLE GIFFORDS (LCS 10) FY25 DSRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002424C4408",
+      "signed_date": "2024-07-05",
+      "obligated_amount": 27660190.0,
+      "total_obligated_amount": 46508647.34,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "CNO AVAILABILITY USS MOBILE (LCS 26) FY24 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002425C4420",
+      "signed_date": "2025-08-14",
+      "obligated_amount": 46297507.0,
+      "total_obligated_amount": 46297507.0,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "USS SAVANNAH (LCS 28) FY25 DSRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N4523A23C0561",
+      "signed_date": "2023-02-13",
+      "obligated_amount": 43066072.93,
+      "total_obligated_amount": 45266692.02,
+      "vendor_name": "METRO MACHINE CORP.",
+      "description": "USS SAMPSON (DDG 102) FY23 SRA",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N0002421C4455",
+      "signed_date": "2021-03-08",
+      "obligated_amount": 34729132.0,
+      "total_obligated_amount": 43037902.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS RUSSELL (DDG 59) FY21 SELECTED RESTRICTED AVAILABILITY (SRA)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523621F4011",
+      "signed_date": "2021-01-07",
+      "obligated_amount": 31281276.0,
+      "total_obligated_amount": 42699208.44,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "FY21 VERTICAL REQUIREMENT FOR USS JOHN FINN DDG-113, USS STERETT DDG-104, USS PRINCETON CG-59\n\nREQUIREMENT ONE: USS JOHN FINN DDG-113, USS STERETT DDG-104\nREQUIREMENT TWO: USS PRINCETON CG-59",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002423C4405",
+      "signed_date": "2023-07-24",
+      "obligated_amount": 37730469.0,
+      "total_obligated_amount": 42270493.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "CNO AVAILABILITY USS JOHN P MURTHA (LPD 26) FY 23 SRA.",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002423C2316",
+      "signed_date": "2023-09-22",
+      "obligated_amount": 18991743.0,
+      "total_obligated_amount": 40850456.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "PSA FOR JACK H. LUCAS (DDG 125)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523623F8352",
+      "signed_date": "2023-05-15",
+      "obligated_amount": 36395456.09,
+      "total_obligated_amount": 40677676.68,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C420A, USS CHARLESTON (LCS-18) FY23 DSRA DELIVERY ORDER",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523620F8160",
+      "signed_date": "2020-07-16",
+      "obligated_amount": 40223285.0,
+      "total_obligated_amount": 40396176.76,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "C480 LCS USS MONTGOMERY (LCS-8) FY20 DSRA",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N4523A23C0555",
+      "signed_date": "2023-02-09",
+      "obligated_amount": 37398872.25,
+      "total_obligated_amount": 39183636.38,
+      "vendor_name": "VIGOR MARINE LLC",
+      "description": "USS GRIDLEY (DDG 101) FY23 SRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N5523621F8190",
+      "signed_date": "2021-02-24",
+      "obligated_amount": 38733026.0,
+      "total_obligated_amount": 38733026.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C420A USS MANCHESTER (LCS-14) FY21 DSRA DELIVERY ORDER",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N0002419C2317",
+      "signed_date": "2020-06-15",
+      "obligated_amount": 12902625.0,
+      "total_obligated_amount": 37874480.37,
+      "vendor_name": "BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC",
+      "description": "DDG 119 PSA OPTION EXERCISE",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5005420FC057",
+      "signed_date": "2020-09-15",
+      "obligated_amount": 34477700.0,
+      "total_obligated_amount": 37472043.0,
+      "vendor_name": "METRO MACHINE CORP",
+      "description": "USS MCFAUL (DDG-74) SRA MOD 1",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N0002426C4408",
+      "signed_date": "2025-12-18",
+      "obligated_amount": 37434088.0,
+      "total_obligated_amount": 37434088.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "USS KANSAS CITY (LCS 22) FY26 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523620F5192",
+      "signed_date": "2020-07-24",
+      "obligated_amount": 29316761.0,
+      "total_obligated_amount": 32709997.0,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, INC.",
+      "description": "C450 - FY21 USS PAUL HAMILTON (DDG 60) DSRA",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N0002421C4456",
+      "signed_date": "2021-03-10",
+      "obligated_amount": 32520591.0,
+      "total_obligated_amount": 32520591.0,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, LLC",
+      "description": "USS SOMERSET (LPD-25) FY21 SELECTED RESTRICED AVAILABILITY",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N6278622F0018",
+      "signed_date": "2022-09-19",
+      "obligated_amount": 30209592.0,
+      "total_obligated_amount": 30209592.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "DDG 1001 PSA BASE AWARD",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5005421FC035",
+      "signed_date": "2021-04-14",
+      "obligated_amount": 26317446.0,
+      "total_obligated_amount": 27562051.0,
+      "vendor_name": "MARINE HYDRAULICS INTERNATIONAL, INC.",
+      "description": "USS LABOON (DDG-58) SRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N5523621F5287",
+      "signed_date": "2022-04-20",
+      "obligated_amount": 26415841.1,
+      "total_obligated_amount": 26503089.72,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, LLC",
+      "description": "CODE 420A USS O'KANE (DDG-77) TPPC-DDG77-SWRMC22-CN01, EXERCISE OPTIONS, UNILATERAL-OPTIONS",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N5523624F5022",
+      "signed_date": "2024-01-30",
+      "obligated_amount": 25911113.99,
+      "total_obligated_amount": 26005021.66,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C420A, USS PAUL HAMILTON (DDG-60) FY24 SRA, SSP: TPPC-DDG60-SWRMC24-CN01, DELIVERY ORDER",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523623F8433",
+      "signed_date": "2023-10-11",
+      "obligated_amount": 25906506.16,
+      "total_obligated_amount": 25906506.16,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C420A MODIFICATION TO FULLY FUND BASE SCLINS AS WELL AS EXERCISE/FULLY FUND REQUIRED OPTION SCLINS ISO USS OAKLAND (LCS-24) FY24 DSRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523622F5314",
+      "signed_date": "2022-01-19",
+      "obligated_amount": 22678701.75,
+      "total_obligated_amount": 25789703.11,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C420A USS STOCKDALE (DDG-106) FY22 SRA DELIVERY ORDER",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523625F5040",
+      "signed_date": "2025-07-23",
+      "obligated_amount": 24192466.66,
+      "total_obligated_amount": 25596710.35,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, LLC",
+      "description": "CODE 420A, USS CURTIS WILBUR (DDG-54) FISCAL YEAR 26 SELECTED RESTRICTED AVAILABILITY, TPPC-DDG54-SWRMC26-CN01, DELIVERY ORDER",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N5523625F5023",
+      "signed_date": "2025-03-19",
+      "obligated_amount": 24785102.48,
+      "total_obligated_amount": 25197119.23,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, LLC",
+      "description": "CODE420A, USS STERETT (DDG-104) FISCAL YEAR 2025, SELECTED RESTRICTED AVAILABILITY, SSP: TPPC-DDG104-SWRMC25-CN01, DELIVERY ORDER",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N5005420FC049",
+      "signed_date": "2020-08-31",
+      "obligated_amount": 22164403.0,
+      "total_obligated_amount": 25016665.0,
+      "vendor_name": "METRO MACHINE CORP",
+      "description": "USS NITZE (DDG-94) SRA MOD 1",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N5005420FC052",
+      "signed_date": "2020-08-06",
+      "obligated_amount": 14801799.0,
+      "total_obligated_amount": 24742137.0,
+      "vendor_name": "MARINE HYDRAULICS INTERNATIONAL, INC.",
+      "description": "USS TRUXTUN (DDG-103) FY21 SRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N5523620F6016",
+      "signed_date": "2020-02-04",
+      "obligated_amount": 24695933.0,
+      "total_obligated_amount": 24516012.0,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C430 LPD/LSD AWARD OF THE USS JOHN P. MURTHA (LPD-26) FY20 SRA",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5005421FC034",
+      "signed_date": "2021-04-14",
+      "obligated_amount": 22136367.0,
+      "total_obligated_amount": 24335176.0,
+      "vendor_name": "MARINE HYDRAULICS INTERNATIONAL, INC.",
+      "description": "USS PHILIPPINE SEA (CG-58) SRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N5523624F5013",
+      "signed_date": "2023-12-11",
+      "obligated_amount": 23063402.0,
+      "total_obligated_amount": 24038489.58,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, LLC",
+      "description": "C420A, USS STETHEM (DDG-63) FY24 SRA DELIVERY ORDER",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N0002418C2404",
+      "signed_date": "2020-09-15",
+      "obligated_amount": 12819729.0,
+      "total_obligated_amount": 23076020.0,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "LHA 7 FITTING OUT AVAILABILITY - SCN",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N0002425C2301",
+      "signed_date": "2025-09-04",
+      "obligated_amount": 22820720.0,
+      "total_obligated_amount": 22820720.0,
+      "vendor_name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+      "description": "PSA FOR HARVEY BARNUM JR. (DDG 124)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523625F8451",
+      "signed_date": "2024-11-29",
+      "obligated_amount": 21625032.37,
+      "total_obligated_amount": 21908843.26,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "CODE 420A, USS MANCHESTER (LCS-14) FISCAL YEAR 2025, SELECTED RESTRICTED AVAILABILITY, SSP: TPPC-LCS14-SSSD25-CN01, DELIVERY ORDER",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N5523621F5229",
+      "signed_date": "2021-01-07",
+      "obligated_amount": 17816587.0,
+      "total_obligated_amount": 18941554.89,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, INC.",
+      "description": "FY21 VERTICAL REQUIREMENT FOR USS JOHN FINN DDG-113, USS STERETT DDG-104, USS PRINCETON CG-59\n\nREQUIREMENT ONE: USS JOHN FINN DDG-113, USS STERETT DDG-104\nREQUIREMENT TWO: USS PRINCETON CG-59",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N5005423FC005",
+      "signed_date": "2022-10-21",
+      "obligated_amount": 16561215.0,
+      "total_obligated_amount": 16708892.0,
+      "vendor_name": "MARINE HYDRAULICS INTERNATIONAL, LLC",
+      "description": "USS GONZALEZ (DDG-66) FY23 SRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N5523621F5228",
+      "signed_date": "2021-01-07",
+      "obligated_amount": 13464242.0,
+      "total_obligated_amount": 16645043.0,
+      "vendor_name": "CONTINENTAL MARITIME OF SAN DIEGO, INC.",
+      "description": "FY21 VERTICAL REQUIREMENT FOR USS JOHN FINN DDG-113, USS STERETT DDG-104, USS PRINCETON CG-59\n\nREQUIREMENT ONE: USS JOHN FINN DDG-113, USS STERETT DDG-104\nREQUIREMENT TWO: USS PRINCETON CG-59",
+      "_swept_as": "Continental Maritime SD"
+    },
+    {
+      "piid": "N5523622F5340",
+      "signed_date": "2022-07-07",
+      "obligated_amount": 15151612.93,
+      "total_obligated_amount": 16435774.16,
+      "vendor_name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+      "description": "C420A USS SPRUANCE (DDG 111) FY23 SRA DELIVERY ORDER",
+      "_swept_as": "NASSCO"
+    },
+    {
+      "piid": "N5005423FC006",
+      "signed_date": "2022-11-18",
+      "obligated_amount": 15589971.0,
+      "total_obligated_amount": 16396322.0,
+      "vendor_name": "MARINE HYDRAULICS INTERNATIONAL, LLC",
+      "description": "USS FORREST SHERMAN (DDG-98) FY23 SRA",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N5523621F2091",
+      "signed_date": "2021-04-02",
+      "obligated_amount": 13400965.97,
+      "total_obligated_amount": 15700580.65,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C420A USS MAKIN ISLAND (LHD 8) FY21 SIA DELIVERY ORDER",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N4002722F0018",
+      "signed_date": "2022-05-03",
+      "obligated_amount": 15822214.69,
+      "total_obligated_amount": 15085870.79,
+      "vendor_name": "METRO MACHINE CORP.",
+      "description": "USS JASON DUNHAM (DDG 109) SSP SERM-506-22",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N5005423FC017",
+      "signed_date": "2022-12-21",
+      "obligated_amount": 11992088.0,
+      "total_obligated_amount": 13948742.0,
+      "vendor_name": "METRO MACHINE CORP",
+      "description": "USS LABOON (DDG-58) FY23 EM01- EM",
+      "_swept_as": "Metro Machine"
+    },
+    {
+      "piid": "N5005423FL039",
+      "signed_date": "2023-09-28",
+      "obligated_amount": 13339533.0,
+      "total_obligated_amount": 13339533.0,
+      "vendor_name": "MARINE HYDRAULICS INTERNATIONAL, LLC",
+      "description": "USS TORTUGA (LSD-46) A4A1 CMAV (LOT 2)",
+      "_swept_as": "Vigor Marine"
+    },
+    {
+      "piid": "N0002424C2321",
+      "signed_date": "2024-08-30",
+      "obligated_amount": 12941069.0,
+      "total_obligated_amount": 12941069.0,
+      "vendor_name": "BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC",
+      "description": "PSA FOR JOHN BASILONE (DDG 122) AND HARVEY C. BARNUM JR (DDG 124)",
+      "_swept_as": "BAE Norfolk"
+    },
+    {
+      "piid": "N5523622F5293",
+      "signed_date": "2022-05-03",
+      "obligated_amount": 12269380.0,
+      "total_obligated_amount": 12103519.66,
+      "vendor_name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+      "description": "C460A_USS STERETT (DDG 104) FY22 DRY DOCK CMAV DELIVERY ORDER AWARD",
+      "_swept_as": "BAE Norfolk"
+    }
+  ],
+  "count": 88
+}

@@ -1,0 +1,253 @@
+Loaded 170 PIIDs from /Users/brendantoole/projects2/buildco3/data_pull/subaward_full.json
+
+==========================================================================================
+TOP 50 PARENT COMPANIES (cross-PIID, FY20-26 window deltas, corrected dedup)
+==========================================================================================
+Rank Parent                                                    Sub $  PIIDs   #subs
+   1 HL WELDING                                         $    4606.0M      5     168
+   2 Fincantieri (Marinette Marine)                     $    2487.0M      1      26
+   3 Teledyne                                           $     977.4M     13      87
+   4 AMERICAN SCAFFOLD                                  $     939.7M     30     589
+   5 BREWER CRANE                                       $     924.3M     15      66
+   6 DIAMOND ENVIRONMENTAL SERVICES                     $     921.8M      5      10
+   7 HAWTHORNE MACHINERY                                $     921.7M      5       5
+   8 TIMKEN GEARS & SERVICES                            $     899.9M     20      53
+   9 General Dynamics                                   $     433.2M     14     111
+  10 L3Harris (Aerojet Rocketdyne)                      $     400.9M      5      11
+  11 Rolls-Royce                                        $     313.4M     25     119
+  12 Northrop Grumman                                   $     253.2M      9      65
+  13 L3Harris                                           $     250.5M     45     258
+  14 TRIDENT SENSORS                                    $     233.3M      1       1
+  15 CAES (Cobham Advanced Electronic Solutions)        $     217.4M      8      50
+  16 GE Aerospace                                       $     211.7M     14      42
+  17 IMIA                                               $     204.4M     28     248
+  18 Johnson Controls                                   $     174.1M     24     104
+  19 Leonardo DRS                                       $     173.6M     15     185
+  20 Fairbanks Morse Defense                            $     160.8M     18     125
+  21 SPARTON DELEON SPRINGS                             $     107.9M      2       4
+  22 RAM-SYSTEM GMBH                                    $      97.5M      1       3
+  23 BAY METALS & FABRICATION                           $      92.7M      9     180
+  24 US JOINER                                          $      88.1M     12     102
+  25 UNITED RENTALS (NORTH AMERICA)                     $      77.4M     29     221
+  26 Honeywell                                          $      71.3M     12      25
+  27 ENGINEERED COIL                                    $      68.0M     14     108
+  28 ANAREN                                             $      64.3M      7      17
+  29 GOLDEN STAR TECHNOLOGY                             $      63.2M      3      19
+  30 RED RIVER TECHNOLOGY                               $      61.0M      2      13
+  31 LAKE SHORE SYSTEMS                                 $      60.4M     22     136
+  32 NAMMO RAUFOSS AS                                   $      59.0M      1       4
+  33 DUCOMMUN LABARGE TECHNOLOGIES                      $      57.8M     11      87
+  34 SOUTHCOAST WELDING & MANUFACTURING                 $      57.4M     17     116
+  35 AIRBUS US SPACE & DEFENSE                          $      56.2M      1      12
+  36 TECNICO                                            $      56.0M     12      26
+  37 INDUSTRIAL CORROSION CONTROL                       $      54.8M      6     117
+  38 ELLWOOD NATIONAL FORGE                             $      50.5M      4      11
+  39 AMP UNITED                                         $      50.0M     14     160
+  40 ESPEY MFG AND ELECTRONICS                          $      42.6M      6      61
+  41 TTM PRINTED CIRCUIT                                $      41.2M      3      18
+  42 WALASHEK INDUSTRIAL & MARINE                       $      40.6M      7     116
+  43 EMS INDUSTRIAL                                     $      40.3M      8     106
+  44 MAJOR TOOL & MACHINE                               $      39.0M      1       8
+  45 EAST COAST REPAIR & FABRICATION                    $      35.7M      9      77
+  46 MARCOM SERVICES                                    $      35.2M      7      38
+  47 JRF SHIP REPAIRS                                   $      33.8M      8     109
+  48 RENK AKTIENGESELLSCHAFT                            $      33.6M      1       4
+  49 PROPULSION CONTROLS ENGINEERING                    $      32.2M     19     208
+  50 GOODRICH ACTUATION SYSTEMS                         $      31.6M      1       1
+
+Grand total in-window subs across 170 PIIDs: $20.52B (17095 unique subaward records)
+
+==========================================================================================
+PER-SECTION ROLLUPS
+==========================================================================================
+
+## Airborne MCM (ALMDS/AMNS/Barracuda) -- $0.15B total subs
+  SPARTON DELEON SPRINGS                             $    107.9M (2 PIIDs, 4 subs)
+  Teledyne                                           $     16.9M (1 PIIDs, 11 subs)
+  ARETE ASSOCIATES                                   $      5.9M (2 PIIDs, 11 subs)
+  EDGEONE                                            $      3.1M (1 PIIDs, 8 subs)
+  SAFT AMERICA                                       $      2.7M (1 PIIDs, 1 subs)
+  Curtiss-Wright                                     $      1.6M (3 PIIDs, 11 subs)
+  MEGGITT DEFENSE SYSTEMS                            $      1.6M (1 PIIDs, 4 subs)
+  TEAMVANTAGE MOLDING                                $      1.1M (1 PIIDs, 2 subs)
+  ABELCONN                                           $      1.0M (1 PIIDs, 2 subs)
+  HI TECH MACHINING & ENGINEERING                    $      1.0M (1 PIIDs, 3 subs)
+
+## DDG Mod - CEC -- $0.03B total subs
+  SECHAN ELECTRONICS                                 $      6.6M (1 PIIDs, 1 subs)
+  ACTION ELECTRONICS                                 $      5.1M (1 PIIDs, 5 subs)
+  WIND RIVER SYSTEMS                                 $      3.4M (1 PIIDs, 4 subs)
+  EPSILON SYSTEMS SOLUTIONS                          $      3.0M (1 PIIDs, 1 subs)
+  WORLD WIDE TECHNOLOGY                              $      2.3M (1 PIIDs, 6 subs)
+  REAL-TIME INNOVATIONS                              $      2.0M (1 PIIDs, 5 subs)
+  CUMMINGS AEROSPACE                                 $      1.8M (1 PIIDs, 1 subs)
+  FISHEYE SOFTWARE                                   $      1.5M (2 PIIDs, 2 subs)
+  HP                                                 $      1.0M (1 PIIDs, 6 subs)
+  Mercury Systems                                    $      0.7M (1 PIIDs, 2 subs)
+
+## DDG Mod - CIWS/RAM/SeaRAM -- $0.56B total subs
+  RAM-SYSTEM GMBH                                    $     97.5M (1 PIIDs, 3 subs)
+  L3Harris                                           $     38.9M (5 PIIDs, 20 subs)
+  General Dynamics                                   $     36.3M (4 PIIDs, 84 subs)
+  Northrop Grumman                                   $     26.0M (1 PIIDs, 6 subs)
+  DUCOMMUN LABARGE TECHNOLOGIES                      $     17.5M (5 PIIDs, 60 subs)
+  LOURDES INDUSTRIES                                 $     15.4M (5 PIIDs, 103 subs)
+  WHELAN MACHINE & TOOL                              $     12.0M (4 PIIDs, 88 subs)
+  AST/ACME                                           $     12.0M (3 PIIDs, 246 subs)
+  HAIGH-FARR                                         $     10.4M (1 PIIDs, 2 subs)
+  HAAS GROUP INTERNATIONAL                           $     10.2M (3 PIIDs, 13 subs)
+
+## DDG Mod - HELIOS -- $0.06B total subs
+  MZA ASSOCIATES                                     $     25.4M (1 PIIDs, 1 subs)
+  L3Harris                                           $     22.5M (1 PIIDs, 11 subs)
+  SPD TECHNOLOGIES                                   $      4.1M (1 PIIDs, 1 subs)
+  SEA BOX                                            $      1.8M (1 PIIDs, 1 subs)
+  RIGGS DISTLER &                                    $      1.1M (1 PIIDs, 1 subs)
+  HEILIND MIL-AERO                                   $      0.9M (1 PIIDs, 2 subs)
+  DOMAILLE ENGINEERING                               $      0.8M (1 PIIDs, 2 subs)
+  GROMELSKI & ASSOCIATES                             $      0.7M (1 PIIDs, 1 subs)
+  HOWELL LABORATORIES                                $      0.6M (1 PIIDs, 1 subs)
+  TALOSWEST                                          $      0.5M (1 PIIDs, 2 subs)
+
+## DDG Mod - SEWIP -- $0.00B total subs
+  Lockheed Martin                                    $      0.6M (1 PIIDs, 1 subs)
+  SYPRIS ELECTRONICS                                 $     -0.0M (1 PIIDs, 2 subs)
+
+## DDG Mod - SPY-6 -- $1.22B total subs
+  General Dynamics                                   $    359.4M (1 PIIDs, 10 subs)
+  CAES (Cobham Advanced Electronic Solutions)        $    169.6M (1 PIIDs, 11 subs)
+  Northrop Grumman                                   $    113.9M (1 PIIDs, 3 subs)
+  GOLDEN STAR TECHNOLOGY                             $     61.6M (1 PIIDs, 12 subs)
+  ANAREN                                             $     57.0M (1 PIIDs, 4 subs)
+  MAJOR TOOL & MACHINE                               $     39.0M (1 PIIDs, 8 subs)
+  TTM PRINTED CIRCUIT                                $     38.2M (1 PIIDs, 8 subs)
+  DUCOMMUN LABARGE TECHNOLOGIES                      $     21.7M (1 PIIDs, 4 subs)
+  M.S.M. INDUSTRIES                                  $     21.2M (1 PIIDs, 17 subs)
+  OPTIMA STANTRON                                    $     20.3M (1 PIIDs, 4 subs)
+
+## DDG Mod - SSDS -- $0.04B total subs
+  MISSION SOLUTIONS                                  $     13.7M (1 PIIDs, 4 subs)
+  PROGRAMS MANAGEMENT ANALYTICS & TECHNOLOGIES       $      6.3M (1 PIIDs, 4 subs)
+  INNOVATIVE DEFENSE TECHNOLOGIES                    $      2.9M (1 PIIDs, 3 subs)
+  ADVANCED SCIENCES AND TECHNOLOGIES                 $      2.6M (1 PIIDs, 4 subs)
+  REAL-TIME INNOVATIONS                              $      1.6M (1 PIIDs, 7 subs)
+  IN-DEPTH ENGINEERING                               $      1.5M (1 PIIDs, 3 subs)
+  CNI SALES                                          $      1.3M (1 PIIDs, 5 subs)
+  THUNDERBOLT SOFTWARE                               $      1.2M (1 PIIDs, 6 subs)
+  APEX SYSTEMS                                       $      1.2M (1 PIIDs, 2 subs)
+  GNOSTECH                                           $      0.9M (1 PIIDs, 3 subs)
+
+## DDG-1000 -- $0.13B total subs
+  RED RIVER TECHNOLOGY                               $     61.0M (2 PIIDs, 13 subs)
+  AIR MASTERS MECHANICAL                             $      6.3M (1 PIIDs, 5 subs)
+  Leonardo DRS                                       $      4.5M (1 PIIDs, 17 subs)
+  MOTOROLA SOLUTIONS                                 $      3.6M (1 PIIDs, 1 subs)
+  REAL-TIME INNOVATIONS                              $      3.1M (2 PIIDs, 6 subs)
+  INFINITE ELECTRONICS INTERNATIONAL                 $      2.7M (1 PIIDs, 2 subs)
+  General Dynamics                                   $      2.7M (1 PIIDs, 1 subs)
+  CLARUS FLUID INTELLIGENCE                          $      2.6M (1 PIIDs, 1 subs)
+  NAVAL ENGINEERING SUPPORT                          $      2.4M (1 PIIDs, 3 subs)
+  DELL MARKETING L.P                                 $      2.3M (1 PIIDs, 2 subs)
+
+## DDG-51 New Construction -- $1.44B total subs
+  GE Aerospace                                       $    196.7M (4 PIIDs, 23 subs)
+  Johnson Controls                                   $    141.0M (5 PIIDs, 49 subs)
+  Rolls-Royce                                        $     97.4M (3 PIIDs, 37 subs)
+  L3Harris                                           $     79.3M (5 PIIDs, 80 subs)
+  Leonardo DRS                                       $     76.9M (5 PIIDs, 94 subs)
+  Northrop Grumman                                   $     51.8M (3 PIIDs, 32 subs)
+  ESPEY MFG AND ELECTRONICS                          $     42.4M (4 PIIDs, 58 subs)
+  ENGINEERED COIL                                    $     42.2M (4 PIIDs, 60 subs)
+  TIMKEN GEARS & SERVICES                            $     40.9M (2 PIIDs, 2 subs)
+  ELLWOOD NATIONAL FORGE                             $     38.3M (2 PIIDs, 7 subs)
+
+## Depot Maintenance -- $10.53B total subs
+  HL WELDING                                         $   4606.0M (5 PIIDs, 168 subs)
+  AMERICAN SCAFFOLD                                  $    939.7M (30 PIIDs, 589 subs)
+  BREWER CRANE                                       $    924.3M (15 PIIDs, 66 subs)
+  DIAMOND ENVIRONMENTAL SERVICES                     $    921.8M (5 PIIDs, 10 subs)
+  HAWTHORNE MACHINERY                                $    921.7M (5 PIIDs, 5 subs)
+  TIMKEN GEARS & SERVICES                            $    837.1M (15 PIIDs, 40 subs)
+  IMIA                                               $    189.0M (24 PIIDs, 218 subs)
+  BAY METALS & FABRICATION                           $     92.7M (9 PIIDs, 180 subs)
+  UNITED RENTALS (NORTH AMERICA)                     $     77.3M (28 PIIDs, 219 subs)
+  TECNICO                                            $     55.8M (11 PIIDs, 24 subs)
+
+## LCS Freedom (legacy construction) -- $2.91B total subs
+  Fincantieri (Marinette Marine)                     $   2487.0M (1 PIIDs, 26 subs)
+  Rolls-Royce                                        $    196.1M (1 PIIDs, 20 subs)
+  AIRBUS US SPACE & DEFENSE                          $     56.2M (1 PIIDs, 12 subs)
+  Northrop Grumman                                   $     44.2M (1 PIIDs, 13 subs)
+  RENK AKTIENGESELLSCHAFT                            $     33.6M (1 PIIDs, 4 subs)
+  GIBBS & COX                                        $     29.0M (1 PIIDs, 13 subs)
+  Fairbanks Morse Defense                            $     22.0M (1 PIIDs, 9 subs)
+  BAE Systems                                        $      7.8M (1 PIIDs, 9 subs)
+  PROPULSION CONTROLS ENGINEERING                    $      4.4M (1 PIIDs, 3 subs)
+  LAKE SHORE SYSTEMS                                 $      3.7M (1 PIIDs, 7 subs)
+
+## LCS MCM Mission Modules -- $1.26B total subs
+  Teledyne                                           $    925.9M (3 PIIDs, 14 subs)
+  TRIDENT SENSORS                                    $    233.3M (1 PIIDs, 1 subs)
+  FAIRLEAD INTEGRATED                                $     16.9M (1 PIIDs, 6 subs)
+  General Dynamics                                   $     12.9M (1 PIIDs, 2 subs)
+  OCEANEERING INTERNATIONAL                          $     12.1M (2 PIIDs, 5 subs)
+  METRON INCORPORATED                                $     11.2M (2 PIIDs, 16 subs)
+  Ultra (Cobham Ultra)                               $     10.3M (2 PIIDs, 5 subs)
+  RTX (Raytheon)                                     $      2.9M (1 PIIDs, 4 subs)
+  MARMON AEROSPACE & DEFENSE                         $      2.8M (1 PIIDs, 3 subs)
+  GALLEON EMBEDDED COMPUTING                         $      2.1M (1 PIIDs, 3 subs)
+
+## LHA Replacement New Construction -- $0.45B total subs
+  L3Harris                                           $     42.1M (2 PIIDs, 18 subs)
+  Fairbanks Morse Defense                            $     41.2M (2 PIIDs, 17 subs)
+  Leonardo DRS                                       $     40.5M (2 PIIDs, 37 subs)
+  INDUSTRIAL CORROSION CONTROL                       $     26.4M (2 PIIDs, 40 subs)
+  LAKE SHORE SYSTEMS                                 $     23.3M (2 PIIDs, 24 subs)
+  Johnson Controls                                   $     18.5M (2 PIIDs, 11 subs)
+  Northrop Grumman                                   $     15.0M (1 PIIDs, 3 subs)
+  THERMAL SPRAY SOLUTIONS                            $     12.7M (1 PIIDs, 2 subs)
+  GE Aerospace                                       $     12.5M (2 PIIDs, 6 subs)
+  ENGINEERED COIL                                    $     10.9M (2 PIIDs, 19 subs)
+
+## LPD Flight II New Construction -- $0.59B total subs
+  Fairbanks Morse Defense                            $     85.4M (4 PIIDs, 56 subs)
+  US JOINER                                          $     58.8M (4 PIIDs, 33 subs)
+  Leonardo DRS                                       $     43.0M (3 PIIDs, 30 subs)
+  Caterpillar                                        $     31.0M (3 PIIDs, 6 subs)
+  AMERICAN SUPERCONDUCTOR                            $     25.8M (1 PIIDs, 3 subs)
+  TIMKEN GEARS & SERVICES                            $     21.6M (2 PIIDs, 9 subs)
+  INDUSTRIAL CORROSION CONTROL                       $     20.9M (2 PIIDs, 56 subs)
+  CAROLINA POWER SYSTEMS OF SUMTER                   $     15.5M (2 PIIDs, 19 subs)
+  ENGINEERED COIL                                    $     14.6M (4 PIIDs, 23 subs)
+  ELLWOOD NATIONAL FORGE                             $     11.9M (1 PIIDs, 3 subs)
+
+## MK-54 Torpedo -- $0.04B total subs
+  L3Harris                                           $     25.0M (1 PIIDs, 1 subs)
+  J&E PRECISION TOOL                                 $      4.6M (1 PIIDs, 4 subs)
+  MI-TECH TUNGSTEN METALS                            $      2.7M (1 PIIDs, 4 subs)
+  F. H. PETERSON MACHINE                             $      1.9M (1 PIIDs, 2 subs)
+  MICA-TRON PRODUCTS                                 $      1.0M (1 PIIDs, 3 subs)
+  SECHAN ELECTRONICS                                 $      0.5M (1 PIIDs, 1 subs)
+  FERRO CERAMIC GRINDING                             $      0.3M (1 PIIDs, 1 subs)
+  LOVERIDGE MACHINE & TOOL                           $      0.3M (1 PIIDs, 2 subs)
+  INSTRUMENTS INCORPORATED                           $      0.2M (1 PIIDs, 1 subs)
+  V-TRON ELECTRONICS                                 $      0.1M (1 PIIDs, 2 subs)
+
+## Ship Gun Systems -- $0.00B total subs
+  VERMILLION INCORPORATED                            $      0.1M (1 PIIDs, 1 subs)
+  Honeywell                                          $      0.0M (1 PIIDs, 1 subs)
+
+## Standard Missile family -- $1.12B total subs
+  L3Harris (Aerojet Rocketdyne)                      $    400.9M (5 PIIDs, 11 subs)
+  NAMMO RAUFOSS AS                                   $     59.0M (1 PIIDs, 4 subs)
+  CAES (Cobham Advanced Electronic Solutions)        $     47.4M (5 PIIDs, 37 subs)
+  Honeywell                                          $     44.8M (4 PIIDs, 6 subs)
+  GOODRICH ACTUATION SYSTEMS                         $     31.6M (1 PIIDs, 1 subs)
+  MAGELLAN AEROSPACE, MIDDLETOWN                     $     28.3M (1 PIIDs, 5 subs)
+  EMPIRICAL SYSTEMS AEROSPACE                        $     26.0M (1 PIIDs, 1 subs)
+  General Dynamics                                   $     21.4M (2 PIIDs, 5 subs)
+  EAGLEPICHER TECHNOLOGIES                           $     18.8M (5 PIIDs, 24 subs)
+  DUCOMMUN LABARGE TECHNOLOGIES                      $     18.6M (5 PIIDs, 23 subs)
+
+
+Wrote /Users/brendantoole/projects2/buildco3/data_pull/subaward_aggregated.json

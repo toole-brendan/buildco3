@@ -1,0 +1,3184 @@
+{
+  "N0002411C2300": {
+    "label": "LM LCS Freedom Construction (Marinette flag)",
+    "prior_reported_billion": 47.17,
+    "naive_dedup_in_window_total": 37772783360.590034,
+    "naive_dedup_record_count": 573,
+    "unique_sub_ids": 226,
+    "deduped_record_count": 226,
+    "total_amount_corrected": 2913084102.0500007,
+    "by_recipient_raw": [
+      {
+        "recipient": "MARINETTE MARINE CORPORATION",
+        "amount": 2486897800.01,
+        "count": 23
+      },
+      {
+        "recipient": "ROLLS-ROYCE MARINE NORTH AMERICA INC.",
+        "amount": 196143208.28,
+        "count": 20
+      },
+      {
+        "recipient": "AIRBUS US SPACE & DEFENSE INC",
+        "amount": 56226114.620000005,
+        "count": 12
+      },
+      {
+        "recipient": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "amount": 44197327.87000001,
+        "count": 12
+      },
+      {
+        "recipient": "RENK AKTIENGESELLSCHAFT",
+        "amount": 33647330.51,
+        "count": 4
+      },
+      {
+        "recipient": "GIBBS & COX, INC.",
+        "amount": 28973474.99,
+        "count": 13
+      },
+      {
+        "recipient": "COLTEC INDUSTRIES INC.",
+        "amount": 19146467.1,
+        "count": 2
+      },
+      {
+        "recipient": "BAE SYSTEMS SOUTHEAST SHIPYARDS JACKSONVILLE LLC",
+        "amount": 4973505.76,
+        "count": 2
+      },
+      {
+        "recipient": "PROPULSION CONTROLS ENGINEERING",
+        "amount": 4418325.24,
+        "count": 3
+      },
+      {
+        "recipient": "LAKE SHORE SYSTEMS, INC.",
+        "amount": 3705163.7399999998,
+        "count": 7
+      },
+      {
+        "recipient": "DUKE MARINE ENGINEERING CONSULTING, INC.",
+        "amount": 3571117.34,
+        "count": 9
+      },
+      {
+        "recipient": "MISSION SOLUTIONS LLC",
+        "amount": 3549776.4499999997,
+        "count": 8
+      },
+      {
+        "recipient": "EAST COAST REPAIR & FABRICATION, LLC",
+        "amount": 3527322.8200000003,
+        "count": 7
+      },
+      {
+        "recipient": "BAE SYSTEMS LAND & ARMAMENTS L.P.",
+        "amount": 2814762.9899999998,
+        "count": 7
+      },
+      {
+        "recipient": "FAIRBANKS MORSE, LLC",
+        "amount": 2805714.5,
+        "count": 7
+      },
+      {
+        "recipient": "DRS NAVAL POWER SYSTEMS INC",
+        "amount": 2336848.83,
+        "count": 2
+      },
+      {
+        "recipient": "HENSOLDT INC",
+        "amount": 1746469.51,
+        "count": 5
+      },
+      {
+        "recipient": "COSPOLICH INC.",
+        "amount": 1702986.0,
+        "count": 1
+      },
+      {
+        "recipient": "SHIPBOARD ELECTRICAL & AIR INC",
+        "amount": 1662187.51,
+        "count": 5
+      },
+      {
+        "recipient": "N A W C A D 4.11.2",
+        "amount": 1527400.0,
+        "count": 2
+      },
+      {
+        "recipient": "NTS TECHNICAL SYSTEMS, LLC",
+        "amount": 954853.45,
+        "count": 1
+      },
+      {
+        "recipient": "ARGON ST, INC.",
+        "amount": 906507.88,
+        "count": 2
+      },
+      {
+        "recipient": "DEFENSE MARITIME SOLUTIONS, INC.",
+        "amount": 839440.75,
+        "count": 2
+      },
+      {
+        "recipient": "EPSILON SYSTEMS SOLUTIONS, INC.",
+        "amount": 532369.18,
+        "count": 2
+      },
+      {
+        "recipient": "CARIBOU THUNDER, LLC",
+        "amount": 460782.95999999996,
+        "count": 2
+      },
+      {
+        "recipient": "NORTH SHORE MARINE TERMINAL & LOGISTICS INC",
+        "amount": 361271.0,
+        "count": 1
+      },
+      {
+        "recipient": "PHOENIX AIR GROUP, INC.",
+        "amount": 318947.16,
+        "count": 1
+      },
+      {
+        "recipient": "COLONNA'S SHIP YARD, INCORPORATED",
+        "amount": 298293.57,
+        "count": 1
+      },
+      {
+        "recipient": "NEAL TECHNICAL INNOVATIONS LLC",
+        "amount": 267688.0,
+        "count": 2
+      },
+      {
+        "recipient": "PACIFIC MARITIME INDUSTRIES CORP.",
+        "amount": 248323.0,
+        "count": 3
+      },
+      {
+        "recipient": "PARKER-HANNIFIN CORPORATION",
+        "amount": 239802.21999999997,
+        "count": 3
+      },
+      {
+        "recipient": "ATLANTIC DIVING SUPPLY, INC.",
+        "amount": 237882.88,
+        "count": 2
+      },
+      {
+        "recipient": "TECNICO CORPORATION",
+        "amount": 212186.0,
+        "count": 2
+      },
+      {
+        "recipient": "IN-PLACE MACHINING COMPANY, LLC",
+        "amount": 210595.58,
+        "count": 1
+      },
+      {
+        "recipient": "IN-DEPTH ENGINEERING CORPORATION",
+        "amount": 204325.7,
+        "count": 1
+      },
+      {
+        "recipient": "L3 TECHNOLOGIES, INC.",
+        "amount": 167330.29,
+        "count": 1
+      },
+      {
+        "recipient": "WESCO DISTRIBUTION, INC.",
+        "amount": 167056.0,
+        "count": 1
+      },
+      {
+        "recipient": "HANSA MEYER GLOBAL TRANSPORT USA, LLC",
+        "amount": 155543.96000000002,
+        "count": 2
+      },
+      {
+        "recipient": "ABCD MARINE LLC",
+        "amount": 152776.25,
+        "count": 1
+      },
+      {
+        "recipient": "POWERSTAR INC",
+        "amount": 147900.0,
+        "count": 2
+      },
+      {
+        "recipient": "MACTECH INCORPORATED",
+        "amount": 143930.0,
+        "count": 3
+      },
+      {
+        "recipient": "MFM SERVICES LLC",
+        "amount": 131474.26,
+        "count": 1
+      },
+      {
+        "recipient": "FINCANTIERI MARINE SYSTEMS NORTH AMERICA, INC.",
+        "amount": 122705.42,
+        "count": 3
+      },
+      {
+        "recipient": "901 D LLC",
+        "amount": 113828.0,
+        "count": 1
+      },
+      {
+        "recipient": "UNIVERSAL PROTECTION SERVICE, LIMITED PARTNERSHIP",
+        "amount": 112887.6,
+        "count": 1
+      },
+      {
+        "recipient": "EUROFINS ELECTRICAL AND ELECTRONIC TESTING NA, LLC",
+        "amount": 110300.0,
+        "count": 1
+      },
+      {
+        "recipient": "HELI MOTION LLC",
+        "amount": 106078.98,
+        "count": 1
+      },
+      {
+        "recipient": "CARAHSOFT TECHNOLOGY CORP",
+        "amount": 96329.25,
+        "count": 2
+      },
+      {
+        "recipient": "GUARDSMARK, LLC",
+        "amount": 94396.17,
+        "count": 1
+      },
+      {
+        "recipient": "SPARTON AYDIN, LLC",
+        "amount": 86360.0,
+        "count": 3
+      }
+    ],
+    "by_recipient_normalized": [
+      {
+        "recipient": "MARINETTE MARINE",
+        "amount": 2486897800.01,
+        "count": 23,
+        "raw_names": [
+          "MARINETTE MARINE CORPORATION"
+        ]
+      },
+      {
+        "recipient": "ROLLS-ROYCE MARINE NORTH AMERICA",
+        "amount": 196143208.28,
+        "count": 20,
+        "raw_names": [
+          "ROLLS-ROYCE MARINE NORTH AMERICA INC."
+        ]
+      },
+      {
+        "recipient": "AIRBUS US SPACE & DEFENSE",
+        "amount": 56226114.620000005,
+        "count": 12,
+        "raw_names": [
+          "AIRBUS US SPACE & DEFENSE INC"
+        ]
+      },
+      {
+        "recipient": "NORTHROP GRUMMAN SYSTEMS",
+        "amount": 44197327.87000001,
+        "count": 12,
+        "raw_names": [
+          "NORTHROP GRUMMAN SYSTEMS CORPORATION"
+        ]
+      },
+      {
+        "recipient": "RENK AKTIENGESELLSCHAFT",
+        "amount": 33647330.51,
+        "count": 4,
+        "raw_names": [
+          "RENK AKTIENGESELLSCHAFT"
+        ]
+      },
+      {
+        "recipient": "GIBBS & COX",
+        "amount": 28973474.99,
+        "count": 13,
+        "raw_names": [
+          "GIBBS & COX, INC."
+        ]
+      },
+      {
+        "recipient": "COLTEC INDUSTRIES",
+        "amount": 19146467.1,
+        "count": 2,
+        "raw_names": [
+          "COLTEC INDUSTRIES INC."
+        ]
+      },
+      {
+        "recipient": "BAE SYSTEMS SOUTHEAST SHIPYARDS JACKSONVILLE",
+        "amount": 4973505.76,
+        "count": 2,
+        "raw_names": [
+          "BAE SYSTEMS SOUTHEAST SHIPYARDS JACKSONVILLE LLC"
+        ]
+      },
+      {
+        "recipient": "PROPULSION CONTROLS ENGINEERING",
+        "amount": 4418325.24,
+        "count": 3,
+        "raw_names": [
+          "PROPULSION CONTROLS ENGINEERING"
+        ]
+      },
+      {
+        "recipient": "LAKE SHORE SYSTEMS",
+        "amount": 3705163.7399999998,
+        "count": 7,
+        "raw_names": [
+          "LAKE SHORE SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "DUKE MARINE ENGINEERING CONSULTING",
+        "amount": 3571117.34,
+        "count": 9,
+        "raw_names": [
+          "DUKE MARINE ENGINEERING CONSULTING, INC."
+        ]
+      },
+      {
+        "recipient": "MISSION SOLUTIONS",
+        "amount": 3549776.4499999997,
+        "count": 8,
+        "raw_names": [
+          "MISSION SOLUTIONS LLC"
+        ]
+      },
+      {
+        "recipient": "EAST COAST REPAIR & FABRICATION",
+        "amount": 3527322.8200000003,
+        "count": 7,
+        "raw_names": [
+          "EAST COAST REPAIR & FABRICATION, LLC"
+        ]
+      },
+      {
+        "recipient": "BAE SYSTEMS LAND & ARMAMENTS L.P",
+        "amount": 2814762.9899999998,
+        "count": 7,
+        "raw_names": [
+          "BAE SYSTEMS LAND & ARMAMENTS L.P."
+        ]
+      },
+      {
+        "recipient": "FAIRBANKS MORSE",
+        "amount": 2805714.5,
+        "count": 7,
+        "raw_names": [
+          "FAIRBANKS MORSE, LLC"
+        ]
+      },
+      {
+        "recipient": "DRS NAVAL POWER SYSTEMS",
+        "amount": 2336848.83,
+        "count": 2,
+        "raw_names": [
+          "DRS NAVAL POWER SYSTEMS INC"
+        ]
+      },
+      {
+        "recipient": "HENSOLDT",
+        "amount": 1746469.51,
+        "count": 5,
+        "raw_names": [
+          "HENSOLDT INC"
+        ]
+      },
+      {
+        "recipient": "COSPOLICH",
+        "amount": 1702986.0,
+        "count": 1,
+        "raw_names": [
+          "COSPOLICH INC."
+        ]
+      },
+      {
+        "recipient": "SHIPBOARD ELECTRICAL & AIR",
+        "amount": 1662187.51,
+        "count": 5,
+        "raw_names": [
+          "SHIPBOARD ELECTRICAL & AIR INC"
+        ]
+      },
+      {
+        "recipient": "N A W C A D 4.11.2",
+        "amount": 1527400.0,
+        "count": 2,
+        "raw_names": [
+          "N A W C A D 4.11.2"
+        ]
+      },
+      {
+        "recipient": "NTS TECHNICAL SYSTEMS",
+        "amount": 954853.45,
+        "count": 1,
+        "raw_names": [
+          "NTS TECHNICAL SYSTEMS, LLC"
+        ]
+      },
+      {
+        "recipient": "ARGON ST",
+        "amount": 906507.88,
+        "count": 2,
+        "raw_names": [
+          "ARGON ST, INC."
+        ]
+      },
+      {
+        "recipient": "DEFENSE MARITIME SOLUTIONS",
+        "amount": 839440.75,
+        "count": 2,
+        "raw_names": [
+          "DEFENSE MARITIME SOLUTIONS, INC."
+        ]
+      },
+      {
+        "recipient": "EPSILON SYSTEMS SOLUTIONS",
+        "amount": 532369.18,
+        "count": 2,
+        "raw_names": [
+          "EPSILON SYSTEMS SOLUTIONS, INC."
+        ]
+      },
+      {
+        "recipient": "CARIBOU THUNDER",
+        "amount": 460782.95999999996,
+        "count": 2,
+        "raw_names": [
+          "CARIBOU THUNDER, LLC"
+        ]
+      },
+      {
+        "recipient": "NORTH SHORE MARINE TERMINAL & LOGISTICS",
+        "amount": 361271.0,
+        "count": 1,
+        "raw_names": [
+          "NORTH SHORE MARINE TERMINAL & LOGISTICS INC"
+        ]
+      },
+      {
+        "recipient": "PHOENIX AIR GROUP",
+        "amount": 318947.16,
+        "count": 1,
+        "raw_names": [
+          "PHOENIX AIR GROUP, INC."
+        ]
+      },
+      {
+        "recipient": "COLONNA'S SHIP YARD, INCORPORATED",
+        "amount": 298293.57,
+        "count": 1,
+        "raw_names": [
+          "COLONNA'S SHIP YARD, INCORPORATED"
+        ]
+      },
+      {
+        "recipient": "NEAL TECHNICAL INNOVATIONS",
+        "amount": 267688.0,
+        "count": 2,
+        "raw_names": [
+          "NEAL TECHNICAL INNOVATIONS LLC"
+        ]
+      },
+      {
+        "recipient": "PACIFIC MARITIME INDUSTRIES",
+        "amount": 248323.0,
+        "count": 3,
+        "raw_names": [
+          "PACIFIC MARITIME INDUSTRIES CORP."
+        ]
+      },
+      {
+        "recipient": "PARKER-HANNIFIN",
+        "amount": 239802.21999999997,
+        "count": 3,
+        "raw_names": [
+          "PARKER-HANNIFIN CORPORATION"
+        ]
+      },
+      {
+        "recipient": "ATLANTIC DIVING SUPPLY",
+        "amount": 237882.88,
+        "count": 2,
+        "raw_names": [
+          "ATLANTIC DIVING SUPPLY, INC."
+        ]
+      },
+      {
+        "recipient": "TECNICO",
+        "amount": 212186.0,
+        "count": 2,
+        "raw_names": [
+          "TECNICO CORPORATION"
+        ]
+      },
+      {
+        "recipient": "IN-PLACE MACHINING",
+        "amount": 210595.58,
+        "count": 1,
+        "raw_names": [
+          "IN-PLACE MACHINING COMPANY, LLC"
+        ]
+      },
+      {
+        "recipient": "IN-DEPTH ENGINEERING",
+        "amount": 204325.7,
+        "count": 1,
+        "raw_names": [
+          "IN-DEPTH ENGINEERING CORPORATION"
+        ]
+      },
+      {
+        "recipient": "L3 TECHNOLOGIES",
+        "amount": 167330.29,
+        "count": 1,
+        "raw_names": [
+          "L3 TECHNOLOGIES, INC."
+        ]
+      },
+      {
+        "recipient": "WESCO DISTRIBUTION",
+        "amount": 167056.0,
+        "count": 1,
+        "raw_names": [
+          "WESCO DISTRIBUTION, INC."
+        ]
+      },
+      {
+        "recipient": "HANSA MEYER GLOBAL TRANSPORT USA",
+        "amount": 155543.96000000002,
+        "count": 2,
+        "raw_names": [
+          "HANSA MEYER GLOBAL TRANSPORT USA, LLC"
+        ]
+      },
+      {
+        "recipient": "ABCD MARINE",
+        "amount": 152776.25,
+        "count": 1,
+        "raw_names": [
+          "ABCD MARINE LLC"
+        ]
+      },
+      {
+        "recipient": "POWERSTAR",
+        "amount": 147900.0,
+        "count": 2,
+        "raw_names": [
+          "POWERSTAR INC"
+        ]
+      },
+      {
+        "recipient": "MACTECH INCORPORATED",
+        "amount": 143930.0,
+        "count": 3,
+        "raw_names": [
+          "MACTECH INCORPORATED"
+        ]
+      },
+      {
+        "recipient": "MFM SERVICES",
+        "amount": 131474.26,
+        "count": 1,
+        "raw_names": [
+          "MFM SERVICES LLC"
+        ]
+      },
+      {
+        "recipient": "FINCANTIERI MARINE SYSTEMS NORTH AMERICA",
+        "amount": 122705.42,
+        "count": 3,
+        "raw_names": [
+          "FINCANTIERI MARINE SYSTEMS NORTH AMERICA, INC."
+        ]
+      },
+      {
+        "recipient": "901 D",
+        "amount": 113828.0,
+        "count": 1,
+        "raw_names": [
+          "901 D LLC"
+        ]
+      },
+      {
+        "recipient": "UNIVERSAL PROTECTION SERVICE, LIMITED PARTNERSHIP",
+        "amount": 112887.6,
+        "count": 1,
+        "raw_names": [
+          "UNIVERSAL PROTECTION SERVICE, LIMITED PARTNERSHIP"
+        ]
+      },
+      {
+        "recipient": "EUROFINS ELECTRICAL AND ELECTRONIC TESTING NA",
+        "amount": 110300.0,
+        "count": 1,
+        "raw_names": [
+          "EUROFINS ELECTRICAL AND ELECTRONIC TESTING NA, LLC"
+        ]
+      },
+      {
+        "recipient": "HELI MOTION",
+        "amount": 106078.98,
+        "count": 1,
+        "raw_names": [
+          "HELI MOTION LLC"
+        ]
+      },
+      {
+        "recipient": "CARAHSOFT TECHNOLOGY",
+        "amount": 96329.25,
+        "count": 2,
+        "raw_names": [
+          "CARAHSOFT TECHNOLOGY CORP"
+        ]
+      },
+      {
+        "recipient": "GUARDSMARK",
+        "amount": 94396.17,
+        "count": 1,
+        "raw_names": [
+          "GUARDSMARK, LLC"
+        ]
+      },
+      {
+        "recipient": "SPARTON AYDIN",
+        "amount": 86360.0,
+        "count": 3,
+        "raw_names": [
+          "SPARTON AYDIN, LLC"
+        ]
+      }
+    ]
+  },
+  "N0002422C5500": {
+    "label": "Raytheon SPY-6 Production",
+    "prior_reported_billion": 1.42,
+    "naive_dedup_in_window_total": 1382787736.28,
+    "naive_dedup_record_count": 795,
+    "unique_sub_ids": 594,
+    "deduped_record_count": 594,
+    "total_amount_corrected": 1206858042.28,
+    "by_recipient_raw": [
+      {
+        "recipient": "GENERAL DYNAMICS MISSION SYSTEMS, INC.",
+        "amount": 359361721.0,
+        "count": 10
+      },
+      {
+        "recipient": "CAES SYSTEMS LLC",
+        "amount": 169608437.0,
+        "count": 11
+      },
+      {
+        "recipient": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "amount": 113854168.0,
+        "count": 3
+      },
+      {
+        "recipient": "GOLDEN STAR TECHNOLOGY INC",
+        "amount": 61583321.0,
+        "count": 12
+      },
+      {
+        "recipient": "ANAREN, INC.",
+        "amount": 57020783.0,
+        "count": 4
+      },
+      {
+        "recipient": "MAJOR TOOL & MACHINE INC",
+        "amount": 38951398.0,
+        "count": 8
+      },
+      {
+        "recipient": "TTM PRINTED CIRCUIT GROUP LLC",
+        "amount": 38230020.0,
+        "count": 8
+      },
+      {
+        "recipient": "DUCOMMUN LABARGE TECHNOLOGIES, INC.",
+        "amount": 21695524.0,
+        "count": 4
+      },
+      {
+        "recipient": "M.S.M. INDUSTRIES, INC.",
+        "amount": 21225217.0,
+        "count": 17
+      },
+      {
+        "recipient": "OPTIMA STANTRON CORP",
+        "amount": 20324903.0,
+        "count": 4
+      },
+      {
+        "recipient": "HONEYWELL INTERNATIONAL INC.",
+        "amount": 19123860.0,
+        "count": 4
+      },
+      {
+        "recipient": "TECHNOLOGY DYNAMICS, INC.",
+        "amount": 18448328.0,
+        "count": 7
+      },
+      {
+        "recipient": "SCI TECHNOLOGY, INC",
+        "amount": 17261919.0,
+        "count": 3
+      },
+      {
+        "recipient": "TELEDYNE BROWN ENGINEERING, INC.",
+        "amount": 16524143.0,
+        "count": 3
+      },
+      {
+        "recipient": "NEVADA HEAT TREATING, LLC",
+        "amount": 15718650.0,
+        "count": 4
+      },
+      {
+        "recipient": "BECON INC",
+        "amount": 12500147.0,
+        "count": 2
+      },
+      {
+        "recipient": "RIVERSIDE MACHINE AND ENGINEERING, INC.",
+        "amount": 12311210.0,
+        "count": 4
+      },
+      {
+        "recipient": "TTI INC.",
+        "amount": 9872002.0,
+        "count": 27
+      },
+      {
+        "recipient": "CRISTEK INTERCONNECTS, LLC",
+        "amount": 8203881.0,
+        "count": 6
+      },
+      {
+        "recipient": "MARWAY POWER SYSTEMS, INC",
+        "amount": 7233696.0,
+        "count": 4
+      },
+      {
+        "recipient": "TTM TECHNOLOGIES, INC",
+        "amount": 7027261.0,
+        "count": 3
+      },
+      {
+        "recipient": "BORG DESIGN INC",
+        "amount": 6543859.0,
+        "count": 6
+      },
+      {
+        "recipient": "KYOCERA AVX COMPONENTS CORPORATION",
+        "amount": 6496413.0,
+        "count": 8
+      },
+      {
+        "recipient": "TCLAD INC",
+        "amount": 6252898.0,
+        "count": 4
+      },
+      {
+        "recipient": "CRISTEK INTERCONNECTS INC",
+        "amount": 5936003.0,
+        "count": 3
+      },
+      {
+        "recipient": "BRAZONICS, INC.",
+        "amount": 5932051.0,
+        "count": 5
+      },
+      {
+        "recipient": "MIDCON CABLES CO, INC.",
+        "amount": 5243294.0,
+        "count": 4
+      },
+      {
+        "recipient": "MICRO-MODE PRODUCTS, INC.",
+        "amount": 4834594.0,
+        "count": 6
+      },
+      {
+        "recipient": "ARC TECHNOLOGY SOLUTIONS, LLC",
+        "amount": 4623612.0,
+        "count": 4
+      },
+      {
+        "recipient": "MAGNETIKA EAST LIMITED PARTNERSHIP",
+        "amount": 4542197.0,
+        "count": 4
+      },
+      {
+        "recipient": "GENERAL TOOL COMPANY",
+        "amount": 4294092.0,
+        "count": 2
+      },
+      {
+        "recipient": "TTM TECHNOLOGIES, INC.",
+        "amount": 4246393.0,
+        "count": 3
+      },
+      {
+        "recipient": "NORTH ATLANTIC INDUSTRIES, INC.",
+        "amount": 4167684.0,
+        "count": 5
+      },
+      {
+        "recipient": "ARROW ELECTRONICS, INC.",
+        "amount": 4126244.0,
+        "count": 39
+      },
+      {
+        "recipient": "PORT ELECTRONICS CORPORATION",
+        "amount": 4101657.0,
+        "count": 18
+      },
+      {
+        "recipient": "FIBER SYSTEMS INTERNATIONAL, INC.",
+        "amount": 4008685.0,
+        "count": 11
+      },
+      {
+        "recipient": "TTM TECHNOLOGIES NORTH AMERICA LLC",
+        "amount": 3808913.0,
+        "count": 1
+      },
+      {
+        "recipient": "PAYTON AMERICA, INC.",
+        "amount": 3561571.0,
+        "count": 6
+      },
+      {
+        "recipient": "REMTEC INC",
+        "amount": 3539826.0,
+        "count": 4
+      },
+      {
+        "recipient": "TRANSCON TECHNOLOGIES, LLC",
+        "amount": 3181089.0,
+        "count": 4
+      },
+      {
+        "recipient": "MIDCON CABLES CO., INC.",
+        "amount": 2940431.0,
+        "count": 7
+      },
+      {
+        "recipient": "AVNET INC",
+        "amount": 2648840.0,
+        "count": 13
+      },
+      {
+        "recipient": "AMETEK INC",
+        "amount": 2594814.0,
+        "count": 9
+      },
+      {
+        "recipient": "HI-REL PRODUCTS, LLC",
+        "amount": 2424973.0,
+        "count": 5
+      },
+      {
+        "recipient": "GLENAIR, INC.",
+        "amount": 2344680.0,
+        "count": 4
+      },
+      {
+        "recipient": "DEVICE ENGINEERING INC",
+        "amount": 2322453.0,
+        "count": 12
+      },
+      {
+        "recipient": "MERRILL TECHNOLOGIES GROUP, LLC",
+        "amount": 2174746.0,
+        "count": 4
+      },
+      {
+        "recipient": "BASIC ELECTRONICS, INC.",
+        "amount": 2124037.0,
+        "count": 4
+      },
+      {
+        "recipient": "SPECTRUM CONTROL INC",
+        "amount": 2056351.0,
+        "count": 6
+      },
+      {
+        "recipient": "JADE MANUFACTURING CO, INC",
+        "amount": 2015115.0,
+        "count": 15
+      }
+    ],
+    "by_recipient_normalized": [
+      {
+        "recipient": "GENERAL DYNAMICS MISSION SYSTEMS",
+        "amount": 359361721.0,
+        "count": 10,
+        "raw_names": [
+          "GENERAL DYNAMICS MISSION SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "CAES SYSTEMS",
+        "amount": 169608437.0,
+        "count": 11,
+        "raw_names": [
+          "CAES SYSTEMS LLC"
+        ]
+      },
+      {
+        "recipient": "NORTHROP GRUMMAN SYSTEMS",
+        "amount": 113854168.0,
+        "count": 3,
+        "raw_names": [
+          "NORTHROP GRUMMAN SYSTEMS CORPORATION"
+        ]
+      },
+      {
+        "recipient": "GOLDEN STAR TECHNOLOGY",
+        "amount": 61583321.0,
+        "count": 12,
+        "raw_names": [
+          "GOLDEN STAR TECHNOLOGY INC"
+        ]
+      },
+      {
+        "recipient": "ANAREN",
+        "amount": 57020783.0,
+        "count": 4,
+        "raw_names": [
+          "ANAREN, INC."
+        ]
+      },
+      {
+        "recipient": "MAJOR TOOL & MACHINE",
+        "amount": 38951398.0,
+        "count": 8,
+        "raw_names": [
+          "MAJOR TOOL & MACHINE INC"
+        ]
+      },
+      {
+        "recipient": "TTM PRINTED CIRCUIT GROUP",
+        "amount": 38230020.0,
+        "count": 8,
+        "raw_names": [
+          "TTM PRINTED CIRCUIT GROUP LLC"
+        ]
+      },
+      {
+        "recipient": "DUCOMMUN LABARGE TECHNOLOGIES",
+        "amount": 21695524.0,
+        "count": 4,
+        "raw_names": [
+          "DUCOMMUN LABARGE TECHNOLOGIES, INC."
+        ]
+      },
+      {
+        "recipient": "M.S.M. INDUSTRIES",
+        "amount": 21225217.0,
+        "count": 17,
+        "raw_names": [
+          "M.S.M. INDUSTRIES, INC."
+        ]
+      },
+      {
+        "recipient": "OPTIMA STANTRON",
+        "amount": 20324903.0,
+        "count": 4,
+        "raw_names": [
+          "OPTIMA STANTRON CORP"
+        ]
+      },
+      {
+        "recipient": "HONEYWELL INTERNATIONAL",
+        "amount": 19123860.0,
+        "count": 4,
+        "raw_names": [
+          "HONEYWELL INTERNATIONAL INC."
+        ]
+      },
+      {
+        "recipient": "TECHNOLOGY DYNAMICS",
+        "amount": 18448328.0,
+        "count": 7,
+        "raw_names": [
+          "TECHNOLOGY DYNAMICS, INC."
+        ]
+      },
+      {
+        "recipient": "SCI TECHNOLOGY",
+        "amount": 17261919.0,
+        "count": 3,
+        "raw_names": [
+          "SCI TECHNOLOGY, INC"
+        ]
+      },
+      {
+        "recipient": "TELEDYNE BROWN ENGINEERING",
+        "amount": 16524143.0,
+        "count": 3,
+        "raw_names": [
+          "TELEDYNE BROWN ENGINEERING, INC."
+        ]
+      },
+      {
+        "recipient": "NEVADA HEAT TREATING",
+        "amount": 15718650.0,
+        "count": 4,
+        "raw_names": [
+          "NEVADA HEAT TREATING, LLC"
+        ]
+      },
+      {
+        "recipient": "CRISTEK INTERCONNECTS",
+        "amount": 14139884.0,
+        "count": 9,
+        "raw_names": [
+          "CRISTEK INTERCONNECTS INC",
+          "CRISTEK INTERCONNECTS, LLC"
+        ]
+      },
+      {
+        "recipient": "BECON",
+        "amount": 12500147.0,
+        "count": 2,
+        "raw_names": [
+          "BECON INC"
+        ]
+      },
+      {
+        "recipient": "RIVERSIDE MACHINE AND ENGINEERING",
+        "amount": 12311210.0,
+        "count": 4,
+        "raw_names": [
+          "RIVERSIDE MACHINE AND ENGINEERING, INC."
+        ]
+      },
+      {
+        "recipient": "TTM TECHNOLOGIES",
+        "amount": 11273654.0,
+        "count": 6,
+        "raw_names": [
+          "TTM TECHNOLOGIES, INC",
+          "TTM TECHNOLOGIES, INC."
+        ]
+      },
+      {
+        "recipient": "TTI",
+        "amount": 11021663.0,
+        "count": 30,
+        "raw_names": [
+          "TTI INC",
+          "TTI INC."
+        ]
+      },
+      {
+        "recipient": "MIDCON CABLES",
+        "amount": 8183725.0,
+        "count": 11,
+        "raw_names": [
+          "MIDCON CABLES CO, INC.",
+          "MIDCON CABLES CO., INC."
+        ]
+      },
+      {
+        "recipient": "MARWAY POWER SYSTEMS",
+        "amount": 7233696.0,
+        "count": 4,
+        "raw_names": [
+          "MARWAY POWER SYSTEMS, INC"
+        ]
+      },
+      {
+        "recipient": "BORG DESIGN",
+        "amount": 6543859.0,
+        "count": 6,
+        "raw_names": [
+          "BORG DESIGN INC"
+        ]
+      },
+      {
+        "recipient": "KYOCERA AVX COMPONENTS",
+        "amount": 6496413.0,
+        "count": 8,
+        "raw_names": [
+          "KYOCERA AVX COMPONENTS CORPORATION"
+        ]
+      },
+      {
+        "recipient": "TCLAD",
+        "amount": 6252898.0,
+        "count": 4,
+        "raw_names": [
+          "TCLAD INC"
+        ]
+      },
+      {
+        "recipient": "BRAZONICS",
+        "amount": 5932051.0,
+        "count": 5,
+        "raw_names": [
+          "BRAZONICS, INC."
+        ]
+      },
+      {
+        "recipient": "MICRO-MODE PRODUCTS",
+        "amount": 4834594.0,
+        "count": 6,
+        "raw_names": [
+          "MICRO-MODE PRODUCTS, INC."
+        ]
+      },
+      {
+        "recipient": "ARC TECHNOLOGY SOLUTIONS",
+        "amount": 4623612.0,
+        "count": 4,
+        "raw_names": [
+          "ARC TECHNOLOGY SOLUTIONS, LLC"
+        ]
+      },
+      {
+        "recipient": "MAGNETIKA EAST LIMITED PARTNERSHIP",
+        "amount": 4542197.0,
+        "count": 4,
+        "raw_names": [
+          "MAGNETIKA EAST LIMITED PARTNERSHIP"
+        ]
+      },
+      {
+        "recipient": "GENERAL TOOL",
+        "amount": 4294092.0,
+        "count": 2,
+        "raw_names": [
+          "GENERAL TOOL COMPANY"
+        ]
+      },
+      {
+        "recipient": "NORTH ATLANTIC INDUSTRIES",
+        "amount": 4167684.0,
+        "count": 5,
+        "raw_names": [
+          "NORTH ATLANTIC INDUSTRIES, INC."
+        ]
+      },
+      {
+        "recipient": "ARROW ELECTRONICS",
+        "amount": 4126244.0,
+        "count": 39,
+        "raw_names": [
+          "ARROW ELECTRONICS, INC."
+        ]
+      },
+      {
+        "recipient": "PORT ELECTRONICS",
+        "amount": 4101657.0,
+        "count": 18,
+        "raw_names": [
+          "PORT ELECTRONICS CORPORATION"
+        ]
+      },
+      {
+        "recipient": "FIBER SYSTEMS INTERNATIONAL",
+        "amount": 4008685.0,
+        "count": 11,
+        "raw_names": [
+          "FIBER SYSTEMS INTERNATIONAL, INC."
+        ]
+      },
+      {
+        "recipient": "TTM TECHNOLOGIES NORTH AMERICA",
+        "amount": 3808913.0,
+        "count": 1,
+        "raw_names": [
+          "TTM TECHNOLOGIES NORTH AMERICA LLC"
+        ]
+      },
+      {
+        "recipient": "PAYTON AMERICA",
+        "amount": 3561571.0,
+        "count": 6,
+        "raw_names": [
+          "PAYTON AMERICA, INC."
+        ]
+      },
+      {
+        "recipient": "REMTEC",
+        "amount": 3539826.0,
+        "count": 4,
+        "raw_names": [
+          "REMTEC INC"
+        ]
+      },
+      {
+        "recipient": "AVNET",
+        "amount": 3215126.0,
+        "count": 14,
+        "raw_names": [
+          "AVNET INC",
+          "AVNET INC."
+        ]
+      },
+      {
+        "recipient": "TRANSCON TECHNOLOGIES",
+        "amount": 3181089.0,
+        "count": 4,
+        "raw_names": [
+          "TRANSCON TECHNOLOGIES, LLC"
+        ]
+      },
+      {
+        "recipient": "AMETEK",
+        "amount": 2594814.0,
+        "count": 9,
+        "raw_names": [
+          "AMETEK INC"
+        ]
+      },
+      {
+        "recipient": "SPECTRUM CONTROL",
+        "amount": 2563369.0,
+        "count": 8,
+        "raw_names": [
+          "SPECTRUM CONTROL INC",
+          "SPECTRUM CONTROL, INC."
+        ]
+      },
+      {
+        "recipient": "HI-REL PRODUCTS",
+        "amount": 2424973.0,
+        "count": 5,
+        "raw_names": [
+          "HI-REL PRODUCTS, LLC"
+        ]
+      },
+      {
+        "recipient": "GLENAIR",
+        "amount": 2344680.0,
+        "count": 4,
+        "raw_names": [
+          "GLENAIR, INC."
+        ]
+      },
+      {
+        "recipient": "DEVICE ENGINEERING",
+        "amount": 2322453.0,
+        "count": 12,
+        "raw_names": [
+          "DEVICE ENGINEERING INC"
+        ]
+      },
+      {
+        "recipient": "MERRILL TECHNOLOGIES GROUP",
+        "amount": 2174746.0,
+        "count": 4,
+        "raw_names": [
+          "MERRILL TECHNOLOGIES GROUP, LLC"
+        ]
+      },
+      {
+        "recipient": "BASIC ELECTRONICS",
+        "amount": 2124037.0,
+        "count": 4,
+        "raw_names": [
+          "BASIC ELECTRONICS, INC."
+        ]
+      },
+      {
+        "recipient": "JADE MANUFACTURING",
+        "amount": 2015115.0,
+        "count": 15,
+        "raw_names": [
+          "JADE MANUFACTURING CO, INC"
+        ]
+      },
+      {
+        "recipient": "PRESIDIO COMPONENTS",
+        "amount": 1931634.0,
+        "count": 3,
+        "raw_names": [
+          "PRESIDIO COMPONENTS, INC."
+        ]
+      },
+      {
+        "recipient": "SANMINA",
+        "amount": 1807612.0,
+        "count": 2,
+        "raw_names": [
+          "SANMINA CORPORATION"
+        ]
+      },
+      {
+        "recipient": "D & G MACHINE PRODUCTS",
+        "amount": 1796607.0,
+        "count": 10,
+        "raw_names": [
+          "D & G MACHINE PRODUCTS INC"
+        ]
+      }
+    ]
+  },
+  "N0002416C5363": {
+    "label": "LM SEWIP Block 2",
+    "prior_reported_billion": 2.85,
+    "naive_dedup_in_window_total": 1241968511.4200013,
+    "naive_dedup_record_count": 204,
+    "unique_sub_ids": 62,
+    "deduped_record_count": 62,
+    "total_amount_corrected": 328436795.25,
+    "by_recipient_raw": [
+      {
+        "recipient": "CAES SYSTEMS LLC",
+        "amount": 109760386.79,
+        "count": 6
+      },
+      {
+        "recipient": "MERCURY SYSTEMS INC",
+        "amount": 85192189.1,
+        "count": 3
+      },
+      {
+        "recipient": "NARDA HOLDINGS, INC.",
+        "amount": 37862512.0,
+        "count": 1
+      },
+      {
+        "recipient": "LINEAR PHOTONICS LLC",
+        "amount": 34349800.0,
+        "count": 2
+      },
+      {
+        "recipient": "ABACO SYSTEMS, INC.",
+        "amount": 14531824.75,
+        "count": 3
+      },
+      {
+        "recipient": "PRODUCTION ENGINEERING CORPORATION",
+        "amount": 13364951.41,
+        "count": 2
+      },
+      {
+        "recipient": "STELLANT PST CORPORATION",
+        "amount": 6938780.17,
+        "count": 2
+      },
+      {
+        "recipient": "CAES MISSION SYSTEMS LLC",
+        "amount": 5400582.94,
+        "count": 2
+      },
+      {
+        "recipient": "OMNIYIG, INC.",
+        "amount": 3646500.0,
+        "count": 1
+      },
+      {
+        "recipient": "FREEDOM POWER SYSTEMS, INC.",
+        "amount": 3371300.0,
+        "count": 1
+      },
+      {
+        "recipient": "TELEDYNE TECHNOLOGIES INCORPORATED",
+        "amount": 2883312.56,
+        "count": 1
+      },
+      {
+        "recipient": "INTERCONNECT SYSTEMS INTERNATIONAL, LLC",
+        "amount": 2649695.0,
+        "count": 1
+      },
+      {
+        "recipient": "SPECTRUM MICROWAVE, INC.",
+        "amount": 2329972.0,
+        "count": 2
+      },
+      {
+        "recipient": "INTELLIPOWER, INC.",
+        "amount": 1744878.2,
+        "count": 1
+      },
+      {
+        "recipient": "AXILLON AEROSPACE (BALTIMORE) INC.",
+        "amount": 839370.0,
+        "count": 1
+      },
+      {
+        "recipient": "ADVANTECH INDUSTRIES, INC.",
+        "amount": 786917.0,
+        "count": 8
+      },
+      {
+        "recipient": "ACTALENT SERVICES, LLC",
+        "amount": 726042.4,
+        "count": 2
+      },
+      {
+        "recipient": "ADVANCED CONVERSION TECHNOLOGY INC",
+        "amount": 274829.0,
+        "count": 1
+      },
+      {
+        "recipient": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+        "amount": 239004.43,
+        "count": 2
+      },
+      {
+        "recipient": "ACROMAG, INCORPORATED",
+        "amount": 231735.0,
+        "count": 1
+      },
+      {
+        "recipient": "NEWARK CORPORATION",
+        "amount": 202146.65999999997,
+        "count": 2
+      },
+      {
+        "recipient": "ATRENNE COMPUTING SOLUTIONS, LLC",
+        "amount": 181716.0,
+        "count": 1
+      },
+      {
+        "recipient": "PENWAY INC",
+        "amount": 117906.0,
+        "count": 2
+      },
+      {
+        "recipient": "PIONEER INDUSTRIES, LLC",
+        "amount": 105675.24,
+        "count": 1
+      },
+      {
+        "recipient": "SHOCK TECH INC",
+        "amount": 86986.0,
+        "count": 1
+      },
+      {
+        "recipient": "REAL-TIME INNOVATIONS, INC.",
+        "amount": 86500.0,
+        "count": 2
+      },
+      {
+        "recipient": "GLENAIR, INC.",
+        "amount": 86490.18,
+        "count": 1
+      },
+      {
+        "recipient": "COLAMCO INC",
+        "amount": 82721.08,
+        "count": 2
+      },
+      {
+        "recipient": "PATHFINDER INDUSTRIES, INC.",
+        "amount": 79195.86,
+        "count": 1
+      },
+      {
+        "recipient": "SIRIUS FEDERAL LLC",
+        "amount": 71980.95,
+        "count": 1
+      },
+      {
+        "recipient": "ANACAPA MICRO PRODUCTS, INC.",
+        "amount": 57354.15,
+        "count": 1
+      },
+      {
+        "recipient": "EASI, LLC",
+        "amount": 44679.98,
+        "count": 1
+      },
+      {
+        "recipient": "DELL FEDERAL SYSTEMS L.P",
+        "amount": 39058.4,
+        "count": 1
+      },
+      {
+        "recipient": "NORTHEASTERN ELECTRONICS CO., INC.",
+        "amount": 38012.0,
+        "count": 1
+      },
+      {
+        "recipient": "BERND GROUP, INC., THE",
+        "amount": 31790.0,
+        "count": 1
+      }
+    ],
+    "by_recipient_normalized": [
+      {
+        "recipient": "CAES SYSTEMS",
+        "amount": 109760386.79,
+        "count": 6,
+        "raw_names": [
+          "CAES SYSTEMS LLC"
+        ]
+      },
+      {
+        "recipient": "MERCURY SYSTEMS",
+        "amount": 85192189.1,
+        "count": 3,
+        "raw_names": [
+          "MERCURY SYSTEMS INC"
+        ]
+      },
+      {
+        "recipient": "NARDA",
+        "amount": 37862512.0,
+        "count": 1,
+        "raw_names": [
+          "NARDA HOLDINGS, INC."
+        ]
+      },
+      {
+        "recipient": "LINEAR PHOTONICS",
+        "amount": 34349800.0,
+        "count": 2,
+        "raw_names": [
+          "LINEAR PHOTONICS LLC"
+        ]
+      },
+      {
+        "recipient": "ABACO SYSTEMS",
+        "amount": 14531824.75,
+        "count": 3,
+        "raw_names": [
+          "ABACO SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "PRODUCTION ENGINEERING",
+        "amount": 13364951.41,
+        "count": 2,
+        "raw_names": [
+          "PRODUCTION ENGINEERING CORPORATION"
+        ]
+      },
+      {
+        "recipient": "STELLANT PST",
+        "amount": 6938780.17,
+        "count": 2,
+        "raw_names": [
+          "STELLANT PST CORPORATION"
+        ]
+      },
+      {
+        "recipient": "CAES MISSION SYSTEMS",
+        "amount": 5400582.94,
+        "count": 2,
+        "raw_names": [
+          "CAES MISSION SYSTEMS LLC"
+        ]
+      },
+      {
+        "recipient": "OMNIYIG",
+        "amount": 3646500.0,
+        "count": 1,
+        "raw_names": [
+          "OMNIYIG, INC."
+        ]
+      },
+      {
+        "recipient": "FREEDOM POWER SYSTEMS",
+        "amount": 3371300.0,
+        "count": 1,
+        "raw_names": [
+          "FREEDOM POWER SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "TELEDYNE TECHNOLOGIES INCORPORATED",
+        "amount": 2883312.56,
+        "count": 1,
+        "raw_names": [
+          "TELEDYNE TECHNOLOGIES INCORPORATED"
+        ]
+      },
+      {
+        "recipient": "INTERCONNECT SYSTEMS INTERNATIONAL",
+        "amount": 2649695.0,
+        "count": 1,
+        "raw_names": [
+          "INTERCONNECT SYSTEMS INTERNATIONAL, LLC"
+        ]
+      },
+      {
+        "recipient": "SPECTRUM MICROWAVE",
+        "amount": 2329972.0,
+        "count": 2,
+        "raw_names": [
+          "SPECTRUM MICROWAVE, INC."
+        ]
+      },
+      {
+        "recipient": "INTELLIPOWER",
+        "amount": 1744878.2,
+        "count": 1,
+        "raw_names": [
+          "INTELLIPOWER, INC."
+        ]
+      },
+      {
+        "recipient": "AXILLON AEROSPACE (BALTIMORE)",
+        "amount": 839370.0,
+        "count": 1,
+        "raw_names": [
+          "AXILLON AEROSPACE (BALTIMORE) INC."
+        ]
+      },
+      {
+        "recipient": "ADVANTECH INDUSTRIES",
+        "amount": 786917.0,
+        "count": 8,
+        "raw_names": [
+          "ADVANTECH INDUSTRIES, INC."
+        ]
+      },
+      {
+        "recipient": "ACTALENT SERVICES",
+        "amount": 726042.4,
+        "count": 2,
+        "raw_names": [
+          "ACTALENT SERVICES, LLC"
+        ]
+      },
+      {
+        "recipient": "ADVANCED CONVERSION TECHNOLOGY",
+        "amount": 274829.0,
+        "count": 1,
+        "raw_names": [
+          "ADVANCED CONVERSION TECHNOLOGY INC"
+        ]
+      },
+      {
+        "recipient": "SCIENCE APPLICATIONS INTERNATIONAL",
+        "amount": 239004.43,
+        "count": 2,
+        "raw_names": [
+          "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION"
+        ]
+      },
+      {
+        "recipient": "ACROMAG, INCORPORATED",
+        "amount": 231735.0,
+        "count": 1,
+        "raw_names": [
+          "ACROMAG, INCORPORATED"
+        ]
+      },
+      {
+        "recipient": "NEWARK",
+        "amount": 202146.65999999997,
+        "count": 2,
+        "raw_names": [
+          "NEWARK CORPORATION"
+        ]
+      },
+      {
+        "recipient": "ATRENNE COMPUTING SOLUTIONS",
+        "amount": 181716.0,
+        "count": 1,
+        "raw_names": [
+          "ATRENNE COMPUTING SOLUTIONS, LLC"
+        ]
+      },
+      {
+        "recipient": "PENWAY",
+        "amount": 117906.0,
+        "count": 2,
+        "raw_names": [
+          "PENWAY INC"
+        ]
+      },
+      {
+        "recipient": "PIONEER INDUSTRIES",
+        "amount": 105675.24,
+        "count": 1,
+        "raw_names": [
+          "PIONEER INDUSTRIES, LLC"
+        ]
+      },
+      {
+        "recipient": "SHOCK TECH",
+        "amount": 86986.0,
+        "count": 1,
+        "raw_names": [
+          "SHOCK TECH INC"
+        ]
+      },
+      {
+        "recipient": "REAL-TIME INNOVATIONS",
+        "amount": 86500.0,
+        "count": 2,
+        "raw_names": [
+          "REAL-TIME INNOVATIONS, INC."
+        ]
+      },
+      {
+        "recipient": "GLENAIR",
+        "amount": 86490.18,
+        "count": 1,
+        "raw_names": [
+          "GLENAIR, INC."
+        ]
+      },
+      {
+        "recipient": "COLAMCO",
+        "amount": 82721.08,
+        "count": 2,
+        "raw_names": [
+          "COLAMCO INC"
+        ]
+      },
+      {
+        "recipient": "PATHFINDER INDUSTRIES",
+        "amount": 79195.86,
+        "count": 1,
+        "raw_names": [
+          "PATHFINDER INDUSTRIES, INC."
+        ]
+      },
+      {
+        "recipient": "SIRIUS FEDERAL",
+        "amount": 71980.95,
+        "count": 1,
+        "raw_names": [
+          "SIRIUS FEDERAL LLC"
+        ]
+      },
+      {
+        "recipient": "ANACAPA MICRO PRODUCTS",
+        "amount": 57354.15,
+        "count": 1,
+        "raw_names": [
+          "ANACAPA MICRO PRODUCTS, INC."
+        ]
+      },
+      {
+        "recipient": "EASI",
+        "amount": 44679.98,
+        "count": 1,
+        "raw_names": [
+          "EASI, LLC"
+        ]
+      },
+      {
+        "recipient": "DELL FEDERAL SYSTEMS L.P",
+        "amount": 39058.4,
+        "count": 1,
+        "raw_names": [
+          "DELL FEDERAL SYSTEMS L.P"
+        ]
+      },
+      {
+        "recipient": "NORTHEASTERN ELECTRONICS",
+        "amount": 38012.0,
+        "count": 1,
+        "raw_names": [
+          "NORTHEASTERN ELECTRONICS CO., INC."
+        ]
+      },
+      {
+        "recipient": "BERND GROUP, INC., THE",
+        "amount": 31790.0,
+        "count": 1,
+        "raw_names": [
+          "BERND GROUP, INC., THE"
+        ]
+      }
+    ]
+  },
+  "N0002420C5503": {
+    "label": "LM SLQ-32(V)6 Production",
+    "prior_reported_billion": 1.42,
+    "naive_dedup_in_window_total": 1415268160.0000024,
+    "naive_dedup_record_count": 612,
+    "unique_sub_ids": 187,
+    "deduped_record_count": 187,
+    "total_amount_corrected": 328611658.19999987,
+    "by_recipient_raw": [
+      {
+        "recipient": "CAES SYSTEMS LLC",
+        "amount": 94705719.92,
+        "count": 4
+      },
+      {
+        "recipient": "MERCURY SYSTEMS INC",
+        "amount": 43213125.18,
+        "count": 3
+      },
+      {
+        "recipient": "NARDA HOLDINGS, INC.",
+        "amount": 23472512.0,
+        "count": 3
+      },
+      {
+        "recipient": "RA WOOD ASSOCIATES LLC",
+        "amount": 22481828.38,
+        "count": 6
+      },
+      {
+        "recipient": "LINEAR PHOTONICS LLC",
+        "amount": 20239924.0,
+        "count": 2
+      },
+      {
+        "recipient": "SMITHS INTERCONNECT INC",
+        "amount": 12473793.0,
+        "count": 4
+      },
+      {
+        "recipient": "ABACO SYSTEMS, INC.",
+        "amount": 11313928.05,
+        "count": 5
+      },
+      {
+        "recipient": "TELEDYNE DEFENSE ELECTRONICS, LLC",
+        "amount": 10951286.500000002,
+        "count": 15
+      },
+      {
+        "recipient": "CAES MISSION SYSTEMS LLC",
+        "amount": 9352884.0,
+        "count": 2
+      },
+      {
+        "recipient": "ATRENNE COMPUTING SOLUTIONS, LLC",
+        "amount": 8435087.96,
+        "count": 2
+      },
+      {
+        "recipient": "PRODUCTION ENGINEERING CORPORATION",
+        "amount": 8069643.33,
+        "count": 3
+      },
+      {
+        "recipient": "MACOM TECHNOLOGY SOLUTIONS INC.",
+        "amount": 7224656.09,
+        "count": 1
+      },
+      {
+        "recipient": "DRS SIGNAL SOLUTIONS, INC.",
+        "amount": 6267744.0,
+        "count": 1
+      },
+      {
+        "recipient": "ADVANCED CONVERSION TECHNOLOGY INC",
+        "amount": 5498388.0,
+        "count": 1
+      },
+      {
+        "recipient": "SMITHS INTERCONNECT, INC.",
+        "amount": 5269235.0,
+        "count": 1
+      },
+      {
+        "recipient": "TELEDYNE LIMITED",
+        "amount": 3968675.0,
+        "count": 1
+      },
+      {
+        "recipient": "STELLANT PST CORPORATION",
+        "amount": 3561700.0,
+        "count": 1
+      },
+      {
+        "recipient": "ELECTROMET CORPORATION",
+        "amount": 3260107.2800000003,
+        "count": 2
+      },
+      {
+        "recipient": "MACROLINK, INC.",
+        "amount": 3013934.0,
+        "count": 1
+      },
+      {
+        "recipient": "INTERCONNECT SYSTEMS INTERNATIONAL, LLC",
+        "amount": 2573892.0,
+        "count": 1
+      },
+      {
+        "recipient": "TELEDYNE BROWN ENGINEERING, INC.",
+        "amount": 2237487.9299999997,
+        "count": 2
+      },
+      {
+        "recipient": "SPECTRUM MICROWAVE, INC.",
+        "amount": 2064491.03,
+        "count": 3
+      },
+      {
+        "recipient": "FEI-ELCOM TECH, INC.",
+        "amount": 1950506.0,
+        "count": 1
+      },
+      {
+        "recipient": "ROTRON INCORPORATED",
+        "amount": 1769135.0,
+        "count": 6
+      },
+      {
+        "recipient": "OMNIYIG, INC.",
+        "amount": 1703000.0,
+        "count": 1
+      },
+      {
+        "recipient": "FREEDOM POWER SYSTEMS, INC.",
+        "amount": 1535757.0,
+        "count": 1
+      },
+      {
+        "recipient": "INTELLIPOWER, INC.",
+        "amount": 1171891.05,
+        "count": 1
+      },
+      {
+        "recipient": "DOW-KEY MICROWAVE LLC",
+        "amount": 931407.0,
+        "count": 4
+      },
+      {
+        "recipient": "WIDE BAND SYSTEMS, INC",
+        "amount": 881534.0,
+        "count": 1
+      },
+      {
+        "recipient": "CRYSTAL GROUP, INC",
+        "amount": 780858.0,
+        "count": 3
+      },
+      {
+        "recipient": "METAL PARTS MANUFACTURING INC",
+        "amount": 678102.0,
+        "count": 2
+      },
+      {
+        "recipient": "ACROMAG, INCORPORATED",
+        "amount": 639520.0,
+        "count": 1
+      },
+      {
+        "recipient": "HEILIND MIL-AERO LLC",
+        "amount": 552200.4299999999,
+        "count": 8
+      },
+      {
+        "recipient": "ADVANTECH INDUSTRIES, INC.",
+        "amount": 460325.0,
+        "count": 4
+      },
+      {
+        "recipient": "SPECTRUM MICROWAVE INC",
+        "amount": 445165.9,
+        "count": 2
+      },
+      {
+        "recipient": "T E TECHNOLOGY, INC.",
+        "amount": 435183.0,
+        "count": 3
+      },
+      {
+        "recipient": "WIND RIVER SYSTEMS, INC.",
+        "amount": 419241.04,
+        "count": 2
+      },
+      {
+        "recipient": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+        "amount": 365486.87,
+        "count": 8
+      },
+      {
+        "recipient": "WESTERN NEW YORK FLUID SYSTEM TECHNOLOGIES, INC.",
+        "amount": 343897.98,
+        "count": 2
+      },
+      {
+        "recipient": "METAL PARTS MANUFACTURING, INC.",
+        "amount": 324882.0,
+        "count": 4
+      },
+      {
+        "recipient": "CORNING OPTICAL COMMUNICATIONS RF LLC",
+        "amount": 294914.77,
+        "count": 5
+      },
+      {
+        "recipient": "DIAMOND USA INC.",
+        "amount": 282998.98,
+        "count": 4
+      },
+      {
+        "recipient": "GLENAIR, INC.",
+        "amount": 260806.71000000002,
+        "count": 5
+      },
+      {
+        "recipient": "NEWARK CORPORATION",
+        "amount": 241745.36,
+        "count": 4
+      },
+      {
+        "recipient": "EAST COAST MICROWAVE SALES & DISTRIBUTION LLC",
+        "amount": 194613.25,
+        "count": 3
+      },
+      {
+        "recipient": "POWELL ELECTRONICS, INC.",
+        "amount": 186327.97000000003,
+        "count": 4
+      },
+      {
+        "recipient": "UNITED ELECTRONIC INDUSTRIES INC",
+        "amount": 174472.0,
+        "count": 3
+      },
+      {
+        "recipient": "HUBER + SUHNER, INC",
+        "amount": 136699.62,
+        "count": 3
+      },
+      {
+        "recipient": "PENWAY INC",
+        "amount": 131560.0,
+        "count": 1
+      },
+      {
+        "recipient": "TTI, INC.",
+        "amount": 131195.22,
+        "count": 2
+      }
+    ],
+    "by_recipient_normalized": [
+      {
+        "recipient": "CAES SYSTEMS",
+        "amount": 94705719.92,
+        "count": 4,
+        "raw_names": [
+          "CAES SYSTEMS LLC"
+        ]
+      },
+      {
+        "recipient": "MERCURY SYSTEMS",
+        "amount": 43213125.18,
+        "count": 3,
+        "raw_names": [
+          "MERCURY SYSTEMS INC"
+        ]
+      },
+      {
+        "recipient": "NARDA",
+        "amount": 23472512.0,
+        "count": 3,
+        "raw_names": [
+          "NARDA HOLDINGS, INC."
+        ]
+      },
+      {
+        "recipient": "RA WOOD ASSOCIATES",
+        "amount": 22481828.38,
+        "count": 6,
+        "raw_names": [
+          "RA WOOD ASSOCIATES LLC"
+        ]
+      },
+      {
+        "recipient": "LINEAR PHOTONICS",
+        "amount": 20239924.0,
+        "count": 2,
+        "raw_names": [
+          "LINEAR PHOTONICS LLC"
+        ]
+      },
+      {
+        "recipient": "SMITHS INTERCONNECT",
+        "amount": 17743028.0,
+        "count": 5,
+        "raw_names": [
+          "SMITHS INTERCONNECT INC",
+          "SMITHS INTERCONNECT, INC."
+        ]
+      },
+      {
+        "recipient": "ABACO SYSTEMS",
+        "amount": 11313928.05,
+        "count": 5,
+        "raw_names": [
+          "ABACO SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "TELEDYNE DEFENSE ELECTRONICS",
+        "amount": 10951286.500000002,
+        "count": 15,
+        "raw_names": [
+          "TELEDYNE DEFENSE ELECTRONICS, LLC"
+        ]
+      },
+      {
+        "recipient": "CAES MISSION SYSTEMS",
+        "amount": 9352884.0,
+        "count": 2,
+        "raw_names": [
+          "CAES MISSION SYSTEMS LLC"
+        ]
+      },
+      {
+        "recipient": "ATRENNE COMPUTING SOLUTIONS",
+        "amount": 8435087.96,
+        "count": 2,
+        "raw_names": [
+          "ATRENNE COMPUTING SOLUTIONS, LLC"
+        ]
+      },
+      {
+        "recipient": "PRODUCTION ENGINEERING",
+        "amount": 8069643.33,
+        "count": 3,
+        "raw_names": [
+          "PRODUCTION ENGINEERING CORPORATION"
+        ]
+      },
+      {
+        "recipient": "MACOM TECHNOLOGY SOLUTIONS",
+        "amount": 7224656.09,
+        "count": 1,
+        "raw_names": [
+          "MACOM TECHNOLOGY SOLUTIONS INC."
+        ]
+      },
+      {
+        "recipient": "DRS SIGNAL SOLUTIONS",
+        "amount": 6267744.0,
+        "count": 1,
+        "raw_names": [
+          "DRS SIGNAL SOLUTIONS, INC."
+        ]
+      },
+      {
+        "recipient": "ADVANCED CONVERSION TECHNOLOGY",
+        "amount": 5498388.0,
+        "count": 1,
+        "raw_names": [
+          "ADVANCED CONVERSION TECHNOLOGY INC"
+        ]
+      },
+      {
+        "recipient": "TELEDYNE LIMITED",
+        "amount": 3968675.0,
+        "count": 1,
+        "raw_names": [
+          "TELEDYNE LIMITED"
+        ]
+      },
+      {
+        "recipient": "STELLANT PST",
+        "amount": 3561700.0,
+        "count": 1,
+        "raw_names": [
+          "STELLANT PST CORPORATION"
+        ]
+      },
+      {
+        "recipient": "ELECTROMET",
+        "amount": 3260107.2800000003,
+        "count": 2,
+        "raw_names": [
+          "ELECTROMET CORPORATION"
+        ]
+      },
+      {
+        "recipient": "MACROLINK",
+        "amount": 3013934.0,
+        "count": 1,
+        "raw_names": [
+          "MACROLINK, INC."
+        ]
+      },
+      {
+        "recipient": "INTERCONNECT SYSTEMS INTERNATIONAL",
+        "amount": 2573892.0,
+        "count": 1,
+        "raw_names": [
+          "INTERCONNECT SYSTEMS INTERNATIONAL, LLC"
+        ]
+      },
+      {
+        "recipient": "SPECTRUM MICROWAVE",
+        "amount": 2509656.9299999997,
+        "count": 5,
+        "raw_names": [
+          "SPECTRUM MICROWAVE INC",
+          "SPECTRUM MICROWAVE, INC."
+        ]
+      },
+      {
+        "recipient": "TELEDYNE BROWN ENGINEERING",
+        "amount": 2237487.9299999997,
+        "count": 2,
+        "raw_names": [
+          "TELEDYNE BROWN ENGINEERING, INC."
+        ]
+      },
+      {
+        "recipient": "FEI-ELCOM TECH",
+        "amount": 1950506.0,
+        "count": 1,
+        "raw_names": [
+          "FEI-ELCOM TECH, INC."
+        ]
+      },
+      {
+        "recipient": "ROTRON INCORPORATED",
+        "amount": 1769135.0,
+        "count": 6,
+        "raw_names": [
+          "ROTRON INCORPORATED"
+        ]
+      },
+      {
+        "recipient": "OMNIYIG",
+        "amount": 1703000.0,
+        "count": 1,
+        "raw_names": [
+          "OMNIYIG, INC."
+        ]
+      },
+      {
+        "recipient": "FREEDOM POWER SYSTEMS",
+        "amount": 1535757.0,
+        "count": 1,
+        "raw_names": [
+          "FREEDOM POWER SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "INTELLIPOWER",
+        "amount": 1171891.05,
+        "count": 1,
+        "raw_names": [
+          "INTELLIPOWER, INC."
+        ]
+      },
+      {
+        "recipient": "METAL PARTS MANUFACTURING",
+        "amount": 1002984.0,
+        "count": 6,
+        "raw_names": [
+          "METAL PARTS MANUFACTURING INC",
+          "METAL PARTS MANUFACTURING, INC."
+        ]
+      },
+      {
+        "recipient": "DOW-KEY MICROWAVE",
+        "amount": 931407.0,
+        "count": 4,
+        "raw_names": [
+          "DOW-KEY MICROWAVE LLC"
+        ]
+      },
+      {
+        "recipient": "WIDE BAND SYSTEMS",
+        "amount": 881534.0,
+        "count": 1,
+        "raw_names": [
+          "WIDE BAND SYSTEMS, INC"
+        ]
+      },
+      {
+        "recipient": "CRYSTAL GROUP",
+        "amount": 780858.0,
+        "count": 3,
+        "raw_names": [
+          "CRYSTAL GROUP, INC"
+        ]
+      },
+      {
+        "recipient": "ACROMAG, INCORPORATED",
+        "amount": 639520.0,
+        "count": 1,
+        "raw_names": [
+          "ACROMAG, INCORPORATED"
+        ]
+      },
+      {
+        "recipient": "ADVANTECH INDUSTRIES",
+        "amount": 553725.0,
+        "count": 5,
+        "raw_names": [
+          "ADVANTECH INDUSTRIES INC",
+          "ADVANTECH INDUSTRIES, INC."
+        ]
+      },
+      {
+        "recipient": "HEILIND MIL-AERO",
+        "amount": 552200.4299999999,
+        "count": 8,
+        "raw_names": [
+          "HEILIND MIL-AERO LLC"
+        ]
+      },
+      {
+        "recipient": "T E TECHNOLOGY",
+        "amount": 435183.0,
+        "count": 3,
+        "raw_names": [
+          "T E TECHNOLOGY, INC."
+        ]
+      },
+      {
+        "recipient": "WIND RIVER SYSTEMS",
+        "amount": 419241.04,
+        "count": 2,
+        "raw_names": [
+          "WIND RIVER SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "SCIENCE APPLICATIONS INTERNATIONAL",
+        "amount": 365486.87,
+        "count": 8,
+        "raw_names": [
+          "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION"
+        ]
+      },
+      {
+        "recipient": "WESTERN NEW YORK FLUID SYSTEM TECHNOLOGIES",
+        "amount": 343897.98,
+        "count": 2,
+        "raw_names": [
+          "WESTERN NEW YORK FLUID SYSTEM TECHNOLOGIES, INC."
+        ]
+      },
+      {
+        "recipient": "CORNING OPTICAL COMMUNICATIONS RF",
+        "amount": 294914.77,
+        "count": 5,
+        "raw_names": [
+          "CORNING OPTICAL COMMUNICATIONS RF LLC"
+        ]
+      },
+      {
+        "recipient": "DIAMOND USA",
+        "amount": 282998.98,
+        "count": 4,
+        "raw_names": [
+          "DIAMOND USA INC."
+        ]
+      },
+      {
+        "recipient": "GLENAIR",
+        "amount": 260806.71000000002,
+        "count": 5,
+        "raw_names": [
+          "GLENAIR, INC."
+        ]
+      },
+      {
+        "recipient": "NEWARK",
+        "amount": 241745.36,
+        "count": 4,
+        "raw_names": [
+          "NEWARK CORPORATION"
+        ]
+      },
+      {
+        "recipient": "EAST COAST MICROWAVE SALES & DISTRIBUTION",
+        "amount": 194613.25,
+        "count": 3,
+        "raw_names": [
+          "EAST COAST MICROWAVE SALES & DISTRIBUTION LLC"
+        ]
+      },
+      {
+        "recipient": "POWELL ELECTRONICS",
+        "amount": 186327.97000000003,
+        "count": 4,
+        "raw_names": [
+          "POWELL ELECTRONICS, INC."
+        ]
+      },
+      {
+        "recipient": "UNITED ELECTRONIC INDUSTRIES",
+        "amount": 174472.0,
+        "count": 3,
+        "raw_names": [
+          "UNITED ELECTRONIC INDUSTRIES INC"
+        ]
+      },
+      {
+        "recipient": "HUBER + SUHNER",
+        "amount": 136699.62,
+        "count": 3,
+        "raw_names": [
+          "HUBER + SUHNER, INC"
+        ]
+      },
+      {
+        "recipient": "PENWAY",
+        "amount": 131560.0,
+        "count": 1,
+        "raw_names": [
+          "PENWAY INC"
+        ]
+      },
+      {
+        "recipient": "TTI",
+        "amount": 131195.22,
+        "count": 2,
+        "raw_names": [
+          "TTI, INC."
+        ]
+      },
+      {
+        "recipient": "TELEDYNE UK LIMITED",
+        "amount": 127379.98,
+        "count": 2,
+        "raw_names": [
+          "TELEDYNE UK LIMITED"
+        ]
+      },
+      {
+        "recipient": "SYSTEMS INTEGRATION PLUS",
+        "amount": 121692.0,
+        "count": 2,
+        "raw_names": [
+          "SYSTEMS INTEGRATION PLUS, LLC"
+        ]
+      },
+      {
+        "recipient": "RICHLIND METAL FABRICATORS",
+        "amount": 113899.8,
+        "count": 3,
+        "raw_names": [
+          "RICHLIND METAL FABRICATORS, LLC"
+        ]
+      }
+    ]
+  },
+  "N0002417C6311": {
+    "label": "NG Knifefish/LCS systems",
+    "prior_reported_billion": 1.475,
+    "naive_dedup_in_window_total": 127368978.33999996,
+    "naive_dedup_record_count": 57,
+    "unique_sub_ids": 36,
+    "deduped_record_count": 36,
+    "total_amount_corrected": 37031735.37,
+    "by_recipient_raw": [
+      {
+        "recipient": "FAIRLEAD INTEGRATED, LLC",
+        "amount": 16871797.57,
+        "count": 6
+      },
+      {
+        "recipient": "GENERAL DYNAMICS MISSION SYSTEMS, INC.",
+        "amount": 12856904.0,
+        "count": 2
+      },
+      {
+        "recipient": "TELEDYNE BROWN ENGINEERING, INC.",
+        "amount": 3571523.75,
+        "count": 2
+      },
+      {
+        "recipient": "NIELSEN BEAUMONT MARINE, INC.",
+        "amount": 1223553.9700000002,
+        "count": 6
+      },
+      {
+        "recipient": "A-1 TRUCK & EQUIPMENT INC",
+        "amount": 828903.92,
+        "count": 8
+      },
+      {
+        "recipient": "MARITIME APPLIED PHYSICS CORPORATION",
+        "amount": 668013.6799999999,
+        "count": 2
+      },
+      {
+        "recipient": "ANACAPA WATERBLASTING, INC.",
+        "amount": 505413.58999999997,
+        "count": 5
+      },
+      {
+        "recipient": "SOUTHLAND TECHNOLOGY, INC.",
+        "amount": 214336.0,
+        "count": 1
+      },
+      {
+        "recipient": "HII FLEET SUPPORT GROUP LLC",
+        "amount": 148422.45,
+        "count": 2
+      },
+      {
+        "recipient": "WIGGINS LIFT CO INC",
+        "amount": 101654.0,
+        "count": 1
+      },
+      {
+        "recipient": "TASC TECHNICAL SERVICES, L.L.C.",
+        "amount": 41212.44,
+        "count": 1
+      }
+    ],
+    "by_recipient_normalized": [
+      {
+        "recipient": "FAIRLEAD INTEGRATED",
+        "amount": 16871797.57,
+        "count": 6,
+        "raw_names": [
+          "FAIRLEAD INTEGRATED, LLC"
+        ]
+      },
+      {
+        "recipient": "GENERAL DYNAMICS MISSION SYSTEMS",
+        "amount": 12856904.0,
+        "count": 2,
+        "raw_names": [
+          "GENERAL DYNAMICS MISSION SYSTEMS, INC."
+        ]
+      },
+      {
+        "recipient": "TELEDYNE BROWN ENGINEERING",
+        "amount": 3571523.75,
+        "count": 2,
+        "raw_names": [
+          "TELEDYNE BROWN ENGINEERING, INC."
+        ]
+      },
+      {
+        "recipient": "NIELSEN BEAUMONT MARINE",
+        "amount": 1223553.9700000002,
+        "count": 6,
+        "raw_names": [
+          "NIELSEN BEAUMONT MARINE, INC."
+        ]
+      },
+      {
+        "recipient": "A-1 TRUCK & EQUIPMENT",
+        "amount": 828903.92,
+        "count": 8,
+        "raw_names": [
+          "A-1 TRUCK & EQUIPMENT INC"
+        ]
+      },
+      {
+        "recipient": "MARITIME APPLIED PHYSICS",
+        "amount": 668013.6799999999,
+        "count": 2,
+        "raw_names": [
+          "MARITIME APPLIED PHYSICS CORPORATION"
+        ]
+      },
+      {
+        "recipient": "ANACAPA WATERBLASTING",
+        "amount": 505413.58999999997,
+        "count": 5,
+        "raw_names": [
+          "ANACAPA WATERBLASTING, INC."
+        ]
+      },
+      {
+        "recipient": "SOUTHLAND TECHNOLOGY",
+        "amount": 214336.0,
+        "count": 1,
+        "raw_names": [
+          "SOUTHLAND TECHNOLOGY, INC."
+        ]
+      },
+      {
+        "recipient": "HII FLEET SUPPORT GROUP",
+        "amount": 148422.45,
+        "count": 2,
+        "raw_names": [
+          "HII FLEET SUPPORT GROUP LLC"
+        ]
+      },
+      {
+        "recipient": "WIGGINS LIFT",
+        "amount": 101654.0,
+        "count": 1,
+        "raw_names": [
+          "WIGGINS LIFT CO INC"
+        ]
+      },
+      {
+        "recipient": "TASC TECHNICAL SERVICES",
+        "amount": 41212.44,
+        "count": 1,
+        "raw_names": [
+          "TASC TECHNICAL SERVICES, L.L.C."
+        ]
+      }
+    ]
+  },
+  "N6133111C0017": {
+    "label": "GDMS Surface MCM Unmanned",
+    "prior_reported_billion": 1.23,
+    "naive_dedup_in_window_total": 1201493045.3500013,
+    "naive_dedup_record_count": 202,
+    "unique_sub_ids": 84,
+    "deduped_record_count": 84,
+    "total_amount_corrected": 1181985031.5000005,
+    "by_recipient_raw": [
+      {
+        "recipient": "TELEDYNE DEFENSE ELECTRONICS, LLC",
+        "amount": 922232195.3000001,
+        "count": 9
+      },
+      {
+        "recipient": "TRIDENT SENSORS LIMITED",
+        "amount": 233306773.0,
+        "count": 1
+      },
+      {
+        "recipient": "ULTRA ELECTRONICS OCEAN SYSTEMS INC.",
+        "amount": 9235436.120000001,
+        "count": 2
+      },
+      {
+        "recipient": "OCEANEERING INTERNATIONAL INC",
+        "amount": 5554656.0,
+        "count": 3
+      },
+      {
+        "recipient": "METRON INCORPORATED",
+        "amount": 4314373.76,
+        "count": 3
+      },
+      {
+        "recipient": "IGO PAUL",
+        "amount": 1552330.0,
+        "count": 2
+      },
+      {
+        "recipient": "IDEAL INSTRUMENT CO, INC.",
+        "amount": 967030.0,
+        "count": 10
+      },
+      {
+        "recipient": "SEMPER OFFSHORE LLC",
+        "amount": 607960.13,
+        "count": 2
+      },
+      {
+        "recipient": "ONCORE MANUFACTURING LLC",
+        "amount": 578228.3200000001,
+        "count": 5
+      },
+      {
+        "recipient": "AB-WEY MACHINE & DIE CO., INC.",
+        "amount": 405333.0,
+        "count": 9
+      },
+      {
+        "recipient": "GAVIAL ITC, LLC",
+        "amount": 313071.0,
+        "count": 1
+      },
+      {
+        "recipient": "SONARDYNE, INC.",
+        "amount": 269658.52,
+        "count": 1
+      },
+      {
+        "recipient": "WESTERN ENVIRONMENTAL TECHNOLOGY LABORATORIES, INC",
+        "amount": 216282.5,
+        "count": 1
+      },
+      {
+        "recipient": "ENSIGN-BICKFORD AEROSPACE & DEFENSE COMPANY",
+        "amount": 203460.0,
+        "count": 1
+      },
+      {
+        "recipient": "ALEXANDER MACHINE & TOOL COMPANY, LLC.",
+        "amount": 199061.0,
+        "count": 1
+      },
+      {
+        "recipient": "ELECTRONIC SALES OF NEW ENGLAND, LLC",
+        "amount": 171700.0,
+        "count": 1
+      },
+      {
+        "recipient": "LITTLE ENTERPRISES, INC.",
+        "amount": 165000.0,
+        "count": 1
+      },
+      {
+        "recipient": "PREVCO SUBSEA LLC",
+        "amount": 162923.65,
+        "count": 1
+      },
+      {
+        "recipient": "CURTISS-WRIGHT DS, INC.",
+        "amount": 134400.0,
+        "count": 1
+      },
+      {
+        "recipient": "DENSEI-LAMBDA K.K.",
+        "amount": 114264.0,
+        "count": 1
+      },
+      {
+        "recipient": "AML OCEANOGRAPHIC LTD",
+        "amount": 113950.0,
+        "count": 1
+      },
+      {
+        "recipient": "D J FABRICATORS INC",
+        "amount": 102400.0,
+        "count": 3
+      },
+      {
+        "recipient": "JOSHUA D GOODWIN",
+        "amount": 101440.0,
+        "count": 2
+      },
+      {
+        "recipient": "SANMINA CORPORATION",
+        "amount": 97024.0,
+        "count": 2
+      },
+      {
+        "recipient": "MIDWEST ENTERP",
+        "amount": 94500.0,
+        "count": 1
+      },
+      {
+        "recipient": "NORTEK, INC.",
+        "amount": 91783.4,
+        "count": 2
+      },
+      {
+        "recipient": "TE CONNECTIVITY LTD.",
+        "amount": 78208.9,
+        "count": 1
+      },
+      {
+        "recipient": "MASSA PRODUCTS CORPORATION",
+        "amount": 69807.0,
+        "count": 2
+      },
+      {
+        "recipient": "FIKE CORPORATION",
+        "amount": 62550.0,
+        "count": 1
+      },
+      {
+        "recipient": "ADCOTRON EMS INC.",
+        "amount": 48030.4,
+        "count": 1
+      },
+      {
+        "recipient": "BIRNS OCEANOGRAPHICS INC",
+        "amount": 47280.0,
+        "count": 1
+      },
+      {
+        "recipient": "CR ENVIRONMENTAL, INC.",
+        "amount": 44000.0,
+        "count": 1
+      },
+      {
+        "recipient": "RESIN TECHNOLOGY, INC",
+        "amount": 36000.0,
+        "count": 1
+      },
+      {
+        "recipient": "PEKO PRECISION PRODUCTS, INC.",
+        "amount": 35861.9,
+        "count": 1
+      },
+      {
+        "recipient": "DESAPRO, INC.",
+        "amount": 34292.0,
+        "count": 1
+      },
+      {
+        "recipient": "PARISI ASSOCIATES LLC",
+        "amount": 33160.0,
+        "count": 1
+      },
+      {
+        "recipient": "3L POWER, LLC",
+        "amount": 33000.0,
+        "count": 1
+      },
+      {
+        "recipient": "MICROSEMI FREQUENCY AND TIME CORP",
+        "amount": 32725.0,
+        "count": 1
+      },
+      {
+        "recipient": "EMOTEQ CORPORATION",
+        "amount": 31824.0,
+        "count": 1
+      },
+      {
+        "recipient": "YSI INC",
+        "amount": 31200.0,
+        "count": 1
+      },
+      {
+        "recipient": "PARAMETRIC MACHINING INC",
+        "amount": 31177.6,
+        "count": 1
+      },
+      {
+        "recipient": "AMETEK SCP INC",
+        "amount": 30681.0,
+        "count": 1
+      }
+    ],
+    "by_recipient_normalized": [
+      {
+        "recipient": "TELEDYNE DEFENSE ELECTRONICS",
+        "amount": 922232195.3000001,
+        "count": 9,
+        "raw_names": [
+          "TELEDYNE DEFENSE ELECTRONICS, LLC"
+        ]
+      },
+      {
+        "recipient": "TRIDENT SENSORS LIMITED",
+        "amount": 233306773.0,
+        "count": 1,
+        "raw_names": [
+          "TRIDENT SENSORS LIMITED"
+        ]
+      },
+      {
+        "recipient": "ULTRA ELECTRONICS OCEAN SYSTEMS",
+        "amount": 9235436.120000001,
+        "count": 2,
+        "raw_names": [
+          "ULTRA ELECTRONICS OCEAN SYSTEMS INC."
+        ]
+      },
+      {
+        "recipient": "OCEANEERING INTERNATIONAL",
+        "amount": 5554656.0,
+        "count": 3,
+        "raw_names": [
+          "OCEANEERING INTERNATIONAL INC"
+        ]
+      },
+      {
+        "recipient": "METRON INCORPORATED",
+        "amount": 4314373.76,
+        "count": 3,
+        "raw_names": [
+          "METRON INCORPORATED"
+        ]
+      },
+      {
+        "recipient": "IGO PAUL",
+        "amount": 1552330.0,
+        "count": 2,
+        "raw_names": [
+          "IGO PAUL"
+        ]
+      },
+      {
+        "recipient": "IDEAL INSTRUMENT",
+        "amount": 967030.0,
+        "count": 10,
+        "raw_names": [
+          "IDEAL INSTRUMENT CO, INC."
+        ]
+      },
+      {
+        "recipient": "SEMPER OFFSHORE",
+        "amount": 607960.13,
+        "count": 2,
+        "raw_names": [
+          "SEMPER OFFSHORE LLC"
+        ]
+      },
+      {
+        "recipient": "ONCORE MANUFACTURING",
+        "amount": 578228.3200000001,
+        "count": 5,
+        "raw_names": [
+          "ONCORE MANUFACTURING LLC"
+        ]
+      },
+      {
+        "recipient": "AB-WEY MACHINE & DIE",
+        "amount": 405333.0,
+        "count": 9,
+        "raw_names": [
+          "AB-WEY MACHINE & DIE CO., INC."
+        ]
+      },
+      {
+        "recipient": "GAVIAL ITC",
+        "amount": 313071.0,
+        "count": 1,
+        "raw_names": [
+          "GAVIAL ITC, LLC"
+        ]
+      },
+      {
+        "recipient": "SONARDYNE",
+        "amount": 269658.52,
+        "count": 1,
+        "raw_names": [
+          "SONARDYNE, INC."
+        ]
+      },
+      {
+        "recipient": "WESTERN ENVIRONMENTAL TECHNOLOGY LABORATORIES",
+        "amount": 216282.5,
+        "count": 1,
+        "raw_names": [
+          "WESTERN ENVIRONMENTAL TECHNOLOGY LABORATORIES, INC"
+        ]
+      },
+      {
+        "recipient": "ENSIGN-BICKFORD AEROSPACE & DEFENSE",
+        "amount": 203460.0,
+        "count": 1,
+        "raw_names": [
+          "ENSIGN-BICKFORD AEROSPACE & DEFENSE COMPANY"
+        ]
+      },
+      {
+        "recipient": "ALEXANDER MACHINE & TOOL",
+        "amount": 199061.0,
+        "count": 1,
+        "raw_names": [
+          "ALEXANDER MACHINE & TOOL COMPANY, LLC."
+        ]
+      },
+      {
+        "recipient": "ELECTRONIC SALES OF NEW ENGLAND",
+        "amount": 171700.0,
+        "count": 1,
+        "raw_names": [
+          "ELECTRONIC SALES OF NEW ENGLAND, LLC"
+        ]
+      },
+      {
+        "recipient": "LITTLE ENTERPRISES",
+        "amount": 165000.0,
+        "count": 1,
+        "raw_names": [
+          "LITTLE ENTERPRISES, INC."
+        ]
+      },
+      {
+        "recipient": "PREVCO SUBSEA",
+        "amount": 162923.65,
+        "count": 1,
+        "raw_names": [
+          "PREVCO SUBSEA LLC"
+        ]
+      },
+      {
+        "recipient": "CURTISS-WRIGHT DS",
+        "amount": 134400.0,
+        "count": 1,
+        "raw_names": [
+          "CURTISS-WRIGHT DS, INC."
+        ]
+      },
+      {
+        "recipient": "DENSEI-LAMBDA K.K",
+        "amount": 114264.0,
+        "count": 1,
+        "raw_names": [
+          "DENSEI-LAMBDA K.K."
+        ]
+      },
+      {
+        "recipient": "AML OCEANOGRAPHIC",
+        "amount": 113950.0,
+        "count": 1,
+        "raw_names": [
+          "AML OCEANOGRAPHIC LTD"
+        ]
+      },
+      {
+        "recipient": "D J FABRICATORS",
+        "amount": 102400.0,
+        "count": 3,
+        "raw_names": [
+          "D J FABRICATORS INC"
+        ]
+      },
+      {
+        "recipient": "JOSHUA D GOODWIN",
+        "amount": 101440.0,
+        "count": 2,
+        "raw_names": [
+          "JOSHUA D GOODWIN"
+        ]
+      },
+      {
+        "recipient": "SANMINA",
+        "amount": 97024.0,
+        "count": 2,
+        "raw_names": [
+          "SANMINA CORPORATION"
+        ]
+      },
+      {
+        "recipient": "MIDWEST ENTERP",
+        "amount": 94500.0,
+        "count": 1,
+        "raw_names": [
+          "MIDWEST ENTERP"
+        ]
+      },
+      {
+        "recipient": "NORTEK",
+        "amount": 91783.4,
+        "count": 2,
+        "raw_names": [
+          "NORTEK, INC."
+        ]
+      },
+      {
+        "recipient": "TE CONNECTIVITY",
+        "amount": 78208.9,
+        "count": 1,
+        "raw_names": [
+          "TE CONNECTIVITY LTD."
+        ]
+      },
+      {
+        "recipient": "MASSA PRODUCTS",
+        "amount": 69807.0,
+        "count": 2,
+        "raw_names": [
+          "MASSA PRODUCTS CORPORATION"
+        ]
+      },
+      {
+        "recipient": "FIKE",
+        "amount": 62550.0,
+        "count": 1,
+        "raw_names": [
+          "FIKE CORPORATION"
+        ]
+      },
+      {
+        "recipient": "ADCOTRON EMS",
+        "amount": 48030.4,
+        "count": 1,
+        "raw_names": [
+          "ADCOTRON EMS INC."
+        ]
+      },
+      {
+        "recipient": "BIRNS OCEANOGRAPHICS",
+        "amount": 47280.0,
+        "count": 1,
+        "raw_names": [
+          "BIRNS OCEANOGRAPHICS INC"
+        ]
+      },
+      {
+        "recipient": "CR ENVIRONMENTAL",
+        "amount": 44000.0,
+        "count": 1,
+        "raw_names": [
+          "CR ENVIRONMENTAL, INC."
+        ]
+      },
+      {
+        "recipient": "RESIN TECHNOLOGY",
+        "amount": 36000.0,
+        "count": 1,
+        "raw_names": [
+          "RESIN TECHNOLOGY, INC"
+        ]
+      },
+      {
+        "recipient": "PEKO PRECISION PRODUCTS",
+        "amount": 35861.9,
+        "count": 1,
+        "raw_names": [
+          "PEKO PRECISION PRODUCTS, INC."
+        ]
+      },
+      {
+        "recipient": "DESAPRO",
+        "amount": 34292.0,
+        "count": 1,
+        "raw_names": [
+          "DESAPRO, INC."
+        ]
+      },
+      {
+        "recipient": "PARISI ASSOCIATES",
+        "amount": 33160.0,
+        "count": 1,
+        "raw_names": [
+          "PARISI ASSOCIATES LLC"
+        ]
+      },
+      {
+        "recipient": "3L POWER",
+        "amount": 33000.0,
+        "count": 1,
+        "raw_names": [
+          "3L POWER, LLC"
+        ]
+      },
+      {
+        "recipient": "MICROSEMI FREQUENCY AND TIME",
+        "amount": 32725.0,
+        "count": 1,
+        "raw_names": [
+          "MICROSEMI FREQUENCY AND TIME CORP"
+        ]
+      },
+      {
+        "recipient": "EMOTEQ",
+        "amount": 31824.0,
+        "count": 1,
+        "raw_names": [
+          "EMOTEQ CORPORATION"
+        ]
+      },
+      {
+        "recipient": "YSI",
+        "amount": 31200.0,
+        "count": 1,
+        "raw_names": [
+          "YSI INC"
+        ]
+      },
+      {
+        "recipient": "PARAMETRIC MACHINING",
+        "amount": 31177.6,
+        "count": 1,
+        "raw_names": [
+          "PARAMETRIC MACHINING INC"
+        ]
+      },
+      {
+        "recipient": "AMETEK SCP",
+        "amount": 30681.0,
+        "count": 1,
+        "raw_names": [
+          "AMETEK SCP INC"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+Loaded 0 cached entries from /Users/brendantoole/projects2/buildco3/data_pull/subaward_dedup.json
+Window: 2020-01-01 to 2026-04-10
+
+[1/6] N0002411C2300 (LM LCS Freedom Construction (Marinette flag))
+  Prior reported: $47.17B -- Marinette $47B claim
+  group=['A', 'B', 'C', 'D'] gid=CONT_AWD_N0002411C2300_9700_-NONE-_-NONE-
+  pulled=1208  in_window=573  new_total=$37.773B  (80% of prior)
+  top sub: MARINETTE MARINE $37217.8M (129 actions)
+[2/6] N0002422C5500 (Raytheon SPY-6 Production)
+  Prior reported: $1.42B -- CAES/Mercury aggregate base
+  group=['A', 'B', 'C', 'D'] gid=CONT_AWD_N0002422C5500_9700_-NONE-_-NONE-
+  pulled=854  in_window=795  new_total=$1.383B  (97% of prior)
+  top sub: GENERAL DYNAMICS MISSION SYSTEMS $359.8M (12 actions)
+[3/6] N0002416C5363 (LM SEWIP Block 2)
+  Prior reported: $2.85B -- approaches sanity floor
+  group=['A', 'B', 'C', 'D'] gid=CONT_AWD_N0002416C5363_9700_-NONE-_-NONE-
+  pulled=358  in_window=204  new_total=$1.242B  (44% of prior)
+  top sub: CAES SYSTEMS $537.1M (22 actions)
+[4/6] N0002420C5503 (LM SLQ-32(V)6 Production)
+  Prior reported: $1.42B -- approaches sanity floor
+  group=['A', 'B', 'C', 'D'] gid=CONT_AWD_N0002420C5503_9700_-NONE-_-NONE-
+  pulled=612  in_window=612  new_total=$1.415B  (100% of prior)
+  top sub: CAES SYSTEMS $318.0M (36 actions)
+[5/6] N0002417C6311 (NG Knifefish/LCS systems)
+  Prior reported: $1.48B -- Teledyne aggregate base
+  group=['A', 'B', 'C', 'D'] gid=CONT_AWD_N0002417C6311_9700_-NONE-_-NONE-
+  pulled=908  in_window=57  new_total=$0.127B  (9% of prior)
+  top sub: GENERAL DYNAMICS MISSION SYSTEMS $70.6M (11 actions)
+[6/6] N6133111C0017 (GDMS Surface MCM Unmanned)
+  Prior reported: $1.23B -- approaches sanity floor
+  group=['A', 'B', 'C', 'D'] gid=CONT_AWD_N6133111C0017_9700_-NONE-_-NONE-
+  pulled=300  in_window=202  new_total=$1.201B  (98% of prior)
+  top sub: TELEDYNE DEFENSE ELECTRONICS $924.5M (30 actions)
+
+Done. Wrote 6 PIIDs to /Users/brendantoole/projects2/buildco3/data_pull/subaward_dedup.json

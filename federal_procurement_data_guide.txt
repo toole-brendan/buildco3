@@ -1,0 +1,918 @@
+================================================================================
+FEDERAL PROCUREMENT DATA PULL — PRACTICAL GUIDE
+================================================================================
+
+A field-tested reference for pulling complete, accurate federal contracting
+data from public APIs. Covers the three primary sources (FPDS, USAspending,
+SAM.gov), their strengths and blind spots, and the specific techniques that
+produce clean results vs. the ones that produce garbage.
+
+Written from direct experience. Every gotcha documented here was hit in
+production pulls.
+
+Last updated: 2026-04-04
+
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+  1. The Three Sources and When to Use Each
+  2. FPDS Atom Feed (Primary Source — Start Here)
+  3. USAspending API (Secondary Source — Aggregated View)
+  4. SAM.gov Opportunities API (Pipeline / Solicitations)
+  5. Search Strategy: How to Build Your Keyword Set
+  6. Post-Filtering: The Critical Step Everyone Skips
+  7. Deduplication
+  8. Award Type Codes — The Complete Picture
+  9. Other Transaction Authority (OTA) — How to Find Them
+  10. Known Blind Spots Across All Sources
+  11. Rate Limits, Quotas, and Politeness
+  12. Recommended Pull Order
+  13. Supplementary Sources
+
+
+================================================================================
+1. THE THREE SOURCES AND WHEN TO USE EACH
+================================================================================
+
+Source              Auth Required?   Best For
+------              --------------   --------
+FPDS Atom Feed      No (public)      Most complete contract data. Only source
+                                     with dedicated OT record types.
+                                     Description-level search. The
+                                     authoritative upstream system.
+
+USAspending API     No (public)      Aggregated views, spending trends,
+                                     recipient-level rollups, subawards.
+                                     Easier JSON API but derived from FPDS
+                                     with data loss.
+
+SAM.gov Opps API    Yes (API key)    Solicitations, pre-award notices,
+                                     pipeline analysis. Not contract
+                                     execution data.
+
+Key insight: USAspending is derived FROM FPDS. When the two conflict, FPDS is
+authoritative. USAspending loses data in the translation — particularly Other
+Transaction awards, which have dedicated XML record types in FPDS
+(OtherTransactionAward, OtherTransactionIDV) but get filed under generic
+award types in USAspending with no reliable way to filter for them.
+
+Start with FPDS for completeness. Use USAspending for trend analysis and
+aggregation views that FPDS doesn't provide. Use SAM.gov for forward-looking
+pipeline data.
+
+
+================================================================================
+2. FPDS ATOM FEED (Primary Source — Start Here)
+================================================================================
+
+OVERVIEW
+--------
+The Federal Procurement Data System (FPDS) is the authoritative database for
+all federal contract actions. The Atom Feed is a public, unauthenticated XML
+API that returns paginated search results. No account needed for public feeds.
+
+Base URL:
+  https://www.fpds.gov/ezsearch/FEEDS/ATOM?FEEDNAME=PUBLIC
+
+Query format:
+  {base_url}&q={URL-encoded query string}&start={offset}
+
+Example:
+  https://www.fpds.gov/ezsearch/FEEDS/ATOM?FEEDNAME=PUBLIC
+    &q=DESCRIPTION_OF_REQUIREMENT%3A%22unmanned+surface+vessel%22
+    +AGENCY_CODE%3A%229700%22
+    &start=0
+
+
+QUERY SYNTAX
+-------------
+Queries are built from field:value pairs joined by spaces (implicit AND).
+
+Quoted string values:    FIELD_NAME:"value with spaces"
+Unquoted values:         FIELD_NAME:value
+Date ranges:             FIELD_NAME:[2023/01/01, 2025/12/31]
+Open-ended dates:        FIELD_NAME:[2023/01/01,)   or   FIELD_NAME:(,2025/12/31]
+Numeric ranges:          FIELD_NAME:[1000000, 5000000]
+
+Multiple conditions are ANDed together:
+  DESCRIPTION_OF_REQUIREMENT:"autonomous" AGENCY_CODE:"9700"
+
+URL-encode the entire q= parameter value. In Python:
+  from urllib import parse
+  params = 'DESCRIPTION_OF_REQUIREMENT:"autonomous vessel" AGENCY_CODE:"9700"'
+  encoded = parse.urlencode({"q": params})
+  url = f"https://www.fpds.gov/ezsearch/FEEDS/ATOM?FEEDNAME=PUBLIC&{encoded}&start=0"
+
+
+MOST USEFUL SEARCH FIELDS
+--------------------------
+Field Name                          Description
+----------                          -----------
+DESCRIPTION_OF_REQUIREMENT          Award description text (best for keyword search)
+AGENCY_CODE                         4-digit agency code (9700=DoD, 7000=DHS, etc.)
+DEPARTMENT_ID                       Department code
+CONTRACTING_AGENCY_ID               Contracting agency 4-digit code
+CONTRACTING_AGENCY_NAME             Contracting agency name (quoted)
+FUNDING_OFFICE_NAME                 Funding office name (quoted)
+UEI_NAME                            Vendor legal business name (for vendor search)
+VENDOR_UEI                          Vendor Unique Entity ID
+PRINCIPAL_NAICS_CODE                6-digit NAICS code
+PRODUCT_OR_SERVICE_CODE             PSC code
+SIGNED_DATE                         Date range [YYYY/MM/DD, YYYY/MM/DD]
+EFFECTIVE_DATE                      Period of performance start date range
+LAST_MOD_DATE                       Last modification date range
+CONTRACT_FISCAL_YEAR                Fiscal year (4-digit)
+FISCAL_YEAR                         OT fiscal year (4-digit)
+OBLIGATED_AMOUNT                    Dollar range [min, max]
+PIID                                Contract ID
+CONTRACT_TYPE                       "IDV" or "Award"
+AWARD_TYPE                          "BPA Call", "Purchase Order",
+                                    "Delivery Order", "Definitive Contract"
+CONTRACT_PRICING_DESCRIPTION        Pricing type (e.g., "Firm Fixed Price")
+EXTENT_COMPETED_DESCRIPTION         Competition status
+RESEARCH_DESCRIPTION                SBIR/STTR phase filtering
+AWARD_STATUS                        "Final" or "Deleted"
+
+Full field list with valid values:
+  https://www.fpds.gov/wiki → (now redirects to sam.gov/contracting)
+  Or see the fpds Python library: pip install fpds
+  Fields are in fpds/constants/fields.json
+
+
+PAGINATION
+----------
+Results come in pages of 10 records. The response XML includes <link> elements:
+
+  <link rel="next" href="...&start=10">    — next page
+  <link rel="last" href="...&start=1060">  — last page
+
+To get total result count: parse the "last" link's start= parameter.
+  total_records ≈ last_start + 10
+  total_pages = (last_start / 10) + 1
+
+Paginate by incrementing start= by 10:
+  start=0, start=10, start=20, ...
+
+If there is no "last" link, all results fit on one page.
+
+
+XML RESPONSE STRUCTURE
+-----------------------
+Each <entry> contains a <content> element with one of three record types:
+
+  <ns1:award>                    — Standard FAR-based contract action
+  <ns1:OtherTransactionAward>    — OT award (10 USC 4022 / formerly 2371b)
+  <ns1:OtherTransactionIDV>      — OT indefinite-delivery vehicle
+
+Key data paths within each record type:
+
+  Identification:
+    .//ns1:awardContractID/ns1:PIID              (standard awards)
+    .//ns1:OtherTransactionAwardContractID/ns1:PIID   (OT awards)
+    .//ns1:OtherTransactionIDVContractID/ns1:PIID     (OT IDVs)
+    .//ns1:modNumber                               (modification number)
+    .//ns1:referencedIDVID/ns1:PIID                (parent IDV PIID)
+
+  Dollar values:
+    .//ns1:obligatedAmount                         (this action)
+    .//ns1:baseAndExercisedOptionsValue             (this action)
+    .//ns1:baseAndAllOptionsValue                   (this action, all options)
+    .//ns1:totalObligatedAmount                     (cumulative)
+    .//ns1:totalBaseAndExercisedOptionsValue         (cumulative)
+    .//ns1:totalBaseAndAllOptionsValue               (cumulative ceiling)
+
+  Parties:
+    .//ns1:vendorName
+    .//ns1:vendorAlternateName
+    .//ns1:contractingOfficeAgencyID @name @departmentName
+    .//ns1:contractingOfficeID @name
+    .//ns1:fundingRequestingAgencyID @name
+    .//ns1:fundingRequestingOfficeID @name
+
+  Contract details:
+    .//ns1:contractActionType                      (code + @description)
+    .//ns1:typeOfContractPricing                   (code + @description)
+    .//ns1:descriptionOfContractRequirement         (THE KEY FIELD for filtering)
+    .//ns1:principalNAICSCode                      (code + @description)
+    .//ns1:productOrServiceCode                    (PSC code + @description)
+    .//ns1:solicitationID
+    .//ns1:extentCompeted @description
+
+  Dates:
+    .//ns1:signedDate
+    .//ns1:effectiveDate
+    .//ns1:currentCompletionDate
+    .//ns1:ultimateCompletionDate
+    .//ns1:fiscalYear
+
+  OT-specific fields (only in OtherTransactionAward/IDV):
+    .//ns1:typeOfAgreement                         ("PROTOTYPE" or "PRODUCTION")
+    .//ns1:nonTraditionalGovernmentContractorParticipation @description
+    .//ns1:nonGovernmentalDollars
+    .//ns1:totalNonGovernmentalDollars
+    .//ns1:consortiumFlag                          (FPDS v1.5.3+)
+    .//ns1:primaryConsortiumMemberName              (FPDS v1.5.3+)
+    .//ns1:primaryConsortiumMemberUEI               (FPDS v1.5.3+)
+    .//ns1:primaryConsortiumMemberCAGECode           (FPDS v1.5.3+)
+
+Namespace: xmlns:ns1="https://www.fpds.gov/FPDS"
+
+
+PYTHON PARSING EXAMPLE
+-----------------------
+  from urllib.request import urlopen
+  from urllib import parse
+  from xml.etree.ElementTree import ElementTree, fromstring
+
+  NS = {"a": "http://www.w3.org/2005/Atom", "ns1": "https://www.fpds.gov/FPDS"}
+  BASE = "https://www.fpds.gov/ezsearch/FEEDS/ATOM?FEEDNAME=PUBLIC"
+
+  q = 'DESCRIPTION_OF_REQUIREMENT:"your search term" AGENCY_CODE:"9700"'
+  url = f"{BASE}&{parse.urlencode({'q': q})}&start=0"
+
+  with urlopen(url) as resp:
+      tree = ElementTree(fromstring(resp.read().decode("utf-8")))
+
+  root = tree.getroot()
+  for entry in root.findall("a:entry", NS):
+      content = entry.find("a:content", NS)
+      # Check record type
+      award = content.find(".//ns1:award", NS)
+      ot_award = content.find(".//ns1:OtherTransactionAward", NS)
+      ot_idv = content.find(".//ns1:OtherTransactionIDV", NS)
+      elem = award or ot_award or ot_idv
+
+      desc = elem.find(".//ns1:descriptionOfContractRequirement", NS)
+      vendor = elem.find(".//ns1:vendorName", NS)
+      obligated = elem.find(".//ns1:totalObligatedAmount", NS)
+
+      print(f"{vendor.text}: ${obligated.text} — {desc.text[:100]}")
+
+
+FPDS PYTHON LIBRARY (OPTIONAL)
+-------------------------------
+  pip install fpds
+
+  import asyncio
+  from fpds import fpdsRequest
+
+  request = fpdsRequest(
+      LAST_MOD_DATE="[2024/01/01, 2025/12/31]",
+      AGENCY_CODE="9700",
+      DESCRIPTION_OF_REQUIREMENT='"unmanned"'
+  )
+  records = asyncio.run(request.data())
+
+The library handles pagination and XML-to-JSON automatically. However, it
+applies regex validation on field values that can be overly strict, and it
+may not parse OT-specific fields. For OT data, direct XML parsing gives
+you more control.
+
+
+COMMON AGENCY CODES
+--------------------
+  9700  Department of Defense (all branches)
+  1700  Department of the Navy (sub-agency of 9700)
+  2100  Department of the Army
+  5700  Department of the Air Force
+  97AD  Office of the Secretary of Defense
+  97F5  Washington Headquarters Services
+  7000  Department of Homeland Security
+  6900  Department of Transportation
+  8000  National Aeronautics and Space Administration
+  1300  Department of Commerce
+  4900  National Science Foundation
+  1200  Department of Agriculture
+  7500  Department of Health and Human Services
+  3600  Department of Veterans Affairs
+
+
+================================================================================
+3. USASPENDING API (Secondary Source — Aggregated View)
+================================================================================
+
+OVERVIEW
+--------
+USAspending.gov provides a REST API (JSON) with easier querying than FPDS
+but less granular data, particularly for OT awards.
+
+Base URL: https://api.usaspending.gov/api/v2/
+Auth: None required (public API)
+
+
+MOST USEFUL ENDPOINTS
+----------------------
+
+POST /search/spending_by_award/
+  The workhorse. Returns individual award records with filtering.
+
+  payload = {
+      "filters": {
+          "keywords": ["your search terms"],
+          "time_period": [{"start_date": "2020-10-01", "end_date": "2026-09-30"}],
+          "award_type_codes": ["A", "B", "C", "D"],
+          "agencies": [
+              {"type": "awarding", "tier": "toptier", "name": "Department of Defense"}
+          ],
+          "naics_codes": {"require": ["336611"]},
+      },
+      "fields": [
+          "Award ID", "Recipient Name", "Award Amount", "Total Outlays",
+          "Description", "Start Date", "End Date", "Contract Award Type",
+          "Awarding Agency", "Awarding Sub Agency", "NAICS Code", "PSC Code",
+          "Place of Performance State Code", "generated_internal_id",
+      ],
+      "limit": 100,
+      "page": 1,
+      "sort": "Award Amount",
+      "order": "desc",
+      "subawards": False,
+  }
+
+POST /search/spending_over_time/
+  FY-level spending trends. Useful for market sizing but cannot filter
+  by description text — only by keywords (which match all fields).
+
+  payload = {
+      "group": "fiscal_year",
+      "filters": {
+          "keywords": ["your terms"],
+          "time_period": [{"start_date": "2017-10-01", "end_date": "2026-09-30"}],
+          "award_type_codes": ["A", "B", "C", "D"],
+      },
+  }
+
+POST /search/spending_by_category/recipient/
+  Aggregated spend by contractor. WARNING: highly polluted by false
+  positives because keyword matching is across all fields, not just
+  descriptions. Use only as directional data — never as your primary
+  competitive analysis source.
+
+POST /autocomplete/recipient/
+  Look up vendor names. Useful for finding exact name strings.
+
+GET /references/award_types/
+  Reference list of all award type codes and their groups.
+
+
+CRITICAL USASPENDING GOTCHAS
+------------------------------
+
+1. Keywords match ALL fields, not just descriptions.
+   Searching for ["unmanned", "vessel"] will match awards where "vessel"
+   appears in the recipient name and "unmanned" appears in a related award's
+   description. This produces massive false positives — e.g., Electric Boat
+   at $139B when searching for unmanned vessels.
+
+   MITIGATION: Always post-filter results by applying a regex to the
+   Description field specifically. See Section 6.
+
+2. Award type codes cannot be mixed across groups.
+   The API returns HTTP 422 if you combine codes from different groups:
+     Group 1 (Contracts): A, B, C, D
+     Group 2 (IDVs):      IDV_A, IDV_B, IDV_B_A, IDV_B_B, IDV_B_C,
+                           IDV_C, IDV_D, IDV_E
+     Group 3 (Grants):    02, 03, 04, 05
+     Group 4 (Other):     06, 07, 08, 09, 10, 11, -1
+
+   You MUST make separate API calls for each group. This 4x multiplies
+   your call count. Plan accordingly.
+
+3. No dedicated OTA award type code.
+   Other Transaction awards are filed under existing types (contracts, IDVs,
+   or "other") with no reliable code-level filter. To find OTAs in
+   USAspending you must keyword-search descriptions for phrases like
+   "other transaction" — but this is unreliable and incomplete.
+   USE FPDS INSTEAD for OT data.
+
+4. spending_over_time does not support description-level filtering.
+   Trend data will include all domains matching your keywords, not just your
+   target domain. It overstates market size for niche topics.
+
+5. Pagination limit is 100 records per page, max ~10,000 total.
+   If your query returns more than ~10,000 results, you'll need to
+   partition by date range, agency, or other filter to get everything.
+
+6. spending_by_category/recipient is especially unreliable.
+   This endpoint aggregates across all keyword-matched awards, amplifying
+   the false-positive problem. Companies that appear at the top of this
+   list may have zero actual awards in your domain. Cross-reference
+   everything against award-level data.
+
+
+================================================================================
+4. SAM.GOV OPPORTUNITIES API (Pipeline / Solicitations)
+================================================================================
+
+OVERVIEW
+--------
+SAM.gov's Opportunities API provides solicitations, pre-solicitation notices,
+award notices, and other procurement opportunities. This is forward-looking
+pipeline data, not contract execution data.
+
+Base URL: https://api.sam.gov/opportunities/v2/search
+Auth: API key required (register at sam.gov, request an API key)
+
+
+QUERY PARAMETERS
+-----------------
+  api_key         Your SAM.gov API key (required)
+  title           Search within opportunity title (most targeted filter)
+  postedFrom      Start date MM/DD/YYYY
+  postedTo        End date MM/DD/YYYY (max 1 year window per call)
+  ncode           NAICS code filter
+  limit           Results per page (max 1000)
+  offset          Pagination offset
+
+Example:
+  GET https://api.sam.gov/opportunities/v2/search
+    ?api_key=YOUR_KEY
+    &title=unmanned+surface+vessel
+    &postedFrom=01/01/2024
+    &postedTo=12/31/2024
+    &limit=1000
+    &offset=0
+
+
+CRITICAL SAM.GOV GOTCHAS
+--------------------------
+
+1. Aggressive rate limits with poor documentation.
+   The daily quota is approximately 50-100 requests per public API key.
+   After exceeding the limit, the API returns HTTP 429 with a message like:
+     "Message throttled out — You have exceeded your quota.
+      You can access API after [date] 00:00:00+0000 UTC"
+   Quota resets at midnight UTC daily.
+
+2. Optimize before you call.
+   Do NOT start by paginating through broad NAICS code results. A single
+   NAICS code like 336611 (shipbuilding) can have thousands of results,
+   consuming your entire daily quota on pagination alone.
+
+   INSTEAD: Use title-based keyword searches, which return far fewer
+   results per query. Run specific, targeted queries rather than broad ones.
+
+3. Date windows are max 1 year each.
+   You must split multi-year searches into separate 1-year calls:
+     01/01/2023 – 12/31/2023
+     01/01/2024 – 12/31/2024
+     01/01/2025 – 12/31/2025
+
+4. Design for quota exhaustion.
+   Plan your queries knowing you have ~50-100 calls per day.
+   - Prioritize title keyword searches over NAICS pagination
+   - Use threading (2-3 workers) but respect the quota ceiling
+   - Cache all results immediately; don't re-fetch
+   - If you need more volume, spread the pull across multiple days
+   - Split keyword lists into "broad" (search all date windows) and
+     "niche" (search recent windows only) to optimize call budget
+
+5. Response structure:
+   {
+     "totalRecords": 42,
+     "opportunitiesData": [
+       {
+         "noticeId": "abc123",
+         "title": "...",
+         "type": "Solicitation",           // or "Presolicitation", "Award Notice", etc.
+         "postedDate": "2024-03-15",
+         "solicitationNumber": "N00024-24-...",
+         "organizationName": "...",
+         "naicsCode": "336611",
+         "award": {                        // only present for Award Notices
+           "amount": "1500000",
+           "awardee": {"name": "...", "ueiSAM": "..."}
+         }
+       }
+     ]
+   }
+
+
+================================================================================
+5. SEARCH STRATEGY: HOW TO BUILD YOUR KEYWORD SET
+================================================================================
+
+The quality of your data pull depends almost entirely on your keyword set.
+Here is the approach that works:
+
+STEP 1: Start with obvious domain terms.
+  For any subject, list the standard terminology:
+    - Official names (e.g., "unmanned surface vessel")
+    - Common variants (e.g., "unmanned surface vehicle", "autonomous vessel")
+    - Abbreviations (e.g., "USV", "UUV", "AUV")
+    - Newer terminology shifts (e.g., "uncrewed" replacing "unmanned")
+
+STEP 2: Add known program names.
+  Most federal programs have specific names or acronyms. These are your
+  highest-precision searches:
+    - Program names (e.g., "XLUUV", "LUSV", "MUSV", "ghost fleet")
+    - Project names (e.g., "sea hunter", "overlord", "Snakehead")
+    - System designations (e.g., "LDUUV", "UISS")
+
+  To discover program names: read budget justification documents (PB books),
+  Congressional Research Service reports, and GAO audits. These are gold
+  mines for program terminology.
+
+STEP 3: Use phrase groups, not loose keywords.
+  BAD:  keywords: ["unmanned", "vessel"]
+        → Matches any award containing both words anywhere across all fields.
+          Pulls in submarine construction, manned vessel maintenance, etc.
+
+  GOOD: keywords: ["unmanned surface vessel"]
+        → Matches the exact phrase. Much higher precision.
+
+  For USAspending, each keyword group is a separate API call. For FPDS,
+  use DESCRIPTION_OF_REQUIREMENT:"exact phrase" for description-only matching.
+
+STEP 4: Add NAICS code searches as a complement.
+  NAICS codes catch awards that use different terminology than your keywords.
+  But NAICS alone is too broad — always combine with keyword post-filtering.
+
+  Strategy: Run NAICS-filtered queries for the most relevant codes, then
+  post-filter results for your domain keywords in the description.
+
+STEP 5: Add vendor-specific searches.
+  If you know key players in your domain, search for them directly:
+    FPDS:         UEI_NAME:"COMPANY NAME" AGENCY_CODE:"9700"
+    USAspending:  Use autocomplete/recipient/ to find exact names,
+                  then filter search results by recipient
+
+  This catches awards where the description is vague but the vendor
+  is a known player.
+
+STEP 6: Iterate based on what you find.
+  - Discover new NAICS codes from your initial results
+  - Find new program names in award descriptions
+  - Identify new vendors that appear alongside known players
+  - Add these as new search terms and re-run
+
+
+================================================================================
+6. POST-FILTERING: THE CRITICAL STEP EVERYONE SKIPS
+================================================================================
+
+Every federal procurement API's keyword search is broader than you want.
+Post-filtering is not optional — it's the difference between clean data
+and garbage.
+
+THE RULE: After pulling results from any API, apply a regex filter to the
+DESCRIPTION field specifically (not across all fields) to verify relevance.
+
+Example regex for a domain:
+  import re
+
+  pattern = re.compile(
+      r"\b("
+      r"your_term_1|your_term_2|"
+      r"multi.?word.?term|"
+      r"ABBREVIATION"
+      r")\b",
+      re.IGNORECASE,
+  )
+
+  def is_relevant(description: str) -> bool:
+      if not description:
+          return False
+      return bool(pattern.search(description))
+
+Apply this to every award's Description field. Discard anything that
+doesn't match.
+
+WHY THIS MATTERS:
+  Without post-filtering, a search for ["autonomous", "vessel"] in
+  USAspending returned Electric Boat at $139B (submarine construction).
+  With post-filtering on the description field, that false positive
+  disappears.
+
+EXCEPTION — OT records:
+  OT records from FPDS are rare enough that you may want to keep all of
+  them for manual review, even if the description doesn't perfectly match
+  your regex. OTAs tend to have shorter, vaguer descriptions.
+
+
+================================================================================
+7. DEDUPLICATION
+================================================================================
+
+You will get duplicates from two sources:
+
+1. Overlapping keyword searches.
+   The same award appears in results for "unmanned surface vessel" and
+   "unmanned surface vehicle". Deduplicate by:
+     - FPDS: PIID + mod_number
+     - USAspending: Award ID or generated_internal_id
+     - SAM.gov: noticeId
+
+2. Modification records.
+   Each contract modification creates a new FPDS record with the same PIID
+   but different mod_number. These are NOT duplicates — they represent
+   different actions on the same contract.
+
+   For competitive analysis, you typically want:
+     - The latest modification (most current dollar values)
+     - OR all modifications if tracking funding changes over time
+
+   The "total" dollar fields (totalObligatedAmount, totalBaseAndAllOptionsValue)
+   on any modification reflect cumulative values, so the latest mod gives you
+   the current state.
+
+   For counting: count unique PIIDs, not unique PIID+mod combinations.
+   For dollars: use totals from the latest mod per PIID, not sum of all mods.
+
+   WARNING: Summing "total" fields across modifications is a common and
+   devastating mistake. A contract with 7 mods each reporting $196M
+   totalObligatedAmount is NOT $1.37B — it's $196M reported 7 times.
+   This error can inflate a company's apparent spend by 5-10x. Always
+   deduplicate to one record per PIID before aggregating dollar values.
+
+VENDOR NAME NORMALIZATION
+--------------------------
+Federal data has inconsistent vendor names. Normalize before aggregating:
+  - Strip trailing suffixes: INC, LLC, CORP, CORPORATION, CO, LTD, LP, L.P.
+  - Remove trailing punctuation: commas, periods
+  - Uppercase everything for comparison
+  - Watch for name changes: companies that are acquired or rename may appear
+    under multiple entries (e.g., "EDO PROFESSIONAL SERVICES" vs
+    "EDO ACQUISITION II" vs "HARRIS SYSTEMS")
+
+
+================================================================================
+8. AWARD TYPE CODES — THE COMPLETE PICTURE
+================================================================================
+
+USAspending award_type_codes (cannot mix groups in one API call):
+
+  CONTRACTS (Group 1):
+    A   BPA Call
+    B   Purchase Order
+    C   Delivery Order
+    D   Definitive Contract
+
+  IDVs (Group 2):
+    IDV_A    GWAC (Government-Wide Acquisition Contract)
+    IDV_B    IDC (Indefinite Delivery Contract)
+    IDV_B_A  IDC / IDIQ
+    IDV_B_B  IDC / Requirements
+    IDV_B_C  IDC / Definite Quantity
+    IDV_C    FSS (Federal Supply Schedule)
+    IDV_D    BOA (Basic Ordering Agreement)
+    IDV_E    BPA (Blanket Purchase Agreement)
+
+  GRANTS (Group 3):
+    02  Block Grant
+    03  Formula Grant
+    04  Project Grant
+    05  Cooperative Agreement
+
+  OTHER (Group 4):
+    06  Direct Payment for Specified Use
+    07  Direct Loan
+    08  Guaranteed/Insured Loan
+    09  Insurance
+    10  Direct Payment with Unrestricted Use
+    11  Other Financial Assistance
+    -1  Unknown
+
+FPDS contractActionType codes:
+    A   BPA Call
+    B   Purchase Order
+    C   Delivery Order
+    D   Definitive Contract
+    E   Definitive Contract (varies)
+    O   Other Transaction IDV
+    (OT Awards have their own record type, not just a code)
+
+For comprehensive pulls, always search all four USAspending groups.
+Contracts-only pulls miss IDVs (which include IDIQs) and grants (which
+include university research and cooperative agreements).
+
+
+================================================================================
+9. OTHER TRANSACTION AUTHORITY (OTA) — HOW TO FIND THEM
+================================================================================
+
+OTAs are one of the fastest-growing procurement vehicles in DoD, especially
+for emerging tech companies. They are also the hardest to find in public data.
+
+WHY THEY MATTER:
+  - Companies like Saronic Technologies had $500 visible in USAspending
+    but $1.85B obligated / $3.36B ceiling in FPDS OT records
+  - Companies like Gravois Aluminum Boats ($1.9B) and Autonomous Surface
+    Vehicles LLC ($2.8B) were 100% OT and completely invisible in
+    USAspending keyword searches
+  - OTAs are used heavily by DIU, DARPA, SOCOM, and NAVSEA for rapid
+    prototyping and production with non-traditional defense contractors
+
+HOW TO FIND OTAs — BY SOURCE:
+
+  FPDS Atom Feed (BEST method):
+    OT records have their own XML record types:
+      <ns1:OtherTransactionAward>   — OT awards under an agreement
+      <ns1:OtherTransactionIDV>     — OT agreements (the umbrella vehicle)
+
+    These are returned alongside standard awards in search results. Parse
+    the XML to distinguish record types. OT records include unique fields:
+      typeOfAgreement:             "PROTOTYPE" or "PRODUCTION"
+      nonTraditionalParticipation: whether non-traditional contractors
+                                   are significantly participating
+      consortiumFlag, primaryConsortiumMemberName: consortia info (v1.5.3+)
+
+    FISCAL_YEAR field is specifically described as "Other Transaction
+    Fiscal Year" in FPDS schema.
+
+  USAspending (UNRELIABLE):
+    No dedicated OT award type code. You must search descriptions for
+    phrases like "other transaction", "OTA", "prototype agreement".
+    Many OT awards have vague descriptions (e.g., "SUPPLY PROCUREMENT")
+    that won't match these keywords. Not recommended as primary OT source.
+
+  SAM.gov:
+    Some OT opportunities appear in SAM.gov, particularly Broad Agency
+    Announcements (BAAs) and Commercial Solutions Openings (CSOs). But
+    many OTAs — especially those through consortia or DIU — bypass SAM.gov
+    entirely.
+
+KEY OT FUNDING OFFICES TO WATCH:
+  - Defense Innovation Unit (DIU)
+  - DARPA
+  - NAVSEA HQ
+  - SOCOM
+  - Washington Headquarters Services (WHS)
+  - OUSD(AT&L) / OUSD(R&E) / OUSD(A&S)
+  - Naval Information Warfare Systems Command
+  - Individual PEOs (Program Executive Offices)
+
+
+================================================================================
+10. KNOWN BLIND SPOTS ACROSS ALL SOURCES
+================================================================================
+
+No combination of public APIs will give you 100% of federal procurement data.
+Know what you're missing:
+
+1. Classified programs.
+   Public databases exclude classified contracts. For national security
+   domains (defense, intelligence), a meaningful portion of spending is
+   invisible. The more sensitive the domain, the bigger this gap.
+
+2. Subcontractor data.
+   All public sources show only prime contract recipients. A company doing
+   $500M/year as a subcontractor providing autonomy software to a prime
+   shipbuilder will not appear anywhere. There is no public API for
+   subcontractor data at the award level.
+
+   Partial mitigation: USAspending has a subawards endpoint, but coverage
+   is inconsistent and limited to first-tier subs on contracts over $30K
+   (or $25K for grants). Far from complete.
+
+3. OTAs through consortia.
+   Many OTAs are awarded through intermediary consortia (e.g., Advanced
+   Technology International, NSTXL, National Armaments Consortium). The
+   FPDS record may list the consortium as the vendor, with the actual
+   performing company in a consortium-member field that only exists
+   in FPDS v1.5.3+. Older records won't have this.
+
+4. SBIR/STTR awards.
+   Small Business Innovation Research awards are in FPDS but may use
+   different description conventions. Supplement with sbir.gov for
+   better coverage of early-stage companies.
+
+5. Grants and cooperative agreements.
+   University research and cooperative agreements are a separate award
+   type group. If you only search contracts (A/B/C/D), you miss all
+   grant-funded work. Universities doing significant research in your
+   domain will be invisible.
+
+6. Delayed reporting.
+   FPDS data has a reporting lag. Recent awards (last 30-90 days) may
+   not yet appear. Some agencies are slower to report than others.
+
+7. Vague descriptions.
+   Some awards have minimal descriptions ("SUPPLY PROCUREMENT",
+   "ENGINEERING SERVICES", "R&D SUPPORT"). These won't match any
+   domain-specific keyword search. There is no workaround except
+   vendor-specific searches for known players.
+
+
+================================================================================
+11. RATE LIMITS, QUOTAS, AND POLITENESS
+================================================================================
+
+FPDS Atom Feed:
+  - No documented rate limit for public feed
+  - 10 records per page means lots of requests for large result sets
+  - Be polite: add 0.3-0.5s delay between pages, brief pause every 5 pages
+  - Set a User-Agent header identifying your client
+  - For authenticated DoD-specific feeds: request account via fsd.gov
+
+USAspending API:
+  - No documented rate limit
+  - Practical limit: ~100 requests per page, max ~10,000 results per query
+  - Add 0.5s between calls; back off on 429s
+  - Retry with exponential backoff on 5xx errors
+
+SAM.gov Opportunities API:
+  - ~50-100 requests per day per API key
+  - Quota resets at midnight UTC
+  - HTTP 429 on quota exceeded, with reset timestamp in message
+  - Design your query plan to fit within daily budget
+  - If you need higher volume, contact SAM.gov for a higher tier key
+
+General:
+  - Always cache results locally after every successful API call
+  - Never re-fetch data you already have
+  - If interrupted, resume from where you left off
+  - Write results to disk incrementally, not all at the end
+  - Implement retry logic with exponential backoff (2s, 4s, 8s)
+
+
+================================================================================
+12. RECOMMENDED PULL ORDER
+================================================================================
+
+For a comprehensive analysis of any federal procurement domain:
+
+STEP 1: FPDS Atom Feed — full historical pull
+  - Build your keyword set (Section 5)
+  - Run description-level searches with agency filters
+  - Run program name searches
+  - Run vendor-specific searches for known players
+  - Parse all three record types (award, OT_award, OT_IDV)
+  - Post-filter by description regex
+  - Deduplicate by PIID + mod_number
+  - This gives you the most complete picture including OT data
+
+STEP 2: USAspending — supplementary views
+  - Run spending_by_award with your keyword groups
+    (4 calls per keyword group: contracts, IDVs, grants, other)
+  - Post-filter by description regex
+  - Run spending_over_time for FY trend data (acknowledge it's noisy)
+  - Optionally run spending_by_category/recipient for directional data
+  - Cross-reference with FPDS results to validate
+
+STEP 3: SAM.gov — pipeline analysis
+  - Design queries to fit within ~50 daily call budget
+  - Use title-based keyword searches, not NAICS pagination
+  - Split by date windows (max 1 year each)
+  - Prioritize broad terms across all windows, niche terms for recent only
+  - Deduplicate by noticeId
+  - Post-filter by title regex
+
+STEP 4: Synthesize
+  - Merge FPDS and USAspending award data, using FPDS as authoritative
+  - Normalize vendor names across all sources
+  - Aggregate by vendor, program, agency, fiscal year
+  - Flag OT-only companies that don't appear in USAspending
+  - Note which companies have SAM.gov pipeline activity vs. no pipeline
+
+
+================================================================================
+13. SUPPLEMENTARY SOURCES
+================================================================================
+
+Beyond the three primary APIs, consider these for completeness:
+
+SBIR.gov (sbir.gov)
+  - SBIR and STTR awards with detailed abstracts
+  - Better for early-stage company discovery than FPDS
+  - API available for programmatic access
+  - Covers all federal agencies
+
+DSIP / DIBBS (dla.mil)
+  - Defense Logistics Agency procurement
+  - Parts and supplies contracts
+  - Separate from FPDS for some transaction types
+
+GovWin (Deltek) — PAID
+  - Best commercial source for OTA/DIU/SBIR visibility
+  - Includes pipeline intelligence and competitive analysis
+  - Pre-award intelligence not available in public sources
+
+Bloomberg Government — PAID
+  - Federal spending analytics
+  - Subcontractor relationship data
+  - Program-level budget tracking
+
+Federal Subaward Reporting System (FSRS)
+  - fsrs.gov
+  - First-tier subcontract data for awards over $30K
+  - Coverage is inconsistent but it's the only public sub data
+
+USAspending Bulk Download
+  - download.usaspending.gov
+  - Full database dumps by agency and fiscal year
+  - Better for large-scale analysis than API pagination
+  - Updated monthly
+
+FPDS Bulk Data
+  - Available via data.gov
+  - Complete FPDS database in XML format
+  - Multi-gigabyte files; best for building a local database
+  - More efficient than Atom Feed for truly comprehensive pulls
+
+
+================================================================================
+END OF GUIDE
+================================================================================

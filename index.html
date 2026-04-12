@@ -1,0 +1,1746 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1200" />
+<title>Where the Money Flows · FY2026 Navy Surface & Amphibious Contract Briefing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ------------------------------------------------------------------
+   BRIDGEWATER INSTITUTIONAL DARK — FY2026 Navy Contract Briefing
+   ------------------------------------------------------------------ */
+:root {
+  --bg:              #0a0e14;
+  --bg-raised:       #10151c;
+  --bg-sunk:         #070a0f;
+  --rule:            #1c2430;
+  --rule-strong:     #2a3645;
+  --rule-gold:       #3b3221;
+
+  --ivory:           #ece6d4;
+  --ivory-bright:    #fbf6e6;
+  --ivory-dim:       #a59f8d;
+  --muted:           #6e7484;
+  --muted-deep:      #3e4452;
+
+  --gold:            #c7a35a;
+  --gold-bright:     #ead194;
+  --gold-dim:        #8c7340;
+  --gold-shadow:     #5a4720;
+
+  --crimson:         #b8534c;
+  --crimson-dim:     #633028;
+
+  --slate:           #4e617d;
+
+  --flow:            rgba(199, 163, 90, 0.18);
+  --flow-hot:        rgba(234, 209, 148, 0.82);
+  --flow-cold:       rgba(199, 163, 90, 0.03);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); }
+body {
+  color: var(--ivory);
+  font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "ss02", "cv11";
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 900px 600px at 15% 8%, rgba(199,163,90,0.045), transparent 55%),
+    radial-gradient(ellipse 1100px 700px at 85% 95%, rgba(78,97,125,0.05), transparent 60%),
+    linear-gradient(to bottom, #090d12 0%, #0a0e14 100%);
+}
+::selection { background: var(--gold); color: var(--bg); }
+
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 56px 120px;
+  position: relative;
+}
+
+/* ------------- top strip ------------- */
+.topstrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule-strong);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.topstrip .left { display: flex; align-items: center; gap: 28px; }
+.topstrip .right { display: flex; align-items: center; gap: 20px; }
+.topstrip .logo {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--ivory);
+}
+.topstrip .logo .mark {
+  width: 14px; height: 14px; display: inline-block;
+  background:
+    linear-gradient(135deg, var(--gold) 0%, var(--gold) 50%, transparent 50%, transparent 100%),
+    linear-gradient(315deg, var(--gold-dim) 0%, var(--gold-dim) 50%, transparent 50%, transparent 100%);
+}
+.topstrip .gold { color: var(--gold); }
+.topstrip .dot {
+  width: 4px; height: 4px; border-radius: 50%; background: var(--gold);
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(199,163,90,0.15);
+}
+
+/* ------------- masthead ------------- */
+.masthead {
+  padding: 72px 0 64px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.masthead::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 400px; height: 180px;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0, transparent 11px,
+      rgba(199,163,90,0.08) 11px, rgba(199,163,90,0.08) 12px
+    );
+  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  pointer-events: none;
+}
+
+.kicker {
+  display: flex; align-items: center; gap: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+.kicker::before {
+  content: ''; width: 48px; height: 1px; background: var(--gold);
+}
+.kicker span.sep {
+  width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
+  display: inline-block;
+}
+
+.masthead h1 {
+  font-family: 'Fraunces', 'IBM Plex Serif', serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 144;
+  font-weight: 300;
+  font-size: clamp(68px, 9.2vw, 132px);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  color: var(--ivory-bright);
+  margin-bottom: 36px;
+  max-width: 16ch;
+}
+.masthead h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+  font-variation-settings: "opsz" 144;
+}
+.masthead h1 .punct { color: var(--gold); font-style: normal; }
+
+.masthead .dek {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ivory-dim);
+  max-width: 62ch;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+}
+.masthead .dek strong {
+  color: var(--ivory);
+  font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+.meta .item {
+  padding-right: 32px;
+  border-left: 1px solid var(--rule);
+  padding-left: 24px;
+}
+.meta .item:first-child { border-left: none; padding-left: 0; }
+.meta .item .label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.meta .item .val {
+  font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', sans-serif;
+  font-size: 15px;
+  color: var(--ivory);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+.meta .item .val .mono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--ivory-dim);
+}
+
+/* ------------- KPI strip ------------- */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 48px 0 52px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.kpi-strip::before {
+  content: 'PRINCIPAL METRICS / FY2020 — FY2026';
+  position: absolute;
+  top: 20px; left: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.kpi {
+  padding: 28px 28px 0 28px;
+  border-left: 1px solid var(--rule);
+  position: relative;
+}
+.kpi:first-child { border-left: none; padding-left: 0; }
+.kpi .idx {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  display: block;
+}
+.kpi .label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+  line-height: 1.5;
+  min-height: 28px;
+}
+.kpi .number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--ivory-bright);
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+.kpi .number .currency {
+  font-size: 20px;
+  color: var(--gold);
+  font-weight: 300;
+  margin-right: 1px;
+  transform: translateY(-4px);
+}
+.kpi .number .unit {
+  font-size: 18px;
+  color: var(--gold);
+  margin-left: 3px;
+  font-weight: 400;
+  transform: translateY(-6px);
+}
+.kpi.crimson .number { color: var(--crimson); }
+.kpi.crimson .number .unit,
+.kpi.crimson .number .currency { color: var(--crimson-dim); }
+.kpi .note {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  color: var(--ivory-dim);
+  margin-top: 14px;
+  line-height: 1.42;
+  font-weight: 400;
+}
+.kpi .note .delta {
+  color: var(--gold);
+  font-family: 'IBM Plex Mono', monospace;
+}
+.kpi.crimson .note .delta { color: var(--crimson); }
+
+/* ------------- exhibit ------------- */
+.exhibit {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 332px;
+  gap: 48px;
+  padding: 64px 0 0;
+}
+
+.exhibit-main { min-width: 0; }
+.ex-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 28px;
+}
+.ex-head .left .label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: flex; align-items: center; gap: 12px;
+}
+.ex-head .left .label::before {
+  content: ''; width: 22px; height: 1px; background: var(--gold);
+}
+.ex-head .left .title {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ivory-bright);
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+.ex-head .left .subtitle {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  max-width: 70ch;
+}
+.ex-head .right {
+  text-align: right;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  min-width: 120px;
+}
+.ex-head .right .gold { color: var(--gold); }
+.ex-head .right .big {
+  font-size: 22px;
+  color: var(--ivory);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  margin-top: 4px;
+  display: block;
+}
+
+/* column headers */
+.col-headers {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.col-headers .col {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.col-headers .col .num {
+  color: var(--gold);
+  font-weight: 500;
+}
+.col-headers .col.mid { justify-content: center; }
+.col-headers .col.right { justify-content: flex-end; }
+
+/* Sankey container */
+.sankey-wrap {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(199,163,90,0.012) 50%, transparent 100%);
+  padding: 8px 0;
+}
+#sankey-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.node-rect {
+  fill: var(--gold);
+  cursor: pointer;
+  transition: fill 0.18s;
+}
+.node-rect:hover { fill: var(--gold-bright); }
+.node-hit {
+  fill: transparent;
+  cursor: pointer;
+}
+.node-label {
+  font-family: 'IBM Plex Sans Condensed', 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  fill: var(--ivory);
+  pointer-events: none;
+  letter-spacing: -0.003em;
+}
+.node-label-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  fill: var(--muted);
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+.node.dim .node-rect { fill: var(--muted-deep); }
+.node.dim .node-label { fill: var(--muted); }
+.node.dim .node-label-sub { fill: var(--muted-deep); }
+.node.active .node-rect { fill: var(--gold-bright); }
+.node.active .node-label {
+  fill: var(--ivory-bright);
+  font-weight: 600;
+}
+.node.active .node-label-sub { fill: var(--gold); }
+
+.link {
+  fill: none;
+  stroke: var(--gold);
+  stroke-opacity: 0.14;
+  transition: stroke-opacity 0.2s, stroke 0.2s;
+  mix-blend-mode: screen;
+}
+.link.dim { stroke-opacity: 0.02; }
+.link.active {
+  stroke-opacity: 0.68;
+  stroke: var(--gold-bright);
+}
+
+.sk-divider {
+  stroke: var(--rule);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+}
+
+/* sankey exhibit annotations */
+.ex-annot {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  color: var(--ivory-dim);
+}
+.ex-annot .an .k {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: block;
+}
+.ex-annot .an p { line-height: 1.55; color: var(--ivory-dim); }
+.ex-annot .an b { color: var(--ivory); font-weight: 500; }
+
+/* tooltip */
+.sk-tip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--bg-raised);
+  border: 1px solid var(--rule-strong);
+  border-left: 2px solid var(--gold);
+  padding: 14px 18px 16px;
+  min-width: 240px;
+  max-width: 320px;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.4),
+    0 24px 80px rgba(0,0,0,0.7),
+    0 4px 16px rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.12s, transform 0.12s;
+  z-index: 50;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.sk-tip.show { opacity: 1; transform: translateY(0); }
+.sk-tip .kind {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sk-tip .kind::before {
+  content: ''; width: 14px; height: 1px; background: var(--gold);
+}
+.sk-tip .name {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ivory-bright);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.sk-tip .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 11px;
+}
+.sk-tip .row:first-of-type { border-top: none; padding-top: 0; }
+.sk-tip .row .k {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 2px;
+}
+.sk-tip .row .v {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--ivory);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.sk-tip .row .v .unit { color: var(--gold); margin-left: 2px; }
+.sk-tip .desc {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 11px;
+  color: var(--ivory-dim);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ------------- findings sidebar ------------- */
+.findings {
+  padding-top: 0;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+}
+.findings .head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 4px;
+}
+.findings .head .label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 10px;
+}
+.findings .head .label::before {
+  content: ''; width: 22px; height: 1px; background: var(--gold);
+}
+.findings .head .title {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ivory-bright);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.findings .head .sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.finding {
+  padding: 18px 0 20px;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 6px;
+  position: relative;
+}
+.finding:last-child { border-bottom: none; }
+.finding .num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  padding-top: 3px;
+  font-weight: 500;
+}
+.finding h4 {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ivory-bright);
+  margin-bottom: 6px;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+.finding p {
+  font-size: 12px;
+  color: var(--ivory-dim);
+  line-height: 1.55;
+}
+.finding .bar {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.finding .bar .bar-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.finding .bar .bar-label.crimson { color: var(--crimson); }
+.finding .bar .bar-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--ivory);
+  margin-left: auto;
+}
+
+/* ------------- second row: league table ------------- */
+.supporting {
+  margin-top: 88px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 332px;
+  gap: 48px;
+}
+.league .ex-head { margin-bottom: 20px; }
+.league table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.league thead th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  font-weight: 500;
+  padding: 8px 10px 14px 0;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.league thead th.num { text-align: right; }
+.league tbody td {
+  padding: 14px 10px 14px 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: middle;
+}
+.league tbody tr:hover td { background: rgba(199,163,90,0.025); }
+.league .rank {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  width: 38px;
+  font-weight: 500;
+}
+.league .name {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 14px;
+  color: var(--ivory-bright);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.league .parent {
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  margin-top: 1px;
+}
+.league .mix {
+  color: var(--ivory-dim);
+  font-size: 11px;
+  max-width: 42ch;
+}
+.league .amount {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: var(--ivory);
+  text-align: right;
+  white-space: nowrap;
+}
+.league .amount .unit {
+  color: var(--gold);
+  font-size: 10px;
+  margin-left: 2px;
+}
+.league .bar-cell {
+  width: 180px;
+  padding-left: 12px;
+}
+.league .bar-bg {
+  height: 4px;
+  background: var(--rule);
+  position: relative;
+  overflow: hidden;
+}
+.league .bar-fg {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: linear-gradient(to right, var(--gold-dim), var(--gold));
+}
+.league .tier {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.league .tier.a { color: var(--gold); }
+.league .tier.b { color: var(--ivory-dim); }
+
+/* compass: "corrections" callout on the right of league table */
+.corrections {
+  padding-top: 0;
+}
+.corrections .head {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 4px;
+}
+.corrections .head .label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 10px;
+}
+.corrections .head .label::before {
+  content: ''; width: 22px; height: 1px; background: var(--crimson);
+}
+.corrections .head .title {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ivory-bright);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.corrections .head .sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.correction {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 20px;
+  align-items: baseline;
+}
+.correction:last-child { border-bottom: none; }
+.correction .entity {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ivory-bright);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+.correction .sub {
+  font-size: 10.5px;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.02em;
+  grid-column: 1 / -1;
+  margin-top: 2px;
+}
+.correction .nums {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.correction .nums .old {
+  color: var(--crimson);
+  text-decoration: line-through;
+  text-decoration-color: var(--crimson-dim);
+  opacity: 0.85;
+}
+.correction .nums .arrow { color: var(--muted); }
+.correction .nums .new {
+  color: var(--ivory);
+  font-weight: 500;
+}
+.correction .ratio {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--crimson);
+  letter-spacing: 0.06em;
+  grid-column: 2;
+  margin-top: 2px;
+  text-align: right;
+}
+
+/* ------------- methodology footer ------------- */
+.methodology {
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule-strong);
+}
+.methodology .top {
+  display: grid;
+  grid-template-columns: 200px 1fr 240px;
+  gap: 48px;
+}
+.methodology .hlabel {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.methodology h3 {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ivory);
+  letter-spacing: -0.01em;
+}
+.methodology p {
+  font-size: 12px;
+  color: var(--ivory-dim);
+  line-height: 1.65;
+  max-width: 72ch;
+}
+.methodology p + p { margin-top: 12px; }
+.methodology .stamp {
+  text-align: right;
+}
+.methodology .stamp .seal {
+  width: 74px; height: 74px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 14px;
+}
+.methodology .stamp .seal::before,
+.methodology .stamp .seal::after {
+  content: '';
+  position: absolute;
+  border: 1px solid var(--gold-dim);
+  border-radius: 50%;
+}
+.methodology .stamp .seal::before { inset: 4px; }
+.methodology .stamp .seal::after { inset: 8px; border-style: dashed; }
+.methodology .stamp .seal span {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.methodology .stamp .meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.methodology .stamp .meta b { color: var(--ivory); font-weight: 500; }
+
+.colophon {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px dashed var(--rule);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.colophon .dot {
+  display: inline-block;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--gold);
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+/* -------------- responsive -------------- */
+@media (max-width: 1200px) {
+  .page { padding: 32px 32px 100px; }
+  .exhibit, .supporting { grid-template-columns: 1fr; }
+  .findings, .corrections { position: static; }
+  .kpi-strip { grid-template-columns: repeat(3, 1fr); gap: 32px 0; padding-top: 72px; }
+  .kpi:nth-child(4) { border-left: none; padding-left: 0; }
+  .methodology .top { grid-template-columns: 1fr; gap: 16px; }
+  .masthead h1 { font-size: 64px; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ============ TOP STRIP ============ -->
+  <div class="topstrip">
+    <div class="left">
+      <span class="logo"><span class="mark"></span>BUILDCO · NAVY DESK</span>
+      <span>SURFACE &amp; AMPHIBIOUS RESEARCH</span>
+    </div>
+    <div class="right">
+      <span>REF 2026-04-10 / FY20-26</span>
+      <span class="dot"></span>
+      <span>BRIEFING <span class="gold">№&nbsp;01</span></span>
+      <span class="dot"></span>
+      <span class="gold">INTERNAL / RESTRICTED</span>
+    </div>
+  </div>
+
+  <!-- ============ MASTHEAD ============ -->
+  <section class="masthead">
+    <div class="kicker">
+      FY2020 — FY2026 CONTRACT OBLIGATION AUDIT
+      <span class="sep"></span>
+      8 HULL CLASSES
+      <span class="sep"></span>
+      170 PIIDS
+    </div>
+    <h1>Where the <em>Money</em> Flows<span class="punct">.</span></h1>
+    <p class="dek">
+      A forensic re-audit of the first-tier subaward ecosystem beneath the U.S.
+      Navy's surface combatant and amphibious warfare programs — DDG-51, DDG-1000,
+      LPD, LHA, LCS, LHD, LSD, CG — after three-stage deduplication corrected
+      a systematic cumulative-snapshot double-count that had inflated prior
+      estimates from <strong>$10.4&nbsp;B</strong> to more than $80&nbsp;B.
+      The verified money flow follows.
+    </p>
+    <div class="meta">
+      <div class="item">
+        <div class="label">Scope</div>
+        <div class="val">170 PIIDs <span class="mono">/ 8 classes</span></div>
+      </div>
+      <div class="item">
+        <div class="label">Execution Window</div>
+        <div class="val">01 Jan 2020 <span class="mono">—</span> 10 Apr 2026</div>
+      </div>
+      <div class="item">
+        <div class="label">Sources</div>
+        <div class="val">FPDS Atom <span class="mono">·</span> USAspending v2</div>
+      </div>
+      <div class="item">
+        <div class="label">Method</div>
+        <div class="val">Per-mod sum <span class="mono">· v3</span> dedup</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KPI STRIP ============ -->
+  <section class="kpi-strip">
+    <div class="kpi">
+      <span class="idx">01</span>
+      <div class="label">In-Window<br>Subaward Total</div>
+      <div class="number"><span class="currency">$</span>10.4<span class="unit">B</span></div>
+      <div class="note">Across 170 primes after v3 dedup <span class="delta">▾ 8× from prior</span></div>
+    </div>
+    <div class="kpi">
+      <span class="idx">02</span>
+      <div class="label">#1 Prime<br>by Window Obligation</div>
+      <div class="number"><span class="currency">$</span>22.0<span class="unit">B</span></div>
+      <div class="note">Huntington Ingalls — DDG-51, LPD, LHA</div>
+    </div>
+    <div class="kpi">
+      <span class="idx">03</span>
+      <div class="label">#2 Prime — Raytheon /<br>&nbsp;RTX (overtakes BIW)</div>
+      <div class="number"><span class="currency">$</span>13.7<span class="unit">B</span></div>
+      <div class="note">Seven missed SM contracts found <span class="delta">▴ +$5.56B</span></div>
+    </div>
+    <div class="kpi">
+      <span class="idx">04</span>
+      <div class="label">DDG-51<br>Industrial Base</div>
+      <div class="number"><span class="currency">$</span>20.7<span class="unit">B</span></div>
+      <div class="note">HII + BIW combined · 6 MYP vehicles</div>
+    </div>
+    <div class="kpi crimson">
+      <span class="idx">05</span>
+      <div class="label">Marinette Marine<br>Phantom Correction</div>
+      <div class="number">19<span class="unit">×</span></div>
+      <div class="note">$47.17 B → <b>$2.49 B</b> on LM LCS Freedom <span class="delta">▾ corrected</span></div>
+    </div>
+    <div class="kpi crimson">
+      <span class="idx">06</span>
+      <div class="label">Prior Estimate<br>Overstatement</div>
+      <div class="number">8<span class="unit">×</span></div>
+      <div class="note">$80 B+ prior claim → $10.4 B verified</div>
+    </div>
+  </section>
+
+  <!-- ============ EXHIBIT 01 — SANKEY + FINDINGS ============ -->
+  <section class="exhibit">
+    <div class="exhibit-main">
+      <div class="ex-head">
+        <div class="left">
+          <div class="label">EXHIBIT 01</div>
+          <div class="title">The Subaward Tier &mdash; Program &rsaquo; Prime &rsaquo; Parent</div>
+          <div class="subtitle">
+            First-tier subaward dollars in the FY2020&ndash;2026 window after v3 dedup.
+            Top 8 programs &middot; top 10 primes &middot; top 15 parent companies.
+            Hover any node to trace its full flow.
+          </div>
+        </div>
+        <div class="right">
+          <div class="gold">UNIT</div>
+          <span class="big">$ MILLIONS</span>
+          <div style="margin-top:6px;">v3 DEDUP &middot; 2026-04-10</div>
+        </div>
+      </div>
+
+      <div class="col-headers">
+        <div class="col"><span class="num">01</span> PROGRAM / HULL CLASS</div>
+        <div class="col mid"><span class="num">02</span> PRIME CONTRACTOR</div>
+        <div class="col right">PARENT COMPANY (AS SUB) <span class="num">03</span></div>
+      </div>
+
+      <div class="sankey-wrap">
+        <svg id="sankey-svg" viewBox="0 0 1100 820" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="sk-tip" class="sk-tip"></div>
+      </div>
+
+      <div class="ex-annot">
+        <div class="an">
+          <span class="k">Read this chart</span>
+          <p>
+            Flow widths are proportional to FY20&ndash;26 reported subaward dollars, not
+            prime obligation. A <b>narrow left band, wide right band</b> at a prime node
+            (e.g., LM LCS Freedom) means most of that prime's value passes through
+            to a single parent.
+          </p>
+        </div>
+        <div class="an">
+          <span class="k">The BIW gap</span>
+          <p>
+            Bath Iron Works shows only <b>$25 M</b> of visible subs against
+            <b>$8.8 B</b> of prime obligation — an <b>FFATA reporting gap</b>, not
+            an absence of subcontracting. The true BIW supplier footprint is
+            invisible to USAspending.
+          </p>
+        </div>
+        <div class="an">
+          <span class="k">Capped values</span>
+          <p>
+            Subaward pairs exceeding 1&times; prime contract value are capped at the
+            prime; pairs exceeding 2&times; prime are excluded as clear data
+            corruption (e.g., the NASSCO Cowpens phantom $920 M).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- findings sidebar -->
+    <aside class="findings">
+      <div class="head">
+        <div class="label">KEY FINDINGS</div>
+        <div class="title">Six material shifts from the prior analysis.</div>
+        <div class="sub">From the v3 subaward re-pull, 10 April 2026.</div>
+      </div>
+
+      <div class="finding">
+        <div class="num">01</div>
+        <div>
+          <h4>Raytheon overtakes BIW as the #2 prime.</h4>
+          <p>
+            Seven FY20&ndash;26 Standard Missile production contracts worth
+            $5.56 B were missed by the original keyword pull. Surfaced via a Navy
+            agency-code sweep with a $100 M dollar floor.
+          </p>
+          <div class="bar">
+            <span class="bar-label">▴ NEW OBLIGATION</span>
+            <span class="bar-num">+ $5.56 B</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">02</div>
+        <div>
+          <h4>Marinette was never $47 billion.</h4>
+          <p>
+            USAspending issues up to 12 cumulative-style snapshots per subaward.
+            Summing them produced a $47.17 B phantom on the LM LCS Freedom prime.
+            Verified: <b>$2.49 B</b> across 23 distinct subcontracts.
+          </p>
+          <div class="bar">
+            <span class="bar-label crimson">▾ CORRECTION</span>
+            <span class="bar-num">19&times; lower</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">03</div>
+        <div>
+          <h4>HII LPD&nbsp;28 is 97% pre-window.</h4>
+          <p>
+            The <em>Fort Lauderdale</em> prime obligated $3.00 B before 2020 but only
+            $77 M inside the FY20&ndash;26 window. Cumulative-vs-window confusion
+            inflated the prior estimate by ~$6 B on LPDs alone.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">04</div>
+        <div>
+          <h4>BIW under-reports subawards entirely.</h4>
+          <p>
+            ~$8.8 B of DDG-51 prime obligation produced only $51 M of reported
+            subawards across all six BIW PIIDs — an FFATA compliance gap, not an
+            absence of subcontracting.
+          </p>
+          <div class="bar">
+            <span class="bar-label crimson">▾ FFATA GAP</span>
+            <span class="bar-num">0.6% visible</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">05</div>
+        <div>
+          <h4>The "hidden RF backbone" was overstated 10&times;.</h4>
+          <p>
+            CAES + Mercury combined exposure across SPY-6, SEWIP Block 2, and
+            SLQ-32(V)6 is <b>$503 M</b> &mdash; not the $5 B+ implied by summed
+            cumulative-snapshot records.
+          </p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="num">06</div>
+        <div>
+          <h4>DDG-1000 is in closeout.</h4>
+          <p>
+            Only $1.35 B of window obligation across 7 PIIDs. The BIW
+            lead-shipbuilder ($3.31 B) and Raytheon mission systems
+            integrator ($1.34 B) are 100% pre-window.
+          </p>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ============ EXHIBIT 02 — LEAGUE TABLE + CORRECTIONS ============ -->
+  <section class="supporting">
+    <div class="league">
+      <div class="ex-head">
+        <div class="left">
+          <div class="label">EXHIBIT 02</div>
+          <div class="title">Prime Contractor League Table</div>
+          <div class="subtitle">
+            Ranked by FY2020&ndash;2026 in-window obligation (per-mod sum).
+            Depot figures are approximations from the per-availability PIIDs.
+          </div>
+        </div>
+        <div class="right">
+          <div class="gold">TOP TEN</div>
+          <span class="big">$ BILLIONS</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>RK</th>
+            <th>CONTRACTOR</th>
+            <th>PROGRAM MIX</th>
+            <th class="num">WINDOW Δ</th>
+            <th></th>
+            <th>TIER</th>
+          </tr>
+        </thead>
+        <tbody id="league-body"></tbody>
+      </table>
+    </div>
+
+    <aside class="corrections">
+      <div class="head">
+        <div class="label">MATERIAL CORRECTIONS</div>
+        <div class="title">Twelve figures that changed.</div>
+        <div class="sub">Prior claim → v3 corrected.</div>
+      </div>
+      <div id="corrections-list"></div>
+    </aside>
+  </section>
+
+  <!-- ============ METHODOLOGY FOOTER ============ -->
+  <section class="methodology">
+    <div class="top">
+      <div>
+        <div class="hlabel">§ METHOD</div>
+        <h3>Per-mod sum, not cumulative.</h3>
+      </div>
+      <div>
+        <p>
+          Window deltas are computed as the per-mod sum of FPDS
+          <span style="color:var(--ivory)">obligatedAmount (this action only)</span>
+          across all in-window mods &mdash; not cumulative-since-contract-award.
+          The prior version of this analysis used cumulative figures, which alone
+          overstated FY20&ndash;26 obligation by roughly $12 B on DDG-51 new
+          construction (pre-window MYP leakage of the FY13&ndash;17 and FY18&ndash;22
+          Block Buys).
+        </p>
+        <p>
+          Subawards were re-pulled from <span style="color:var(--ivory)">USAspending /api/v2/subawards</span>
+          across all 170 in-scope PIIDs and deduplicated in three stages:
+          (i)&nbsp;per <code style="color:var(--gold);font-family:'IBM Plex Mono'">sub_id</code> MAX to collapse
+          cumulative snapshots; (ii)&nbsp;identical-amount duplicates across mod
+          boundaries; (iii)&nbsp;cap at 1.0&times; prime contract value, and
+          exclude pairs exceeding 2&times; prime as clear data corruption.
+        </p>
+        <p style="color:var(--muted); font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.04em; margin-top:20px">
+          SOURCES &nbsp; · &nbsp; FPDS ATOM FEED (EZSEARCH) &nbsp; · &nbsp; USASPENDING V2 API &nbsp; · &nbsp; DAA JES FY2026 &nbsp; · &nbsp; DOD P-1 / R-1 EXHIBITS<br>
+          SEE &nbsp; · &nbsp; FY2026_KEY_PROGRAMS_CONTRACT_AWARDS.MD &nbsp; §22 &ndash; §23
+        </p>
+      </div>
+      <div class="stamp">
+        <div class="seal"><span>BUILD&middot;CO<br>NAVY&middot;DESK<br>2026</span></div>
+        <div class="meta">
+          ANALYST &middot; <b>CLAUDE / BUILDCO</b><br>
+          REF &middot; <b>FY26-NAV-01</b><br>
+          DATE &middot; <b>10 APR 2026</b><br>
+          REV &middot; <b>v3-dedup</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="colophon">
+      <span>END · EXHIBIT 01 &amp; 02 <span class="dot"></span> SEE APPENDIX FOR PER-PROGRAM ROLLUPS</span>
+      <span>BUILDCO · NAVY DESK <span class="dot"></span> FY2026 BRIEFING №&nbsp;01 <span class="dot"></span> 10 APR 2026</span>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================================================================
+     DATA + RENDER
+================================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<script>
+/* ------------------------------------------------------------------
+   DATA
+   Source: FY2026_Key_Programs_Contract_Awards.md §22 (v3 dedup)
+   Triples: [program, prime, subParent, $Millions]
+   ------------------------------------------------------------------ */
+const triples = [
+  /* LCS Freedom Construction — LM prime (Marinette story) */
+  ['LCS Freedom Construction',          'Lockheed Martin',     'Fincantieri / Marinette',  2487],
+  ['LCS Freedom Construction',          'Lockheed Martin',     'Rolls-Royce',              196],
+
+  /* DDG Modernization (SPY-6 + CIWS/RAM) — Raytheon prime */
+  ['DDG Modernization',                 'Raytheon / RTX',      'General Dynamics (sub)',   359],
+  ['DDG Modernization',                 'Raytheon / RTX',      'CAES (Cobham)',            170],
+  ['DDG Modernization',                 'Raytheon / RTX',      'Northrop Grumman (sub)',   114],
+  ['DDG Modernization',                 'Raytheon / RTX',      'L3Harris',                  78],
+  ['DDG Modernization',                 'Raytheon / RTX',      'Honeywell',                 19],
+
+  /* Standard Missile Family — Raytheon prime */
+  ['Standard Missile Family',           'Raytheon / RTX',      'L3Harris (Aerojet)',       378],
+  ['Standard Missile Family',           'Raytheon / RTX',      'Honeywell',                 43],
+  ['Standard Missile Family',           'Raytheon / RTX',      'CAES (Cobham)',             26],
+  ['Standard Missile Family',           'Raytheon / RTX',      'General Dynamics (sub)',    20],
+
+  /* DDG-51 New Construction — HII prime stack */
+  ['DDG-51 New Construction',           'Huntington Ingalls',  'Rolls-Royce',               96],
+  ['DDG-51 New Construction',           'Huntington Ingalls',  'GE Aerospace',              88],
+  ['DDG-51 New Construction',           'Huntington Ingalls',  'Johnson Controls (+York)',  76],
+  ['DDG-51 New Construction',           'Huntington Ingalls',  'Timken Gears',              41],
+  ['DDG-51 New Construction',           'Huntington Ingalls',  'Leonardo DRS',              17],
+  ['DDG-51 New Construction',           'Huntington Ingalls',  'L3Harris',                  14],
+
+  /* DDG-51 New Construction — BIW (FFATA gap story: ~$51M across 6 PIIDs) */
+  ['DDG-51 New Construction',           'Bath Iron Works',     'Johnson Controls (+York)',  25],
+
+  /* LPD Flight II — HII prime */
+  ['LPD Flight II Construction',        'Huntington Ingalls',  'Fairbanks Morse Defense',   65],
+  ['LPD Flight II Construction',        'Huntington Ingalls',  'GE Aerospace',              20],
+  ['LPD Flight II Construction',        'Huntington Ingalls',  'Leonardo DRS',              16],
+  ['LPD Flight II Construction',        'Huntington Ingalls',  'Timken Gears',              12],
+  ['LPD Flight II Construction',        'Huntington Ingalls',  'Johnson Controls (+York)',  11],
+
+  /* LHA Replacement — HII prime */
+  ['LHA Replacement Construction',      'Huntington Ingalls',  'Fairbanks Morse Defense',   40],
+  ['LHA Replacement Construction',      'Huntington Ingalls',  'L3Harris',                  39],
+  ['LHA Replacement Construction',      'Huntington Ingalls',  'Leonardo DRS',              34],
+  ['LHA Replacement Construction',      'Huntington Ingalls',  'Johnson Controls (+York)',  18],
+
+  /* LCS MCM Mission Modules (multi-prime) */
+  ['LCS MCM Mission Modules',           'Raytheon / RTX',      'Sparton DeLeon Springs',   108],
+  ['LCS MCM Mission Modules',           'GD Mission Systems',  'Northrop Grumman (sub)',    50],
+  ['LCS MCM Mission Modules',           'Northrop Grumman',    'General Dynamics (sub)',    13],
+
+  /* Surface Combatant Depot Maintenance */
+  ['Surface Combatant Depot',           'Vigor Marine LLC',    'Timken Gears',             447],
+  ['Surface Combatant Depot',           'BAE Systems',         'IMIA (coatings)',          150],
+  ['Surface Combatant Depot',           'Metro Machine Corp',  'IMIA (coatings)',           30],
+  ['Surface Combatant Depot',           'Metro Machine Corp',  'Fairbanks Morse Defense',   20],
+  ['Surface Combatant Depot',           'NASSCO (GD)',         'IMIA (coatings)',           24],
+  ['Surface Combatant Depot',           'BAE Systems',         'L3Harris',                  10],
+];
+
+/* Ordering (controls vertical position in each column) */
+const programOrder = [
+  'LCS Freedom Construction',
+  'DDG Modernization',
+  'Standard Missile Family',
+  'Surface Combatant Depot',
+  'DDG-51 New Construction',
+  'LPD Flight II Construction',
+  'LHA Replacement Construction',
+  'LCS MCM Mission Modules',
+];
+
+const primeOrder = [
+  'Lockheed Martin',
+  'Raytheon / RTX',
+  'Vigor Marine LLC',
+  'Huntington Ingalls',
+  'BAE Systems',
+  'Metro Machine Corp',
+  'NASSCO (GD)',
+  'GD Mission Systems',
+  'Northrop Grumman',
+  'Bath Iron Works',
+];
+
+const subOrder = [
+  'Fincantieri / Marinette',
+  'Timken Gears',
+  'L3Harris (Aerojet)',
+  'General Dynamics (sub)',
+  'Rolls-Royce',
+  'CAES (Cobham)',
+  'Northrop Grumman (sub)',
+  'IMIA (coatings)',
+  'L3Harris',
+  'Johnson Controls (+York)',
+  'GE Aerospace',
+  'Fairbanks Morse Defense',
+  'Leonardo DRS',
+  'Sparton DeLeon Springs',
+  'Honeywell',
+];
+
+/* Descriptions used in tooltips */
+const descriptions = {
+  'LCS Freedom Construction':     'LM prime, Marinette (Fincantieri) actual hull builder. $250 M new prime in window; $2.9 B subs executing pre-window-funded scope.',
+  'DDG Modernization':            'SPY-6 AMDR radar + CIWS/RAM/SeaRAM families. Raytheon sole prime. SPY-6 production at $3.27 B window Δ.',
+  'Standard Missile Family':      'SM-2/3/6 + Encanistered Missile + DLMF. Raytheon sole prime. Seven contracts worth $5.56 B were missed by the original keyword pull.',
+  'Surface Combatant Depot':      'LHD/LPD/LSD/LHA/CG/DDG depot availabilities across BAE, NASSCO, Metro Machine, Vigor, MHI. Per-availability PIIDs.',
+  'DDG-51 New Construction':      'Six MYP block-buy vehicles across HII Ingalls and BIW. $20.7 B window obligation combined.',
+  'LPD Flight II Construction':   'LPD 28–35, sole-source to HII Ingalls. $4.68 B window Δ across six PIIDs.',
+  'LHA Replacement Construction': 'LHA 8–10, sole-source to HII Ingalls. $4.49 B window Δ across three PIIDs.',
+  'LCS MCM Mission Modules':      'MCM mission module subsystems: UISS (Textron), Knifefish (NG), SMCM (GDMS), Barracuda (Raytheon), MCM USV (Bollinger).',
+
+  'Lockheed Martin':     'LCS Freedom integrator of record; also SLQ-32(V)6 production and HELIOS. Legacy Aegis is fully pre-window.',
+  'Raytheon / RTX':      'Now the #2 prime by FY20-26 window obligation. SPY-6, CIWS/RAM, Standard Missile, Barracuda, AMNS, Encanistered Missile.',
+  'Huntington Ingalls':  '#1 prime overall at ~$22 B. DDG-51 (Pascagoula), sole-source LPD Flight II, sole-source LHA Replacement.',
+  'Bath Iron Works':     'GD subsidiary. DDG-51 MYP and lead design yard. Reports near-zero subawards — FFATA compliance gap.',
+  'BAE Systems':         'Surface combatant depot maintenance primes across Norfolk, San Diego, Jacksonville and Hawaii. >$5 B window footprint.',
+  'Vigor Marine LLC':    'Portland OR yard. DDG and CG depot availabilities. Dominant subaward pair is Timken Gears on the CG-71 MODPRD.',
+  'Metro Machine Corp':  'Norfolk-area LHD/LSD depot prime.',
+  'NASSCO (GD)':         'San Diego LHA/LHD/LSD/DDG/CG depot prime.',
+  'GD Mission Systems':  'Knifefish Block 1 prime, SMCM Unmanned, LCS Independence ISEA.',
+  'Northrop Grumman':    'Knifefish LRIP prime, SEWIP Block 3 (Lite), ALMDS production.',
+
+  'Fincantieri / Marinette': 'Wisconsin yard; owned by Fincantieri. Actual builder of every Freedom-variant LCS hull. $47 B phantom corrected to $2.49 B.',
+  'Timken Gears':            'DDG/LHD/CG propulsion gearing. The $447 M figure is a prime-cap: raw Vigor CG-71 value of $830 M exceeded the $447 M prime and was capped.',
+  'L3Harris (Aerojet)':      'Solid rocket motors for Standard Missile family — acquired by L3Harris in 2023 post-merger consolidation.',
+  'General Dynamics (sub)':  'Intra-corporate work: GDMS on SPY-6 ($359 M), GDLS on MK 46 gun, GD-OTS on CIWS/RAM.',
+  'Rolls-Royce':             'LM2500 gas turbines, waterjets, marine gearing. Cross-program footprint across DDG-51, LCS Freedom, LPD, LHA.',
+  'CAES (Cobham)':           'RF assemblies on SPY-6, SEWIP Block 2, SLQ-32(V)6. Prior file claimed $800 M+; corrected to $217 M.',
+  'Northrop Grumman (sub)':  'RF subassemblies on SPY-6, CIWS intra-prime, Knifefish system integration work.',
+  'IMIA (coatings)':         'International Marine & Industrial Applicators — hull coatings specialist across 28 depot availabilities.',
+  'L3Harris':                'Maritime Power & Energy Solutions (LPD/LHA), Cincinnati Electronics (CIWS), Fuzing & Ordnance (Barracuda).',
+  'Johnson Controls (+York)':'HVAC / chilled water plants on DDG-51, LPD, LHA. Combined with York International subsidiary.',
+  'GE Aerospace':            'LM2500 gas turbines on DDG-51 + GE Energy Power Conversion on LHA 9.',
+  'Fairbanks Morse Defense': 'Diesel generator sets for LPD/LHA propulsion; mtu diesel rebuilds on depot.',
+  'Leonardo DRS':            'Naval Power Systems (switchboards), Network & Imaging Systems, Laurel Technologies.',
+  'Sparton DeLeon Springs':  'ASW sensors / sonobuoy payload on Raytheon Barracuda mine neutralizer.',
+  'Honeywell':               'IMUs / IRUs on Standard Missile guidance and SPY-6 inertial reference.',
+};
+
+/* ------------------------------------------------------------------
+   LEAGUE TABLE DATA (top 10 primes by FY20-26 window Δ, $B)
+   ------------------------------------------------------------------ */
+const league = [
+  { rank: 1,  name: 'Huntington Ingalls',       parent: 'HII',           mix: 'DDG-51 $11.4 B · LPD $4.7 B · LHA $4.5 B · DDG-1000 plan $0.3 B',          amount: 22.0, tier: 'A' },
+  { rank: 2,  name: 'Raytheon / RTX',           parent: 'RTX Corp',      mix: 'SM Family $5.7 B · SPY-6 $3.5 B · CIWS/RAM $2.0 B · DDG-1000 MS $0.9 B',   amount: 13.7, tier: 'A' },
+  { rank: 3,  name: 'Bath Iron Works',          parent: 'Gen. Dynamics', mix: 'DDG-51 $8.8 B (FY23-27 + FY18-22 + FY13-17 MYP closeout)',                 amount:  8.8, tier: 'A' },
+  { rank: 4,  name: 'BAE Systems',              parent: 'BAE plc',       mix: 'Depot maintenance — DDG / LHD / LPD / LSD / CG',                           amount:  5.0, tier: 'A' },
+  { rank: 5,  name: 'Lockheed Martin',          parent: 'LM',            mix: 'SLQ-32(V)6 $0.78 B · SSDS $0.37 B · LCS Freedom $0.25 B · HELIOS',         amount:  1.5, tier: 'B' },
+  { rank: 6,  name: 'Metro Machine Corp',       parent: 'Indep.',        mix: 'LHD / DDG / LSD depot (Norfolk)',                                          amount:  0.70,tier: 'B' },
+  { rank: 7,  name: 'NASSCO',                   parent: 'Gen. Dynamics', mix: 'LHA / LHD / LSD / DDG / CG depot (San Diego)',                             amount:  0.60,tier: 'B' },
+  { rank: 8,  name: 'Vigor Marine LLC',         parent: 'Indep.',        mix: 'DDG / CG depot (Portland OR)',                                             amount:  0.50,tier: 'B' },
+  { rank: 9,  name: 'Northrop Grumman',         parent: 'NG',            mix: 'Knifefish $0.35 B · SEWIP B3 $0.14 B · ALMDS $0.07 B',                     amount:  0.49,tier: 'B' },
+  { rank: 10, name: 'Textron Systems',          parent: 'Textron',       mix: 'UISS Unmanned Influence Sweep System',                                     amount:  0.24,tier: 'B' },
+];
+
+/* ------------------------------------------------------------------
+   CORRECTIONS DATA
+   ------------------------------------------------------------------ */
+const corrections = [
+  { entity: 'Marinette Marine',            sub: 'LM LCS Freedom prime subs',   old: '$47.17 B', now: '$2.49 B', ratio: '19×' },
+  { entity: 'Earl Industries',             sub: 'LHD depot (intra-BAE)',       old: '$932.5 M', now: 'tiny',    ratio: '>100×' },
+  { entity: 'PCE (Propulsion Controls)',   sub: 'LHD depot sub-tier',          old: '$942.3 M', now: '$30 M',   ratio: '31×' },
+  { entity: 'LM SEWIP Block 2 subs',       sub: 'Fully pre-window',            old: '$2.85 B',  now: '$0.005 B',ratio: '570×' },
+  { entity: 'NG Knifefish subs',           sub: 'Teledyne artifact on PIID',   old: '$1.48 B',  now: '$0.13 B', ratio: '11×' },
+  { entity: 'CAES (RF assemblies)',        sub: 'SPY-6 + SEWIP + SLQ-32(V)6',  old: '$800 M+',  now: '$217 M',  ratio: '4×' },
+  { entity: 'MZA Associates (HELIOS)',     sub: 'LM Aculight prime',           old: '$395 M',   now: '$25 M',   ratio: '16×' },
+  { entity: 'L3 Technologies (HELIOS)',    sub: 'LM Aculight prime',           old: '$209 M',   now: '$22 M',   ratio: '9×' },
+  { entity: 'Marine Hydraulics (as sub)',  sub: 'LHD depot sub-tier',          old: '$414.0 M', now: 'tiny',    ratio: '>30×' },
+  { entity: 'TECNICO Corporation',         sub: 'Multi-yard sub-tier',         old: '$230 M',   now: '$55 M',   ratio: '4×' },
+  { entity: 'HII LPD 28 window Δ',         sub: 'N0002416C2431 (FY16 award)',  old: '$3.00 B',  now: '$77 M',   ratio: '39×' },
+  { entity: 'BIW DDG FY13-17 window Δ',    sub: 'N0002413C2305 closeout',      old: '$4.93 B',  now: '$0.48 B', ratio: '10×' },
+];
+
+/* ==================================================================
+   SANKEY RENDER
+================================================================== */
+(function renderSankey(){
+  // Aggregate triples into nodes + links
+  const flows = triples.filter(t => t[3] > 0);
+  const nodeIdx = new Map();
+  const nodes = [];
+  function addNode(name, col){
+    if(nodeIdx.has(name)) return nodeIdx.get(name);
+    const i = nodes.length;
+    nodes.push({name, col});
+    nodeIdx.set(name, i);
+    return i;
+  }
+  programOrder.forEach(p => addNode(p, 0));
+  primeOrder.forEach(p => addNode(p, 1));
+  subOrder.forEach(p => addNode(p, 2));
+
+  const linkAgg = new Map();
+  function addLink(a, b, v){
+    const k = a + '\u0001' + b;
+    linkAgg.set(k, (linkAgg.get(k) || 0) + v);
+  }
+  flows.forEach(([prog, prime, sub, v]) => {
+    addLink(prog, prime, v);
+    addLink(prime, sub, v);
+  });
+
+  const links = [];
+  linkAgg.forEach((value, k) => {
+    const [src, tgt] = k.split('\u0001');
+    links.push({
+      source: nodeIdx.get(src),
+      target: nodeIdx.get(tgt),
+      value,
+    });
+  });
+
+  // SVG setup — fixed viewBox, responsive width
+  const svg = d3.select('#sankey-svg');
+  const W = 1100, H = 820;
+  const M = {top: 16, right: 216, bottom: 16, left: 266};
+
+  const sankeyGen = d3.sankey()
+    .nodeWidth(4)
+    .nodePadding(11)
+    .nodeAlign(d3.sankeyJustify)
+    .extent([[M.left, M.top], [W - M.right, H - M.bottom]]);
+
+  const graph = sankeyGen({
+    nodes: nodes.map(d => ({...d})),
+    links: links.map(d => ({...d})),
+  });
+
+  // Format helpers
+  const fmt = v => {
+    if(v >= 1000) return '$' + (v/1000).toFixed(v >= 10000 ? 1 : 2) + ' B';
+    return '$' + Math.round(v) + ' M';
+  };
+
+  // Draw links
+  const linkSel = svg.append('g')
+    .attr('fill', 'none')
+    .attr('stroke-linecap', 'butt')
+    .selectAll('path')
+    .data(graph.links)
+    .join('path')
+    .attr('class', 'link')
+    .attr('d', d3.sankeyLinkHorizontal())
+    .attr('stroke-width', d => Math.max(0.8, d.width));
+
+  // Draw nodes
+  const nodeSel = svg.append('g')
+    .selectAll('g')
+    .data(graph.nodes)
+    .join('g')
+    .attr('class', 'node');
+
+  nodeSel.append('rect')
+    .attr('class', 'node-rect')
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('height', d => Math.max(1, d.y1 - d.y0))
+    .attr('width', d => d.x1 - d.x0);
+
+  // hit target: wider invisible rect
+  nodeSel.append('rect')
+    .attr('class', 'node-hit')
+    .attr('x', d => d.col === 0 ? d.x0 - 260 : d.col === 2 ? d.x1 : d.x0 - 4)
+    .attr('y', d => d.y0 - 4)
+    .attr('width', d => d.col === 1 ? (d.x1 - d.x0 + 8) : 260)
+    .attr('height', d => (d.y1 - d.y0) + 8);
+
+  // name labels
+  nodeSel.append('text')
+    .attr('class', 'node-label')
+    .attr('x', d => d.col === 0 ? d.x0 - 12 : d.col === 2 ? d.x1 + 12 : (d.x0 + d.x1) / 2)
+    .attr('y', d => {
+      const mid = (d.y0 + d.y1) / 2;
+      const height = d.y1 - d.y0;
+      return height < 18 ? mid + 3 : mid - 3;
+    })
+    .attr('text-anchor', d => d.col === 0 ? 'end' : d.col === 2 ? 'start' : 'middle')
+    .text(d => d.name);
+
+  // mono value sublabels (only when node is tall enough to fit both lines)
+  nodeSel.append('text')
+    .attr('class', 'node-label-sub')
+    .attr('x', d => d.col === 0 ? d.x0 - 12 : d.col === 2 ? d.x1 + 12 : (d.x0 + d.x1) / 2)
+    .attr('y', d => (d.y0 + d.y1) / 2 + 11)
+    .attr('text-anchor', d => d.col === 0 ? 'end' : d.col === 2 ? 'start' : 'middle')
+    .text(d => {
+      const h = d.y1 - d.y0;
+      if(h < 18) return '';
+      return fmt(d.value);
+    });
+
+  // Column label ticks on top (gold crosshairs)
+  const topY = M.top - 4;
+  const col1X = graph.nodes.find(n => n.col === 0).x0;
+  const col2X = graph.nodes.find(n => n.col === 1).x0;
+  const col3X = graph.nodes.find(n => n.col === 2).x1;
+  [col1X, col2X, col3X].forEach(x => {
+    svg.append('line')
+      .attr('x1', x).attr('x2', x)
+      .attr('y1', topY).attr('y2', topY + 6)
+      .attr('stroke', '#c7a35a').attr('stroke-width', 1);
+  });
+  // bottom ticks too
+  const botY = H - M.bottom + 6;
+  [col1X, col2X, col3X].forEach(x => {
+    svg.append('line')
+      .attr('x1', x).attr('x2', x)
+      .attr('y1', botY - 6).attr('y2', botY)
+      .attr('stroke', '#c7a35a').attr('stroke-width', 1);
+  });
+
+  // ---------------- interactivity (hover-to-focus) ----------------
+  const tip = d3.select('#sk-tip');
+
+  function setFocus(target){
+    if(!target){
+      linkSel.classed('dim', false).classed('active', false);
+      nodeSel.classed('dim', false).classed('active', false);
+      return;
+    }
+    if(target.type === 'node'){
+      const n = target.node;
+      const activeLinks = new Set();
+      const activeNodes = new Set([n]);
+      // downstream
+      (function down(node){
+        node.sourceLinks.forEach(l => {
+          activeLinks.add(l);
+          if(!activeNodes.has(l.target)){ activeNodes.add(l.target); down(l.target); }
+        });
+      })(n);
+      // upstream
+      (function up(node){
+        node.targetLinks.forEach(l => {
+          activeLinks.add(l);
+          if(!activeNodes.has(l.source)){ activeNodes.add(l.source); up(l.source); }
+        });
+      })(n);
+      linkSel.classed('dim', l => !activeLinks.has(l)).classed('active', l => activeLinks.has(l));
+      nodeSel.classed('dim', d => !activeNodes.has(d)).classed('active', d => d === n);
+    } else if(target.type === 'link'){
+      linkSel.classed('dim', l => l !== target.link).classed('active', l => l === target.link);
+      nodeSel.classed('dim', d => d !== target.link.source && d !== target.link.target).classed('active', false);
+    }
+  }
+
+  const kindOf = col => ['PROGRAM','PRIME CONTRACTOR','SUB PARENT'][col];
+
+  nodeSel.on('mouseenter', function(ev, d){
+      setFocus({type:'node', node:d});
+      const total = d.value;
+
+      let rows = '';
+      rows += `<div class="row"><span class="k">FY20-26 flow</span><span class="v">${fmt(total)}</span></div>`;
+      if(d.col === 0){
+        rows += `<div class="row"><span class="k">Primes</span><span class="v">${d.sourceLinks.length}</span></div>`;
+      } else if(d.col === 2){
+        rows += `<div class="row"><span class="k">Primes above</span><span class="v">${d.targetLinks.length}</span></div>`;
+      } else {
+        rows += `<div class="row"><span class="k">From programs</span><span class="v">${d.targetLinks.length}</span></div>`;
+        rows += `<div class="row"><span class="k">To sub parents</span><span class="v">${d.sourceLinks.length}</span></div>`;
+      }
+
+      const desc = descriptions[d.name] || '';
+      showTip(ev, {
+        kind: kindOf(d.col),
+        name: d.name,
+        rows,
+        desc,
+      });
+    })
+    .on('mousemove', moveTip)
+    .on('mouseleave', function(){ setFocus(null); hideTip(); });
+
+  linkSel.on('mouseenter', function(ev, l){
+      setFocus({type:'link', link:l});
+      const rows = `
+        <div class="row"><span class="k">Source</span><span class="v">${l.source.name}</span></div>
+        <div class="row"><span class="k">Target</span><span class="v">${l.target.name}</span></div>
+        <div class="row"><span class="k">Flow</span><span class="v">${fmt(l.value)}</span></div>
+      `;
+      showTip(ev, {
+        kind: 'SUBAWARD FLOW',
+        name: l.source.name + ' \u2192 ' + l.target.name,
+        rows,
+        desc: '',
+      });
+    })
+    .on('mousemove', moveTip)
+    .on('mouseleave', function(){ setFocus(null); hideTip(); });
+
+  function showTip(ev, data){
+    let html = `<div class="kind">${data.kind}</div>`;
+    html += `<div class="name">${data.name}</div>`;
+    html += data.rows;
+    if(data.desc) html += `<div class="desc">${data.desc}</div>`;
+    tip.html(html).classed('show', true);
+    moveTip(ev);
+  }
+  function moveTip(ev){
+    const wrap = document.querySelector('.sankey-wrap').getBoundingClientRect();
+    const x = ev.clientX - wrap.left + 18;
+    const y = ev.clientY - wrap.top + 18;
+    const el = tip.node();
+    const ww = el.offsetWidth, hh = el.offsetHeight;
+    const maxX = wrap.width - ww - 8;
+    const maxY = wrap.height - hh - 8;
+    tip.style('left', Math.min(x, Math.max(8, maxX)) + 'px')
+       .style('top',  Math.min(y, Math.max(8, maxY)) + 'px');
+  }
+  function hideTip(){ tip.classed('show', false); }
+})();
+
+/* ==================================================================
+   LEAGUE TABLE RENDER
+================================================================== */
+(function renderLeague(){
+  const tbody = document.getElementById('league-body');
+  const max = Math.max(...league.map(l => l.amount));
+  const rows = league.map(row => {
+    const pct = (row.amount / max) * 100;
+    const amt = row.amount >= 1
+      ? row.amount.toFixed(1) + '<span class="unit"> B</span>'
+      : (row.amount * 1000).toFixed(0) + '<span class="unit"> M</span>';
+    return `
+      <tr>
+        <td class="rank">${String(row.rank).padStart(2,'0')}</td>
+        <td>
+          <div class="name">${row.name}</div>
+          <div class="parent">${row.parent}</div>
+        </td>
+        <td class="mix">${row.mix}</td>
+        <td class="amount">$${amt}</td>
+        <td class="bar-cell">
+          <div class="bar-bg"><div class="bar-fg" style="width:${pct}%"></div></div>
+        </td>
+        <td class="tier ${row.tier.toLowerCase()}">TIER ${row.tier}</td>
+      </tr>
+    `;
+  }).join('');
+  tbody.innerHTML = rows;
+})();
+
+/* ==================================================================
+   CORRECTIONS LIST RENDER
+================================================================== */
+(function renderCorrections(){
+  const box = document.getElementById('corrections-list');
+  box.innerHTML = corrections.map(c => `
+    <div class="correction">
+      <div class="entity">${c.entity}</div>
+      <div class="nums">
+        <span class="old">${c.old}</span>
+        <span class="arrow">→</span>
+        <span class="new">${c.now}</span>
+      </div>
+      <div class="sub">${c.sub}</div>
+      <div class="ratio">▾ ${c.ratio}</div>
+    </div>
+  `).join('');
+})();
+</script>
+</body>
+</html>

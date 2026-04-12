@@ -1,0 +1,633 @@
+
+================================================================================
+BATCH: ddg_construction
+================================================================================
+
+Per-PIID totals:
+  N0002423C2307 (HII DDG-51 FY23-27): 355 subs, $757,614,241 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002418C2307 (HII DDG-51 FY18-22): 2192 subs, $1,148,314,583 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002413C2307 (HII DDG-51 FY13-17): 2284 subs, $931,422,800 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002411C2307 (HII DDG-51 FY11): 255 subs, $27,053,079 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002411C2309 (HII DDG-51 FY10): 226 subs, $24,635,943 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002418C2305 (BIW DDG-51 FY18-22): 24 subs, $53,285,954 -- prime: BATH IRON WORKS CORPORATION
+  N0002423C2305 (BIW DDG-51 FY23-27): 0 subs, $0 -- prime: BATH IRON WORKS CORPORATION
+  N0002413C2305 (BIW DDG-51 FY13-17): 93 subs, $6,725,687 -- prime: BATH IRON WORKS CORPORATION
+  N0002411C2305 (BIW DDG-51 FY11): 0 subs, $0 -- prime: BATH IRON WORKS CORPORATION
+  N0002418C2313 (BIW DDG-51 Lead Yard FY18-22): 0 subs, $0 -- prime: BATH IRON WORKS CORPORATION
+  N0002424C2313 (BIW DDG-51 Lead Yard FY24+): 0 subs, $0 -- prime: BATH IRON WORKS CORPORATION
+
+Top 30 subcontractors aggregated across batch:
+  $   384,567,546 |  109 actions |   5 primes | ROLLS-ROYCE MARINE NORTH AMERICA
+      ex: 03019-02 CSE PS 310-02A
+  $   196,643,110 |   21 actions |   4 primes | GENERAL ELECTRIC
+      ex: TMR REBUY 399975
+  $   191,844,835 |   54 actions |   4 primes | YORK INTERNATIONAL
+      ex: VSR NO.SA15074
+  $   162,973,762 |  121 actions |   7 primes | L3HARRIS MARITIME POWER & ENERGY SOLUTIONS
+      ex: 04018-01 PANELS (DDG121) COA4
+  $   151,352,010 |   10 actions |   3 primes | SOCAIL, LDA
+      ex: 03013-01 GAS TURBINE ENGINES
+  $   122,917,389 |   64 actions |   5 primes | NORTHROP GRUMMAN SYSTEMS
+      ex: DDG STEERING SYSTEM
+  $   117,963,457 |   39 actions |   5 primes | JOHNSON CONTROLS NAVY SYSTEMS
+      ex: TMR REBUY DDG125A
+  $   103,250,144 |   96 actions |   6 primes | DRS NAVAL POWER SYSTEMS
+      ex: S012 R-415894 / DDG133
+  $    81,795,215 |    6 actions |   3 primes | TIMKEN GEARS & SERVICES
+      ex: LDD 5319-035
+  $    73,913,165 |   13 actions |   2 primes | ELLWOOD NATIONAL FORGE
+      ex: DDG 143 03003-01 PROPULSION SHAFT, FWD
+  $    67,355,253 |  100 actions |   6 primes | ENGINEERED COIL
+      ex: DDG 143 02537-01 NCSE PS 512-05A
+  $    51,039,622 |   66 actions |   4 primes | ESPEY MFG AND ELECTRONICS CORP
+      ex: DDG 141 04022-02 CSE PS 314-10A
+  $    43,895,272 |  137 actions |   6 primes | LAKE SHORE SYSTEMS
+      ex: 01011-01 WARPING CAPSTAN
+  $    35,572,296 |    8 actions |   1 primes | ERIE FORGE & STEEL
+      ex: RPR NCR 360846
+  $    32,996,397 |   44 actions |   4 primes | POWER PARAGON
+      ex: 04080-01 60 HZ SSABT SWITCH
+  $    32,073,287 |   76 actions |   4 primes | THE ENTWISTLE
+      ex: 05040-02 CSE PS 582-02B
+  $    31,039,020 |   39 actions |   3 primes | AIR & LIQUID SYSTEMS
+      ex: DDG 141 03030-03 CSE PS 503-06D
+  $    30,970,527 |   45 actions |   6 primes | THE HILLER COMPANIES
+      ex: DDG 147 03174-03 CSE PS 555-05A
+  $    30,604,477 |   82 actions |   4 primes | US JOINER
+      ex: 01056-54 (M1KJ-FE00-13)
+  $    30,022,883 |   26 actions |   5 primes | PARKER HANNIFIN
+      ex: DDG 149 03041-02 CSE PS 531-01B
+  $    29,790,984 |   20 actions |   3 primes | MAXIM EVAPORATORS OF AMERICA
+      ex: 03250-03 CSE PS 532-14A
+  $    27,744,577 |   22 actions |   2 primes | ADI TECHNOLOGIES
+      ex: REBUY S012 R-359712
+  $    27,393,928 |   25 actions |   3 primes | ALFA LAVAL
+      ex: DDG 143 03011-01 CSE PS 541-10B
+  $    27,339,499 |   35 actions |   4 primes | AMERICAN METAL BEARING CO
+      ex: 03028-01 STERN TUBE BEARINGS
+  $    25,863,351 |   63 actions |   5 primes | DOVER PUMPS & PROCESS SOLUTIONS SEGMENT
+      ex: 07338-01 PUMP ROTARY VINE
+  $    25,278,297 |   43 actions |   5 primes | HOWDEN NORTH AMERICA
+      ex: DDG 141 02506-01 NCSE PS 512-01A
+  $    22,827,848 |   27 actions |   3 primes | MORPAC INDUSTRIES
+      ex: REBUY ES012-04259 / DDG128
+  $    22,203,111 |   25 actions |   4 primes | RIX INDUSTRIES
+      ex: S012 R-376254-A   DDG123
+  $    19,683,218 |  128 actions |   2 primes | MILWAUKEE VALVE CO
+      ex: DDG 139 07000-01
+  $    18,219,018 |   23 actions |   3 primes | EMS DEVELOPMENT
+      ex: 04001-01 CSE PS 475-01C
+
+================================================================================
+BATCH: ddg_1000
+================================================================================
+
+Per-PIID totals:
+  N0002406C2303 (BIW DDG-1000 Detail Design): 0 subs, $0 -- prime: BATH IRON WORKS CORPORATION
+  N0002411C2306 (BIW DDG-1000 Construction): 0 subs, $0 -- prime: BATH IRON WORKS CORPORATION
+  N0002410C5126 (Raytheon DDG-1000 DMS): 0 subs, $0 -- prime: RAYTHEON COMPANY
+  N0002417C5145 (Raytheon DDG-1000 TSA): 482 subs, $164,815,906 -- prime: RAYTHEON COMPANY
+  N0002422C5522 (Raytheon DDG-1000 AS&M): 66 subs, $75,508,390 -- prime: RAYTHEON COMPANY
+  N0002423C2324 (HII DDG-1000 Mod Planning): 138 subs, $31,757,755 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002424C2331 (BIW DDG-1000 Planning Yard): 0 subs, $0 -- prime: BATH IRON WORKS CORPORATION
+  N0002415C5344 (GDLS MK 46 MOD 2 Gun): 551 subs, $501,360,307 -- prime: GENERAL DYNAMICS LAND SYSTEMS INC.
+  N0002403C5115 (LM DDG-51 Combat Systems): 0 subs, $0 -- prime: LOCKHEED MARTIN CORPORATION
+
+Top 30 subcontractors aggregated across batch:
+  $    62,285,691 |   28 actions |   2 primes | RED RIVER TECHNOLOGY
+      ex: COMPUTER HARDWARE, COMPUTER SOFTWARE, MAINT AGMT - COMP HW.
+  $    51,738,567 |   13 actions |   1 primes | NORTHROP GRUMMAN SYSTEMS
+      ex: SEMICONDUCTOR AND RELATED DEVICE MANUFACTURING
+  $    47,634,692 |   51 actions |   1 primes | SYSTEMS ENGINEERING & MANUFACTURING
+      ex: INDUSTRIAL MACHINERY AND EQUIPMENT MERCHANT WHOLESALERS
+  $    45,227,080 |   20 actions |   1 primes | HART TECHNOLOGIES
+      ex: ENGINEERING SERVICES
+  $    44,816,205 |   36 actions |   1 primes | CHARLES E. GILLMAN
+      ex: MOTOR VEHICLE ELECTRICAL AND ELECTRONIC EQUIPMENT MANUFACTUR
+  $    43,175,020 |   14 actions |   1 primes | LAUREL TECHNOLOGIES PARTNERSHIP
+      ex: PRINTED CIRCUIT BOARD MANUFACTURING
+  $    42,526,430 |    5 actions |   1 primes | LANZEN, INCORPORATED
+      ex: ANTENNA MOUNT
+  $    40,909,630 |   10 actions |   1 primes | LAPEER INDUSTRIES
+      ex: AIRCRAFT PART AND AUXILIARY EQUIPMENT MANUFACTURING
+  $    40,849,964 |    5 actions |   1 primes | VARTECH SYSTEMS
+      ex: RUGGED LCD DISPLAYS AND INDUSTRIAL GRADE COMPUTER SYSTEMS
+  $    34,157,775 |   16 actions |   1 primes | RAYTHEON
+      ex: SEARCH, DETECTION, NAVIGATION, GUIDANCE, AERONAUTICAL, AND N
+  $    31,170,809 |   39 actions |   1 primes | KEARFOTT CORP
+      ex: AIRCRAFT PART AND AUXILIARY EQUIPMENT MANUFACTURING
+  $    27,870,279 |   13 actions |   1 primes | MOOG INDUSTRIAL CONTROLS
+      ex: SEMICONDUCTOR AND RELATED DEVICE MANUFACTURING
+  $    19,899,087 |   20 actions |   1 primes | MOTOROLA SOLUTIONS
+      ex: COMPUTER SOFTWARE.
+  $    17,185,700 |   19 actions |   1 primes | DELL MARKETING
+      ex: COMPUTER HARDWARE.
+  $    14,539,252 |   13 actions |   1 primes | ATRENNE COMPUTING SOLUTIONS
+      ex: TEST AND TOOLING
+  $    13,658,946 |    4 actions |   1 primes | RELIABILITY & PERFORMANCE TECHNOLOGIES
+      ex: FY19 P3 DDG LABOR-TSA CLIN 2006
+  $    12,924,787 |   53 actions |   1 primes | CURTISS-WRIGHT DS
+      ex: ENGINEERING SERVICES
+  $    12,213,043 |   41 actions |   1 primes | SIRIUS FEDERAL
+      ex: UCS-SD32T123X-EP  3.2TB 2.5IN ENTERPRISE
+  $    11,052,176 |   34 actions |   2 primes | REAL-TIME INNOVATIONS
+      ex: MAINTAGMT-CANSWU-OPT.
+  $    11,003,635 |   13 actions |   1 primes | MOOG
+      ex: SEMICONDUCTOR AND RELATED DEVICE MANUFACTURING
+  $     7,035,642 |    7 actions |   2 primes | IDEOCELL
+      ex: TI-2001-P14 DDG 1001 LABOR IDEOCELL
+  $     6,507,303 |    6 actions |   1 primes | AIR MASTERS MECHANICAL
+      ex: DDG_XMP-24-XXXX-B07-PAS
+  $     5,642,301 |    6 actions |   1 primes | PROPULSION CONTROLS ENGINEERING
+      ex: DDG1000 CLASS TOTAL
+  $     5,105,283 |    6 actions |   1 primes | RITE-SOLUTIONS
+      ex: TRAVEL PORT HUANEME
+  $     4,701,700 |   20 actions |   2 primes | MAK TECHNOLOGIES
+      ex: CO #2 PROFESSIONAL ENGINEERING SUPPORT
+  $     4,596,340 |   12 actions |   1 primes | VETRONIX RESEARCH CORP
+      ex: SEMICONDUCTOR AND RELATED DEVICE MANUFACTURING
+  $     4,468,200 |   17 actions |   1 primes | DRS NAVAL POWER SYSTEMS
+      ex: DDG 1000 (VSR SA 24399)
+  $     4,154,792 |    7 actions |   2 primes | GE ENERGY POWER CONVERSION USA
+      ex: DDG1000 CLASS TOTAL
+  $     4,094,128 |   17 actions |   1 primes | PROGRESS SOFTWARE
+      ex: COMPUTER SOFTWARE.
+  $     3,843,247 |   21 actions |   1 primes | NATEL ENGINEERING
+      ex: SEMICONDUCTOR AND RELATED DEVICE MANUFACTURING
+
+================================================================================
+BATCH: ddg_subsystems
+================================================================================
+
+Per-PIID totals:
+  N0002422C5500 (Raytheon SPY-6 Production): 854 subs, $1,415,213,646 -- prime: RAYTHEON COMPANY
+  N0002425C5501 (Raytheon SPY-6 FoR): 0 subs, $0 -- prime: RAYTHEON COMPANY
+  N0002420C5503 (LM SLQ-32(V)6): 612 subs, $1,415,268,160 -- prime: LOCKHEED MARTIN CORPORATION
+  N0002416C5363 (LM SEWIP Block 2): 358 subs, $2,846,337,559 -- prime: LOCKHEED MARTIN CORPORATION
+  N0002409C5300 (LM SEWIP Block 2 older): NOT FOUND
+  N0002415C5319 (NG SEWIP Block 3): 3 subs, $556,906 -- prime: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  N0002422C5520 (NG SEWIP Block 3 design): 10 subs, $889,536 -- prime: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  N0002416C5352 (GDMS SEWIP Block 1B3): 19 subs, $20,778,842 -- prime: GENERAL DYNAMICS MISSION SYSTEMS, INC.
+  N0002414C5341 (GDMS SEWIP Block 1B3 LRIP): 12 subs, $6,366,066 -- prime: GENERAL DYNAMICS MISSION SYSTEMS, INC.
+  N0002419C5200 (Raytheon CEC design agent): 147 subs, $302,785,582 -- prime: RAYTHEON COMPANY
+  N0002413C5212 (Raytheon CEC): 63 subs, $12,489,724 -- prime: RAYTHEON COMPANY
+  N0002425C5239 (Raytheon CEC follow-on): 3 subs, $6,015,929 -- prime: RAYTHEON COMPANY
+  N0002419C5603 (LM SSDS CSEA): 898 subs, $270,064,416 -- prime: LOCKHEED MARTIN CORPORATION
+  N0002414C5128 (Raytheon SSDS PSEA): 206 subs, $71,233,291 -- prime: RAYTHEON COMPANY
+
+Top 30 subcontractors aggregated across batch:
+  $ 1,561,562,895 |   83 actions |   3 primes | CAES SYSTEMS
+      ex: MULTI-FUNCTION ASSYS, MULTI-FUNCTION ASSYS, SERVICES: NONPRO
+  $   987,753,078 |   66 actions |   4 primes | MERCURY SYSTEMS
+      ex: ASSY  SW MTX  HPOI. ASSY  SW MTX  PDF. AMPLIFIER  DETECTOR. 
+  $   362,711,443 |   17 actions |   3 primes | GENERAL DYNAMICS MISSION SYSTEMS
+      ex: TEST EQUIPMENT,NRE - ALL.
+  $   351,920,502 |   29 actions |   2 primes | NARDA HOLDINGS
+      ex: AMPLIFIER  RF  2-6GHZ  SMA-F FIBER OPTIC RECEIVER. FIBER OPT
+  $   304,048,111 |   62 actions |   5 primes | ABACO SYSTEMS
+      ex: ETHERNET SW  VME CARD ETHERNET SW  VME CARD. VXS  SW  VME CA
+  $   227,666,190 |   28 actions |   2 primes | LINEAR PHOTONICS
+      ex: MODULE  POWER SUPPLY
+  $   200,885,316 |   56 actions |   2 primes | PRODUCTION ENGINEERING
+      ex: ENCLOSURE. HPOI  ASSEMBLY. SHELTER STRUCTURE ASSEMBLY. ENCLO
+  $   181,111,505 |   45 actions |   3 primes | EPSILON SYSTEMS SOLUTIONS
+      ex: SERVICES: NONPRODUCT, TECH/ENG SERVICES.
+  $   162,926,534 |   27 actions |   2 primes | RA WOOD ASSOCIATES
+      ex: TUNER  HPOI TUNER  HPOI.
+  $   151,781,183 |    5 actions |   2 primes | NORTHROP GRUMMAN SYSTEMS
+      ex: MAJOR ASSEMBLIES, POWER SUPPLIES, MAJOR ASSEMBLIES, POWER SU
+  $   149,516,937 |  161 actions |   1 primes | MISSION SOLUTIONS
+      ex: SSDS 23-10 IFFSIM - RVP STUDY SSDS 23-10 IFFSIM SSDS 23-11 R
+  $   112,992,858 |    6 actions |   2 primes | CUMMINGS AEROSPACE
+      ex: SERVICES: NONPRODUCT.
+  $    86,447,479 |   23 actions |   3 primes | GOLDEN STAR TECHNOLOGY
+      ex: SERVER PERIPHERAL, SERVER PERIPHERAL, SERVER PERIPHERAL, SER
+  $    74,389,046 |   29 actions |   3 primes | ATRENNE COMPUTING SOLUTIONS
+      ex: SERVER  4-PORT
+  $    60,580,779 |    8 actions |   1 primes | ANAREN
+      ex: COMBNER/DIVIDER/CPLR, COMBNER/DIVIDER/CPLR, LIMITERS.
+  $    55,485,888 |   25 actions |   2 primes | CAES MISSION SYSTEMS
+      ex: AMPLIFIER  LIMITER
+  $    48,625,578 |   18 actions |   2 primes | SMITHS INTERCONNECT
+      ex: ANTENNA ASSY  HGHS ASSEMBLY  FIBER OPTICS RECIEVER-BDEA
+  $    44,141,882 |   24 actions |   2 primes | STELLANT PST
+      ex: SWITCH  PDF LIMITER SWITCH  PDF LIMITER.
+  $    43,306,377 |  127 actions |   2 primes | PROGRAMS MANAGEMENT ANALYTICS & TECHNOLOGIES
+      ex: PMAT TI 26-01 IN-SERVICE SUPPORT PMAT TI 26-16 FACILITIES SU
+  $    41,492,302 |    9 actions |   1 primes | MAJOR TOOL & MACHINE
+      ex: GEN STRUCTURAL ASSYS.
+  $    41,067,064 |   70 actions |   3 primes | TELEDYNE DEFENSE ELECTRONICS
+      ex: FILTER  YIG
+  $    40,953,845 |   16 actions |   2 primes | TTM PRINTED CIRCUIT GROUP
+      ex: SENSOR TERMINAL BOARD
+  $    39,552,489 |   26 actions |   1 primes | M.S.M. INDUSTRIES
+      ex: INTEGRTD ELECTR ASSY, INTEGRTD ELECTR ASSY, INTEGRTD ELECTR 
+  $    38,574,832 |   13 actions |   3 primes | DRS SIGNAL SOLUTIONS
+      ex: CSI VME MICROWAVE TUNER.
+  $    38,055,739 |   18 actions |   2 primes | ELECTROMET
+      ex: ASSEMBLY  CABINET MOUNTING BRACKET. ASSEMBLY  CABINET MOUNTI
+  $    36,171,832 |   15 actions |   2 primes | INTERCONNECT SYSTEMS INTERNATIONAL
+      ex: HYBRID PROC  VME CARD.
+  $    35,500,013 |    8 actions |   2 primes | TELEDYNE LIMITED
+      ex: FILTER S-BAND FAST TUNED NOTCH FILTER X-BAND FAST TUNED NOTC
+  $    30,969,490 |   42 actions |   2 primes | SPECTRUM MICROWAVE
+      ex: DIPLEXER  MICROWAVE DIPLEXER  MICROWAVE. FILTER  RF  BAND RE
+  $    30,564,257 |   12 actions |   2 primes | TECHNOLOGY DYNAMICS
+      ex: POWER SUPPLIES, POWER SUPPLIES, SERVICES: NONPRODUCT, POWER 
+  $    30,423,700 |   15 actions |   2 primes | OMNIYIG
+      ex: FILTER  YIG
+
+================================================================================
+BATCH: weapons
+================================================================================
+
+Per-PIID totals:
+  N0002418C5406 (Raytheon FY18 CIWS): 3651 subs, $1,130,176,309 -- prime: RAYTHEON COMPANY
+  N0002419C5406 (Raytheon SeaRAM upgrade): 2677 subs, $627,185,535 -- prime: RAYTHEON COMPANY
+  N0038319F0VP0 (Raytheon CIWS PBL): 13 subs, $5,701,179 -- prime: RAYTHEON COMPANY
+  N0002407C6119 (Raytheon SM-3): 0 subs, $0 -- prime: RAYTHEON COMPANY
+  N0002417C5410 (Raytheon FY17-21 SM): 235 subs, $79,794,552 -- prime: RAYTHEON COMPANY
+  N0002413C5403 (Raytheon FY13-17 SM): 893 subs, $221,974,845 -- prime: RAYTHEON COMPANY
+  N0002425C6401 (GDMS MK 54 MOD 1 LWT Sonar): 2 subs, $25,034,020 -- prime: GENERAL DYNAMICS MISSION SYSTEMS, INC.
+  N0002418C6405 (Ultra Electronics MK 54 MOD 0 Array): 26 subs, $12,071,759 -- prime: ULTRA ELECTRONICS OCEAN SYSTEMS INC.
+
+Top 30 subcontractors aggregated across batch:
+  $   232,458,959 |   31 actions |   2 primes | DRS NETWORK & IMAGING SYSTEMS
+      ex: TEST EQUIPMENT, TOOLING - MACHINE.
+  $   116,895,375 |   83 actions |   5 primes | L3 TECHNOLOGIES
+      ex: GOODS AND OR SERVICES
+  $    96,583,272 |   72 actions |   2 primes | GENERAL DYNAMICS-OTS
+      ex: BOLTS, CONTACTS, DC-DC POWER SUPPLIES, GEARS, GEN STRUCTURAL
+  $    81,037,208 |   35 actions |   3 primes | HONEYWELL INTERNATIONAL
+      ex: IMUS IRUS.
+  $    71,639,896 |   38 actions |   2 primes | MOOG
+      ex: ACTUATRELECTRO-MECH, NRE - ALL, TOOLING - MACHINE.
+  $    71,577,045 |  175 actions |   4 primes | DUCOMMUN LABARGE TECHNOLOGIES
+      ex: CABLE ASSEMBLIES RF, CONTROLACTUATION SYS, CUSTOM CCA'S, FLE
+  $    55,786,244 |  104 actions |   2 primes | AEROJET ROCKETDYNE
+      ex: TECH/ENG SERVICES.
+  $    50,890,605 |  221 actions |   4 primes | LOURDES INDUSTRIES
+      ex: HYDRAULIC ASSEMBLIES.
+  $    47,873,235 |   35 actions |   2 primes | GE AVIATION SYSTEMS
+      ex: CUSTOM CCA'S, DC-DC POWER SUPPLIES, INTEGRTD ELECTR ASSY, OT
+  $    46,135,229 |   24 actions |   2 primes | L3HARRIS CINCINNATI ELECTRONICS
+      ex: PEDEST&GIMBALPLATFRM.
+  $    45,120,426 |   60 actions |   4 primes | CURTISS-WRIGHT DS
+      ex: MEMORY PROM FLASH, MULTI-FUNCTION ASSYS, TEST SUPPLIES.
+  $    44,505,833 |   41 actions |   3 primes | SOUTHERN GEAR & MACHINE
+      ex: GEARS, PRECISION MACHINED.
+  $    37,911,430 |   49 actions |   3 primes | GENERAL DYNAMICS MISSION SYSTEMS
+      ex: CUSTOM - COMPUTER HW.
+  $    34,596,648 |   41 actions |   2 primes | CODA OCTOPUS ENGINEERING
+      ex: AC-DC POWER SUPPLIES, CABLEASSY&HARNMULTI, CARD BASKETS, COT
+  $    31,112,032 |   51 actions |   2 primes | MICROTECH
+      ex: COAXIALRF CONNECTOR, COUPLERS, NON-COMPLEX MACHINED, PRECISI
+  $    31,008,829 |   57 actions |   2 primes | KOLLMORGEN CORP
+      ex: ELECTRIC MOTORS, NRE - ALL, OTHER MACHINE WORK.
+  $    30,769,282 |   80 actions |   3 primes | MICROWAVE POWER PRODUCTS
+      ex: POWERTUBES(TWTSETC).
+  $    30,238,453 |  135 actions |   2 primes | WHELAN MACHINE & TOOL
+      ex: NON-COMPLEX MACHINED, NRE - OTHER.
+  $    29,190,952 |   29 actions |   3 primes | ANAREN
+      ex: MIXERS, NRE - OTHER.
+  $    28,360,332 |   46 actions |   2 primes | ABACO SYSTEMS
+      ex: COTS & MOD STD CCAS.
+  $    23,708,053 |   30 actions |   2 primes | CPI ELECTRON DEVICE BUSINESS
+      ex: FIRM FIXED PRICE
+  $    22,451,015 |   22 actions |   2 primes | SI MANUFACTURING
+      ex: AC-DC POWER SUPPLIES, INDUCTORS, NRE - ALL, POWER TRANSFORME
+  $    22,306,417 |   29 actions |   2 primes | ITT ENIDINE
+      ex: FIRM FIXED PRICE
+  $    22,046,170 |   53 actions |   2 primes | CICON ENGINEERING
+      ex: CABLEASSY&HARNMULTI, NRE - FIRST ARTICLE, NRE - OTHER.
+  $    18,554,866 |   31 actions |   2 primes | HDL RESEARCH LAB
+      ex: DC-DC POWER SUPPLIES.
+  $    18,087,169 |   21 actions |   2 primes | EMS DEFENSE TECHNOLOGIES
+      ex: AM STYRENIC(ABSASA), WG SWITCHES.
+  $    17,073,726 |   28 actions |   2 primes | EPSILON SYSTEMS SOLUTIONS
+      ex: CIRCUIT BREAKERS, FLATPANEL DISPLAYS.
+  $    15,858,399 |   25 actions |   2 primes | ENSIGN-BICKFORD AEROSPACE & DEFENSE
+      ex: PYROTECHNIC DEVICES.
+  $    15,498,388 |   62 actions |   3 primes | TELEDYNE DEFENSE ELECTRONICS
+      ex: CABLE/CABLEASSYHV, CABLEASSY&HARNMULTI, NRE - OTHER.
+  $    14,610,947 |   14 actions |   2 primes | RGB SPECTRUM
+      ex: CUSTOM CCA'S, NRE - ALL.
+
+================================================================================
+BATCH: lpd_lha
+================================================================================
+
+Per-PIID totals:
+  N0002424C2473 (HII LPD 33/34/35): 0 subs, $0 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002418C2406 (HII LPD 30/31/32): 1009 subs, $692,338,718 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002416C2431 (HII LPD 28): 1030 subs, $489,633,239 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002416C2415 (HII LPD 17 LCE&S): 192 subs, $58,171,033 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002421C2443 (HII LPD 17 Class Eng): 41 subs, $5,426,798 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002426C2443 (HII LPD 17 PD&ES): 0 subs, $0 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002410C2203 (HII LPD 17 Class Eng older): 0 subs, $0 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002421C2451 (BAE Norfolk LPD 28 FOA): 199 subs, $16,140,973 -- prime: BAE SYSTEMS MARITIME SOLUTIONS NORFOLK INC.
+  N0002410C2205 (Raytheon LPD 17 LCE&S): 0 subs, $0 -- prime: RAYTHEON COMPANY
+  N0002416C2427 (HII LHA 8 Bougainville): 0 subs, $0 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002420C2437 (HII LHA 9): 446 subs, $333,386,124 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002424C2467 (HII LHA 10 AP): 0 subs, $0 -- prime: HUNTINGTON INGALLS INCORPORATED
+  N0002425C4404 (NASSCO USS America LHA 6): 0 subs, $0 -- prime: NATIONAL STEEL AND SHIPBUILDING COMPANY
+
+Top 30 subcontractors aggregated across batch:
+  $   161,622,784 |   53 actions |   4 primes | US JOINER
+      ex: US JOINER - TI 0204-01
+  $   142,183,368 |   38 actions |   5 primes | COLTEC INDUSTRIES
+      ex: REBUY S012 R- 389531 LPD28
+  $   124,977,396 |   50 actions |   4 primes | DRS NAVAL POWER SYSTEMS
+      ex: 04014-01 (PTS 6323-K)
+  $    62,756,998 |   50 actions |   4 primes | L3HARRIS MARITIME POWER & ENERGY SOLUTIONS
+      ex: REBUY S012 R-364481 LPD28
+  $    58,965,883 |   11 actions |   3 primes | CATERPILLAR
+      ex: TMR REBUY ES012 6114
+  $    49,380,326 |   15 actions |   3 primes | TIMKEN GEARS & SERVICES
+      ex: 03015-01 (PTS 6108-K)
+  $    48,874,742 |    5 actions |   1 primes | AMERICAN SUPERCONDUCTOR CORP
+      ex: 04001-01 (PTS 7901-J)
+  $    45,330,261 |   19 actions |   5 primes | YORK INTERNATIONAL
+      ex: LPD27 YORK PLANT UPGRADE KITS
+  $    44,921,305 |   54 actions |   5 primes | ENGINEERED COIL
+      ex: LHA9-03291-01 WTRMIST FF PUMP
+  $    44,405,318 |   45 actions |   6 primes | FAIRBANKS MORSE
+      ex: LPD28 - VSR SA22736
+  $    33,095,212 |   35 actions |   4 primes | CAROLINA POWER SYSTEMS OF SUMTER
+      ex: REBUY ES012 8461 / LPD29
+  $    27,447,707 |    8 actions |   3 primes | ELLWOOD NATIONAL FORGE
+      ex: 01138-01  (PTS 6264-K)
+  $    27,012,378 |   63 actions |   3 primes | INDUSTRIAL CORROSION CONTROL
+      ex: 09106-01 (TANK PAINTING)
+  $    26,872,178 |   29 actions |   4 primes | LAKE SHORE SYSTEMS
+      ex: LHA9-01510-02
+  $    25,778,895 |  157 actions |   4 primes | MILWAUKEE VALVE CO
+      ex: 07000-01 VALVE GLOBE IN-LINE
+  $    25,220,862 |   20 actions |   3 primes | JERED
+      ex: 01004-01 (PTS 6256-K)
+  $    23,487,414 |   11 actions |   4 primes | ROLLS-ROYCE MARINE NORTH AMERICA
+      ex: LPD27 - SA12264
+  $    21,921,337 |   73 actions |   5 primes | JA MOODY
+      ex: VALVE ASSY, BUTTERFLY (LPD-31)
+  $    21,306,784 |   21 actions |   4 primes | CARVER PUMP
+      ex: 03005-01 (PTS 6219-K)
+  $    20,420,581 |   13 actions |   3 primes | ALFA LAVAL
+      ex: S012 R-380600  LPD29
+  $    20,104,094 |   67 actions |   3 primes | GRISWOLD INDUSTRIES
+      ex: CONTROL VALVE LPD32
+  $    16,103,166 |  120 actions |   4 primes | B N L INDUSTRIES
+      ex: REBUY  LHA9-03275-01
+  $    15,163,258 |   28 actions |   3 primes | HHE SERVICES
+      ex: LPD21 - CONTROL STATION
+  $    14,881,175 |   10 actions |   3 primes | SHEFFIELD FORGEMASTERS ENGINEERING LIMITED
+      ex: LHA9-05002-01 (STRUT CASTING)
+  $    13,217,780 |   11 actions |   3 primes | AMERICAN METAL BEARING CO
+      ex: 03028-01 PTS 6222-K
+  $    12,211,309 |    2 actions |   1 primes | GE ENERGY POWER CONVERSION USA
+      ex: LHA9-04163-01 AUX PROP SYS
+  $    11,213,505 |   55 actions |   3 primes | DYNALEC
+      ex: SWITCHBOARD ALARM (LHA9)
+  $    11,178,059 |   17 actions |   5 primes | THE HILLER COMPANIES
+      ex: 03143-01 (PTS 6368-K)
+  $    11,102,274 |   15 actions |   5 primes | HOWDEN NORTH AMERICA
+      ex: LHA9-02506-01
+  $    11,059,694 |   15 actions |   3 primes | JOHNSON CONTROLS NAVY SYSTEMS
+      ex: REBUY ES012 11218 / LHA8
+
+================================================================================
+BATCH: lhd_maint
+================================================================================
+
+Per-PIID totals:
+  N0002411C4407 (BAE Norfolk LHD 3 FY11): 1557 subs, $1,813,670,726 -- prime: BAE SYSTEMS MARITIME SOLUTIONS NORFOLK INC.
+  N0002423C4408 (BAE Norfolk Kearsarge FY23): 850 subs, $145,937,644 -- prime: BAE SYSTEMS MARITIME SOLUTIONS NORFOLK INC.
+  N0002426C4405 (BAE Norfolk Iwo Jima FY26): 0 subs, $0 -- prime: BAE SYSTEMS MARITIME SOLUTIONS NORFOLK INC.
+  N0002425C4430 (BAE Norfolk Wasp FY25): 34 subs, $39,081,088 -- prime: BAE SYSTEMS MARITIME SOLUTIONS NORFOLK INC.
+  N0002421C4404 (BAE Norfolk Wasp FY21): 334 subs, $134,141,601 -- prime: BAE SYSTEMS MARITIME SOLUTIONS NORFOLK INC.
+  N0002424C4418 (Metro Machine Bataan FY24): 77 subs, $159,305,035 -- prime: METRO MACHINE CORP.
+  N0002422C4490 (Metro Machine Iwo Jima FY22): 80 subs, $92,394,476 -- prime: METRO MACHINE CORP.
+  N0002420C4467 (Metro Machine Bataan FY20): 42 subs, $35,244,920 -- prime: METRO MACHINE CORP.
+  N0002422C4420 (BAE SD Essex FY22): 987 subs, $41,718,606 -- prime: BAE SYSTEMS MARITIME SOLUTIONS SAN DIEGO INC.
+  N0002420C4308 (BAE SD Boxer DSRA): 405 subs, $102,203,315 -- prime: BAE SYSTEMS MARITIME SOLUTIONS SAN DIEGO INC.
+  N0002423C4404 (NASSCO Makin Island FY23): 0 subs, $0 -- prime: NATIONAL STEEL AND SHIPBUILDING COMPANY
+  N0002418C4404 (NASSCO Bonhomme Richard): 454 subs, $1,007,227,536 -- prime: NATIONAL STEEL AND SHIPBUILDING COMPANY
+
+Top 30 subcontractors aggregated across batch:
+  $   942,253,444 |  144 actions |   3 primes | PROPULSION CONTROLS ENGINEERING
+      ex: SUBCONTRACT COSTS
+  $   932,508,159 |  134 actions |   1 primes | EARL INDUSTRIES
+      ex: MATERIALS
+  $   414,016,311 |  261 actions |   1 primes | MARINE HYDRAULICS INTERNATIONAL
+      ex: DIRECT EQUIPMENT RENT
+  $   229,692,252 |  207 actions |   7 primes | TECNICO
+      ex: MATERIALS
+  $   178,771,592 |  106 actions |   9 primes | IMIA
+      ex: SUBCONTRACT COSTS
+  $   117,875,548 |  210 actions |   7 primes | EMS INDUSTRIAL
+      ex: MATERIALS
+  $    88,251,925 |   98 actions |   6 primes | BAY METALS & FABRICATION
+      ex: SUBCONTRACT COSTS
+  $    67,069,838 |   50 actions |   1 primes | METRO MACHINE
+      ex: MATERIALS
+  $    44,880,621 |  118 actions |   9 primes | WALASHEK INDUSTRIAL & MARINE
+      ex: SUBCONTRACT COSTS
+  $    32,579,115 |  109 actions |   7 primes | AUXILIARY SYSTEMS
+      ex: SUBCONTRACT COSTS
+  $    31,003,882 |   81 actions |   4 primes | EAST COAST REPAIR & FABRICATION
+      ex: MATERIALS
+  $    30,426,924 |   36 actions |   4 primes | MARCOM SERVICES
+      ex: DIRECT EQUIPMENT RENT
+  $    23,416,158 |   31 actions |   4 primes | JRF SHIP REPAIRS
+      ex: SUBCONTRACT COSTS
+  $    21,340,041 |   76 actions |   6 primes | ART CRAFT FABRICATORS
+      ex: FFP 1-BID RCVD NON-COMMERCIAL
+  $    15,630,853 |   10 actions |   4 primes | AMP UNITED
+      ex: FFP 1-BID RCVD NON-COMMERCIAL
+  $    15,133,276 |   17 actions |   3 primes | INTERNATIONAL FLOORING & PROTECTIVE COATINGS
+      ex: SUBCONTRACT COSTS
+  $    11,813,749 |   96 actions |   1 primes | HL WELDING
+      ex: CODED REPAIR MATERIAL
+  $    11,424,366 |   68 actions |   7 primes | GENERATION REFRIGERATION
+      ex: SUBCONTRACT COSTS
+  $    10,685,394 |   13 actions |   3 primes | US JOINER
+      ex: MATERIALS
+  $    10,007,359 |   31 actions |   5 primes | CONSOLIDATED MARINE SYSTEMS
+      ex: SUBCONTRACT COSTS
+  $     9,484,348 |   19 actions |   4 primes | SURFACE TECHNOLOGIES
+      ex: SUBCONTRACT COSTS
+  $     9,031,973 |   28 actions |   1 primes | HII SAN DIEGO SHIPYARD
+      ex: REPAIR SUB-CONTRACTS
+  $     8,877,007 |   56 actions |   8 primes | DEFENSE MARITIME SOLUTIONS
+      ex: MATERIALS
+  $     8,685,097 |   10 actions |   5 primes | EPSILON SYSTEMS SOLUTIONS
+      ex: SUBCONTRACT COSTS
+  $     8,565,281 |   10 actions |   3 primes | POTTER ELECTRIC
+      ex: MATERIALS
+  $     8,412,370 |   64 actions |   8 primes | STANDARD CALIBRATIONS
+      ex: SUBCONTRACT COSTS
+  $     8,257,151 |   66 actions |   4 primes | TURN KEY SCAFFOLD
+      ex: SUBCONTRACT COSTS
+  $     8,146,298 |    5 actions |   4 primes | COASTAL MECHANICAL SYSTEMS
+      ex: FFP 1-BID RCVD NON-COMMERCIAL
+  $     7,726,747 |   47 actions |   4 primes | ALLIED RESEARCH TECHNOLOGY
+      ex: SUBCONTRACT COSTS
+  $     7,328,304 |   47 actions |   5 primes | COASTAL MARINE SERVICES
+      ex: SUBCONTRACT COSTS
+
+================================================================================
+BATCH: lcs_mcm
+================================================================================
+
+Per-PIID totals:
+  N0002413C6300 (LM LCS Integration): 22 subs, $1,234,051 -- prime: LOCKHEED MARTIN CORPORATION
+  N0002421C5105 (LM LCS Freedom): 37 subs, $4,551,751 -- prime: LOCKHEED MARTIN CORPORATION
+  N6339419F0043 (LM LCS Freedom Design Agent): 106 subs, $17,907,983 -- prime: LOCKHEED MARTIN CORPORATION
+  N6339424C0003 (LM LCS Freedom Combat ISEA): 20 subs, $3,658,221 -- prime: LOCKHEED MARTIN CORPORATION
+  N6339424C0004 (GDMS LCS Independence ISEA): 51 subs, $8,754,726 -- prime: GENERAL DYNAMICS MISSION SYSTEMS, INC.
+  N0001923F2544 (Textron LCS Independence): 3 subs, $664,043 -- prime: TEXTRON SYSTEMS CORPORATION
+  N0002411C2300 (LM LCS construction): 1208 subs, $48,290,431,189 -- prime: LOCKHEED MARTIN CORPORATION
+  N0002414C6322 (Textron UISS): 118 subs, $26,490,731 -- prime: TEXTRON SYSTEMS CORPORATION
+  N0002421C6304 (GDMS Knifefish UUV): 52 subs, $18,557,321 -- prime: GENERAL DYNAMICS MISSION SYSTEMS, INC.
+  N0002417C6311 (NG Knifefish/LCS): 908 subs, $1,474,998,583 -- prime: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  N0002422C6305 (Bollinger MCM USV): 0 subs, $0 -- prime: BOLLINGER SHIPYARDS LOCKPORT, L.L.C.
+  N0002418C6300 (Raytheon Barracuda): 173 subs, $247,834,360 -- prime: RAYTHEON COMPANY
+  N0002415C6318 (NG ALMDS production): 74 subs, $91,259,643 -- prime: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  N0002422C6418 (NG ALMDS production support): 38 subs, $6,771,667 -- prime: NORTHROP GRUMMAN SYSTEMS CORPORATION
+  N0002403C6310 (Raytheon AMNS Upgrade -3): 0 subs, $0 -- prime: RAYTHEON COMPANY
+  N0002410C6307 (Raytheon AMNS LRIP): 0 subs, $0 -- prime: RAYTHEON COMPANY
+  N0002417C6305 (Raytheon AMNS LRIP newer): 280 subs, $117,934,470 -- prime: RAYTHEON COMPANY
+  N6133111C0017 (GDMS Surface MCM Unmanned): 300 subs, $1,227,845,775 -- prime: GENERAL DYNAMICS MISSION SYSTEMS, INC.
+
+Top 30 subcontractors aggregated across batch:
+  $47,170,399,832 |  234 actions |   1 primes | MARINETTE MARINE
+      ex: CORE CLASS SERVICES - CLIN 0112 SERVICE ITEM - CLIN 0114 AUT
+  $   928,010,316 |   50 actions |   3 primes | TELEDYNE DEFENSE ELECTRONICS
+      ex: GOODS AND OR SERVICES
+  $   715,054,623 |  158 actions |   2 primes | TELEDYNE BROWN ENGINEERING
+      ex: COMPLEX FORMING, MACHINE SHOP WORK, MAJOR ASSEMBLIES, OFFICE
+  $   607,790,974 |   70 actions |   3 primes | GENERAL DYNAMICS MISSION SYSTEMS
+      ex: CLIN 18 TRAVEL LCS IND CS TEST PROC & PLAN (2009)
+  $   267,686,697 |   62 actions |   1 primes | ROLLS-ROYCE MARINE NORTH AMERICA
+      ex: BONDED SEAL LIP SEAL ASSEMBLY PIN COTTER .19DIAX2.00LG STL B
+  $   233,368,973 |    3 actions |   1 primes | TRIDENT SENSORS LIMITED
+      ex: GOODS AND OR SERVICES
+  $   207,063,992 |   87 actions |   2 primes | GIBBS & COX
+      ex: G&C TI-16 OTH SUPPORT LABOR
+  $   155,977,673 |   36 actions |   1 primes | AIRBUS US SPACE & DEFENSE
+      ex: 80089537; WAVE GUIDE FLANGES ALL SERVICES SERVICE ITEM TRS-3
+  $   144,714,234 |   20 actions |   2 primes | SPARTON DELEON SPRINGS
+      ex: TECH/ENG SERVICES.
+  $   136,835,713 |   76 actions |   4 primes | NORTHROP GRUMMAN SYSTEMS
+      ex: LM LCS FATHOMETER KIT INSTALLATION KIT  NAVDDS UPS INSTALL K
+  $   133,029,886 |   35 actions |   1 primes | FAIRLEAD INTEGRATED
+      ex: MAJOR SYS/SUBSYS
+  $    90,998,998 |   18 actions |   1 primes | RENK AKTIENGESELLSCHAFT
+      ex: LCS 17 UWI-002 PDA UNDERWAYS SUPPORT - R FLEXIBLE HOSE HUMID
+  $    59,613,635 |    9 actions |   1 primes | COLTEC INDUSTRIES
+      ex: L3 COMM SUPPORT 2019 QWALTEC - KOLB QWALTEC - ZUBER QWALTEC 
+  $    56,806,505 |   43 actions |   3 primes | ARETE ASSOCIATES
+      ex: P LBR HCPL FACA
+  $    54,455,404 |  260 actions |   1 primes | NIELSEN BEAUMONT MARINE
+      ex: ENGINEER. SERVICES
+  $    46,646,040 |   25 actions |   2 primes | MEGGITT DEFENSE SYSTEMS
+      ex: MAJOR SYS/SUBSYS
+  $    27,967,719 |    8 actions |   1 primes | APPLIED PHYSICAL SCIENCES CORP
+      ex: NRE - ALL, SERVICES: NONPRODUCT.
+  $    21,506,029 |  116 actions |   1 primes | ANACAPA WATERBLASTING
+      ex: ENGINEER. SERVICES
+  $    21,481,829 |   27 actions |   2 primes | METRON INCORPORATED
+      ex: GOODS AND OR SERVICES
+  $    20,767,877 |   65 actions |   1 primes | DUKE MARINE ENGINEERING CONSULTING
+      ex: LCS 21 DMEC SY OVERSIGHT LCS 23 HSC INSPECTION LCS 25 DMEC S
+  $    20,553,983 |   47 actions |   2 primes | MISSION SOLUTIONS
+      ex: LCS-13 CPCRS FIXES FY'18 LCS-FS18  1VS6186FSM18 AFMS SUPPORT
+  $    19,501,350 |   13 actions |   2 primes | ULTRA ELECTRONICS OCEAN SYSTEMS
+      ex: GOODS AND OR SERVICES
+  $    17,093,192 |    8 actions |   1 primes | L3HARRIS FUZING AND ORDNANCE SYSTEMS
+      ex: NRE - BARRACUDA MINE NEUTRALIZER ESAD
+  $    16,552,398 |   29 actions |   1 primes | HENSOLDT
+      ex: ONSITE ENGINEERING SERVICES ENG SERVICE - LCS 23 (SAT COMPLE
+  $    16,340,581 |   13 actions |   2 primes | OCEANEERING INTERNATIONAL
+      ex: GOODS AND OR SERVICES
+  $    15,776,881 |   22 actions |   1 primes | LAKE SHORE SYSTEMS
+      ex: LR&H STERN DOOR AND RAMP FENDER STANCHION SERVICE- INTEGRATE
+  $    14,436,810 |   62 actions |   2 primes | EAST COAST REPAIR & FABRICATION
+      ex: LCS 5 RPM INDICATORS SUPPORT ECRF LABOR LCS 5 RPM INDICATORS
+  $    14,047,456 |   45 actions |   1 primes | SHIPBOARD ELECTRICAL & AIR
+      ex: ELECTRICAL SUPPORT OF PCW-1079 ELECTRICAL SUPPORT OF PCW-921
+  $    14,039,218 |    9 actions |   1 primes | DE TECHNOLOGIES
+      ex: WARHEADS.
+  $    12,945,466 |  122 actions |   1 primes | A-1 TRUCK & EQUIPMENT
+      ex: ENGINEER. SERVICES
+
+================================================================================
+BATCH: misc
+================================================================================
+
+Per-PIID totals:
+  N0002418C5392 (LM Aculight HELIOS): 331 subs, $683,233,032 -- prime: LOCKHEED MARTIN ACULIGHT CORPORATION
+  N0002417C5375 (BAE L&A MK 110 MOD 0): 4 subs, $407,047 -- prime: BAE SYSTEMS LAND & ARMAMENTS L.P.
+  N0002412C5316 (BAE L&A MK 110 USCG NSC): 4 subs, $357,314 -- prime: BAE SYSTEMS LAND & ARMAMENTS L.P.
+  N6660418F3013 (SAIC SSTD Nixie): 42 subs, $12,342,399 -- prime: SCIENCE APPLICATIONS INTERNATIONAL CORPORATION
+
+Top 30 subcontractors aggregated across batch:
+  $   394,918,443 |   19 actions |   1 primes | MZA ASSOCIATES
+      ex: CLOSED - NRE BEAM CONTROL I&T RECURRING BEAN CONTROL I&T BC 
+  $   208,919,825 |   11 actions |   1 primes | L3 TECHNOLOGIES
+      ex: QT FOR APPLICATION DEVELOPMENT QWALTEC - WRITERS AND TRAININ
+  $    15,708,352 |    7 actions |   1 primes | SPD TECHNOLOGIES
+      ex: DELL POWEREDGE R430 RACK SERVER BELLOWS ASSY CM SIGNAL PROCE
+  $     8,833,037 |   15 actions |   1 primes | RIGGS DISTLER &
+      ex: INCO RENTED EQUIP./MATERIAL . INCO LABOR - WEEK 2. INCO LABO
+  $     8,389,208 |   10 actions |   1 primes | SEA BOX
+      ex: CLIN 2.0 - TITAN STRUCTURE PROD - TRAVEL
+  $     7,415,686 |   18 actions |   1 primes | DOMAILLE ENGINEERING
+      ex: FIBER ROUTER  MAIN ARC FIBER ROUTER  MAIN COLD PLATE
+  $     5,613,091 |    8 actions |   1 primes | RTX BBN TECHNOLOGIES
+      ex: SURFACE SHIP TORPEDO DEFENSE (SSTD)  AN/SLQ25D NIXIE ENGINEE
+  $     5,608,808 |   10 actions |   1 primes | GROMELSKI & ASSOCIATES
+      ex: SERVICE ITEM
+  $     4,985,964 |   12 actions |   1 primes | HEILIND MIL-AERO
+      ex: CABLES  SP  FIB OP  HELIOS  PTC  RESIDEN CABLES  SP  DC HV P
+  $     4,895,065 |   21 actions |   1 primes | TALOSWEST
+      ex: TEMS CONTROLLER PLUS UP SERVICE ITEM ADDITIONAL FUNDING TEMS
+  $     3,707,950 |    3 actions |   1 primes | INTEROCEAN SYSTEMS
+      ex: NIXIE WINCH
+  $     3,443,853 |    7 actions |   1 primes | NLIGHT
+      ex: LAPTOP  PANASONIC SOFTWARE  OPUS HINGE ASSY ASSY  LH MLG FWD
+  $     2,722,137 |    5 actions |   1 primes | HOWELL LABORATORIES
+      ex: SERVICE ITEM. 6995-G505. 9600-G501. 9630-G501. 9640-G501.
+  $     1,912,647 |   15 actions |   1 primes | QORTEK
+      ex: Â Â Â BUILDING TEST FIXTURE AND TESTING EQUIPMENT
+  $     1,438,110 |    4 actions |   1 primes | EOSPACE
+      ex: LINBO3 PHASE MODULATOR  X.
+  $     1,256,574 |   12 actions |   1 primes | JAANN
+      ex: JAANN INSTALLATION SUPPORT LABOR.
+  $     1,087,411 |   18 actions |   1 primes | L3HARRIS MARITIME POWER & ENERGY SOLUTIONS
+      ex: POST DELIVERY SUPPORT  TECHNICAL SUPPORT SERVICE ITEM SERVIC
+  $       930,200 |    4 actions |   1 primes | MICRO-OPTICS
+      ex: OPTIC  FIBER  ISO  3W  BAND C  10UM PM OPTIC  FIBER  ISO  30
+  $       887,566 |    2 actions |   1 primes | ALLIANCE SPACESYSTEMS
+      ex: LLD SBC STRUCTURE ASSY.
+  $       798,755 |    7 actions |   1 primes | STV INCORPORATED
+      ex: TRAVEL SUPPORT EOY 2020 BOM / COST ESTIMATE FOUNDATION AND E
+  $       794,630 |    6 actions |   1 primes | ATRENNE COMPUTING SOLUTIONS
+      ex: 2019 RAYTHEON SUPPORT NRE - 2004W1141-101 EXPEDITE - 2004W11
+  $       778,134 |    5 actions |   1 primes | LASER OPERATIONS
+      ex: LASER  DFB  TOP 15-60C  1UM  CHANNEL 044 LASER  DFB  TOP 15-
+  $       680,000 |    5 actions |   1 primes | ADVALUE PHOTONICS
+      ex: OPTICS  PM FIBER SPLITTER  D2 OPTICS  PM FIBER SPLITTER  D1 
+  $       548,009 |    4 actions |   1 primes | MLD TECHNOLOGIES
+      ex: OUTER BLADE UPR ASSY BLADE ASSY MICROSATELLITE LM SPACE MISS
+  $       463,954 |    1 actions |   1 primes | KEARFOTT
+      ex: INERTIAL NAVIGATION SYSTEM
+  $       432,357 |    4 actions |   2 primes | VERMILLION INCORPORATED
+      ex: MATERIALS
+  $       419,440 |    3 actions |   1 primes | OPTIMAX SYSTEMS
+      ex: LENS  BEAM SHAPING.
+  $       359,322 |    9 actions |   1 primes | L3HARRIS CINCINNATI ELECTRONICS
+      ex: 'WALRSS REP S/N 83-0174 RMA CAM21-0834 L3HARRIS REPAIR OF WA
+  $       336,928 |    3 actions |   1 primes | AGGREKO
+      ex: COLD TRUCK PACKAGE HOT TRUCK PACKAGE ONE TIME CHARGE: CONNEC
+  $       327,517 |    4 actions |   1 primes | NUFERN
+      ex: SERVICE ITEM

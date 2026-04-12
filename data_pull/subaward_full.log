@@ -1,0 +1,445 @@
+Total unique PIIDs to process: 170
+Window: 2020-01-01 to 2026-04-10
+
+Cached: 0
+
+[1/170] N0002423C2307 :: DDG-51 NEW CONSTRUCTION::HII Ingalls FY23-27 MYP
+  pulled=355  unique_subs=337  in_window=$693.2M
+  top: GENERAL ELECTRIC COMPANY                 $130.7M
+[2/170] N0002423C2305 :: DDG-51 NEW CONSTRUCTION::BIW FY23-27 MYP
+  pulled=0  unique_subs=0  in_window=$0.0M
+[3/170] N0002418C2307 :: DDG-51 NEW CONSTRUCTION::HII Ingalls FY18-22 MYP
+  pulled=2192  unique_subs=1633  in_window=$630.9M
+  top: ROLLS-ROYCE MARINE NORTH AMERICA INC.    $93.7M
+[4/170] N0002418C2305 :: DDG-51 NEW CONSTRUCTION::BIW FY18-22 MYP
+  pulled=24  unique_subs=20  in_window=$46.3M
+  top: JOHNSON CONTROLS NAVY SYSTEMS, LLC       $24.6M
+[5/170] N0002413C2305 :: DDG-51 NEW CONSTRUCTION::BIW FY13-17 MYP
+  pulled=93  unique_subs=70  in_window=$5.4M
+  top: ROLLS-ROYCE MARINE NORTH AMERICA INC.    $1.4M
+[6/170] N0002413C2307 :: DDG-51 NEW CONSTRUCTION::HII DDG 117 FY13/16
+  pulled=2284  unique_subs=427  in_window=$60.2M
+  top: SOUTHCOAST WELDING & MANUFACTURING, LLC. $9.0M
+[7/170] N0002418C2313 :: DDG-51 NEW CONSTRUCTION::BIW Lead Yard FY18-22
+  pulled=0  unique_subs=0  in_window=$0.0M
+[8/170] N0002424C2313 :: DDG-51 NEW CONSTRUCTION::BIW Lead Yard FY24+
+  pulled=0  unique_subs=0  in_window=$0.0M
+[9/170] N0002403C5115 :: DDG-51 NEW CONSTRUCTION::LM Aegis Combat System (legacy)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[10/170] N0002406C2303 :: DDG-1000::BIW lead shipbuilder
+  pulled=0  unique_subs=0  in_window=$0.0M
+[11/170] N0002410C5126 :: DDG-1000::Raytheon Mission Systems Integrator
+  pulled=0  unique_subs=0  in_window=$0.0M
+[12/170] N0002417C5145 :: DDG-1000::Raytheon Total Ship Activation / MSE
+  pulled=482  unique_subs=59  in_window=$22.6M
+  top: MOTOROLA SOLUTIONS, INC.                 $3.6M
+[13/170] N0002422C5522 :: DDG-1000::Raytheon AS&M Support
+  pulled=66  unique_subs=62  in_window=$75.0M
+  top: RED RIVER TECHNOLOGY LLC                 $59.5M
+[14/170] N0002423C2324 :: DDG-1000::HII DDG 1000/1001 Mod Planning
+  pulled=138  unique_subs=129  in_window=$30.2M
+  top: AIR MASTERS MECHANICAL INC               $6.3M
+[15/170] N0002424C2331 :: DDG-1000::BIW Planning Yard Follow On
+  pulled=0  unique_subs=0  in_window=$0.0M
+[16/170] N0002415C5344 :: DDG-1000::GD Land Systems MK 46 MOD 2 Gun
+  pulled=551  unique_subs=0  in_window=$0.0M
+[17/170] N0002424C2473 :: LPD FLIGHT II::HII LPD 33/34/35 block buy
+  pulled=0  unique_subs=0  in_window=$0.0M
+[18/170] N0002418C2406 :: LPD FLIGHT II::HII LPD 30/31/32
+  pulled=1009  unique_subs=820  in_window=$505.2M
+  top: US JOINER LLC                            $54.7M
+[19/170] N0002416C2431 :: LPD FLIGHT II::HII LPD 28 Fort Lauderdale
+  pulled=1030  unique_subs=351  in_window=$57.6M
+  top: INDUSTRIAL CORROSION CONTROL INC         $11.1M
+[20/170] N0002416C2415 :: LPD FLIGHT II::HII LPD 17 LCE&S Core
+  pulled=192  unique_subs=32  in_window=$21.1M
+  top: COLTEC INDUSTRIES INC.                   $7.3M
+[21/170] N0002421C2443 :: LPD FLIGHT II::HII LPD 17 Class Eng Svcs
+  pulled=41  unique_subs=41  in_window=$5.4M
+  top: FAIRBANKS MORSE, LLC                     $2.1M
+[22/170] N0002426C2443 :: LPD FLIGHT II::HII LPD 17 PD&ES
+  pulled=0  unique_subs=0  in_window=$0.0M
+[23/170] N0002416C2427 :: LHA REPLACEMENT::HII LHA 8 Bougainville
+  pulled=837  unique_subs=436  in_window=$123.5M
+  top: INDUSTRIAL CORROSION CONTROL INC         $26.0M
+[24/170] N0002420C2437 :: LHA REPLACEMENT::HII LHA 9
+  pulled=446  unique_subs=428  in_window=$329.9M
+  top: L3HARRIS MARITIME POWER & ENERGY SOLUTIO $38.8M
+[25/170] N0002424C2467 :: LHA REPLACEMENT::HII LHA 10 AP
+  pulled=0  unique_subs=0  in_window=$0.0M
+[26/170] N0002422C5500 :: DDG MOD - SPY-6::Raytheon AN/SPY-6(V) Production
+  pulled=854  unique_subs=594  in_window=$1206.9M
+  top: GENERAL DYNAMICS MISSION SYSTEMS, INC.   $359.4M
+[27/170] N0002425C5501 :: DDG MOD - SPY-6::Raytheon SPY-6 FoR design agent
+  pulled=0  unique_subs=0  in_window=$0.0M
+[28/170] N0001424C1103 :: DDG MOD - SPY-6::RASP enhanced radar signal processing
+  pulled=22  unique_subs=22  in_window=$8.3M
+  top: MOUSER ELECTRONICS, INC                  $4.6M
+[29/170] N0002420C5503 :: DDG MOD - SEWIP::LM SLQ-32(V)6 production
+  ! pull failed page 1: Remote end closed connection without response
+  pulled=0  unique_subs=0  in_window=$0.0M
+[30/170] N0002416C5363 :: DDG MOD - SEWIP::LM SEWIP Block 2 subsystems
+  ! pull failed page 1: Remote end closed connection without response
+  pulled=0  unique_subs=0  in_window=$0.0M
+[31/170] N0002409C5300 :: DDG MOD - SEWIP::LM AN/SLQ-32X(V) Block 2 (FY09)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[32/170] N0002415C5319 :: DDG MOD - SEWIP::NG SEWIP Block 3 pre-design
+  pulled=3  unique_subs=3  in_window=$0.6M
+  top: LOCKHEED MARTIN CORPORATION              $0.6M
+[33/170] N0002422C5520 :: DDG MOD - SEWIP::NG SEWIP Block 3 design agent
+  !! id lookup error: Remote end closed connection without response
+[34/170] N0002414C5341 :: DDG MOD - SEWIP::GDMS SEWIP Block 1B3 LRIP
+  pulled=12  unique_subs=0  in_window=$0.0M
+[35/170] N0002416C5352 :: DDG MOD - SEWIP::GDMS SEWIP Block 1B3 systems
+  pulled=19  unique_subs=0  in_window=$0.0M
+[36/170] N0002419C5603 :: DDG MOD - SSDS::LM SSDS CSEA
+  pulled=898  unique_subs=81  in_window=$38.0M
+  top: MISSION SOLUTIONS LLC                    $13.7M
+[37/170] N0002414C5128 :: DDG MOD - SSDS::Raytheon SSDS PSEA
+  pulled=206  unique_subs=3  in_window=$0.3M
+  top: TRANS-PAK, INCORPORATED                  $0.2M
+[38/170] N0002419C5200 :: DDG MOD - CEC::Raytheon CEC design agent
+  pulled=147  unique_subs=58  in_window=$23.7M
+  top: SECHAN ELECTRONICS INC                   $6.6M
+[39/170] N0002413C5212 :: DDG MOD - CEC::Raytheon CEC (FY13)
+  pulled=63  unique_subs=0  in_window=$0.0M
+[40/170] N0002425C5239 :: DDG MOD - CEC::Raytheon CEC follow-on
+  pulled=3  unique_subs=3  in_window=$6.0M
+  top: EPSILON SYSTEMS SOLUTIONS, INC.          $3.0M
+[41/170] N0002418C5406 :: DDG MOD - CIWS::Raytheon FY18 CIWS Production
+  pulled=3651  unique_subs=480  in_window=$78.9M
+  top: L3HARRIS CINCINNATI ELECTRONICS CORPORAT $6.1M
+[42/170] N0002419C5406 :: DDG MOD - CIWS::Raytheon SeaRAM upgrade
+  pulled=2677  unique_subs=715  in_window=$138.2M
+  top: L3HARRIS CINCINNATI ELECTRONICS CORPORAT $12.8M
+[43/170] N0002407C5437 :: DDG MOD - CIWS::Raytheon Mk 15 Phalanx R&D (FY07)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[44/170] N0002418C5392 :: DDG MOD - HELIOS::LM Aculight HELIOS
+  pulled=331  unique_subs=72  in_window=$62.2M
+  top: MZA ASSOCIATES CORPORATION               $25.4M
+[45/170] N0002407C6119 :: STANDARD MISSILE::Raytheon SM-3 (FY07)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[46/170] N0002417C5410 :: STANDARD MISSILE::Raytheon FY17-21 SM Production
+  pulled=235  unique_subs=48  in_window=$19.6M
+  top: EMHISER RESEARCH INC                     $6.4M
+[47/170] N0002413C5403 :: STANDARD MISSILE::Raytheon FY13-17 SM Production
+  pulled=893  unique_subs=0  in_window=$0.0M
+[48/170] N0002402C5319 :: STANDARD MISSILE::Raytheon SM (FY02)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[49/170] N0002400C5390 :: STANDARD MISSILE::Raytheon SM (FY00)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[50/170] N0002418C5407 :: STANDARD MISSILE::Raytheon SM DLMF/ILM
+  pulled=280  unique_subs=83  in_window=$86.2M
+  top: AEROJET ROCKETDYNE INC                   $65.2M
+[51/170] N0002425C6401 :: MK-54::GDMS MK 54 MOD 1 LWT Sonar Assembly
+  pulled=2  unique_subs=2  in_window=$25.0M
+  top: L3 TECHNOLOGIES, INC.                    $25.0M
+[52/170] N0002418C6405 :: MK-54::Ultra Electronics MK 54 MOD 0 Array Kits
+  pulled=26  unique_subs=26  in_window=$12.1M
+  top: J&E PRECISION TOOL, LLC                  $4.6M
+[53/170] N0002417C5375 :: SHIP GUN SYSTEMS::BAE 57mm MK 110 MOD 0 Gun Mount
+  pulled=4  unique_subs=2  in_window=$0.2M
+  top: VERMILLION INCORPORATED                  $0.1M
+[54/170] N0002412C5316 :: SHIP GUN SYSTEMS::BAE MK 110 Naval Gun (NSC)
+  pulled=4  unique_subs=0  in_window=$0.0M
+[55/170] N0002418F5302 :: SHIP GUN SYSTEMS::BAE MK 110 GWS Engineering Services
+  pulled=3  unique_subs=0  in_window=$0.0M
+[56/170] N0002415C6318 :: AIRBORNE MCM - ALMDS::NG ALMDS production
+  pulled=74  unique_subs=0  in_window=$0.0M
+[57/170] N0002422C6418 :: AIRBORNE MCM - ALMDS::NG ALMDS production support
+  pulled=38  unique_subs=17  in_window=$4.6M
+  top: ARETE ASSOCIATES                         $2.7M
+[58/170] N0002403C6310 :: AIRBORNE MCM - AMNS::Raytheon AMNS Upgrade (FY03)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[59/170] N0002410C6307 :: AIRBORNE MCM - AMNS::Raytheon AMNS LRIP (FY09)
+  pulled=0  unique_subs=0  in_window=$0.0M
+[60/170] N0002417C6305 :: AIRBORNE MCM - AMNS::Raytheon AMNS LRIP
+  pulled=280  unique_subs=48  in_window=$25.2M
+  top: TELEDYNE BROWN ENGINEERING, INC.         $16.2M
+[61/170] N0002425F6404 :: AIRBORNE MCM - AMNS::Raytheon AMNS Test & Depot Support
+  pulled=0  unique_subs=0  in_window=$0.0M
+[62/170] N0002421F6412 :: AIRBORNE MCM - AMNS::Raytheon AMNS Test & Depot Support
+  pulled=6  unique_subs=5  in_window=$0.3M
+  top: CURTISS-WRIGHT DS, INC.                  $0.2M
+[63/170] N0002418C6300 :: AIRBORNE MCM - BARRACUDA::Raytheon Barracuda mine neutralize
+  pulled=173  unique_subs=67  in_window=$122.2M
+  top: SPARTON DELEON SPRINGS, LLC              $107.2M
+[64/170] N0002414C6322 :: LCS MCM - UISS::Textron UISS
+  pulled=118  unique_subs=90  in_window=$22.2M
+  top: RAYTHEON COMPANY                         $2.9M
+[65/170] N0002421C6304 :: LCS MCM - KNIFEFISH::GDMS Knifefish Block 1 LRIP
+  pulled=52  unique_subs=50  in_window=$18.3M
+  top: METRON INCORPORATED                      $6.8M
+[66/170] N0002417C6311 :: LCS MCM - KNIFEFISH::NG Knifefish/LCS systems
+  pulled=908  unique_subs=36  in_window=$37.0M
+  top: FAIRLEAD INTEGRATED, LLC                 $16.9M
+[67/170] N0002422C6305 :: LCS MCM - MCM USV::Bollinger MCM USV
+  pulled=0  unique_subs=0  in_window=$0.0M
+[68/170] N6133111C0017 :: LCS MCM - SMCM::GDMS Surface MCM Unmanned
+  pulled=300  unique_subs=84  in_window=$1182.0M
+  top: TELEDYNE DEFENSE ELECTRONICS, LLC        $922.2M
+[69/170] N0002411C2300 :: LCS FREEDOM::LM Freedom Variant Construction (FY10)
+  pulled=1208  unique_subs=226  in_window=$2913.1M
+  top: MARINETTE MARINE CORPORATION             $2486.9M
+[70/170] N0002425C5409 :: STANDARD MISSILE::Raytheon FY25 SM-6 BLK IA TAC AUR
+  pulled=8  unique_subs=8  in_window=$32.7M
+  top: GOODRICH ACTUATION SYSTEMS LIMITED       $31.6M
+[71/170] N0002424C5408 :: STANDARD MISSILE::Raytheon GMA MK25 option exercise + TE
+  pulled=43  unique_subs=43  in_window=$139.0M
+  top: NAMMO RAUFOSS AS                         $59.0M
+[72/170] N0002423C5408 :: STANDARD MISSILE::Raytheon SM-2 DLMF Maintenance Spares PIO
+  pulled=26  unique_subs=26  in_window=$60.3M
+  top: AEROJET ROCKETDYNE INC                   $54.1M
+[73/170] N0002421C5411 :: STANDARD MISSILE::Raytheon SM-2 BLK IIIB TAC AUR
+  pulled=751  unique_subs=398  in_window=$191.0M
+  top: AEROJET ROCKETDYNE INC                   $40.0M
+[74/170] N0002418C5432 :: STANDARD MISSILE::Raytheon Encanistered Missile (EM)
+  pulled=229  unique_subs=67  in_window=$56.2M
+  top: SAMUEL, SON & CO. (USA) INC.             $17.5M
+[75/170] N0002420C5405 :: STANDARD MISSILE::Raytheon SM Increase Production Capacity
+  pulled=1019  unique_subs=419  in_window=$485.9M
+  top: AEROJET ROCKETDYNE INC                   $237.3M
+[76/170] N0002424C6104 :: STANDARD MISSILE::Raytheon SM Production Lot #2
+  pulled=15  unique_subs=15  in_window=$45.9M
+  top: EMPIRICAL SYSTEMS AEROSPACE INC          $26.0M
+[77/170] N0002422C5400 :: DDG MOD - CIWS::Raytheon RAM GMRP MK 44 MOD 6 BLK 2B
+  pulled=118  unique_subs=76  in_window=$151.2M
+  top: RAM-SYSTEM GMBH                          $97.5M
+[78/170] N0002424C5406 :: DDG MOD - CIWS::Raytheon FY25 CIWS Production
+  pulled=23  unique_subs=23  in_window=$7.2M
+  top: L3HARRIS CINCINNATI ELECTRONICS CORPORAT $3.0M
+[79/170] N0002426C5403 :: DDG MOD - CIWS::Raytheon FY26 RAM GMRP MK 44 MOD 6 BLK 2B
+  pulled=0  unique_subs=0  in_window=$0.0M
+[80/170] N0002421C5406 :: DDG MOD - CIWS::Raytheon Block 1B BSL2 Class A Overhaul
+  pulled=1322  unique_subs=808  in_window=$163.2M
+  top: GENERAL DYNAMICS-OTS, INC.               $15.8M
+[81/170] N0038325FNE02 :: DDG MOD - CIWS::Raytheon Non-Recurring Demand #2
+  pulled=3  unique_subs=3  in_window=$0.2M
+  top: ACCUSEMBLE ELECTRONICS INC               $0.1M
+[82/170] N0038325F0NE1 :: DDG MOD - CIWS::Raytheon MK-99 PBL NRD Order #1
+  pulled=99  unique_subs=99  in_window=$19.0M
+  top: CDP FASTENER GROUP, INC.                 $4.4M
+[83/170] N0002419C4447 :: DEPOT::VIGOR MARINE LLC::USS CAPE ST GEORGE (CG-71) 237 DAY 
+  pulled=367  unique_subs=351  in_window=$956.6M
+  top: TIMKEN GEARS & SERVICES INC.             $830.7M
+[84/170] N0002424C4418 :: DEPOT::METRO MACHINE CORP.::USS BATAAN (LHD 5)FY 24 DSRA
+  pulled=77  unique_subs=77  in_window=$159.3M
+  top: IMIA, LLC                                $59.5M
+[85/170] N0002423C4408 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::CNO AVAILABILIT
+  pulled=850  unique_subs=850  in_window=$145.9M
+  top: BAY METALS & FABRICATION, LLC            $40.3M
+[86/170] N0002425C4402 :: DEPOT::VIGOR MARINE LLC::TYCOM (1B4B)N00024-25-C-4402 USS KI
+  pulled=16  unique_subs=16  in_window=$10.9M
+  top: IMIA, LLC                                $7.1M
+[87/170] N0002418C4403 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS TORTUGA (LS
+  pulled=519  unique_subs=187  in_window=$52.1M
+  top: TECNICO CORPORATION                      $25.5M
+[88/170] N0002423C4410 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, LLC::C420A USS MOM
+  pulled=0  unique_subs=0  in_window=$0.0M
+[89/170] N0002421C4404 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS WASP (LHD-1
+  pulled=334  unique_subs=323  in_window=$121.4M
+  top: IMIA, LLC                                $25.6M
+[90/170] N0002424C4423 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS HALSEY (D
+  pulled=58  unique_subs=58  in_window=$4.9M
+  top: AMP UNITED LLC                           $1.0M
+[91/170] N0002422C4420 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::THE PURPOSE O
+  pulled=987  unique_subs=986  in_window=$41.7M
+  top: PROPULSION CONTROLS ENGINEERING          $6.5M
+[92/170] N0002426C4405 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS IWO JIMA (L
+  pulled=0  unique_subs=0  in_window=$0.0M
+[93/170] N0002420C4308 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS BOXER DSR
+  pulled=405  unique_subs=405  in_window=$102.2M
+  top: IMIA, LLC                                $19.2M
+[94/170] N0002425C4404 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::USS AMERICA 
+  pulled=0  unique_subs=0  in_window=$0.0M
+[95/170] N0002418C4439 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::CODE 430A, U
+  pulled=269  unique_subs=102  in_window=$5601.2M
+  top: HL WELDING, INC.                         $2760.6M
+[96/170] N0002423C4412 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::CNO AVAILABILIT
+  pulled=441  unique_subs=441  in_window=$55.3M
+  top: JRF SHIP REPAIRS, LLC                    $11.0M
+[97/170] N0002420C4460 :: DEPOT::METRO MACHINE CORP::USS MASON (DDG-87)FY20 DMP--EXERC
+  pulled=62  unique_subs=62  in_window=$39.9M
+  top: TECNICO CORPORATION                      $8.3M
+[98/170] N0002425C4400 :: DEPOT::METRO MACHINE CORP.::USS OAK HILL (LSD 51) FY25 DOCKI
+  pulled=0  unique_subs=0  in_window=$0.0M
+[99/170] N0002423C4486 :: DEPOT::BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC::USS LASSEN 
+  pulled=400  unique_subs=400  in_window=$33.5M
+  top: EAST COAST REPAIR & FABRICATION, LLC     $8.7M
+[100/170] N0002426C4403 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS FORREST SHE
+  pulled=0  unique_subs=0  in_window=$0.0M
+[101/170] N0002421C4405 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::CODE 430A US
+  pulled=56  unique_subs=20  in_window=$1.7M
+  top: PROPULSION CONTROLS ENGINEERING          $0.6M
+[102/170] N0002422C4422 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS ROSS (DDG 7
+  pulled=237  unique_subs=237  in_window=$5.9M
+  top: BAY METALS & FABRICATION, LLC            $1.9M
+[103/170] N0002421C4478 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::C430A MODIFI
+  pulled=224  unique_subs=166  in_window=$31.7M
+  top: SOUTHCOAST WELDING & MANUFACTURING, LLC. $12.2M
+[104/170] N0002425C4427 :: DEPOT::METRO MACHINE CORP.::USS PORTER DDG-78 N00024-25-C-44
+  pulled=0  unique_subs=0  in_window=$0.0M
+[105/170] N0002422C4485 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS MUSTIN (D
+  pulled=265  unique_subs=263  in_window=$8.5M
+  top: PREMIER SCAFFOLD, INC.                   $0.9M
+[106/170] N0002420C4400 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS PREBLE (D
+  pulled=141  unique_subs=141  in_window=$32.7M
+  top: YYK ENTERPRISES OPERATIONS, LLC          $7.7M
+[107/170] N0002420C4467 :: DEPOT::METRO MACHINE CORP::USS BATAAN (LHD-5) FY20 SELECTED 
+  pulled=42  unique_subs=42  in_window=$35.2M
+  top: MARCOM SERVICES, LLC                     $5.1M
+[108/170] N0002425C4421 :: DEPOT::BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC::USS THE SUL
+  pulled=0  unique_subs=0  in_window=$0.0M
+[109/170] N0002421C4442 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS SAN DIEGO
+  pulled=166  unique_subs=166  in_window=$31.0M
+  top: SOUTHCOAST WELDING & MANUFACTURING, LLC. $7.0M
+[110/170] N5005426FC005 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS COLE (DDG-6
+  pulled=0  unique_subs=0  in_window=$0.0M
+[111/170] N0002425C4430 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS WASP (LHD 1
+  pulled=34  unique_subs=34  in_window=$39.1M
+  top: JRF SHIP REPAIRS, LLC                    $7.7M
+[112/170] N0002424C4407 :: DEPOT::VIGOR MARINE LLC::USS JOHN S MCCAIN (DDG 56) DSRA
+  pulled=23  unique_subs=23  in_window=$18.6M
+  top: IMIA, LLC                                $5.3M
+[113/170] N0002424C4414 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::USS CARTER HALL
+  pulled=155  unique_subs=155  in_window=$35.3M
+  top: AMP UNITED LLC                           $14.5M
+[114/170] N0002424C4417 :: DEPOT::BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC::USS RAMAGE 
+  pulled=172  unique_subs=172  in_window=$24.5M
+  top: ADVANCED MARINE PRESERVATION LLC         $9.3M
+[115/170] N5523621F8167 :: DEPOT::VIGOR MARINE LLC::C480, USS GABRIELLE GIFFORDS (LCS-1
+  pulled=0  unique_subs=0  in_window=$0.0M
+[116/170] N0002423C4407 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::CHIEF OF NAV
+  pulled=0  unique_subs=0  in_window=$0.0M
+[117/170] N0002423C4404 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::CNO AVAILABI
+  pulled=0  unique_subs=0  in_window=$0.0M
+[118/170] N5523621F8244 :: DEPOT::VIGOR MARINE LLC::C440B CMSD EXECUTION
+USS OMAHA (LCS
+  pulled=0  unique_subs=0  in_window=$0.0M
+[119/170] N5523622C0001 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::C420A USS CU
+  pulled=195  unique_subs=104  in_window=$6.9M
+  top: SOUTH BAY SAND BLASTING AND TANK CLEANIN $1.2M
+[120/170] N0002420C2320 :: DEPOT::BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC::LCS 23 POST
+  pulled=222  unique_subs=222  in_window=$13.8M
+  top: UNIVERSAL PROTECTION SERVICE, LIMITED PA $4.4M
+[121/170] N0002425C4422 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::USS HARPERS 
+  pulled=0  unique_subs=0  in_window=$0.0M
+[122/170] N0002425C4406 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS OKANE (DD
+  pulled=0  unique_subs=0  in_window=$0.0M
+[123/170] N0002421C4408 :: DEPOT::MARINE HYDRAULICS INTERNATIONAL, LLC::USS OAK HILL SR
+  pulled=0  unique_subs=0  in_window=$0.0M
+[124/170] N0002420C4401 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::OPTION EXERC
+  pulled=145  unique_subs=105  in_window=$10.4M
+  top: HL WELDING, INC.                         $2.9M
+[125/170] N5523622F8286 :: DEPOT::VIGOR MARINE LLC::C420A, USS TULSA (LCS-16) FY22 DSRA
+  pulled=0  unique_subs=0  in_window=$0.0M
+[126/170] N0002426C4409 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS STOCKDALE
+  pulled=0  unique_subs=0  in_window=$0.0M
+[127/170] N0002425C4409 :: DEPOT::VIGOR MARINE LLC::USS GABRIELLE GIFFORDS (LCS 10) FY2
+  pulled=0  unique_subs=0  in_window=$0.0M
+[128/170] N0002424C4408 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::CNO AVAILABIL
+  pulled=48  unique_subs=48  in_window=$8.8M
+  top: BENDER CCP, INC.                         $2.5M
+[129/170] N0002425C4420 :: DEPOT::VIGOR MARINE LLC::USS SAVANNAH (LCS 28) FY25 DSRA
+  pulled=0  unique_subs=0  in_window=$0.0M
+[130/170] N4523A23C0561 :: DEPOT::METRO MACHINE CORP.::USS SAMPSON (DDG 102) FY23 SRA
+  pulled=0  unique_subs=0  in_window=$0.0M
+[131/170] N0002421C4455 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS RUSSELL (
+  pulled=73  unique_subs=73  in_window=$12.8M
+  top: CABRILLO ENTERPRISES INC                 $2.8M
+[132/170] N5523621F4011 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::FY21 VERTICA
+  pulled=0  unique_subs=0  in_window=$0.0M
+[133/170] N0002423C4405 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::CNO AVAILABIL
+  pulled=288  unique_subs=288  in_window=$22.0M
+  top: IMIA, LLC                                $5.1M
+[134/170] N0002423C2316 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::PSA FOR JACK 
+  pulled=84  unique_subs=83  in_window=$10.4M
+  top: PACIFIC MARITIME GROUP INC               $3.2M
+[135/170] N5523623F8352 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C420A, USS CH
+  pulled=223  unique_subs=223  in_window=$11.8M
+  top: IMIA, LLC                                $3.0M
+[136/170] N5523620F8160 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::C480 LCS USS
+  pulled=0  unique_subs=0  in_window=$0.0M
+[137/170] N4523A23C0555 :: DEPOT::VIGOR MARINE LLC::USS GRIDLEY (DDG 101) FY23 SRA
+  pulled=37  unique_subs=32  in_window=$18.6M
+  top: JAG WELDING, FAB, & SERVICES, INC        $3.2M
+[138/170] N5523621F8190 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C420A USS MAN
+  pulled=0  unique_subs=0  in_window=$0.0M
+[139/170] N0002419C2317 :: DEPOT::BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC::DDG 119 PSA
+  pulled=104  unique_subs=28  in_window=$5.2M
+  top: SERCO INC                                $1.8M
+[140/170] N5005420FC057 :: DEPOT::METRO MACHINE CORP::USS MCFAUL (DDG-74) SRA MOD 1
+  pulled=19  unique_subs=19  in_window=$14.3M
+  top: COASTAL MECHANICAL SYSTEMS LLC           $6.5M
+[141/170] N0002426C4408 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::USS KANSAS CI
+  pulled=0  unique_subs=0  in_window=$0.0M
+[142/170] N5523620F5192 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, INC.::C450 - FY21 
+  pulled=0  unique_subs=0  in_window=$0.0M
+[143/170] N0002421C4456 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, LLC::USS SOMERSET 
+  pulled=0  unique_subs=0  in_window=$0.0M
+[144/170] N6278622F0018 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::DDG 1001 PSA 
+  pulled=0  unique_subs=0  in_window=$0.0M
+[145/170] N5005421FC035 :: DEPOT::MARINE HYDRAULICS INTERNATIONAL, INC.::USS LABOON (DD
+  pulled=0  unique_subs=0  in_window=$0.0M
+[146/170] N5523621F5287 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, LLC::CODE 420A USS
+  pulled=0  unique_subs=0  in_window=$0.0M
+[147/170] N5523624F5022 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C420A, USS PA
+  pulled=118  unique_subs=118  in_window=$4.3M
+  top: PROPULSION CONTROLS ENGINEERING          $1.6M
+[148/170] N5523623F8433 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C420A MODIFIC
+  pulled=161  unique_subs=161  in_window=$11.0M
+  top: AMP UNITED LLC                           $2.9M
+[149/170] N5523622F5314 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C420A USS STO
+  pulled=94  unique_subs=94  in_window=$-0.3M
+  top: CALIFORNIA MARINE CLEANING, INC.         $0.1M
+[150/170] N5523625F5040 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, LLC::CODE 420A, US
+  pulled=0  unique_subs=0  in_window=$0.0M
+[151/170] N5523625F5023 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, LLC::CODE420A, USS
+  pulled=0  unique_subs=0  in_window=$0.0M
+[152/170] N5005420FC049 :: DEPOT::METRO MACHINE CORP::USS NITZE (DDG-94) SRA MOD 1
+  pulled=26  unique_subs=26  in_window=$8.5M
+  top: COLONNA'S SHIP YARD, INCORPORATED        $1.3M
+[153/170] N5005420FC052 :: DEPOT::MARINE HYDRAULICS INTERNATIONAL, INC.::USS TRUXTUN (D
+  pulled=32  unique_subs=32  in_window=$11.4M
+  top: TECNICO CORPORATION                      $2.4M
+[154/170] N5523620F6016 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C430 LPD/LSD 
+  pulled=25  unique_subs=25  in_window=$1.6M
+  top: EAST COAST REPAIR & FABRICATION, LLC     $0.3M
+[155/170] N5005421FC034 :: DEPOT::MARINE HYDRAULICS INTERNATIONAL, INC.::USS PHILIPPINE
+  pulled=0  unique_subs=0  in_window=$0.0M
+[156/170] N5523624F5013 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, LLC::C420A, USS ST
+  pulled=0  unique_subs=0  in_window=$0.0M
+[157/170] N0002418C2404 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::LHA 7 FITTIN
+  pulled=223  unique_subs=48  in_window=$2763.6M
+  top: HL WELDING, INC.                         $1840.0M
+[158/170] N0002425C2301 :: DEPOT::BAE SYSTEMS NORFOLK SHIP REPAIR INC.::PSA FOR HARVEY 
+  pulled=0  unique_subs=0  in_window=$0.0M
+[159/170] N5523625F8451 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::CODE 420A, U
+  pulled=0  unique_subs=0  in_window=$0.0M
+[160/170] N5523621F5229 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, INC.::FY21 VERTICA
+  pulled=0  unique_subs=0  in_window=$0.0M
+[161/170] N5005423FC005 :: DEPOT::MARINE HYDRAULICS INTERNATIONAL, LLC::USS GONZALEZ (D
+  pulled=0  unique_subs=0  in_window=$0.0M
+[162/170] N5523621F5228 :: DEPOT::CONTINENTAL MARITIME OF SAN DIEGO, INC.::FY21 VERTICA
+  pulled=0  unique_subs=0  in_window=$0.0M
+[163/170] N5523622F5340 :: DEPOT::NATIONAL STEEL AND SHIPBUILDING COMPANY::C420A USS SP
+  pulled=0  unique_subs=0  in_window=$0.0M
+[164/170] N5005423FC006 :: DEPOT::MARINE HYDRAULICS INTERNATIONAL, LLC::USS FORREST SHE
+  pulled=0  unique_subs=0  in_window=$0.0M
+[165/170] N5523621F2091 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C420A USS MAK
+  pulled=24  unique_subs=24  in_window=$5.1M
+  top: THERMAL SPRAY SOLUTIONS, INC.            $1.7M
+[166/170] N4002722F0018 :: DEPOT::METRO MACHINE CORP.::USS JASON DUNHAM (DDG 109) SSP S
+  pulled=0  unique_subs=0  in_window=$0.0M
+[167/170] N5005423FC017 :: DEPOT::METRO MACHINE CORP::USS LABOON (DDG-58) FY23 EM01- EM
+  pulled=17  unique_subs=17  in_window=$2.3M
+  top: GOODRICH CORPORATION                     $0.7M
+[168/170] N5005423FL039 :: DEPOT::MARINE HYDRAULICS INTERNATIONAL, LLC::USS TORTUGA (LS
+  pulled=0  unique_subs=0  in_window=$0.0M
+[169/170] N0002424C2321 :: DEPOT::BAE SYSTEMS JACKSONVILLE SHIP REPAIR LLC::PSA FOR JOH
+  pulled=0  unique_subs=0  in_window=$0.0M
+[170/170] N5523622F5293 :: DEPOT::BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.::C460A_USS STE
+  pulled=3  unique_subs=3  in_window=$-0.4M
+  top: CALIFORNIA MARINE CLEANING, INC.         $-0.0M
+
+Done. Wrote 170 PIIDs to /Users/brendantoole/projects2/buildco3/data_pull/subaward_full.json

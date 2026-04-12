@@ -1,0 +1,144 @@
+Loaded 0 cached PIIDs from /Users/brendantoole/projects2/buildco3/data_pull/fpds_mod_data.json
+Total PIIDs to process: 69
+Window: 2020-01-01 to 2026-04-10
+
+[1/69] N0002423C2307 (DDG-51 NEW CONSTRUCTION: HII Ingalls FY23-27 MYP)
+  mods=162  in_window=162  window_delta=$   6947.3M  latest_cumulative=$    6948.2M
+[2/69] N0002423C2305 (DDG-51 NEW CONSTRUCTION: BIW FY23-27 MYP)
+  mods= 56  in_window= 56  window_delta=$   5027.3M  latest_cumulative=$    5027.6M
+[3/69] N0002418C2307 (DDG-51 NEW CONSTRUCTION: HII Ingalls FY18-22 MYP)
+  mods=760  in_window=716  window_delta=$   4058.0M  latest_cumulative=$    6826.7M
+[4/69] N0002418C2305 (DDG-51 NEW CONSTRUCTION: BIW FY18-22 MYP)
+  mods=284  in_window=254  window_delta=$   3306.5M  latest_cumulative=$    5339.0M
+[5/69] N0002413C2305 (DDG-51 NEW CONSTRUCTION: BIW FY13-17 MYP)
+  mods=708  in_window=354  window_delta=$    483.7M  latest_cumulative=$    4932.5M
+[6/69] N0002413C2307 (DDG-51 NEW CONSTRUCTION: HII DDG 117 FY13/16)
+  mods=1106  in_window=517  window_delta=$    355.8M  latest_cumulative=$    3346.2M
+[7/69] N0002418C2313 (DDG-51 NEW CONSTRUCTION: BIW Lead Yard FY18-22)
+  mods= 44  in_window= 35  window_delta=$    181.9M  latest_cumulative=$     302.9M
+[8/69] N0002424C2313 (DDG-51 NEW CONSTRUCTION: BIW Lead Yard FY24+)
+  mods= 21  in_window= 21  window_delta=$    185.7M  latest_cumulative=$     185.7M
+[9/69] N0002403C5115 (DDG-51 NEW CONSTRUCTION: LM Aegis Combat System (legacy))
+  mods=391  in_window=  2  window_delta=$     -0.0M  latest_cumulative=$     972.4M
+[10/69] N0002406C2303 (DDG-1000: BIW lead shipbuilder)
+  mods=636  in_window= 11  window_delta=$     -2.9M  latest_cumulative=$    3310.0M
+[11/69] N0002410C5126 (DDG-1000: Raytheon Mission Systems Integrator)
+  mods=219  in_window= 18  window_delta=$     -1.2M  latest_cumulative=$    1341.5M
+[12/69] N0002417C5145 (DDG-1000: Raytheon Total Ship Activation / MSE)
+  mods=123  in_window= 50  window_delta=$    281.9M  latest_cumulative=$     790.3M
+[13/69] N0002422C5522 (DDG-1000: Raytheon AS&M Support)
+  mods= 56  in_window= 56  window_delta=$    567.8M  latest_cumulative=$     571.2M
+[14/69] N0002423C2324 (DDG-1000: HII DDG 1000/1001 Mod Planning)
+  mods=110  in_window=110  window_delta=$    307.6M  latest_cumulative=$     328.9M
+[15/69] N0002424C2331 (DDG-1000: BIW Planning Yard Follow On)
+  mods=116  in_window=116  window_delta=$    196.3M  latest_cumulative=$     226.8M
+[16/69] N0002415C5344 (DDG-1000: GD Land Systems MK 46 MOD 2 Gun)
+  mods= 17  in_window=  2  window_delta=$      0.0M  latest_cumulative=$      76.6M
+[17/69] N0002424C2473 (LPD FLIGHT II: HII LPD 33/34/35 block buy)
+  mods=  5  in_window=  5  window_delta=$   1222.0M  latest_cumulative=$    1222.0M
+[18/69] N0002418C2406 (LPD FLIGHT II: HII LPD 30/31/32)
+  mods=340  in_window=303  window_delta=$   3176.6M  latest_cumulative=$    4723.0M
+[19/69] N0002416C2431 (LPD FLIGHT II: HII LPD 28 Fort Lauderdale)
+  mods=421  in_window=268  window_delta=$     77.3M  latest_cumulative=$    2997.3M
+[20/69] N0002416C2415 (LPD FLIGHT II: HII LPD 17 LCE&S Core)
+  mods=290  in_window=109  window_delta=$     64.8M  latest_cumulative=$     307.3M
+[21/69] N0002421C2443 (LPD FLIGHT II: HII LPD 17 Class Eng Svcs)
+  mods=354  in_window=354  window_delta=$    124.6M  latest_cumulative=$     124.6M
+[22/69] N0002426C2443 (LPD FLIGHT II: HII LPD 17 PD&ES)
+  mods=  1  in_window=  1  window_delta=$     12.2M  latest_cumulative=$      20.2M
+[23/69] N0002416C2427 (LHA REPLACEMENT: HII LHA 8 Bougainville)
+  mods=663  in_window=413  window_delta=$   1014.8M  latest_cumulative=$    3319.3M
+[24/69] N0002420C2437 (LHA REPLACEMENT: HII LHA 9)
+  mods=160  in_window=160  window_delta=$   3154.2M  latest_cumulative=$    3155.7M
+[25/69] N0002424C2467 (LHA REPLACEMENT: HII LHA 10 AP)
+  mods= 11  in_window= 11  window_delta=$    321.6M  latest_cumulative=$     807.0M
+[26/69] N0002422C5500 (DDG MOD - SPY-6: Raytheon AN/SPY-6(V) Production)
+  mods= 37  in_window= 37  window_delta=$   3266.2M  latest_cumulative=$    3265.8M
+[27/69] N0002425C5501 (DDG MOD - SPY-6: Raytheon SPY-6 FoR design agent)
+  mods= 18  in_window= 18  window_delta=$    204.8M  latest_cumulative=$       4.9M
+[28/69] N0001424C1103 (DDG MOD - SPY-6: RASP enhanced radar signal processing)
+  mods=  5  in_window=  5  window_delta=$     14.7M  latest_cumulative=$      14.7M
+[29/69] N0002420C5503 (DDG MOD - SEWIP: LM SLQ-32(V)6 production)
+  mods= 47  in_window= 47  window_delta=$    783.2M  latest_cumulative=$     783.2M
+[30/69] N0002416C5363 (DDG MOD - SEWIP: LM SEWIP Block 2 subsystems)
+  mods= 22  in_window= 10  window_delta=$      4.7M  latest_cumulative=$     572.2M
+[31/69] N0002409C5300 (DDG MOD - SEWIP: LM AN/SLQ-32X(V) Block 2 (FY09))
+  mods= 54  in_window=  0  window_delta=$      0.0M  latest_cumulative=$       0.0M
+[32/69] N0002415C5319 (DDG MOD - SEWIP: NG SEWIP Block 3 pre-design)
+  mods= 97  in_window= 60  window_delta=$     59.2M  latest_cumulative=$     188.8M
+[33/69] N0002422C5520 (DDG MOD - SEWIP: NG SEWIP Block 3 design agent)
+  mods= 34  in_window= 34  window_delta=$     80.3M  latest_cumulative=$      80.3M
+[34/69] N0002414C5341 (DDG MOD - SEWIP: GDMS SEWIP Block 1B3 LRIP)
+  mods= 14  in_window=  2  window_delta=$      0.5M  latest_cumulative=$      17.4M
+[35/69] N0002416C5352 (DDG MOD - SEWIP: GDMS SEWIP Block 1B3 systems)
+  mods= 27  in_window=  8  window_delta=$      0.0M  latest_cumulative=$      57.0M
+[36/69] N0002419C5603 (DDG MOD - SSDS: LM SSDS CSEA)
+  mods= 61  in_window= 59  window_delta=$    368.3M  latest_cumulative=$     405.1M
+[37/69] N0002414C5128 (DDG MOD - SSDS: Raytheon SSDS PSEA)
+  mods=103  in_window= 18  window_delta=$      9.4M  latest_cumulative=$     358.1M
+[38/69] N0002419C5200 (DDG MOD - CEC: Raytheon CEC design agent)
+  mods= 86  in_window= 81  window_delta=$    392.9M  latest_cumulative=$     416.5M
+[39/69] N0002413C5212 (DDG MOD - CEC: Raytheon CEC (FY13))
+  mods=124  in_window= 13  window_delta=$     -8.2M  latest_cumulative=$     379.9M
+[40/69] N0002425C5239 (DDG MOD - CEC: Raytheon CEC follow-on)
+  mods= 28  in_window= 28  window_delta=$    160.8M  latest_cumulative=$      53.9M
+[41/69] N0002418C5406 (DDG MOD - CIWS: Raytheon FY18 CIWS Production)
+  mods= 92  in_window= 78  window_delta=$     -0.1M  latest_cumulative=$     220.3M
+[42/69] N0002419C5406 (DDG MOD - CIWS: Raytheon SeaRAM upgrade)
+  mods= 61  in_window= 55  window_delta=$    125.2M  latest_cumulative=$      58.8M
+[43/69] N0002407C5437 (DDG MOD - CIWS: Raytheon Mk 15 Phalanx R&D (FY07))
+  mods= 43  in_window=  1  window_delta=$     -0.1M  latest_cumulative=$     194.5M
+[44/69] N0002418C5392 (DDG MOD - HELIOS: LM Aculight HELIOS)
+  mods=110  in_window= 84  window_delta=$     93.4M  latest_cumulative=$     225.4M
+[45/69] N0002407C6119 (STANDARD MISSILE: Raytheon SM-3 (FY07))
+  mods=224  in_window= 20  window_delta=$     -2.7M  latest_cumulative=$    1904.3M
+[46/69] N0002417C5410 (STANDARD MISSILE: Raytheon FY17-21 SM Production)
+  mods=213  in_window=113  window_delta=$    138.1M  latest_cumulative=$     291.9M
+[47/69] N0002413C5403 (STANDARD MISSILE: Raytheon FY13-17 SM Production)
+  mods= 84  in_window= 24  window_delta=$      0.0M  latest_cumulative=$     276.4M
+[48/69] N0002402C5319 (STANDARD MISSILE: Raytheon SM (FY02))
+  mods= 30  in_window=  1  window_delta=$      0.0M  latest_cumulative=$     227.1M
+[49/69] N0002400C5390 (STANDARD MISSILE: Raytheon SM (FY00))
+  mods=148  in_window=  1  window_delta=$      0.0M  latest_cumulative=$     210.8M
+[50/69] N0002418C5407 (STANDARD MISSILE: Raytheon SM DLMF/ILM)
+  mods=210  in_window=115  window_delta=$     25.0M  latest_cumulative=$      28.0M
+[51/69] N0002425C6401 (MK-54: GDMS MK 54 MOD 1 LWT Sonar Assembly)
+  mods=  3  in_window=  3  window_delta=$    114.8M  latest_cumulative=$     114.8M
+[52/69] N0002418C6405 (MK-54: Ultra Electronics MK 54 MOD 0 Array Kits)
+  mods= 30  in_window= 27  window_delta=$     67.7M  latest_cumulative=$     156.4M
+[53/69] N0002417C5375 (SHIP GUN SYSTEMS: BAE 57mm MK 110 MOD 0 Gun Mount)
+  mods= 18  in_window= 12  window_delta=$      0.0M  latest_cumulative=$      56.0M
+[54/69] N0002412C5316 (SHIP GUN SYSTEMS: BAE MK 110 Naval Gun (NSC))
+  mods= 37  in_window=  2  window_delta=$     -0.5M  latest_cumulative=$      50.2M
+[55/69] N0002418F5302 (SHIP GUN SYSTEMS: BAE MK 110 GWS Engineering Services)
+  mods=  9  in_window=  3  window_delta=$     -0.4M  latest_cumulative=$       7.7M
+[56/69] N0002415C6318 (AIRBORNE MCM - ALMDS: NG ALMDS production)
+  mods= 62  in_window= 29  window_delta=$     13.4M  latest_cumulative=$     177.0M
+[57/69] N0002422C6418 (AIRBORNE MCM - ALMDS: NG ALMDS production support)
+  mods= 30  in_window= 30  window_delta=$     60.4M  latest_cumulative=$      60.4M
+[58/69] N0002403C6310 (AIRBORNE MCM - AMNS: Raytheon AMNS Upgrade (FY03))
+  mods= 90  in_window=  1  window_delta=$      0.0M  latest_cumulative=$     102.5M
+[59/69] N0002410C6307 (AIRBORNE MCM - AMNS: Raytheon AMNS LRIP (FY09))
+  mods= 52  in_window=  4  window_delta=$     -0.3M  latest_cumulative=$      58.1M
+[60/69] N0002417C6305 (AIRBORNE MCM - AMNS: Raytheon AMNS LRIP)
+  mods= 43  in_window= 32  window_delta=$     26.6M  latest_cumulative=$      50.5M
+[61/69] N0002425F6404 (AIRBORNE MCM - AMNS: Raytheon AMNS Test & Depot Support)
+  mods=  2  in_window=  2  window_delta=$      2.2M  latest_cumulative=$       2.2M
+[62/69] N0002421F6412 (AIRBORNE MCM - AMNS: Raytheon AMNS Test & Depot Support)
+  mods= 19  in_window= 19  window_delta=$      8.4M  latest_cumulative=$       8.4M
+[63/69] N0002418C6300 (AIRBORNE MCM - BARRACUDA: Raytheon Barracuda mine neutralizer)
+  mods= 44  in_window= 36  window_delta=$    159.3M  latest_cumulative=$     206.7M
+[64/69] N0002414C6322 (LCS MCM - UISS: Textron UISS)
+  mods=118  in_window= 73  window_delta=$    241.8M  latest_cumulative=$     331.2M
+[65/69] N0002421C6304 (LCS MCM - KNIFEFISH: GDMS Knifefish Block 1 LRIP)
+  mods= 42  in_window= 42  window_delta=$     81.9M  latest_cumulative=$      81.9M
+[66/69] N0002417C6311 (LCS MCM - KNIFEFISH: NG Knifefish/LCS systems)
+  mods=153  in_window=103  window_delta=$    347.6M  latest_cumulative=$     492.5M
+[67/69] N0002422C6305 (LCS MCM - MCM USV: Bollinger MCM USV)
+  mods= 31  in_window= 31  window_delta=$    116.1M  latest_cumulative=$     116.3M
+[68/69] N6133111C0017 (LCS MCM - SMCM: GDMS Surface MCM Unmanned)
+  mods= 82  in_window= 19  window_delta=$     15.4M  latest_cumulative=$     143.3M
+[69/69] N0002411C2300 (LCS FREEDOM: LM Freedom Variant Construction (FY10))
+  mods=692  in_window=192  window_delta=$    250.0M  latest_cumulative=$    4980.5M
+
+Done. Wrote 69 PIIDs to /Users/brendantoole/projects2/buildco3/data_pull/fpds_mod_data.json
