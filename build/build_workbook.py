@@ -894,8 +894,7 @@ def create_competitive_dynamics(wb):
         wc(ws, r, 2, parent, font=F_GRAY)
         wc(ws, r, 3, val, font=F_BLUE, fmt=NUM_FMT)
         wc(ws, r, 4, programs, font=F_GRAY)
-    r += 1; total_label(ws, r, 1, '')
-    total_label(ws, r, 2, 'Total (top 19)')
+    r += 1; total_label(ws, r, 1, 'Total (top 19)')
     total_cell(ws, r, 3, f'=SUM(C{ft}:C{r-1})')
     span_top_border(ws, r, 4)
 
