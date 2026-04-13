@@ -24,7 +24,7 @@ import re
 WORKBOOK_SRC = 'output/08APR2028_Newbuild_and_MRO_Spend_v2.3.xlsx'
 OUTPUT_DIR   = 'output'
 FILE_PREFIX  = '08APR2028_Newbuild_and_MRO_Spend'
-VERSION_MAJOR = 3  # auto-increments minor: v3.0, v3.1, v3.2, ...
+VERSION_MAJOR = 4  # auto-increments minor: v4.0, v4.1, v4.2, ...
 
 
 def next_output_path():
@@ -82,6 +82,66 @@ BUCKET_SHORT = {
     '6': 'Sustainment Engineering', '7': 'Availability Support',
 }
 MRO_BKTS = ['2', '3', '4', '5', '6', '7']
+
+# ── P-5c / P-8a cost breakdown ───────────────────────────────
+
+P5C_COST_CATEGORIES = [
+    'Plan Costs',
+    'Basic Construction',
+    'Change Orders',
+    'Electronics',
+    'Propulsion Equipment',
+    'Hull, Mechanical, and Electrical',
+    'Ordnance',
+    'Other Cost',
+    'Technology Insertion',
+]
+P5C_VALID = set(P5C_COST_CATEGORIES)
+
+P8A_COST_CATEGORIES = {'Electronics', 'Hull, Mechanical, and Electrical', 'Ordnance'}
+
+
+def parse_exhibit_level(title):
+    """Extract exhibit level from an ALT_VIEW title string.
+    Returns 'P-5c', 'P-8a', 'P-35', or None."""
+    if not title:
+        return None
+    t = str(title).strip()
+    if ' - P-5c - ' in t:
+        return 'P-5c'
+    if ' - P-8a ' in t:
+        for cat in P8A_COST_CATEGORIES:
+            if f' - P-8a {cat} - ' in t:
+                return 'P-8a'
+        return None
+    if ' - P-35 ' in t:
+        return 'P-35'
+    return None
+
+
+def parse_cost_category(title, exhibit_level):
+    """Extract P-5c cost category from an ALT_VIEW title string.
+    For P-5c rows: the category after ' - P-5c - '.
+    For P-8a/P-35 rows: the P-5c parent category (Electronics, HM&E, Ordnance).
+    Returns a category string or None."""
+    if not title or not exhibit_level:
+        return None
+    t = str(title).strip()
+
+    if exhibit_level == 'P-5c':
+        cat = t.split(' - P-5c - ', 1)[1].strip()
+        return cat if cat in P5C_VALID else None
+
+    if exhibit_level == 'P-8a':
+        for cat in P8A_COST_CATEGORIES:
+            if f' - P-8a {cat} - ' in t:
+                return cat
+        return None
+
+    if exhibit_level == 'P-35':
+        return None
+
+    return None
 
 
 # ── Styles (per workbook styling guide) ──────────────────────
@@ -157,6 +217,27 @@ def make_cascade(value_ranges):
         return cf(*conditions)[1:]
 
     return cf, cf_neg, cf_inner
+
+
+def make_altview_cascade(value_ranges):
+    """
+    Build cf / cf_inner for [ALT_VIEW] rows only.
+    Same cascade logic as make_cascade but matches JB_S="[ALT_VIEW]" instead
+    of "" and "[PARENT]".  Simpler: only one row-type term, not two.
+    """
+    def cf(*conditions):
+        cond = (',' + ','.join(conditions)) if conditions else ''
+        t = []
+        for i, vr in enumerate(value_ranges):
+            prior = ''.join(f',{value_ranges[j]},""' for j in range(i))
+            check = f',{vr},"<>"' if i < len(value_ranges) - 1 else ''
+            t.append(f'SUMIFS({vr},JB_S,"[ALT_VIEW]"{cond}{prior}{check})')
+        return '=' + '+'.join(t)
+
+    def cf_inner(*conditions):
+        return cf(*conditions)[1:]
+
+    return cf, cf_inner
 
 
 # ── Cell & layout helpers ─────────────────────────────────────
@@ -286,6 +367,10 @@ def read_data(src_path, col_indices):
     type_svc = {}; type_cat = {}
     all_tam_types = set(); tf_src = defaultdict(float)
     nb_excl = defaultdict(float); mro_excl = defaultdict(float)
+    p5c_data = defaultdict(float)   # (vessel_type, cost_category) -> $K
+    p5c_types = set()
+    p8a_data = defaultdict(float)   # (vessel_type, cost_category, system_name) -> $K
+    p8a_types = set()
 
     for row in ws.iter_rows(min_row=5, max_row=ws.max_row):
         cat = str(row[24].value).strip() if row[24].value else ''
@@ -298,10 +383,27 @@ def read_data(src_path, col_indices):
             type_cat[vt] = cat
 
         rt = row[21].value
-        if not additive(rt): continue
         bk = row[4].value
+        bs = str(bk).strip() if bk is not None else ''
+
+        # ── ALT_VIEW scan (P-5c / P-8a for cost category breakdown) ──
+        if str(rt).strip() == '[ALT_VIEW]' and bk is not None and bs == '1':
+            title = str(row[3].value).strip() if row[3].value else ''
+            ex = parse_exhibit_level(title)
+            cc_val = parse_cost_category(title, ex)
+            if ex and cc_val and cat in TAM_CATEGORIES and vt and vt not in SAM_EXCLUDED_TYPES:
+                val = read_val(row)
+                if ex == 'P-5c' and cc_val in P5C_VALID:
+                    p5c_data[(vt, cc_val)] += val
+                    p5c_types.add(vt)
+                elif ex == 'P-8a':
+                    ce = str(row[33].value).strip() if row[33].value else ''
+                    if ce:
+                        p8a_data[(vt, cc_val, ce)] += val
+                        p8a_types.add(vt)
+
+        if not additive(rt): continue
         if bk is None: continue
-        bs = str(bk).strip()
         if bs not in ('1', '2', '3', '4', '5', '6', '7'): continue
 
         v = read_val(row)
@@ -346,6 +448,13 @@ def read_data(src_path, col_indices):
         'sources':             [s for s, _ in sorted(tf_src.items(), key=lambda x: -x[1])],
         'nb_excl':  [c for c, v in sorted(nb_excl.items(), key=lambda x: -x[1]) if v > 0],
         'mro_excl': [c for c, v in sorted(mro_excl.items(), key=lambda x: -x[1]) if v > 0],
+        # P-5c / P-8a breakdown data
+        'p5c_data': dict(p5c_data),
+        'p5c_types': sorted_svc([t for t in p5c_types
+                                  if any(p5c_data.get((t, c), 0) > 0 for c in P5C_VALID)],
+                                 nb),
+        'p8a_data': dict(p8a_data),
+        'p8a_types': sorted_svc(list(p8a_types), nb),
     }
 
 
@@ -489,7 +598,7 @@ def create_newbuild_tam(wb, d, label, prefix, cf, cf_neg, cf_inner):
     finish_sheet(ws)
 
 
-def create_newbuild_sam(wb, d, label, prefix, cf, cf_neg, cf_inner):
+def create_newbuild_sam(wb, d, label, prefix, cf, cf_neg, cf_inner, altview_cf=None, altview_inner=None):
     ws = wb.create_sheet(f'{prefix} Newbuild SAM')
     mc = max(4, 2 + len(d['nb_sam_nz']) + 1)
     cw(ws, 1, 30); cw(ws, 2, 12)
@@ -559,6 +668,137 @@ def create_newbuild_sam(wb, d, label, prefix, cf, cf_neg, cf_inner):
 
     span_top_border(ws, tkr, tc)
     apply_group_borders(ws, svc_r, tkr, 2, n_usn, n_cg)
+    r = tkr  # advance r past mekko total row
+
+    # ── Sections D & E: P-5c cost category breakdown (FY26 only) ──
+
+    p5c_types = d.get('p5c_types', [])
+    if p5c_types and altview_inner:
+        sam_p5c = [t for t in p5c_types if t not in SAM_EXCLUDED_TYPES]
+
+        if sam_p5c:
+            cats = [c for c in P5C_COST_CATEGORIES
+                    if any(d['p5c_data'].get((t, c), 0) > 0 for t in sam_p5c)]
+
+            n_types = len(sam_p5c)
+            tc = 2 + n_types  # Total column
+
+            # ── (D) Gross P-5c Cost Category Breakdown ──
+            r += 3
+            subsec_band(ws, r, f'(D) P-5c Gross Cost Category Breakdown by Vessel Type \u2014 {label} ($K)', tc)
+            r += 1
+            purpose_row(ws, r, 'Gross total-ship-estimate costs from Exhibit P-5c. These are pre-AP/SFF and will NOT match SAM net totals.')
+            r += 1
+            svc_r_d = r
+            sam_p5c_ordered, n_usn_d, n_cg_d = write_svc_header(ws, r, sam_p5c, d['type_svc'])
+
+            r += 1
+            wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR); cw(ws, 1, 30)
+            for i, vt in enumerate(sam_p5c_ordered):
+                c = 2 + i
+                wc(ws, r, c, vt, font=F_HDR, border=B_HDR); cw(ws, c, 14)
+            wc(ws, r, tc, 'Total', font=F_HDR, border=B_HDR); cw(ws, tc, 14)
+            hdr_r_d = r
+
+            # Data rows — one per cost category, $ values
+            first_d = r + 1
+            for cat in cats:
+                r += 1
+                wc(ws, r, 1, cat, font=F_DATA)
+                for i, vt in enumerate(sam_p5c_ordered):
+                    c = 2 + i
+                    formula = altview_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_CC,"{cat}"', f'JB_W,"{vt}"')
+                    wc(ws, r, c, '=' + formula, font=F_DATA, fmt=NUM_FMT)
+                wc(ws, r, tc, f'=SUM({get_column_letter(2)}{r}:{get_column_letter(tc-1)}{r})',
+                   font=F_DATA, fmt=NUM_FMT)
+            last_d = r
+
+            # Total row
+            r += 1; tkr_d = r
+            wc(ws, r, 1, 'Gross Total ($K)', font=F_TOTAL, border=B_TOT)
+            for c in range(2, tc + 1):
+                total_cell(ws, r, c,
+                           f'=SUM({get_column_letter(c)}{first_d}:{get_column_letter(c)}{last_d})')
+            span_top_border(ws, r, tc)
+            apply_group_borders(ws, svc_r_d, tkr_d, 2, n_usn_d, n_cg_d)
+
+            # Percentage rows below total
+            r += 2
+            subsubsec_band(ws, r, 'Cost category mix (% of gross total per vessel type)', tc)
+            r += 1
+            wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR)
+            for i, vt in enumerate(sam_p5c_ordered):
+                wc(ws, r, 2 + i, vt, font=F_HDR, border=B_HDR)
+            wc(ws, r, tc, 'Total', font=F_HDR, border=B_HDR)
+
+            pct_first = r + 1
+            for ci, cat in enumerate(cats):
+                r += 1
+                data_row = first_d + ci
+                wc(ws, r, 1, cat, font=F_DATA)
+                for c in range(2, tc + 1):
+                    cl = get_column_letter(c)
+                    wc(ws, r, c, f'=IFERROR({cl}{data_row}/{cl}${tkr_d},0)',
+                       font=F_PCT, fmt=PCT_FMT)
+            r += 1
+            wc(ws, r, 1, 'Total', font=F_TOTAL, border=B_TOT)
+            for c in range(2, tc + 1):
+                pct_total(ws, r, c, 1.0)
+            span_top_border(ws, r, tc)
+
+            # ── (E) Proportional Cost Category Allocation to SAM Net Totals ──
+            r += 3
+            subsec_band(ws, r, f'(E) Proportional Cost Category Allocation to SAM Net Totals \u2014 {label} ($K)', tc)
+            r += 1
+            purpose_row(ws, r, 'P-5c percentage mix from (D) applied to SAM net budget-authority totals from (B). Totals reconcile to SAM.')
+            r += 1
+            svc_r_e = r
+            sam_p5c_ordered_e, n_usn_e, n_cg_e = write_svc_header(ws, r, sam_p5c, d['type_svc'])
+
+            r += 1
+            wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR)
+            for i, vt in enumerate(sam_p5c_ordered_e):
+                c = 2 + i
+                wc(ws, r, c, vt, font=F_HDR, border=B_HDR); cw(ws, c, 14)
+            wc(ws, r, tc, 'Total', font=F_HDR, border=B_HDR)
+
+            # SAM net total row (reference from section B via formula)
+            r += 1; sam_ref_r = r
+            wc(ws, r, 1, 'SAM Net Total ($K)', font=F_KPI, fill=BG_TEAL)
+            for i, vt in enumerate(sam_p5c_ordered_e):
+                c = 2 + i
+                wc(ws, r, c, cf('JB_B,1', f'JB_W,"{vt}"'), font=F_KPI, fill=BG_TEAL, fmt=NUM_FMT)
+            wc(ws, r, tc, f'=SUM({get_column_letter(2)}{r}:{get_column_letter(tc-1)}{r})',
+               font=F_KPI, fill=BG_TEAL, fmt=NUM_FMT)
+
+            # Allocated rows — SAM net total * P-5c percentage
+            alloc_first = r + 1
+            for ci, cat in enumerate(cats):
+                r += 1
+                pct_row = pct_first + ci
+                wc(ws, r, 1, cat, font=F_DATA)
+                for c in range(2, tc + 1):
+                    cl = get_column_letter(c)
+                    wc(ws, r, c, f'=IFERROR({cl}${sam_ref_r}*{cl}{pct_row},0)',
+                       font=F_DATA, fmt=NUM_FMT)
+            alloc_last = r
+
+            # Total row
+            r += 1
+            wc(ws, r, 1, 'Allocated Total ($K)', font=F_TOTAL, border=B_TOT)
+            for c in range(2, tc + 1):
+                total_cell(ws, r, c,
+                           f'=SUM({get_column_letter(c)}{alloc_first}:{get_column_letter(c)}{alloc_last})')
+            span_top_border(ws, r, tc)
+
+            # Verification row — should equal SAM net total
+            r += 1
+            wc(ws, r, 1, 'Check: matches SAM net?', font=F_GRAY)
+            for c in range(2, tc + 1):
+                cl = get_column_letter(c)
+                wc(ws, r, c, f'=IFERROR({cl}{r-1}/{cl}{sam_ref_r}-1,0)', font=F_GRAY, fmt='0.0%')
+
+            apply_group_borders(ws, svc_r_e, r, 2, n_usn_e, n_cg_e)
 
     finish_sheet(ws)
 
@@ -753,6 +993,145 @@ def create_mro_sam(wb, d, label, prefix, cf, cf_neg, cf_inner, mro_tam_info=None
 
     span_top_border(ws, tkr, tc)
     apply_group_borders(ws, svc_r, tkr, 2, n_usn, n_cg)
+
+    finish_sheet(ws)
+
+
+def create_newbuild_cost_detail(wb, d, label, prefix, acf_inner):
+    """Supplemental sheet: direct P-5c costs (Approach 2) + P-8a system detail.
+    Only created when P-5c data is available (FY26)."""
+    p5c_types = d.get('p5c_types', [])
+    p8a_types = d.get('p8a_types', [])
+    if not p5c_types:
+        return
+
+    ws = wb.create_sheet(f'{prefix} Newbuild SAM Cost Detail')
+
+    sam_p5c = [t for t in p5c_types if t not in SAM_EXCLUDED_TYPES]
+    cats = [c for c in P5C_COST_CATEGORIES
+            if any(d['p5c_data'].get((t, c), 0) > 0 for t in sam_p5c)]
+
+    tc = 2 + len(sam_p5c)  # Total column
+    mc = max(tc, 6)
+    cw(ws, 1, 32)
+
+    r = 1; title_band(ws, r, f'Newbuild SAM Cost Detail \u2014 {label} ($K)', mc)
+    r = 2; purpose_row(ws, r,
+        'Gross ship-cost breakdown from P-5c and P-8a exhibits. '
+        'NOT net budget authority \u2014 see Newbuild SAM for reconciled values.')
+
+    # ── (A) Direct P-5c Cost Category Breakdown (Approach 2) ──
+    r = 4; subsec_band(ws, r,
+        f'(A) P-5c Total Ship Cost by Vessel Type & Cost Category \u2014 {label} ($K)', tc)
+    r += 1
+    svc_r = r
+    ordered, n_usn, n_cg = write_svc_header(ws, r, sam_p5c, d['type_svc'])
+
+    r += 1
+    wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR)
+    for i, vt in enumerate(ordered):
+        c = 2 + i
+        wc(ws, r, c, vt, font=F_HDR, border=B_HDR); cw(ws, c, 14)
+    wc(ws, r, tc, 'Total', font=F_HDR, border=B_HDR); cw(ws, tc, 14)
+
+    first_a = r + 1
+    for cat in cats:
+        r += 1
+        wc(ws, r, 1, cat, font=F_DATA)
+        for i, vt in enumerate(ordered):
+            c = 2 + i
+            formula = acf_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_CC,"{cat}"', f'JB_W,"{vt}"')
+            wc(ws, r, c, '=' + formula, font=F_DATA, fmt=NUM_FMT)
+        wc(ws, r, tc, f'=SUM({get_column_letter(2)}{r}:{get_column_letter(tc-1)}{r})',
+           font=F_DATA, fmt=NUM_FMT)
+    last_a = r
+
+    r += 1; tkr_a = r
+    wc(ws, r, 1, 'Gross Total ($K)', font=F_TOTAL, border=B_TOT)
+    for c in range(2, tc + 1):
+        total_cell(ws, r, c,
+                   f'=SUM({get_column_letter(c)}{first_a}:{get_column_letter(c)}{last_a})')
+    span_top_border(ws, r, tc)
+    apply_group_borders(ws, svc_r, tkr_a, 2, n_usn, n_cg)
+
+    # ── (B) P-8a System-Level Detail by Vessel Type ──
+    r += 3; subsec_band(ws, r,
+        f'(B) P-8a System-Level Detail by Vessel Type \u2014 {label} ($K)', 4)
+    r += 1
+    purpose_row(ws, r, 'Individual GFE systems from Exhibit P-8a, grouped by cost category within each vessel type.')
+
+    sam_p8a = [t for t in p8a_types if t not in SAM_EXCLUDED_TYPES]
+
+    for vt in sam_p8a:
+        # Gather systems for this vessel type
+        systems = []
+        for (vt2, cc, ce), val in d['p8a_data'].items():
+            if vt2 == vt and val > 0:
+                systems.append((cc, ce, val))
+        if not systems:
+            continue
+
+        r += 2
+        subsubsec_band(ws, r, vt, 4)
+        r += 1
+        hdr_row(ws, r, [('System', 32), ('Cost Category', 22), (f'{label} ($K)', 14), ('% of Type', 10)])
+        ft = r + 1
+
+        # Sort: by category order, then by value descending within category
+        cat_order = list(P8A_COST_CATEGORIES)
+        systems_sorted = sorted(systems, key=lambda x: (cat_order.index(x[0])
+                                                         if x[0] in cat_order else 99, -x[2]))
+        for cc, ce, val in systems_sorted:
+            r += 1
+            wc(ws, r, 1, ce, font=F_DATA)
+            wc(ws, r, 2, cc, font=F_GRAY)
+            wc(ws, r, 3, val, font=F_BLUE, fmt=NUM_FMT)
+        lt = r
+
+        r += 1
+        total_label(ws, r, 1, f'{vt} Total')
+        total_cell(ws, r, 3, f'=SUM(C{ft}:C{lt})')
+        span_top_border(ws, r, 4)
+
+        # Fill percentage column
+        for rn in range(ft, lt + 1):
+            wc(ws, rn, 4, f'=IFERROR(C{rn}/C${r},0)', font=F_PCT, fmt=PCT_FMT)
+        pct_total(ws, r, 4, 1.0)
+
+    # ── (C) Top P-8a Systems — Cross-Program Summary ──
+    r += 3; subsec_band(ws, r,
+        f'(C) Top P-8a Systems \u2014 Cross-Program Summary \u2014 {label} ($K)', 5)
+    r += 1
+    purpose_row(ws, r, 'Largest GFE systems aggregated across all SAM vessel types.')
+
+    # Aggregate by system name across vessel types
+    sys_agg = defaultdict(lambda: {'total': 0, 'category': '', 'programs': []})
+    for (vt, cc, ce), val in d['p8a_data'].items():
+        if vt in SAM_EXCLUDED_TYPES or val <= 0:
+            continue
+        sys_agg[ce]['total'] += val
+        sys_agg[ce]['category'] = cc
+        sys_agg[ce]['programs'].append(vt)
+
+    top_systems = sorted(sys_agg.items(), key=lambda x: -x[1]['total'])[:30]
+
+    r += 1
+    hdr_row(ws, r, [('System', 32), ('Cost Category', 22), (f'{label} ($K)', 14),
+                     ('# Programs', 10), ('Vessel Types', 40)])
+    ft = r + 1
+    for ce, info in top_systems:
+        r += 1
+        wc(ws, r, 1, ce, font=F_DATA)
+        wc(ws, r, 2, info['category'], font=F_GRAY)
+        wc(ws, r, 3, info['total'], font=F_BLUE, fmt=NUM_FMT)
+        wc(ws, r, 4, len(set(info['programs'])), font=F_DATA)
+        wc(ws, r, 5, ', '.join(sorted(set(info['programs']))), font=F_GRAY)
+    lt = r
+
+    r += 1
+    total_label(ws, r, 1, 'Total (top systems)')
+    total_cell(ws, r, 3, f'=SUM(C{ft}:C{lt})')
+    span_top_border(ws, r, 5)
 
     finish_sheet(ws)
 
@@ -953,6 +1332,164 @@ def create_competitive_dynamics(wb):
     finish_sheet(ws)
 
 
+# ── Derived columns ──────────────────────────────────────────
+
+def populate_derived_columns(wb):
+    """Populate Exhibit Level (col 38) and Cost Category (col 39) for ALT_VIEW rows.
+    These columns exist only in the output, not the source."""
+    ws = wb['J Book Items Cons.']
+    # Match existing header styling: Arial 8 bold, left-aligned, vertical center
+    hdr_font = Font(name='Arial', size=8, bold=True)
+    hdr_align = Alignment(horizontal='left', vertical='center')
+    data_font = Font(name='Arial', size=8)
+    data_align = Alignment(horizontal='left', vertical='center')
+
+    for c in (38, 39):
+        cell = ws.cell(row=4, column=c)
+        cell.font = hdr_font
+        cell.alignment = hdr_align
+    ws.cell(row=4, column=38, value='Exhibit Level')
+    ws.cell(row=4, column=39, value='Cost Category')
+
+    count = 0
+    for row in range(5, ws.max_row + 1):
+        rt = ws.cell(row, 22).value
+        if rt != '[ALT_VIEW]':
+            continue
+        title = ws.cell(row, 4).value
+        ex = parse_exhibit_level(title)
+        if ex:
+            cell_ex = ws.cell(row, 38, value=ex)
+            cell_ex.font = data_font
+            cell_ex.alignment = data_align
+            cc = parse_cost_category(title, ex)
+            if cc:
+                cell_cc = ws.cell(row, 39, value=cc)
+                cell_cc.font = data_font
+                cell_cc.alignment = data_align
+            count += 1
+    print(f'  Derived columns: populated {count} ALT_VIEW rows')
+
+
+def update_validation_sheet(wb):
+    """Append v4.0 documentation to the Validation sheet."""
+    ws = wb['Validation']
+    # Find the last populated row
+    r = ws.max_row + 2
+
+    def vrow(sheet, field, value, desc, notes=''):
+        nonlocal r
+        ws.cell(r, 1, value=sheet)
+        ws.cell(r, 2, value=field)
+        ws.cell(r, 3, value=value)
+        ws.cell(r, 4, value=desc)
+        if notes:
+            ws.cell(r, 5, value=notes)
+        for c in range(1, 6):
+            ws.cell(r, c).font = Font(name='Arial', size=8)
+        r += 1
+
+    def section(title):
+        nonlocal r
+        r += 1
+        ws.cell(r, 1, value=title)
+        ws.cell(r, 1).font = Font(name='Arial', size=8, bold=True)
+        r += 2
+
+    # ── New section: v4.0 derived columns ──
+    section('DERIVED COLUMNS (v4.0 — Exhibit Level & Cost Category)')
+
+    vrow('J Book Items Cons.', 'Column', 'Exhibit Level (col AL)',
+         'Derived column populated by the build script for [ALT_VIEW] rows. '
+         'Values: "P-5c", "P-8a", "P-35", or blank. '
+         'Parsed from the Line Item Title string pattern (e.g., "DDG-51 - P-5c - Electronics").',
+         'Only exists in the output workbook, not the source. '
+         'P-8a rows require a known cost category in the title to be tagged '
+         '(filters out narrative text fragments). '
+         'Blank for non-ALT_VIEW rows.')
+
+    vrow('J Book Items Cons.', 'Column', 'Cost Category (col AM)',
+         'Derived column populated by the build script for [ALT_VIEW] rows. '
+         'Values: one of the 9 P-5c cost categories, or blank. '
+         'For P-5c rows: extracted directly from the title (e.g., "Basic Construction"). '
+         'For P-8a rows: the parent P-5c category (Electronics, HM&E, or Ordnance). '
+         'For P-35 rows: blank (not needed for current formulas).',
+         'Valid P-5c cost categories: Plan Costs, Basic Construction, Change Orders, '
+         'Electronics, Propulsion Equipment, Hull Mechanical and Electrical, '
+         'Ordnance, Other Cost, Technology Insertion. '
+         'Year-based P-5c breakdowns (e.g., "2014", "2026") get blank Cost Category.')
+
+    # ── New section: SAM cost category breakdown ──
+    section('NEWBUILD SAM COST CATEGORY BREAKDOWN (v4.0 — Sections D & E)')
+
+    vrow('Newbuild SAM', 'Section', '(D) P-5c Gross Cost Category Breakdown',
+         'Decomposes new-construction spending into P-5c cost categories '
+         '(Plan Costs, Basic Construction, Change Orders, Electronics, HM&E, Ordnance, Other Cost) '
+         'by SAM vessel type. Values are GROSS total-ship-estimate costs from Exhibit P-5c — '
+         'these are pre-AP/SFF deductions and will NOT match SAM net totals.',
+         'FY2026 only. Uses SUMIFS on [ALT_VIEW] rows with JB_EX="P-5c". '
+         'Includes a percentage sub-table showing the cost category mix per vessel type. '
+         'Coverage: 6 SAM vessel types with P-5c data from 13+ ship programs.')
+
+    vrow('Newbuild SAM', 'Section', '(E) Proportional Cost Category Allocation',
+         'Applies the P-5c percentage mix from section (D) to the SAM net budget-authority '
+         'totals from section (B). This gives a cost category decomposition that reconciles '
+         'to the SAM total. Formula: SAM_net_per_type * P5c_pct_per_category.',
+         'Allocated Total should equal SAM Net Total per vessel type. '
+         'The "Check: matches SAM net?" row verifies reconciliation (should show 0.0%). '
+         'Use this section for market-sizing statements like '
+         '"$X.XB of DDG SAM goes to electronics/GFE."')
+
+    # ── New section: SAM Cost Detail sheet ──
+    section('NEWBUILD SAM COST DETAIL SHEET (v4.0)')
+
+    vrow('Newbuild SAM Cost Detail', 'Section', '(A) P-5c Total Ship Cost',
+         'Same data as SAM section (D) but presented as a standalone Approach 2 reference. '
+         'Gross P-5c values by vessel type and cost category — the actual cost of ships '
+         'before AP/SFF netting. Not reconciled to budget authority.',
+         'Useful for answering "what does a DDG-51 actually cost to build, by component?"')
+
+    vrow('Newbuild SAM Cost Detail', 'Section', '(B) P-8a System-Level Detail',
+         'Individual GFE systems from Exhibit P-8a, grouped by cost category within each '
+         'vessel type. Shows system name, cost category, FY2026 $K, and % of vessel type total. '
+         'Systems include radars (SPY-6, MFR), weapons (VLS, AEGIS, guns), '
+         'electronics (SEWIP, SCS, EXCOMM), and HM&E (generators, navigation).',
+         'P-8a values are pre-scanned from the source and written as static values (F_BLUE font). '
+         'Coverage: 4 SAM vessel types with P-8a data. '
+         'Cost Element column (col AH) provides the system name; '
+         '30 of 415 P-8a rows lack a Cost Element and are excluded.')
+
+    vrow('Newbuild SAM Cost Detail', 'Section', '(C) Top P-8a Systems Cross-Program',
+         'Largest GFE systems aggregated across all SAM vessel types, sorted by total FY2026 $K. '
+         'Shows system name, cost category, total $K, number of programs, and vessel types.',
+         'Useful for answering "what is the total radar market?" or '
+         '"which GFE systems span the most programs?"')
+
+    # ── FY2027 note ──
+    section('FY2027 COST CATEGORY BREAKDOWN — NOT YET AVAILABLE')
+
+    vrow('Newbuild SAM', 'Note', 'FY2027 has no sections (D)/(E) or Cost Detail sheet',
+         'The FY2027 SCN/OPN justification books (Exhibits P-5c, P-8a, P-35) have not been '
+         'released yet. Cost category breakdowns will be added when those documents are published.',
+         'FY2027 Newbuild SAM retains sections (A)/(B)/(C) only.')
+
+    # ── Named ranges documentation ──
+    section('NAMED RANGES (v4.0 additions)')
+
+    vrow('J Book Items Cons.', 'Named Range', 'JB_CE (col AH)',
+         'Cost Element — existing column containing system names for P-8a rows '
+         '(e.g., "AN/SPY-6(V)1 (AMDR)"). Named range added in v4.0 for SUMIFS use.',
+         'Range: $AH$5:$AH$3381. Populated for ~385 of 415 P-8a rows.')
+
+    vrow('J Book Items Cons.', 'Named Range', 'JB_EX (col AL)',
+         'Exhibit Level — derived column. Values: "P-5c", "P-8a", "P-35", or blank.',
+         'Range: $AL$5:$AL$3381. Used in SUMIFS to filter by exhibit type.')
+
+    vrow('J Book Items Cons.', 'Named Range', 'JB_CC (col AM)',
+         'Cost Category — derived column. Values: P-5c cost category name or blank.',
+         'Range: $AM$5:$AM$3381. Used in SUMIFS to filter by cost category.')
+
+
 # ── Named ranges ──────────────────────────────────────────────
 
 def create_named_ranges(wb):
@@ -960,6 +1497,9 @@ def create_named_ranges(wb):
     shared = [
         ('JB_A', 'A'), ('JB_B', 'E'), ('JB_F', 'F'),
         ('JB_S', 'V'), ('JB_U', 'X'), ('JB_V', 'Y'), ('JB_W', 'Z'),
+        ('JB_CE', 'AH'),   # Cost Element (existing col 34)
+        ('JB_EX', 'AL'),   # Exhibit Level (new col 38)
+        ('JB_CC', 'AM'),   # Cost Category (new col 39)
     ]
     fy_ranges = []
     for fyc in FY_CONFIGS:
@@ -990,6 +1530,14 @@ def main():
     # Named ranges
     create_named_ranges(wb)
 
+    # Populate derived columns in Sheet 1
+    print('Populating derived columns...')
+    populate_derived_columns(wb)
+
+    # Update Validation sheet with v4.0 documentation
+    print('Updating Validation sheet...')
+    update_validation_sheet(wb)
+
     # Build each fiscal year
     generated = []
     for fyc in FY_CONFIGS:
@@ -1013,13 +1561,20 @@ def main():
         div_ws.row_dimensions[1].height = _RH
 
         cf, cf_neg, cf_inner = make_cascade(fyc['value_ranges'])
+        acf, acf_inner = make_altview_cascade(fyc['value_ranges'])
 
         args = (wb, d, label, prefix, cf, cf_neg, cf_inner)
         create_total_funding(*args)
         create_newbuild_tam(*args)
-        create_newbuild_sam(*args)
+        create_newbuild_sam(*args, altview_cf=acf, altview_inner=acf_inner)
         mro_tam_info = create_mro_tam(*args)
         create_mro_sam(*args, mro_tam_info=mro_tam_info)
+
+        # Supplemental cost detail (FY26 only — P-5c/P-8a data availability)
+        cost_detail_name = None
+        if d.get('p5c_types'):
+            create_newbuild_cost_detail(wb, d, label, prefix, acf_inner)
+            cost_detail_name = f'{prefix} Newbuild SAM Cost Detail'
 
         # Apply tab colors to all sheets in this FY group
         fy_sheets = [
@@ -1027,13 +1582,20 @@ def main():
             f'{prefix} Newbuild SAM',  f'{prefix} MRO TAM',
             f'{prefix} MRO SAM',
         ]
+        if cost_detail_name:
+            fy_sheets.append(cost_detail_name)
         for sn in fy_sheets:
             wb[sn].sheet_properties.tabColor = tab_color
 
         generated.append(divider_name)
         generated.extend([
             f'{prefix} Total Funding', f'{prefix} Newbuild TAM',
-            f'{prefix} Newbuild SAM',  f'{prefix} MRO TAM',
+            f'{prefix} Newbuild SAM',
+        ])
+        if cost_detail_name:
+            generated.append(cost_detail_name)
+        generated.extend([
+            f'{prefix} MRO TAM',
             f'{prefix} MRO SAM',
         ])
 
