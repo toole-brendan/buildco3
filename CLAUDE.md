@@ -22,6 +22,7 @@ FY2027_numbers/  FY2027 budget document extracts
 
 ## Commands
 
+- `python3 build/build_from_data.py` — rebuild market-sizing sheets from `build/data_v2.xlsx`. **Always ask the user before running this** — it creates a new versioned output file and archives the previous version.
 - `./push_to_drive.sh` — dry run: preview what would push to Google Drive
 - `./push_to_drive.sh --go` — push `output/` to `gdrive:buildco3`
 - Edit `.rclone-filters` to change which folders get pushed
@@ -31,3 +32,4 @@ FY2027_numbers/  FY2027 budget document extracts
 - PDFs (~130MB) are gitignored; only extracted `.txt` versions are tracked
 - `.env` contains `SAM_API_KEY` — never commit
 - Excel models are versioned by filename (v1.20, v1.21, v1.22)
+- Build script auto-archives the previous minor version to `output/archive/` when creating a new one
