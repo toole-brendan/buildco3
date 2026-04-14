@@ -31,7 +31,6 @@ from prototype_annotations import add_sticky_notes
 # ── Configuration ─────────────────────────────────────────────
 
 WORKBOOK_SRC = 'build/data_v2.xlsx'
-VALIDATION_SRC = 'build/validation_sheet.xlsx'
 OUTPUT_DIR   = 'output'
 FILE_PREFIX  = '08APR2028_Newbuild_and_MRO_Spend'
 VERSION_MAJOR = 5  # auto-increments minor: v5.0, v5.1, v5.2, ...
@@ -92,7 +91,7 @@ FY_CONFIGS = [
 # ── Taxonomy ──────────────────────────────────────────────────
 
 TAM_CATEGORIES = {'Combatant Ships', 'Auxiliary Ships', 'Cutters', 'Unmanned Maritime Platforms'}
-TAM_EXCLUDED_CATEGORIES = ['Combatant Crafts', 'Support Crafts']
+TAM_EXCLUDED_CATEGORIES = ['Combatant Crafts', 'Support Crafts', 'Boats']
 SAM_EXCLUDED_TYPES = {'Submarines', 'Aircraft Carriers', 'Unmanned Undersea Vehicles'}
 
 BUCKET_NAMES = {
@@ -594,17 +593,19 @@ def create_total_funding(wb, d, label, prefix, cf, cf_neg, cf_inner):
 
 def create_newbuild_tam(wb, d, label, prefix, cf, cf_neg, cf_inner):
     ws = wb.create_sheet(f'{prefix} Newbuild TAM')
-    mc = max(4, 2 + len(d['nb_nz']) + 1)
+    hull_tam_nz = d.get('nb_hull_tam_nz', [])
+    mc = max(5, 2 + len(d['nb_nz']) + 1, 2 + len(hull_tam_nz) + 1)
     cw(ws, 1, 30); cw(ws, 2, 12)
 
     r = 1; title_band(ws, r, f'Newbuild TAM \u2014 {label} ($K)', mc)
     r = 2; purpose_row(ws, r,
-        'Total Funding narrowed to new construction only and only oceangoing vessels — '
+        'Total Funding narrowed to new construction only and only oceangoing vessels \u2014 '
         'excludes small craft (Combatant Crafts, Support Crafts) and USCG Boats. '
         'Limited to line items with clear vessel type designation; unattributed fleet-wide items are excluded.')
 
     # (A) Bridge
     r = 4; subsec_band(ws, r, '(A) Bridge: Total NC Funding \u2192 Newbuild TAM', 2)
+    bridge_start = r + 1
     r += 1; wc(ws, r, 1, 'Total New Construction Funding', font=F_DATA)
     wc(ws, r, 2, cf('JB_B,1'), font=F_DATA, fmt=NUM_FMT)
     r += 1; wc(ws, r, 1, '  Less: Unattributed (fleet-wide NC items)', font=F_DATA)
@@ -612,12 +613,15 @@ def create_newbuild_tam(wb, d, label, prefix, cf, cf_neg, cf_inner):
     for cat in TAM_EXCLUDED_CATEGORIES:
         r += 1; wc(ws, r, 1, f'  Less: {cat}', font=F_DATA)
         wc(ws, r, 2, cf_neg('JB_B,1', f'JB_V,"{cat}"'), font=F_DATA, fmt=NUM_FMT)
+    r += 1; wc(ws, r, 1, '  Less: No vessel type designation', font=F_DATA)
+    novt_f = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"', 'JB_W,""') for c in sorted(TAM_CATEGORIES))
+    wc(ws, r, 2, f'=-({novt_f})', font=F_DATA, fmt=NUM_FMT)
+    bridge_end = r
     r += 1; total_label(ws, r, 1, 'Newbuild TAM')
-    tam_f = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"') for c in sorted(TAM_CATEGORIES))
-    total_cell(ws, r, 2, '=' + tam_f)
+    total_cell(ws, r, 2, f'=SUM(B{bridge_start}:B{bridge_end})')
     span_top_border(ws, r, 2)
 
-    # (B) All vessel types
+    # (B) Newbuild TAM by Vessel Type
     r += 3; subsec_band(ws, r, '(B) Newbuild TAM by Vessel Type', 4)
     all_types = svc_order(d['all_tam_types'], d['type_svc'])
     r += 1; hdr_row(ws, r, [('Vessel Type', 30), ('Service', 8), (f'{label} ($K)', 12), ('% of TAM', 10)])
@@ -634,303 +638,460 @@ def create_newbuild_tam(wb, d, label, prefix, cf, cf_neg, cf_inner):
     for rn in range(ft, lt + 1):
         wc(ws, rn, 4, f'=IFERROR(C{rn}/C${tr},0)', font=F_PCT, fmt=PCT_FMT)
 
-    # (C) Mekko
+    # Dynamic section lettering (C/D/E skip gracefully if no hull data)
+    _sec = ord('C')
+    def next_sec():
+        nonlocal _sec; ch = chr(_sec); _sec += 1; return ch
+
+    # (C) Newbuild TAM by Hull Program
+    if hull_tam_nz:
+        sl = next_sec()
+        r += 3
+        subsec_band(ws, r, f'({sl}) Newbuild TAM by Hull Program \u2014 {label} ($K)', 5)
+        r += 1
+        purpose_row(ws, r, 'Same funding as (B) broken down to individual hull programs.')
+        r += 1
+        hdr_row(ws, r, [('Hull Program', 16), ('Vessel Type', 24), ('Service', 8),
+                         (f'{label} ($K)', 12), ('% of TAM', 10)])
+        ft_h = r + 1
+        for hl in hull_tam_nz:
+            r += 1
+            wc(ws, r, 1, hl, font=F_DATA)
+            wc(ws, r, 2, d['hull_type'].get(hl, ''), font=F_DATA)
+            wc(ws, r, 3, d['hull_svc'].get(hl, ''), font=F_DATA)
+            wc(ws, r, 4, cf('JB_B,1', f'JB_H,"{hl}"'), font=F_DATA, fmt=NUM_FMT)
+        lt_h = r; r += 1; tr_h = r
+        total_label(ws, r, 1, 'Newbuild TAM'); total_label(ws, r, 2, '')
+        total_label(ws, r, 3, '')
+        total_cell(ws, r, 4, f'=SUM(D{ft_h}:D{lt_h})')
+        pct_total(ws, r, 5, 1.0)
+        span_top_border(ws, r, 5)
+        for rn in range(ft_h, lt_h + 1):
+            wc(ws, rn, 5, f'=IFERROR(D{rn}/D${tr_h},0)', font=F_PCT, fmt=PCT_FMT)
+
+    # (D) Mekko — Sub-Category Mix by Vessel Type
+    sl = next_sec()
     mk = svc_order(d['nb_nz'], d['type_svc'])
-    r += 3; subsec_band(ws, r, '(C) Newbuild TAM \u2014 DD&C vs AP/LLTM by Vessel Type (Mekko)', 2 + len(mk))
+    r += 3; subsec_band(ws, r, f'({sl}) Newbuild TAM \u2014 Sub-Category Mix by Vessel Type (Mekko)', 2 + len(mk))
     r += 1; svc_r = r; mk, n_usn, n_cg = write_svc_header(ws, r, d['nb_nz'], d['type_svc'])
     r += 1; wc(ws, r, 1, 'Sub-Category', font=F_HDR, border=B_HDR); cw(ws, 1, 30)
     for i, vt in enumerate(mk):
         c = 2 + i; wc(ws, r, c, vt, font=F_HDR, border=B_HDR); cw(ws, c, 12)
     tc = 2 + len(mk); wc(ws, r, tc, 'Total', font=F_HDR, border=B_HDR); cw(ws, tc, 12)
-    dr = r + 1; ar = r + 2; orr = r + 3; tkr = r + 4
+    dr = r + 1; ar = r + 2; rcoh_r = r + 3; slep_r = r + 4; tkr = r + 5
+
+    ddc = ['"Full ship DD&C"', '"Full ship DD&C / LLTM"', '"Full vessel procurement"']
 
     wc(ws, tkr, 1, 'Total ($K)', font=F_TOTAL, border=B_TOT)
     for i, vt in enumerate(mk):
         total_cell(ws, tkr, 2 + i, cf('JB_B,1', f'JB_W,"{vt}"'))
     total_cell(ws, tkr, tc, f'=SUM({get_column_letter(2)}{tkr}:{get_column_letter(tc-1)}{tkr})')
 
-    ddc = ['"Full ship DD&C"', '"Full ship DD&C / LLTM"', '"Full vessel procurement"']
+    tcl = get_column_letter(tc)
+    fcl = get_column_letter(2); lcl = get_column_letter(tc - 1)
+
     wc(ws, dr, 1, 'Full Ship DD&C', font=F_DATA)
     for i, vt in enumerate(mk):
         c = 2 + i; cl = get_column_letter(c)
         parts = '+'.join(cf_inner('JB_B,1', f'JB_W,"{vt}"', f'JB_F,{s}') for s in ddc)
         wc(ws, dr, c, f'=IFERROR(({parts})/{cl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
-    tcl = get_column_letter(tc)
-    wc(ws, dr, tc, f'=IFERROR(1-{tcl}{ar},0)', font=F_PCT, fmt=PCT_FMT)
+    wc(ws, dr, tc, f'=IFERROR(SUMPRODUCT({fcl}{dr}:{lcl}{dr},{fcl}${tkr}:{lcl}${tkr})/{tcl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
 
     wc(ws, ar, 1, 'Advance Procurement / LLTM', font=F_DATA)
     for i, vt in enumerate(mk):
         c = 2 + i; cl = get_column_letter(c)
         ap = cf_inner('JB_B,1', f'JB_W,"{vt}"', 'JB_F,"Advance procurement / LLTM"')
         wc(ws, ar, c, f'=IFERROR(({ap})/{cl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
-    ap_cat = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"', 'JB_F,"Advance procurement / LLTM"') for c in sorted(TAM_CATEGORIES))
-    wc(ws, ar, tc, f'=IFERROR(({ap_cat})/{tcl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
+    wc(ws, ar, tc, f'=IFERROR(SUMPRODUCT({fcl}{ar}:{lcl}{ar},{fcl}${tkr}:{lcl}${tkr})/{tcl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
 
-    wc(ws, orr, 1, 'Other NC Sub-Categories', font=F_DATA)
-    for i in range(len(mk)):
+    wc(ws, rcoh_r, 1, 'RCOH', font=F_DATA)
+    for i, vt in enumerate(mk):
         c = 2 + i; cl = get_column_letter(c)
-        wc(ws, orr, c, f'=IFERROR(1-{cl}{dr}-{cl}{ar},0)', font=F_PCT, fmt=PCT_FMT)
-    wc(ws, orr, tc, f'=IFERROR(1-{tcl}{dr}-{tcl}{ar},0)', font=F_PCT, fmt=PCT_FMT)
+        rcoh = cf_inner('JB_B,1', f'JB_W,"{vt}"', 'JB_F,"RCOH"')
+        wc(ws, rcoh_r, c, f'=IFERROR(({rcoh})/{cl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
+    wc(ws, rcoh_r, tc, f'=IFERROR(SUMPRODUCT({fcl}{rcoh_r}:{lcl}{rcoh_r},{fcl}${tkr}:{lcl}${tkr})/{tcl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
+
+    wc(ws, slep_r, 1, 'SLEP', font=F_DATA)
+    for i, vt in enumerate(mk):
+        c = 2 + i; cl = get_column_letter(c)
+        slep = cf_inner('JB_B,1', f'JB_W,"{vt}"', 'JB_F,"SLEP"')
+        wc(ws, slep_r, c, f'=IFERROR(({slep})/{cl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
+    wc(ws, slep_r, tc, f'=IFERROR(SUMPRODUCT({fcl}{slep_r}:{lcl}{slep_r},{fcl}${tkr}:{lcl}${tkr})/{tcl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
 
     span_top_border(ws, tkr, tc)
     apply_group_borders(ws, svc_r, tkr, 2, n_usn, n_cg)
     r = tkr
 
-    # (D) Newbuild TAM by Hull Program
-    hull_tam_nz = d.get('nb_hull_tam_nz', [])
+    # (E) Mekko — Sub-Category Mix by Hull Program
     if hull_tam_nz:
-        r += 3
-        subsec_band(ws, r, f'(D) Newbuild TAM by Hull Program \u2014 {label} ($K)', 4)
-        r += 1
-        purpose_row(ws, r, 'Same funding as (B) broken down to individual hull programs.')
-        r += 1
-        hdr_row(ws, r, [('Hull Program', 30), ('Service', 8), (f'{label} ($K)', 12), ('% of TAM', 10)])
-        ft_d = r + 1
-        for hl in hull_tam_nz:
-            r += 1
-            vt_label = d['hull_type'].get(hl, '')
-            wc(ws, r, 1, f'{hl} ({vt_label})' if vt_label else hl, font=F_DATA)
-            wc(ws, r, 2, d['hull_svc'].get(hl, ''), font=F_DATA)
-            wc(ws, r, 3, cf('JB_B,1', f'JB_H,"{hl}"'), font=F_DATA, fmt=NUM_FMT)
-        lt_d = r; r += 1; tr_d = r
-        total_label(ws, r, 1, 'Newbuild TAM'); total_label(ws, r, 2, '')
-        total_cell(ws, r, 3, f'=SUM(C{ft_d}:C{lt_d})')
-        pct_total(ws, r, 4, 1.0)
-        span_top_border(ws, r, 4)
-        for rn in range(ft_d, lt_d + 1):
-            wc(ws, rn, 4, f'=IFERROR(C{rn}/C${tr_d},0)', font=F_PCT, fmt=PCT_FMT)
+        sl = next_sec()
+        r += 3; subsec_band(ws, r, f'({sl}) Newbuild TAM \u2014 Sub-Category Mix by Hull Program (Mekko)',
+                            2 + len(hull_tam_nz))
+        r += 1; svc_r_h = r
+        hull_mk, n_usn_h, n_cg_h = write_svc_header(ws, r, hull_tam_nz, d['hull_svc'])
+        r += 1; wc(ws, r, 1, 'Sub-Category', font=F_HDR, border=B_HDR); cw(ws, 1, 30)
+        for i, hl in enumerate(hull_mk):
+            c = 2 + i; wc(ws, r, c, hl, font=F_HDR, border=B_HDR); cw(ws, c, 12)
+        tc_h = 2 + len(hull_mk)
+        wc(ws, r, tc_h, 'Total', font=F_HDR, border=B_HDR); cw(ws, tc_h, 12)
+        dr_h = r + 1; ar_h = r + 2; rcoh_h = r + 3; slep_h = r + 4; tkr_h = r + 5
+
+        wc(ws, tkr_h, 1, 'Total ($K)', font=F_TOTAL, border=B_TOT)
+        for i, hl in enumerate(hull_mk):
+            total_cell(ws, tkr_h, 2 + i, cf('JB_B,1', f'JB_H,"{hl}"'))
+        total_cell(ws, tkr_h, tc_h,
+                   f'=SUM({get_column_letter(2)}{tkr_h}:{get_column_letter(tc_h-1)}{tkr_h})')
+
+        tcl_h = get_column_letter(tc_h)
+
+        wc(ws, dr_h, 1, 'Full Ship DD&C', font=F_DATA)
+        for i, hl in enumerate(hull_mk):
+            c = 2 + i; cl = get_column_letter(c)
+            parts = '+'.join(cf_inner('JB_B,1', f'JB_H,"{hl}"', f'JB_F,{s}') for s in ddc)
+            wc(ws, dr_h, c, f'=IFERROR(({parts})/{cl}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+        ddc_cat_h = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"', f'JB_F,{s}') for c in sorted(TAM_CATEGORIES) for s in ddc)
+        wc(ws, dr_h, tc_h, f'=IFERROR(({ddc_cat_h})/{tcl_h}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+
+        wc(ws, ar_h, 1, 'Advance Procurement / LLTM', font=F_DATA)
+        for i, hl in enumerate(hull_mk):
+            c = 2 + i; cl = get_column_letter(c)
+            ap = cf_inner('JB_B,1', f'JB_H,"{hl}"', 'JB_F,"Advance procurement / LLTM"')
+            wc(ws, ar_h, c, f'=IFERROR(({ap})/{cl}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+        ap_cat_h = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"',
+                   'JB_F,"Advance procurement / LLTM"') for c in sorted(TAM_CATEGORIES))
+        wc(ws, ar_h, tc_h, f'=IFERROR(({ap_cat_h})/{tcl_h}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+
+        wc(ws, rcoh_h, 1, 'RCOH', font=F_DATA)
+        for i, hl in enumerate(hull_mk):
+            c = 2 + i; cl = get_column_letter(c)
+            rcoh = cf_inner('JB_B,1', f'JB_H,"{hl}"', 'JB_F,"RCOH"')
+            wc(ws, rcoh_h, c, f'=IFERROR(({rcoh})/{cl}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+        rcoh_cat_h = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"', 'JB_F,"RCOH"') for c in sorted(TAM_CATEGORIES))
+        wc(ws, rcoh_h, tc_h, f'=IFERROR(({rcoh_cat_h})/{tcl_h}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+
+        wc(ws, slep_h, 1, 'SLEP', font=F_DATA)
+        for i, hl in enumerate(hull_mk):
+            c = 2 + i; cl = get_column_letter(c)
+            slep = cf_inner('JB_B,1', f'JB_H,"{hl}"', 'JB_F,"SLEP"')
+            wc(ws, slep_h, c, f'=IFERROR(({slep})/{cl}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+        slep_cat_h = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"', 'JB_F,"SLEP"') for c in sorted(TAM_CATEGORIES))
+        wc(ws, slep_h, tc_h, f'=IFERROR(({slep_cat_h})/{tcl_h}${tkr_h},0)', font=F_PCT, fmt=PCT_FMT)
+
+        span_top_border(ws, tkr_h, tc_h)
+        apply_group_borders(ws, svc_r_h, tkr_h, 2, n_usn_h, n_cg_h)
 
     finish_sheet(ws)
 
 
 def create_newbuild_sam(wb, d, label, prefix, cf, cf_neg, cf_inner, altview_cf=None, altview_inner=None):
     ws = wb.create_sheet(f'{prefix} Newbuild SAM')
-    mc = max(4, 2 + len(d['nb_sam_nz']) + 1)
-    cw(ws, 1, 30); cw(ws, 2, 12)
 
+    ddc_subs = ['"Full ship DD&C"', '"Full ship DD&C / LLTM"', '"Full vessel procurement"']
+    p5c_hulls = d.get('p5c_hull_types', [])
+    hull_nz = d.get('nb_hull_nz', [])
+    has_p5c = bool(p5c_hulls) and altview_inner is not None
+
+    # Max columns across all sections
+    mc_subcat = 8  # VT, Svc, DD&C, AP, RCOH, SLEP, Total, %
+    mc_hull = 9    # Hull, VT, Svc, DD&C, AP, RCOH, SLEP, Total, %
+    tc_p5c = 2 + len(p5c_hulls) if has_p5c else 4
+    mc = max(mc_hull, tc_p5c)
+    cw(ws, 1, 30)
+
+    # ── Title & Purpose ──
     r = 1; title_band(ws, r, f'Newbuild SAM \u2014 {label} ($K)', mc)
     if prefix == 'FY27':
         r = 2; purpose_row(ws, r,
             'Newbuild TAM narrowed further: excludes Submarines and Aircraft Carriers '
             '(single-yard / nuclear-restricted programs) and Unmanned Undersea Vehicles. '
             'Focused on outsourceable new construction where a company could compete as subprime '
-            'on module fabrication or systems integration — scoped to full-ship DD&C funding '
-            '(not advance procurement). Justification books (P-5c, P-8a) not yet released for FY27 — '
+            'on module fabrication or systems integration. Includes all new-construction funding '
+            '(DD&C and advance procurement). Justification books (P-5c, P-8a) not yet released for FY27 — '
             'visibility is at program level only, not cost element level.')
     else:
         r = 2; purpose_row(ws, r,
-            'Newbuild TAM narrowed further: excludes Submarines and Aircraft Carriers '
-            '(single-yard / nuclear-restricted programs) and Unmanned Undersea Vehicles. '
-            'Focused on outsourceable new construction where a company could compete as subprime '
-            'on module fabrication or systems integration — scoped to full-ship DD&C funding '
-            '(not advance procurement) with P-5c and P-8a cost elements providing '
-            'component-level visibility where available.')
+            'Outsourceable new construction sized at cost-element level. Starts from Newbuild TAM, '
+            'excludes single-yard/nuclear programs (Submarines, Aircraft Carriers, UUVs), then narrows '
+            'to hull programs with P-5c exhibit data. P-5c percentage mix applied to net budget authority '
+            'gives the Newbuild SAM — the market a company could compete in, broken by component.')
 
-    # (A) Bridge
-    r = 4; subsec_band(ws, r, '(A) Bridge: Newbuild TAM \u2192 Newbuild SAM', 2)
+    # ── (A) Bridge: Newbuild TAM → Newbuild SAM (all programs) ──
+    r = 4; subsec_band(ws, r, '(A) Bridge: Newbuild TAM \u2192 Newbuild SAM (all programs)', 2)
     r += 1; bridge_first = r
     wc(ws, r, 1, 'Newbuild TAM', font=F_DATA)
     wc(ws, r, 2, '=' + '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"') for c in sorted(TAM_CATEGORIES)), font=F_DATA, fmt=NUM_FMT)
     for vt in ['Submarines', 'Aircraft Carriers', 'Unmanned Undersea Vehicles']:
         r += 1; wc(ws, r, 1, f'  Less: {vt}', font=F_DATA)
         wc(ws, r, 2, cf_neg('JB_B,1', f'JB_W,"{vt}"'), font=F_DATA, fmt=NUM_FMT)
-    r += 1; total_label(ws, r, 1, 'Newbuild SAM')
+    r += 1; total_label(ws, r, 1, 'Newbuild SAM (all programs)')
     total_cell(ws, r, 2, f'=SUM(B{bridge_first}:B{r-1})')
     span_top_border(ws, r, 2)
 
-    # (B) All SAM vessel types
-    r += 3; subsec_band(ws, r, '(B) Newbuild SAM by Vessel Type', 4)
-    all_types = svc_order(d['all_sam_types'], d['type_svc'])
-    r += 1; hdr_row(ws, r, [('Vessel Type', 30), ('Service', 8), (f'{label} ($K)', 12), ('% of SAM', 10)])
-    ft = r + 1
-    for vt in all_types:
-        r += 1; wc(ws, r, 1, vt, font=F_DATA)
+    # ── (B) SAM (all programs) by Vessel Type & Sub-Category ──
+    vt_nz = svc_order(d['nb_sam_nz'], d['type_svc'])
+    r += 3; subsec_band(ws, r, f'(B) Newbuild SAM (all programs) by Vessel Type & Sub-Category \u2014 {label} ($K)', mc_subcat)
+    r += 1; hdr_row(ws, r, [
+        ('Vessel Type', 30), ('Service', 8),
+        ('DD&C', 12), ('AP/LLTM', 12), ('RCOH', 12), ('SLEP', 12),
+        ('Total', 12), ('% of Total', 10),
+    ])
+    ft_b = r + 1
+    for vt in vt_nz:
+        r += 1
+        wc(ws, r, 1, vt, font=F_DATA)
         wc(ws, r, 2, d['type_svc'].get(vt, ''), font=F_DATA)
-        wc(ws, r, 3, cf('JB_B,1', f'JB_W,"{vt}"'), font=F_DATA, fmt=NUM_FMT)
-    lt = r; r += 1; tr = r
-    total_label(ws, r, 1, 'Newbuild SAM'); total_label(ws, r, 2, '')
-    total_cell(ws, r, 3, f'=SUM(C{ft}:C{lt})')
-    pct_total(ws, r, 4, 1.0)
-    span_top_border(ws, r, 4)
-    for rn in range(ft, lt + 1):
-        wc(ws, rn, 4, f'=IFERROR(C{rn}/C${tr},0)', font=F_PCT, fmt=PCT_FMT)
+        ddc_parts = '+'.join(cf_inner('JB_B,1', f'JB_W,"{vt}"', f'JB_F,{s}') for s in ddc_subs)
+        wc(ws, r, 3, f'={ddc_parts}', font=F_DATA, fmt=NUM_FMT)
+        wc(ws, r, 4, cf('JB_B,1', f'JB_W,"{vt}"', 'JB_F,"Advance procurement / LLTM"'), font=F_DATA, fmt=NUM_FMT)
+        wc(ws, r, 5, cf('JB_B,1', f'JB_W,"{vt}"', 'JB_F,"RCOH"'), font=F_DATA, fmt=NUM_FMT)
+        wc(ws, r, 6, cf('JB_B,1', f'JB_W,"{vt}"', 'JB_F,"SLEP"'), font=F_DATA, fmt=NUM_FMT)
+        wc(ws, r, 7, cf('JB_B,1', f'JB_W,"{vt}"'), font=F_DATA, fmt=NUM_FMT)
+    lt_b = r; r += 1; tr_b = r
+    total_label(ws, r, 1, 'Newbuild SAM (all programs)'); total_label(ws, r, 2, '')
+    for c in range(3, 8):
+        total_cell(ws, r, c, f'=SUM({get_column_letter(c)}{ft_b}:{get_column_letter(c)}{lt_b})')
+    pct_total(ws, r, 8, 1.0)
+    span_top_border(ws, r, 8)
+    for rn in range(ft_b, lt_b + 1):
+        wc(ws, rn, 8, f'=IFERROR(G{rn}/G${tr_b},0)', font=F_PCT, fmt=PCT_FMT)
 
-    # (C) Mekko
-    mk = svc_order(d['nb_sam_nz'], d['type_svc'])
-    r += 3; subsec_band(ws, r, '(C) Newbuild SAM \u2014 DD&C vs AP/LLTM by Vessel Type (Mekko)', 2 + len(mk))
-    r += 1; svc_r = r; mk, n_usn, n_cg = write_svc_header(ws, r, d['nb_sam_nz'], d['type_svc'])
-    r += 1; wc(ws, r, 1, 'Sub-Category', font=F_HDR, border=B_HDR); cw(ws, 1, 30)
-    for i, vt in enumerate(mk):
-        c = 2 + i; wc(ws, r, c, vt, font=F_HDR, border=B_HDR); cw(ws, c, 12)
-    tc = 2 + len(mk); wc(ws, r, tc, 'Total', font=F_HDR, border=B_HDR); cw(ws, tc, 12)
-    dr = r + 1; ar = r + 2; tkr = r + 3
-
-    wc(ws, tkr, 1, 'Total ($K)', font=F_TOTAL, border=B_TOT)
-    for i, vt in enumerate(mk):
-        total_cell(ws, tkr, 2 + i, cf('JB_B,1', f'JB_W,"{vt}"'))
-    total_cell(ws, tkr, tc, f'=SUM({get_column_letter(2)}{tkr}:{get_column_letter(tc-1)}{tkr})')
-
-    ddc = ['"Full ship DD&C"', '"Full ship DD&C / LLTM"', '"Full vessel procurement"']
-    wc(ws, dr, 1, 'Full Ship DD&C', font=F_DATA)
-    for i, vt in enumerate(mk):
-        c = 2 + i; cl = get_column_letter(c)
-        parts = '+'.join(cf_inner('JB_B,1', f'JB_W,"{vt}"', f'JB_F,{s}') for s in ddc)
-        wc(ws, dr, c, f'=IFERROR(({parts})/{cl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
-    tcl = get_column_letter(tc)
-    wc(ws, dr, tc, f'=IFERROR(1-{tcl}{ar},0)', font=F_PCT, fmt=PCT_FMT)
-
-    wc(ws, ar, 1, 'Advance Procurement / LLTM', font=F_DATA)
-    for i, vt in enumerate(mk):
-        c = 2 + i; cl = get_column_letter(c)
-        ap = cf_inner('JB_B,1', f'JB_W,"{vt}"', 'JB_F,"Advance procurement / LLTM"')
-        wc(ws, ar, c, f'=IFERROR(({ap})/{cl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
-    ap_cat = '+'.join(cf_inner('JB_B,1', f'JB_V,"{c}"', 'JB_F,"Advance procurement / LLTM"') for c in sorted(TAM_CATEGORIES))
-    wc(ws, ar, tc, f'=IFERROR(({ap_cat})/{tcl}${tkr},0)', font=F_PCT, fmt=PCT_FMT)
-
-    span_top_border(ws, tkr, tc)
-    apply_group_borders(ws, svc_r, tkr, 2, n_usn, n_cg)
-    r = tkr  # advance r past mekko total row
-
-    # ── (D) Newbuild SAM by Hull Program ──
-
-    hull_nz = d.get('nb_hull_nz', [])
+    # ── (C) SAM (all programs) by Hull Program & Sub-Category ──
+    mc_hull = 9  # Hull, VT, Svc, DD&C, AP, RCOH, SLEP, Total, %
+    tr_c = None
     if hull_nz:
         r += 3
-        subsec_band(ws, r, f'(D) Newbuild SAM by Hull Program \u2014 {label} ($K)', 4)
+        subsec_band(ws, r, f'(C) Newbuild SAM (all programs) by Hull Program \u2014 {label} ($K)', mc_hull)
         r += 1
-        purpose_row(ws, r, 'Same funding as (B) broken down to individual hull programs \u2014 the level at which budget line items are traceable.')
+        purpose_row(ws, r, 'Same funding as (B) broken down to individual hull programs — the level at which budget line items are traceable.')
         r += 1
-        hdr_row(ws, r, [('Hull Program', 30), ('Service', 8), (f'{label} ($K)', 12), ('% of SAM', 10)])
-        ft_d = r + 1
+        hdr_row(ws, r, [
+            ('Hull Program', 16), ('Vessel Type', 24), ('Service', 8),
+            ('DD&C', 12), ('AP/LLTM', 12), ('RCOH', 12), ('SLEP', 12),
+            ('Total', 12), ('% of Total', 10),
+        ])
+        ft_c = r + 1
         for hl in hull_nz:
             r += 1
-            vt_label = d['hull_type'].get(hl, '')
-            wc(ws, r, 1, f'{hl} ({vt_label})' if vt_label else hl, font=F_DATA)
-            wc(ws, r, 2, d['hull_svc'].get(hl, ''), font=F_DATA)
-            wc(ws, r, 3, cf('JB_B,1', f'JB_H,"{hl}"'), font=F_DATA, fmt=NUM_FMT)
-        lt_d = r; r += 1; tr_d = r
-        total_label(ws, r, 1, 'Newbuild SAM'); total_label(ws, r, 2, '')
-        total_cell(ws, r, 3, f'=SUM(C{ft_d}:C{lt_d})')
-        pct_total(ws, r, 4, 1.0)
-        span_top_border(ws, r, 4)
-        for rn in range(ft_d, lt_d + 1):
-            wc(ws, rn, 4, f'=IFERROR(C{rn}/C${tr_d},0)', font=F_PCT, fmt=PCT_FMT)
+            wc(ws, r, 1, hl, font=F_DATA)
+            wc(ws, r, 2, d['hull_type'].get(hl, ''), font=F_DATA)
+            wc(ws, r, 3, d['hull_svc'].get(hl, ''), font=F_DATA)
+            ddc_parts = '+'.join(cf_inner('JB_B,1', f'JB_H,"{hl}"', f'JB_F,{s}') for s in ddc_subs)
+            wc(ws, r, 4, f'={ddc_parts}', font=F_DATA, fmt=NUM_FMT)
+            wc(ws, r, 5, cf('JB_B,1', f'JB_H,"{hl}"', 'JB_F,"Advance procurement / LLTM"'), font=F_DATA, fmt=NUM_FMT)
+            wc(ws, r, 6, cf('JB_B,1', f'JB_H,"{hl}"', 'JB_F,"RCOH"'), font=F_DATA, fmt=NUM_FMT)
+            wc(ws, r, 7, cf('JB_B,1', f'JB_H,"{hl}"', 'JB_F,"SLEP"'), font=F_DATA, fmt=NUM_FMT)
+            wc(ws, r, 8, cf('JB_B,1', f'JB_H,"{hl}"'), font=F_DATA, fmt=NUM_FMT)
+        lt_c = r; r += 1; tr_c = r
+        total_label(ws, r, 1, 'Newbuild SAM (all programs)')
+        total_label(ws, r, 2, ''); total_label(ws, r, 3, '')
+        for c in range(4, 9):
+            total_cell(ws, r, c, f'=SUM({get_column_letter(c)}{ft_c}:{get_column_letter(c)}{lt_c})')
+        pct_total(ws, r, 9, 1.0)
+        span_top_border(ws, r, 9)
+        for rn in range(ft_c, lt_c + 1):
+            wc(ws, rn, 9, f'=IFERROR(H{rn}/H${tr_c},0)', font=F_PCT, fmt=PCT_FMT)
 
-    # ── (E) P-5c Cost Category Breakdown by Hull & (F) Proportional Allocation ──
-    _section_e_row = None; _tc_e = None
+    # ── FY27 / no P-5c: stop here ──
+    if not has_p5c:
+        if prefix == 'FY27':
+            r += 2
+            purpose_row(ws, r, 'Justification books (P-5c, P-8a) not yet released for FY27 — '
+                'cost-element breakdown and Newbuild SAM (cost-element coverage) are not available.')
+        finish_sheet(ws)
+        return {'section_e_row': None, 'tc_e': None}
 
-    p5c_hulls = d.get('p5c_hull_types', [])
-    if p5c_hulls and altview_inner:
-        cats = [c for c in P5C_COST_CATEGORIES
-                if any(d['p5c_hull'].get((h, c), 0) > 0 for h in p5c_hulls)]
+    # ── Bridge: All Programs → Cost-Element Coverage ──
+    p5c_set = set(p5c_hulls)
+    no_p5c = [hl for hl in hull_nz if hl not in p5c_set]
+    no_p5c_uscg = [hl for hl in no_p5c if d['hull_svc'].get(hl, '') == 'USCG']
+    no_p5c_other = [hl for hl in no_p5c if d['hull_svc'].get(hl, '') != 'USCG']
 
-        n_hulls = len(p5c_hulls)
-        tc_e = 2 + n_hulls  # Total column
-        _tc_e = tc_e
-
-        # ── (E) Gross P-5c Cost Category Breakdown by Hull ──
-        r += 3; _section_e_row = r
-        subsec_band(ws, r, f'(E) P-5c Gross Cost Category Breakdown by Hull \u2014 {label} ($K)', tc_e)
+    r += 3
+    subsec_band(ws, r, '(C\u2192D) Bridge: All Programs \u2192 Cost-Element Coverage', 2)
+    r += 1; bridge2_first = r
+    wc(ws, r, 1, 'Newbuild SAM (all programs)', font=F_DATA)
+    wc(ws, r, 2, f'=H{tr_c}', font=F_DATA, fmt=NUM_FMT)
+    for hl in no_p5c_uscg:
         r += 1
-        purpose_row(ws, r, 'Gross total-ship-estimate costs from Exhibit P-5c. These are pre-AP/SFF and will NOT match SAM net totals.')
+        vt_label = d['hull_type'].get(hl, '')
+        wc(ws, r, 1, f'  Less: {hl} ({vt_label}, USCG — no P-5c)', font=F_DATA)
+        wc(ws, r, 2, cf_neg('JB_B,1', f'JB_H,"{hl}"'), font=F_DATA, fmt=NUM_FMT)
+    for hl in no_p5c_other:
         r += 1
-        svc_r_e = r
-        p5c_ordered, n_usn_e, n_cg_e = write_svc_header(ws, r, p5c_hulls, d['hull_svc'])
+        vt_label = d['hull_type'].get(hl, '')
+        wc(ws, r, 1, f'  Less: {hl} ({vt_label} — no P-5c)', font=F_DATA)
+        wc(ws, r, 2, cf_neg('JB_B,1', f'JB_H,"{hl}"'), font=F_DATA, fmt=NUM_FMT)
+    r += 1
+    total_label(ws, r, 1, 'Newbuild SAM (cost-element coverage)')
+    total_cell(ws, r, 2, f'=SUM(B{bridge2_first}:B{r-1})')
+    span_top_border(ws, r, 2)
 
+    # ── (D) P-5c Gross Cost Category Breakdown by Hull ──
+    cats = [c for c in P5C_COST_CATEGORIES
+            if any(d['p5c_hull'].get((h, c), 0) > 0 for h in p5c_hulls)]
+
+    n_hulls = len(p5c_hulls)
+    tc_e = 2 + n_hulls
+
+    r += 3; _section_d_row = r
+    subsec_band(ws, r, f'(D) P-5c Gross Cost Category Breakdown by Hull \u2014 {label} ($K)', tc_e)
+    r += 1
+    purpose_row(ws, r, 'Gross total-ship-estimate costs from Exhibit P-5c. These are pre-AP/SFF and will NOT match SAM net totals.')
+    r += 1
+    svc_r_d = r
+    p5c_ordered, n_usn_d, n_cg_d = write_svc_header(ws, r, p5c_hulls, d['hull_svc'])
+
+    r += 1
+    wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR); cw(ws, 1, 30)
+    for i, hl in enumerate(p5c_ordered):
+        c = 2 + i
+        wc(ws, r, c, hl, font=F_HDR, border=B_HDR); cw(ws, c, 14)
+    wc(ws, r, tc_e, 'Total', font=F_HDR, border=B_HDR); cw(ws, tc_e, 14)
+
+    first_d = r + 1
+    for cat in cats:
         r += 1
-        wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR); cw(ws, 1, 30)
+        wc(ws, r, 1, cat, font=F_DATA)
         for i, hl in enumerate(p5c_ordered):
             c = 2 + i
-            wc(ws, r, c, hl, font=F_HDR, border=B_HDR); cw(ws, c, 14)
-        wc(ws, r, tc_e, 'Total', font=F_HDR, border=B_HDR); cw(ws, tc_e, 14)
-
-        # Data rows — one per cost category, $ values
-        first_e = r + 1
-        for cat in cats:
-            r += 1
-            wc(ws, r, 1, cat, font=F_DATA)
-            for i, hl in enumerate(p5c_ordered):
-                c = 2 + i
-                formula = altview_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_CC,"{cat}"', f'JB_H,"{hl}"')
-                wc(ws, r, c, '=' + formula, font=F_DATA, fmt=NUM_FMT)
-            wc(ws, r, tc_e, f'=SUM({get_column_letter(2)}{r}:{get_column_letter(tc_e-1)}{r})',
-               font=F_DATA, fmt=NUM_FMT)
-        last_e = r
-
-        # Total row
-        r += 1; tkr_e = r
-        wc(ws, r, 1, 'Gross Total ($K)', font=F_TOTAL, border=B_TOT)
-        for c in range(2, tc_e + 1):
-            total_cell(ws, r, c,
-                       f'=SUM({get_column_letter(c)}{first_e}:{get_column_letter(c)}{last_e})')
-        span_top_border(ws, r, tc_e)
-        apply_group_borders(ws, svc_r_e, tkr_e, 2, n_usn_e, n_cg_e)
-
-        # Percentage sub-table
-        r += 2
-        subsubsec_band(ws, r, 'Cost category mix (% of gross total per hull program)', tc_e)
-        r += 1
-        wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR)
-        for i, hl in enumerate(p5c_ordered):
-            wc(ws, r, 2 + i, hl, font=F_HDR, border=B_HDR)
-        wc(ws, r, tc_e, 'Total', font=F_HDR, border=B_HDR)
-
-        pct_first_e = r + 1
-        for ci, cat in enumerate(cats):
-            r += 1
-            data_row = first_e + ci
-            wc(ws, r, 1, cat, font=F_DATA)
-            for c in range(2, tc_e + 1):
-                cl = get_column_letter(c)
-                wc(ws, r, c, f'=IFERROR({cl}{data_row}/{cl}${tkr_e},0)',
-                   font=F_PCT, fmt=PCT_FMT)
-        pct_last_e = r
-        r += 1
-        wc(ws, r, 1, 'Total', font=F_TOTAL, border=B_TOT)
-        for c in range(2, tc_e + 1):
-            pct_total(ws, r, c, 1.0)
-        span_top_border(ws, r, tc_e)
-        apply_group_borders(ws, pct_first_e - 2, r, 2, n_usn_e, n_cg_e)
-
-        # ── (F) Proportional Cost Category Allocation by Hull to SAM Net Totals ──
-        r += 3
-        subsec_band(ws, r, f'(F) Proportional Cost Category Allocation to SAM Net Totals \u2014 {label} ($K)', tc_e)
-        r += 1
-        purpose_row(ws, r, 'P-5c percentage mix from (E) applied to SAM net budget-authority totals from (D). Totals reconcile to SAM.')
-        r += 1
-        svc_r_f = r
-        p5c_ordered_f, n_usn_f, n_cg_f = write_svc_header(ws, r, p5c_hulls, d['hull_svc'])
-
-        r += 1
-        wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR)
-        for i, hl in enumerate(p5c_ordered_f):
-            c = 2 + i
-            wc(ws, r, c, hl, font=F_HDR, border=B_HDR); cw(ws, c, 14)
-        wc(ws, r, tc_e, 'Total', font=F_HDR, border=B_HDR)
-
-        # SAM net total reference row (per hull from SUMIFS)
-        r += 1; sam_ref_r = r
-        wc(ws, r, 1, 'SAM Net Total ($K)', font=F_KPI, fill=BG_TEAL)
-        for i, hl in enumerate(p5c_ordered_f):
-            c = 2 + i
-            wc(ws, r, c, cf('JB_B,1', f'JB_H,"{hl}"'), font=F_KPI, fill=BG_TEAL, fmt=NUM_FMT)
+            formula = altview_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_CC,"{cat}"', f'JB_H,"{hl}"')
+            wc(ws, r, c, '=' + formula, font=F_DATA, fmt=NUM_FMT)
         wc(ws, r, tc_e, f'=SUM({get_column_letter(2)}{r}:{get_column_letter(tc_e-1)}{r})',
-           font=F_KPI, fill=BG_TEAL, fmt=NUM_FMT)
+           font=F_DATA, fmt=NUM_FMT)
+    last_d = r
 
-        # Allocated rows — SAM net total * P-5c percentage
-        for ci, cat in enumerate(cats):
-            r += 1
-            pct_row = pct_first_e + ci
-            wc(ws, r, 1, cat, font=F_DATA)
-            for c in range(2, tc_e + 1):
-                cl = get_column_letter(c)
-                wc(ws, r, c, f'=IFERROR({cl}${sam_ref_r}*{cl}{pct_row},0)',
-                   font=F_DATA, fmt=NUM_FMT)
+    r += 1; tkr_d = r
+    wc(ws, r, 1, 'Gross Total ($K)', font=F_TOTAL, border=B_TOT)
+    for c in range(2, tc_e + 1):
+        total_cell(ws, r, c,
+                   f'=SUM({get_column_letter(c)}{first_d}:{get_column_letter(c)}{last_d})')
+    span_top_border(ws, r, tc_e)
+    apply_group_borders(ws, svc_r_d, tkr_d, 2, n_usn_d, n_cg_d)
 
-        apply_group_borders(ws, svc_r_f, r, 2, n_usn_f, n_cg_f)
+    # Percentage sub-table
+    r += 2
+    subsubsec_band(ws, r, 'Cost category mix (% of gross total per hull program)', tc_e)
+    r += 1
+    wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR)
+    for i, hl in enumerate(p5c_ordered):
+        wc(ws, r, 2 + i, hl, font=F_HDR, border=B_HDR)
+    wc(ws, r, tc_e, 'Total', font=F_HDR, border=B_HDR)
+
+    pct_first = r + 1
+    for ci, cat in enumerate(cats):
+        r += 1
+        data_row = first_d + ci
+        wc(ws, r, 1, cat, font=F_DATA)
+        for c in range(2, tc_e + 1):
+            cl = get_column_letter(c)
+            wc(ws, r, c, f'=IFERROR({cl}{data_row}/{cl}${tkr_d},0)',
+               font=F_PCT, fmt=PCT_FMT)
+    r += 1
+    wc(ws, r, 1, 'Total', font=F_TOTAL, border=B_TOT)
+    for c in range(2, tc_e + 1):
+        pct_total(ws, r, c, 1.0)
+    span_top_border(ws, r, tc_e)
+    apply_group_borders(ws, pct_first - 2, r, 2, n_usn_d, n_cg_d)
+
+    # ── (E) Newbuild SAM (cost-element coverage) ──
+    # Sort hulls by descending SAM net BA for (E) and (F)
+    p5c_by_net = svc_order(
+        sorted(p5c_hulls, key=lambda h: -d['nb_hull'].get(h, 0)),
+        d['hull_svc'])
+
+    r += 3
+    subsec_band(ws, r, f'(E) Newbuild SAM (cost-element coverage) \u2014 {label} ($K)', tc_e)
+    r += 1
+    purpose_row(ws, r, 'P-5c percentage mix from (D) applied to SAM net budget-authority totals. '
+        'This is the Newbuild SAM — the outsourceable new-construction market sized at component level.')
+    r += 1
+    svc_r_e = r
+    p5c_ordered_e, n_usn_e, n_cg_e = write_svc_header(ws, r, p5c_by_net, d['hull_svc'])
+
+    r += 1
+    wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR)
+    for i, hl in enumerate(p5c_ordered_e):
+        c = 2 + i
+        wc(ws, r, c, hl, font=F_HDR, border=B_HDR); cw(ws, c, 14)
+    wc(ws, r, tc_e, 'Total', font=F_HDR, border=B_HDR)
+
+    # SAM net total reference row
+    r += 1; sam_ref_r = r
+    wc(ws, r, 1, 'SAM Net Total ($K)', font=F_KPI, fill=BG_TEAL)
+    for i, hl in enumerate(p5c_ordered_e):
+        c = 2 + i
+        wc(ws, r, c, cf('JB_B,1', f'JB_H,"{hl}"'), font=F_KPI, fill=BG_TEAL, fmt=NUM_FMT)
+    wc(ws, r, tc_e, f'=SUM({get_column_letter(2)}{r}:{get_column_letter(tc_e-1)}{r})',
+       font=F_KPI, fill=BG_TEAL, fmt=NUM_FMT)
+
+    # Allocated rows — SAM net * (P-5c category / P-5c total) per hull
+    first_sam = r + 1
+    for cat in cats:
+        r += 1
+        wc(ws, r, 1, cat, font=F_DATA)
+        for i, hl in enumerate(p5c_ordered_e):
+            c = 2 + i; cl = get_column_letter(c)
+            p5c_cat = altview_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_CC,"{cat}"', f'JB_H,"{hl}"')
+            p5c_tot = altview_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_H,"{hl}"')
+            wc(ws, r, c, f'=IFERROR({cl}${sam_ref_r}*({p5c_cat})/({p5c_tot}),0)',
+               font=F_DATA, fmt=NUM_FMT)
+        wc(ws, r, tc_e, f'=SUM({get_column_letter(2)}{r}:{get_column_letter(tc_e-1)}{r})',
+           font=F_DATA, fmt=NUM_FMT)
+    last_sam = r
+
+    # Newbuild SAM total row
+    r += 1
+    wc(ws, r, 1, 'Newbuild SAM ($K)', font=F_TOTAL, border=B_TOT)
+    for c in range(2, tc_e + 1):
+        total_cell(ws, r, c,
+                   f'=SUM({get_column_letter(c)}{first_sam}:{get_column_letter(c)}{last_sam})')
+    span_top_border(ws, r, tc_e)
+    apply_group_borders(ws, svc_r_e, r, 2, n_usn_e, n_cg_e)
+
+    # ── (F) Mekko: Cost Category Mix by Hull ──
+    r += 3
+    subsec_band(ws, r, f'(F) Newbuild SAM \u2014 Cost Category Mix by Hull (Mekko)', tc_e)
+    r += 1
+    svc_r_f = r
+    p5c_ordered_f, n_usn_f, n_cg_f = write_svc_header(ws, r, p5c_by_net, d['hull_svc'])
+
+    r += 1
+    wc(ws, r, 1, 'Cost Category', font=F_HDR, border=B_HDR); cw(ws, 1, 30)
+    for i, hl in enumerate(p5c_ordered_f):
+        c = 2 + i
+        wc(ws, r, c, hl, font=F_HDR, border=B_HDR); cw(ws, c, 14)
+    wc(ws, r, tc_e, 'Total', font=F_HDR, border=B_HDR)
+
+    n_cats = len(cats)
+    tkr_f = r + 1 + n_cats
+    tcl_f = get_column_letter(tc_e)
+    fcl_f = get_column_letter(2); lcl_f = get_column_letter(tc_e - 1)
+
+    # Percentage rows — self-contained P-5c percentage per hull
+    for ci, cat in enumerate(cats):
+        cr = r + 1 + ci
+        wc(ws, cr, 1, cat, font=F_DATA)
+        for i, hl in enumerate(p5c_ordered_f):
+            c = 2 + i
+            p5c_cat = altview_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_CC,"{cat}"', f'JB_H,"{hl}"')
+            p5c_tot = altview_inner('JB_B,1', f'JB_EX,"P-5c"', f'JB_H,"{hl}"')
+            wc(ws, cr, c, f'=IFERROR(({p5c_cat})/({p5c_tot}),0)', font=F_PCT, fmt=PCT_FMT)
+        wc(ws, cr, tc_e,
+           f'=IFERROR(SUMPRODUCT({fcl_f}{cr}:{lcl_f}{cr},{fcl_f}${tkr_f}:{lcl_f}${tkr_f})/{tcl_f}${tkr_f},0)',
+           font=F_PCT, fmt=PCT_FMT)
+
+    # Total ($K) row
+    wc(ws, tkr_f, 1, 'Total ($K)', font=F_TOTAL, border=B_TOT)
+    for i, hl in enumerate(p5c_ordered_f):
+        c = 2 + i
+        total_cell(ws, tkr_f, c, cf('JB_B,1', f'JB_H,"{hl}"'))
+    total_cell(ws, tkr_f, tc_e,
+               f'=SUM({get_column_letter(2)}{tkr_f}:{get_column_letter(tc_e-1)}{tkr_f})')
+    span_top_border(ws, tkr_f, tc_e)
+    apply_group_borders(ws, svc_r_f, tkr_f, 2, n_usn_f, n_cg_f)
 
     finish_sheet(ws)
-    return {'section_e_row': _section_e_row, 'tc_e': _tc_e}
+    return {'section_e_row': _section_d_row, 'tc_e': tc_e}
 
 
 def create_mro_tam(wb, d, label, prefix, cf, cf_neg, cf_inner):
@@ -1548,32 +1709,11 @@ def create_named_ranges(wb):
         wb.defined_names.add(DefinedName(nm, attr_text=f"{JB}!${col}$6:${col}$4000"))
 
 
-# ── Validation sheet import ───────────────────────────────────
 
-def import_validation_sheet(wb, src_path):
-    """Copy the Validation sheet from a standalone xlsx into the workbook."""
-    src_wb = openpyxl.load_workbook(src_path)
-    ws_src = src_wb['Validation']
-    ws_dst = wb.create_sheet('Validation')
 
-    for row in ws_src.iter_rows(min_row=1, max_row=ws_src.max_row, max_col=ws_src.max_column):
-        for cell in row:
-            new_cell = ws_dst.cell(row=cell.row, column=cell.column, value=cell.value)
-            if cell.has_style:
-                new_cell.font = copy(cell.font)
-                new_cell.fill = copy(cell.fill)
-                new_cell.border = copy(cell.border)
-                new_cell.alignment = copy(cell.alignment)
-                new_cell.number_format = cell.number_format
+# ── Validation sheet (see build/validation_sheet.py) ─────────
 
-    for col_letter, dim in ws_src.column_dimensions.items():
-        ws_dst.column_dimensions[col_letter].width = dim.width
-    for row_num, dim in ws_src.row_dimensions.items():
-        ws_dst.row_dimensions[row_num].height = dim.height
 
-    ws_dst.sheet_view.showGridLines = False
-    src_wb.close()
-    print(f'  Imported {ws_src.max_row} rows from {src_path}')
 
 
 # ── Main ──────────────────────────────────────────────────────
@@ -1669,13 +1809,11 @@ def main():
     create_competitive_dynamics(wb)
     generated.append('Competitive Dynamics')
 
-    # Validation sheet (imported from standalone file)
-    if os.path.exists(VALIDATION_SRC):
-        print('\n--- Validation ---')
-        import_validation_sheet(wb, VALIDATION_SRC)
-        generated.append('Validation')
-    else:
-        print(f'\nWarning: {VALIDATION_SRC} not found — skipping Validation sheet')
+    # Validation sheet (built programmatically — see validation_sheet.py)
+    from validation_sheet import create_validation_sheet
+    print('\n--- Validation ---')
+    create_validation_sheet(wb)
+    generated.append('Validation')
 
     # Order: Sheet 1, then generated sheets in FY order, then remaining base sheets
     base_first = 'J Book Items Cons.'
@@ -1693,20 +1831,23 @@ def main():
         tc = fy26_sam_info['tc_e']                # 1-based max col → 0-based "next col"
         annotations.append({
             'sheet': 'FY26 Newbuild SAM',
-            'from_col': tc, 'from_row': er,
-            'to_col': tc + 4, 'to_row': er + 12,
+            'from_col': tc + 1, 'from_row': er,
+            'to_col': tc + 4, 'to_row': er + 14,
             'lines': [
-                '**USCG Data Gap**',
+                '**P-5c Gross vs Net Budget Authority**',
                 '',
-                'Sections (E) and (F) cover Navy (SCN)',
-                'hull programs only. Coast Guard cutters',
-                '(OPC, FRC, PSC, WCC) appear in (B)-(D)',
-                'with program-level totals but lack P-5c',
-                'and P-8a cost category breakdowns.',
+                'P-5c exhibits report gross total-ship-estimate',
+                'costs — what the ship actually costs to build,',
+                'broken by component. These gross costs ($17.5B',
+                'across 8 hulls) are larger than net budget',
+                'authority ($11.8B) because they include money',
+                'that was funded through advance procurement',
+                'in prior fiscal years.',
                 '',
-                '_USCG uses DHS Capital Investment Exhibits,_',
-                '_not DoD P-series — no component-level_',
-                '_cost data is published._',
+                '_Section (F) solves this: it takes the P-5c_',
+                '_percentage mix and applies it to net BA,_',
+                '_so cost categories reconcile to actual_',
+                '_FY2026 funding._',
             ],
         })
     if fy26_detail_info and fy26_detail_info.get('section_b_row'):
