@@ -1143,7 +1143,7 @@ def create_newbuild_sam(wb, d, label, prefix, cf, cf_neg, cf_inner, altview_cf=N
     if p8a_sam_hulls:
         COLS_PER_TABLE = 4
         GAP = 1
-        TABLES_PER_ROW = 4
+        TABLES_PER_ROW = 6
         STRIDE = COLS_PER_TABLE + GAP  # 5
         P8A_CAT_ORDER = [c for c in P5C_COST_CATEGORIES if c in P8A_COST_CATEGORIES]
 
@@ -1180,6 +1180,9 @@ def create_newbuild_sam(wb, d, label, prefix, cf, cf_neg, cf_inner, altview_cf=N
             n_cats = len(groups)
             n_sys = sum(len(slist) for _, slist in groups)
             return 2 + n_cats + n_sys + 1  # subsubsec + hdr + cats + systems + total
+
+        # Sort hulls by number of systems descending (longest tables first / leftmost)
+        p8a_sam_hulls = sorted(p8a_sam_hulls, key=lambda hl: -_table_height(hl))
 
         # Lay out in grid: chunks of TABLES_PER_ROW
         for chunk_start in range(0, len(p8a_sam_hulls), TABLES_PER_ROW):
@@ -1233,8 +1236,8 @@ def create_newbuild_sam(wb, d, label, prefix, cf, cf_neg, cf_inner, altview_cf=N
                         wc(ws, cr, c1 + 2, '=' + formula, font=F_PCT, fmt=NUM_FMT)
                         cr += 1
 
-                # Total row — aligned across all tables in row
-                total_r = row_start + max_h - 1
+                # Total row — immediately after last data row
+                total_r = cr
                 cl3 = get_column_letter(c1 + 2)
                 total_formula = '=' + '+'.join(f'{cl3}{sr}' for sr in cat_subtotal_rows)
                 wc(ws, total_r, c1, f'{hl} Total', font=F_TOTAL, border=B_TOT)

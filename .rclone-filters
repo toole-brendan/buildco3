@@ -1,4 +1,6 @@
-# Only push output/ (Excel models, HTML briefing)
+# Only push output/ top-level files (Excel models, HTML briefing)
+# Exclude archive subdirectory
+- output/archive/**
 + output/**
 
 # Exclude everything else
