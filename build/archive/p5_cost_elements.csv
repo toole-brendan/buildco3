@@ -1,0 +1,193 @@
+source_book,line_item_number,line_item_title,exhibit_type,p5_item,cost_element_id,cost_element_name,cost_type,fy2026_qty,fy2026_unit_cost_k,fy2026_total_m,fy2025_qty,fy2025_unit_cost_k,fy2025_total_m,contractor,notes
+WPN,1250,TRIDENT II Mods,P-5,1 / D5 Life Extension,1.1.1,Joint Fuze Production Engineering/Support,Recurring,,,6.354,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,1 / D5 Life Extension,1.1.2,Joint Fuze Material/Hardware Procurement,Recurring,,,0.000,,,,"",Completed
+WPN,1250,TRIDENT II Mods,P-5,1 / D5 Life Extension,2.1.1,Production Support,Recurring,,,31.330,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,1 / D5 Life Extension,4.1.2,Missile Inverter,Recurring,20,1002.505,20.050,,,,"",Fleet Return Missile Electronic SPALT Kits
+WPN,1250,TRIDENT II Mods,P-5,1 / D5 Life Extension,4.1.3,Command Sequencer,Recurring,31,792.843,24.578,,,,"",Fleet Return Missile Electronic SPALT Kits
+WPN,1250,TRIDENT II Mods,P-5,1 / D5 Life Extension,4.1.5,Fleet Return Missile Electronics Production Support,Recurring,,,12.060,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,1 / D5 Life Extension,,SUBTOTAL: D5 Life Extension,,,,,94.372,,,,,"FY2025=$209.997M"
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,1.1,Warhead Components,Support,,,76.668,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,1.2,Mk4B Shape Stable Nose Tip (SSNT),Support,,,32.895,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,1.3,"Tooling, Test/Support Equipment",Support,,,123.736,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,1.4,System Integration & Planning,Support,,,8.583,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,1.5,Supportability Mods/SPALT Insertion,Support,,,45.218,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,2.1,Solid Rocket Motors,Recurring,13,20073.692,260.958,,,,"",Major production item
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,2.2,Post Boost Control System (PBCS),Recurring,12,4466.667,53.600,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,2.3,HMX,Support,,,19.210,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,2.4,Ordnance,Support,,,21.862,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,2.5,Controls,Support,,,27.396,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,2.6,Other,Support,,,7.421,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,2.7,PBCS Requalification,Support,,,13.800,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,3.1,Electronics,Support,,,3.551,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,5.1,Production Support,Support,,,102.294,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,6.1,Guidance Repair Parts,Support,,,3.612,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,7.1,SRM Chamber/Case Modernization,Support,,,21.500,,,,"",Industrial Base Sub-Tier Recapitalization
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,7.2,SRM Igniter/Nozzle Modernization,Support,,,17.500,,,,"",Industrial Base Sub-Tier Recapitalization
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,7.3,SRM Propellant/Energetics Modernization,Support,,,25.206,,,,"",Industrial Base Sub-Tier Recapitalization
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,8.1,Capital Maintenance,Support,,,8.353,,,,"",Missile Industrial Facilities
+WPN,1250,TRIDENT II Mods,P-5,2 / Operating and Support Costs,,SUBTOTAL: Operating and Support Costs,,,,,873.363,,,,,"FY2025=$777.853M"
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.1,Airframe,Support,,,68.771,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.2,Propulsion,Support,,,81.839,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.3,Electronics and Avionics,Support,,,210.278,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.4,Controls,Support,,,240.255,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.5,Ordnance,Support,,,20.184,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.6,Test Missile Kit,Support,,,146.061,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.7,Systems Engineering,Support,,,120.622,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.8,Test and Evaluation,Support,,,53.474,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.9,System Assembly,Support,,,81.782,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.10,Training & Support Equipment,Support,,,37.741,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,1.11,Re-Entry Body Integration,Support,,,48.604,,,,"",Missile Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.1,Guidance - Systems Engineering,Support,,,29.049,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.2,Guidance - Algorithms and Software,Support,,,20.155,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.3,Guidance - System Hardware,Support,,,95.817,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.4,Guidance - Radiation Hardened Parts,Support,,,33.332,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.5,Guidance - Sensors,Support,,,114.860,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.6,Guidance - Information Systems/Data Management,Support,,,7.167,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.7,Guidance - Test Equipment,Support,,,16.599,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,2.8,Guidance - Integration and Test,Support,,,9.206,,,,"",Guidance Redesign
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,3.1,Fire Control,Support,,,92.777,,,,"",Ship Interface
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,3.2,Launcher,Support,,,23.457,,,,"",Ship Interface
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,3.3,Navigation,Support,,,9.736,,,,"",Ship Interface
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,4.1,System Evaluation,Support,,,52.528,,,,"",
+WPN,1250,TRIDENT II Mods,P-5,3 / D5LE2,,SUBTOTAL: D5LE2,,,,,1614.294,,,,,"FY2025=$806.017M; COLUMBIA-class missile redesign"
+WPN,1250,TRIDENT II Mods,P-5,,"TOTAL: TRIDENT II Mods (all 3 items)",,,,,2582.029,,,2793.867,,"FY2026 Total incl DAA=$2,644,029K per data_v2"
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,1.1.2,SM-6 Block IA/IAU All Up Round Missile,Recurring,28,5300.000,148.400,78,,,"Raytheon (RTX)",Major production item; FY25 had 78 missiles
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,1.1.7,SM-6 Production Start Up,Recurring,,,30.359,,,,"",
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,1.1.8,Canister - SM-6 Block IA (Mk 21 Mod 4),Recurring,28,366.324,10.257,,,,"",
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,1.1.9,SM-6 IAU Transition to Production (TTP),Recurring,,,51.000,,,,"",
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,2.1,SM-6 BLK I/IA Production Engineering/Support,Support,,,28.516,,,,"",
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,2.4,SM-6 BLK I/IA Diminishing Manufacturing Sources,Support,,,24.268,,,,"",
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,2.6,SM-6 BLK I/IA Containers,Support,,,0.504,,,,"",
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,2.7,SM-6 BLK I/IA ILS/Fleet Documentation,Support,,,2.019,,,,"",
+WPN,2234,Standard Missile,P-5,1 / STANDARD MISSILE,,SUBTOTAL: Standard Missile (discretionary),,,,,295.323,,,642.507,,"FY26 shows 10 qty at $29.5M unit; $817M total includes mandatory funding for 111 additional SM-6s"
+WPN,2291,LRASM,P-5,1 / LRASM C-1,1.1.1,All Up Round (AUR),Recurring,30,3098.000,92.940,,,,"Lockheed Martin",
+WPN,2291,LRASM,P-5,1 / LRASM C-1,2.1.1,Obsolescence,Non-Recurring,,,0.929,,,,"",
+WPN,2291,LRASM,P-5,1 / LRASM C-1,3.1,Production Support,Support,,,5.100,,,,"",
+WPN,2291,LRASM,P-5,1 / LRASM C-1,3.2,LRASM Operational Test Support,Support,,,9.652,,,,"",
+WPN,2291,LRASM,P-5,1 / LRASM C-1,,SUBTOTAL: LRASM C-1,,,,,108.621,,,150.850,,
+WPN,2291,LRASM,P-5,2 / LRASM C-3,1.1.1,LRASM C-3 AUR,Recurring,26,3836.000,99.742,,,,"Lockheed Martin",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,1.1.2,Radios,Recurring,26,179.000,4.654,,,,"",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,1.1.3,Contractor ECO,Recurring,,,0.248,,,,"",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,2.1.1,NRE / Obsolescence,Non-Recurring,,,3.039,,,,"",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,2.1.2,Tooling/Production Facilitization,Non-Recurring,,,7.161,,,,"",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,2.1.3,Telemetry Kits,Non-Recurring,,,8.023,,,,"",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,3.1,Production Support,Support,,,9.154,,,,"",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,3.2,Telemetry Kit Integration,Support,,,2.575,,,,"",
+WPN,2291,LRASM,P-5,2 / LRASM C-3,,SUBTOTAL: LRASM C-3,,,,,134.596,,,175.585,,
+WPN,2291,LRASM,P-5,,"TOTAL: LRASM (C-1 + C-3 discretionary)",,,,,243.217,,,326.435,,"$531M total includes $288M mandatory for 64 additional AURs"
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,1.1.5,ESSM Block 2,Recurring,305,1351.000,412.055,350,,,Raytheon (RTX),Major production item
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,1.1.7,Missile Obsolescence,Recurring,,,14.155,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,2.1.1,MK 25 Quadpack Canisters,Recurring,71,673.366,47.809,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,2.1.2,MK25 Mod 1 MK8 Bolts,Recurring,,,2.040,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,2.1.3,MK 852 Mod 0 (Blk2 Shipping),Recurring,28,48.679,1.363,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,4.6,Producibility/Procurement Support,Support,,,12.272,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,4.8,Security/Infrastructure Support,Support,,,10.023,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,4.9,Configuration Management,Support,,,0.962,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,4.10,Hardware/Maintenance Support,Support,,,2.702,,,,"",
+WPN,2307,Evolved Sea Sparrow Missile (ESSM),P-5,1 / ESSM,,TOTAL: ESSM,,,,,503.381,,,622.551,,"305 missiles FY26 vs 350 FY25; unit cost $1,650K FY26"
+WPN,3117,MK-48 Torpedo,P-5,1 / MK-48 Torpedo,1.1.4,Installation,Recurring,,,6.987,,,,,"FY26 only installation; zero torpedo procurement qty"
+WPN,3117,MK-48 Torpedo,P-5,1 / MK-48 Torpedo,1.1.5,Diminishing Manufacturing Sources,Recurring,,,0.094,,,,"",
+WPN,3117,MK-48 Torpedo,P-5,1 / MK-48 Torpedo,,TOTAL: MK-48 Torpedo,,,,,7.081,85,4142.000,352.047,,"FY26 drops to $7M; FY25 was $352M (85 torpedoes at $4.1M each)"
+WPN,2301,Tomahawk Mods,P-3a,,6.1,Other Production Support,Support,,,6.283,,,,"","No P-5 exhibit; uses P-3a format. FY26=$6.3M as procurement phase complete; FY25=$296.8M"
+OPN_BA1,1000,Ship Maintenance Repair and Modernization,P-5,1 / Ship Maint Repair & Mod,,U.S. Pacific Fleet Ship Availabilities (101 entries),Recurring,,,1306.538,,,,"Various shipyards","Includes DSRA/SRA/DMP availabilities for individual hulls"
+OPN_BA1,1000,Ship Maintenance Repair and Modernization,P-5,1 / Ship Maint Repair & Mod,,U.S. Fleet Forces Ship Availabilities (139 entries),Recurring,,,1086.082,,,,"Various shipyards","Includes DSRA/SRA/DMP availabilities for individual hulls"
+OPN_BA1,1000,Ship Maintenance Repair and Modernization,P-5,1 / Ship Maint Repair & Mod,,"TOTAL: Ship Maintenance, Repair and Modernization",,,,,2392.620,,,2392.190,,"PACFLT $1,306.5M + USFF $1,086.1M; individual ship availability data available in source"
+OPN_BA1,0900,DDG Mod,P-3a,,DM001,DDG Modernization HME (GEDMS),Recurring,,,24.122,,,,"","No P-5 exhibit"
+OPN_BA1,0900,DDG Mod,P-3a,,DM001,DDG Modernization HME (MCS/DCS),Recurring,,,45.949,,,,"",
+OPN_BA1,0900,DDG Mod,P-3a,,DM001,DDG Modernization HME (DVSS),Recurring,,,2.917,,,,"",
+OPN_BA1,0900,DDG Mod,P-3a,,DM001,DDG Modernization HME (Wireless Communications),Recurring,,,0.732,,,,"",
+OPN_BA1,0900,DDG Mod,P-3a,,"TOTAL: DDG Mod (P-3a only)",,,,,79.260,,,93.674,,"No P-5; $997M in data_v2 may include other line items or FY26 Request vs Total"
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,1.1.1,AN/SSQ-36 (BT),Recurring,1557,1.021,1.590,,,,"Various (competitive)",Bathythermograph
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,1.1.2,AN/SSQ-53 (DIFAR),Recurring,70000,1.783,124.802,,,,"Various (competitive)",Directional LOFAR; largest single sonobuoy buy
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,1.1.3,AN/SSQ-62 (DICASS),Recurring,9000,3.039,27.347,,,,"Various",Directional Command Activated
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,2.1.1,AN/SSQ-101 (Multi-static Coherent Receiver),Recurring,3000,6.208,18.624,,,,"Various",
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,2.1.3,AN/SSQ-125B (Multi-static Coherent Source),Recurring,4982,13.000,64.766,,,,"Various",New variant replacing 125/125A
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,4.1.1,Acceptance Testing - Common,Support,,,3.474,,,,"",
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,4.1.2,Acceptance Testing - Multi-static,Support,,,4.041,,,,"",
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,6.1,Production Engineering - Common,Support,,,2.626,,,,"",
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,6.2,Production Engineering - Multi-static,Support,,,2.638,,,,"",
+OPN_BA3,4048,Sonobuoys - All Types,P-5,1 / Sonobuoys All Types,,TOTAL: Sonobuoys,,,,,249.908,,,353.441,,"88,539 total buoys FY26; unit costs range $1K-$13K"
+OPN_BA2,2915,CANES,P-3a,Mod 1 / CANES Afloat,1.1.1,CANES - Afloat NonOrganic,Recurring,5,,29.319,,,,"BAE/DRS Laurel/L3 Harris/Leidos/Peraton/Serco/VT Milcom/GTS",
+OPN_BA2,2915,CANES,P-3a,Mod 1 / CANES Afloat,1.1.2,CANES - Afloat Technical Insertion NonOrganic,Recurring,20,,103.568,,,,"8 vendors incl BAE/DRS Laurel/L3 Harris/Leidos",
+OPN_BA2,2915,CANES,P-3a,Mod 1 / CANES Afloat,1.1.3,Agile Enclave - NonOrganic,Recurring,125,,162.831,,,,"",
+OPN_BA2,2915,CANES,P-3a,Mod 1 / CANES Afloat,,Production Support + Design Service Agent,Support,,,22.264,,,,"",
+OPN_BA2,2915,CANES,P-3a,Mod 1 / CANES Afloat,,Installation,Installation,,,212.426,,,,"",
+OPN_BA2,2915,CANES,P-3a,Mod 1 / CANES Afloat,,SUBTOTAL: CANES Afloat,,,,,530.408,,,,"",
+OPN_BA2,2915,CANES,P-3a,Mod 2 / CANES Ashore,1.1.1,CANES - Ashore Technical Insertion NonOrganic,Recurring,1,,3.677,,,,"",
+OPN_BA2,2915,CANES,P-3a,Mod 2 / CANES Ashore,,Support + Installation,Support,,,0.239,,,,"",
+OPN_BA2,2915,CANES,P-3a,Mod 2 / CANES Ashore,,SUBTOTAL: CANES Ashore,,,,,3.916,,,,"",
+OPN_BA2,2915,CANES,P-3a,,"TOTAL: CANES",,,,,534.324,,,440.207,,"150 afloat + 1 ashore procurement units; $212M installation is 40% of total"
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA102,Towed Systems,Recurring,,,70.011,,,,"","No P-5 or P-5a exhibit"
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA102-1.1,TB-34A Fatline Towed Arrays,Recurring,5,1492.000,7.461,,,,"",
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA102-1.2,TB-29C Thin Line Towed Arrays,Recurring,4,5019.000,20.078,,,,"",
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA102-1.3,Towed Array Refurbishment & Upgrades,Recurring,,,33.618,,,,"",
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA102-1.4,Towed Array Handler System Upgrade,Recurring,,,8.854,,,,"",
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA106,Hull Sensors (VA Unique Sensor),Recurring,,,14.593,,,,"",
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA201,Block Changes,Recurring,,,5.645,,,,"",
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA202,Production/Engineering Support,Support,,,42.374,,,,"","Incl $24.1M Large Vertical Array shipyard install"
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA303,COTS Supportability Upgrades,Recurring,,,74.582,,,,"","Largest item; incl $43.8M COTS Tech Insertion + $18.7M shipyard install"
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,SA401,Initial Training,Support,,,2.920,,,,"",
+OPN_BA2,2150,SSN Acoustic Equipment,P-40a,,"SUBTOTAL: SSN Acoustics (P-40a only)",,,,,232.371,,,,"","Full LI total $498.6M; remainder in P-3a modifications"
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC959,SEWIP Block 1B2,Recurring,3,423.833,1.271,,,,"Crane Organic / Crane IN",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC959,SEWIP Block 2 Lite,Recurring,3,5210.000,15.630,,,,"Lockheed Martin / Syracuse NY",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC959,SEWIP CPS and CDS for Lite,Recurring,3,515.000,1.545,,,,"DRS Laurel Tech / Johnstown PA",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC959,SEWIP Production Support + ECPs + Spares,Support,,,2.934,,,,"",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC961,Solid State PSI - High Band Transmit/Receive,Recurring,1,875.000,0.875,,,,"Crane Organic / Crane IN",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC961,Solid State PSI - Engineering Support,Support,,,1.284,,,,"",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC962,RMA/INT Kit Procurement (no install),Recurring,19,271.579,5.160,,,,"Crane Organic / Crane IN",ECPs
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC962,Environmental Kit Procurement (no install),Recurring,50,16.980,0.849,,,,"Crane Organic / Crane IN",ECPs
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC962,Obsolescence Kit Procurement (no install),Recurring,40,206.000,8.240,,,,"Crane Organic / Crane IN",ECPs
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC962,AAPA Kit Procurement,Recurring,52,743.769,38.676,,,,"Crane Organic / Crane IN","NEW in FY26; largest single item"
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC963,AN/SLQ-32(V)6 Test Sets,Recurring,5,1380.000,6.899,,,,"Crane Organic / Crane IN",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC963,AN/SLQ-32(V)7 Test Sets,Recurring,8,882.250,7.058,,,,"Crane Organic / Crane IN",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC963,SLQ-32(V)7 EA Characterization Test Set,Recurring,1,12012.000,12.012,,,,"TBD","NEW in FY26"
+OPN_BA2,2312,AN/SLQ-32,P-5a,,TC962-NRE,"NRE (RMA/INT + Environmental + Obsolescence)",Non-Recurring,,,7.767,,,,"Crane Organic",
+OPN_BA2,2312,AN/SLQ-32,P-5a,,"TOTAL: AN/SLQ-32",,,,,115.618,,,53.937,,"Crane Organic (NSWC Crane) dominates; AAPA Kit $38.7M is new FY26"
+OPN_BA2,2360,Shipboard IW Exploit,P-5,1 / Shipboard IW Exploit,2.1.1,Information Warfare (IW) Training Equipment,Recurring,1,3492.000,3.492,1,3421.000,3.421,"NIWC PAC / San Diego CA",
+OPN_BA2,2360,Shipboard IW Exploit,P-5,1 / Shipboard IW Exploit,6.1.1,"CCOP Systems & Subsystems",Recurring,27,264.593,7.144,,,,"CACI/Epsilon/SRC/Raytheon/DRT","New in FY26; realigned from LI 3501"
+OPN_BA2,2360,Shipboard IW Exploit,P-5,1 / Shipboard IW Exploit,,Support + Installation,Support,,,0.638,,,,"",
+OPN_BA2,2360,Shipboard IW Exploit,P-5,1 / Shipboard IW Exploit,,"TOTAL: Shipboard IW Exploit (P-5 only)",,,,,11.274,,,12.653,,"P-5 covers only $11M of $380M LI total; bulk is in P-3a modifications"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,14,Shipboard Systems Modernization Portfolio (SSMP),Recurring,,,127.209,,,,"","Largest item; incl $35.8M production HW + $32.1M ship re-architecture"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,16,Columbia Class,Recurring,,,200.317,,,,"","$198.1M TRIPER spares + $2.2M SWSS trainer"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,2,Fire Control Equipment,Recurring,,,32.100,,,,"NIROP","Incl $14.3M targeting SW refresh"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,4,Instrumentation/Missile Checkout Equipment,Recurring,,,29.356,,,,"Lockheed Martin / Sunnyvale CA","Incl $27.7M FTI Refresh; Umbilical Qty=1 @ $1,631K"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,15,Training Support Equipment,Support,,,12.514,,,,"",
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,6,Alterations - Launcher & Handling,Recurring,,,13.851,,,,"","$10.9M Launcher SPALTs"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,8,Alterations - Navigation Equipment,Recurring,,,12.188,,,,"Boeing / Anaheim CA","$8.4M Transducer SPALTs"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,7,Alterations - Fire Control Equipment,Recurring,,,21.442,,,,"","$20.7M Minor SPALTs"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,1,Launcher & Handling Equipment,Recurring,,,8.598,,,,"Northrop Grumman / Rocket Center WV; Lockheed Martin / Sunnyvale CA",
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,3,Navigation Equipment,Recurring,,,7.599,,,,"Boeing / Anaheim CA","ESGN(R) Stable Platform & Housing / SIS Kits"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,13,SSI Increment 15,Recurring,5,775.000,8.507,,,,"","Qty=5 fire control production + $4.6M installation"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,5,Information Technology,Recurring,,,7.938,,,,"",
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,10,SSI Increment 8,Recurring,,,6.377,,,,"","$3.5M nav SHIPALT + $2.8M gyroscope fault isolation"
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,9,Alterations - Instrumentation,Recurring,,,3.183,,,,"",
+OPN_BA4,5358,Strategic Missile Systems Equip,P-5a,,"TOTAL: Strategic Missile Systems Equip",,,,,491.179,,,320.691,,"Columbia Class $200M + SSMP $127M = 67% of total"
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,AEGIS Support Equipment,Recurring,,,187.988,,,,"","Largest sub-item; no further P-5 breakdown"
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,NATO SEASPARROW,Recurring,,,50.282,,,,"",
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,Ship Self Defense System,Recurring,,,28.336,,,,"",
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,Integrated Combat System (ICS) Equipment,Recurring,,,27.333,,,,"",
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,OTH Weapon System,Recurring,,,22.415,,,,"",
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,RAM Launchers (P-3a installation),Installation,,,55.986,,,,"","Via P-3a Mod 2"
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,SSDS COTS Conversion Kits (P-3a),Recurring,,,63.776,,,,"","Via P-3a Mod 3"
+OPN_BA4,5231,Ship Missile Support Equipment,P-40a,,,"TOTAL: Ship Missile Support Equipment",,,,,455.822,,,376.830,,"No line-item P-5; AEGIS $188M dominates"
+OPN_BA2,2981,In-Service Radars and Sensors,P-5a,,DC020,Dual Band Radar (DBR),Recurring,,,37.456,,,,"","$29.7M ECPs + $4.7M special test equip + $3.1M prod support"
+OPN_BA2,2981,In-Service Radars and Sensors,P-5a,,DC022,Radar Restoration Material,Recurring,244,11.385,5.127,,,,"NSWC Crane / Crane IN","48 Arrays"
+OPN_BA2,2981,In-Service Radars and Sensors,P-5a,,DC026,I-STALKER,Recurring,2,1222.000,12.732,,,,"TBD","Incl $4.4M install + $3.2M prod support"
+OPN_BA2,2981,In-Service Radars and Sensors,P-5a,,"SUBTOTAL: In-Service Radars (P-40a)",,,,,55.315,,,,"","Full LI ~$250M; remainder in P-3a mods"
+OPN_BA2,2606,Cooperative Engagement Capability,P-5a,,UC017,Signal Data Processors (SDP) Capability Enhancement,Recurring,20,432.288,8.646,,,,"L3 Technologies / Largo FL","121% unit cost increase FY25-to-FY26 ($195K to $432K)"
+OPN_BA2,2606,Cooperative Engagement Capability,P-5a,,UC004,ECP/Kit Procurement,Recurring,,,5.302,,,,"",
+OPN_BA2,2606,Cooperative Engagement Capability,P-5a,,UC830,Production Engineering Support,Support,,,5.300,,,,"",
+OPN_BA2,2606,Cooperative Engagement Capability,P-5a,,UC016,System Component Upgrades (AECU to ECSC),Recurring,,,4.310,,,,"",
+OPN_BA2,2606,Cooperative Engagement Capability,P-5a,,"TOTAL: CEC",,,,,23.558,,,,"",
+OPN_BA1,1210,Standard Boats,P-5a,,H0001-1.3,CNIC Force Protection (Medium),Recurring,17,565.111,9.607,,,,"TBD / IDIQ / NAVSEA",
+OPN_BA1,1210,Standard Boats,P-5a,,H0002-2.1,7M (24 ft) RIB,Recurring,11,353.778,3.892,,,,"TBD / IDIQ / NAVSEA",Amphibious Assault Ships
+OPN_BA1,1210,Standard Boats,P-5a,,H0002-2.2,11M (36 ft) RIB,Recurring,3,1196.000,3.588,,,,"TBD / IDIQ / NAVSEA",Amphibious Assault Ships
+OPN_BA1,1210,Standard Boats,P-5a,,H0003-3.1,EOD Support Craft RIB,Recurring,9,884.000,7.956,,,,"TBD / IDIQ / NAVSEA",
+OPN_BA1,1210,Standard Boats,P-5a,,H0004-4.1,NSW Long Range Support Craft,Recurring,10,405.333,4.053,,,,"TBD / IDIQ / NAVSEA",Naval Special Warfare
+OPN_BA1,1210,Standard Boats,P-5a,,H0004-4.2,NSW Short Range Support Craft,Recurring,8,403.000,3.224,,,,"TBD / IDIQ / NAVSEA",Naval Special Warfare
+OPN_BA1,1210,Standard Boats,P-5a,,H0009,Submarine Warfare (Dive Boat),Recurring,1,,4.500,,,,"TBD",
+OPN_BA1,1210,Standard Boats,P-5a,,H0001-1.5,CNIC Workboat (Medium),Recurring,2,1116.000,2.231,,,,"TBD",
+OPN_BA1,1210,Standard Boats,P-5a,,H0001-1.7,Arizona Memorial Ferry,Recurring,1,2000.000,2.000,,,,"TBD",
+OPN_BA1,1210,Standard Boats,P-5a,,"TOTAL: Standard Boats",,,,,51.546,,,422.832,,"FY26 $51.5M vs FY25 $422.8M — large drop; $867M in data_v2 may be FY26 Request not Total"
+OPN_BA1,0941,Submarine Support Equipment,P-40a,,PB002,Acoustic Superiority Machinery Alterations,Recurring,,,5.829,,,,"","No P-5 or P-5a; only P-3a mod data"
+OPN_BA1,0941,Submarine Support Equipment,P-40a,,"TOTAL: Submarine Support Equipment",,,,,383.062,,,288.052,,"Minimal P-5/P-40a detail available; bulk in sub-items without exhibit breakdown"

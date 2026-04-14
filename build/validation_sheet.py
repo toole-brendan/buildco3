@@ -85,9 +85,13 @@ def create_validation_sheet(wb):
          'sustainment engineering, and availability support \u2014 and only oceangoing vessels. '
          'Same vessel scope as Newbuild TAM; limited to line items with clear vessel type designation.'),
         ('MRO SAM',
-         'MRO TAM narrowed further: excludes Submarines, Aircraft Carriers & UUVs, and draws work types '
-         'down to scheduled depot maintenance and modernization/alteration installation \u2014 '
-         'the outsourceable categories where a company could compete for repair or upgrade work.'),
+         'MRO TAM narrowed to outsourceable work types (scheduled depot maintenance, '
+         'continuous/emergent maintenance, modernization/alteration installation, '
+         'and major life-cycle events) and outsourceable vessel types (excludes '
+         'Submarines, Aircraft Carriers & UUVs). Sized at hull-program level. '
+         'Includes aggregate SDM cost-element estimation derived from OMN Ship Maintenance '
+         'sub-component data \u2014 applies a single aggregate cost mix (government labor, '
+         'contract, materials, etc.) to per-hull SDM totals as a directional approximation.'),
     ]:
         r += 2; subsubsec_band(ws, r, name, mc)
         r += 1; wc(ws, r, 1, defn, font=F_DATA)
@@ -115,17 +119,18 @@ def create_validation_sheet(wb):
     # Outsourceable work types
     r += 2; subsubsec_band(ws, r, 'Outsourceable Work Types (SAM-eligible)', mc)
     r += 1; purpose_row(ws, r,
-        'Three work types a non-incumbent shipyard could compete for \u2014 these define SAM MRO scope')
+        'Work types a non-incumbent shipyard could compete for \u2014 these define SAM scope')
     r += 1; hdr_row(ws, r, [('Work Type', 35), ('Description', 70), ('Bucket', 50)])
     for wt, desc, bkt in [
         ('New Construction', 'Detail design, construction, and delivery of new vessels', 'Bucket 1'),
         ('Scheduled Depot Maintenance', 'CNO-scheduled depot-level maintenance availabilities', 'Bucket 2'),
+        ('Continuous / Emergent Maintenance', 'Intermediate-level and emergent repair, continuous maintenance', 'Bucket 3'),
         ('Modernization & Alteration', 'Combat system upgrades, hull/mech/elec modernization', 'Bucket 4'),
+        ('Major Life-Cycle Events', 'SLEP, MMA, RCOH \u2014 major overhauls extending service life', 'Bucket 5'),
     ]:
         r += 1; _dr(r, wt, desc, bkt)
     r += 1; _nr(r,
-        'Excluded: Continuous/Emergent (3), Major Life-Cycle/RCOH (5), '
-        'Sustainment Engineering (6), Availability Support (7)')
+        'Excluded: Sustainment Engineering (6), Availability Support (7)')
 
     # TAM vessel categories
     r += 2; subsubsec_band(ws, r, 'TAM Vessel Category Scope', mc)
@@ -516,7 +521,7 @@ def create_validation_sheet(wb):
     # ── Newbuild SAM Cost Category Detail ────────────────────
     r += 2; subsec_band(ws, r, 'Newbuild SAM Cost Category Detail', mc)
     r += 1; purpose_row(ws, r,
-        'Supplemental cost category analysis on the Newbuild SAM and Cost Detail sheets (FY26 only)')
+        'Supplemental cost category analysis on the Newbuild SAM sheet (FY26 only)')
     r += 1; hdr_row(ws, r, [('Section', 35), ('Description', 70), ('Notes', 50)])
     for sec, desc, notes in [
         ('SAM (D): P-5c Gross Cost Category',
@@ -527,19 +532,14 @@ def create_validation_sheet(wb):
          'P-5c percentage mix from (D) applied to SAM net budget-authority totals. '
          'Cost category decomposition reconciles to the SAM total.',
          'Allocated Total should equal SAM Net Total per vessel type.'),
-        ('Cost Detail (A): P-5c Total Ship Cost',
-         'Gross P-5c values by vessel type and cost category \u2014 actual cost of ships before AP/SFF netting.',
-         '"What does a DDG-51 actually cost to build, by component?"'),
-        ('Cost Detail (B): P-8a System-Level',
-         'Individual GFE systems from Exhibit P-8a, grouped by cost category within each vessel type.',
-         'P-8a values are static (F_BLUE font). 30 of 415 rows lack a Cost Element.'),
-        ('Cost Detail (C): Top P-8a Cross-Program',
-         'Largest GFE systems aggregated across all SAM vessel types, sorted by total FY2026 $K.',
-         '"Total radar market?" or "which GFE systems span the most programs?"'),
+        ('SAM (G): P-8a System Detail by Hull',
+         'Individual GFE systems from Exhibit P-8a (radars, weapons, electronics, propulsion), '
+         'grouped by cost category within each hull program. Laid out as a 4-across grid of per-hull tables.',
+         'Bold category subtotal rows, italic system rows. Uses JB_EX="P-8a" with JB_CE per system.'),
     ]:
         r += 1; _dr(r, sec, desc, notes)
     r += 2; _nr(r,
-        'FY2027 has no sections (D)/(E) or Cost Detail sheet \u2014 justification books (P-5c, P-8a, P-35) not yet released.')
+        'FY2027 has no sections (D)/(E)/(G) \u2014 justification books (P-5c, P-8a, P-35) not yet released.')
 
     # ── FY2027 Methodology & Sourcing ────────────────────────
     r += 2; subsec_band(ws, r, 'FY2027 Methodology & Sourcing', mc)

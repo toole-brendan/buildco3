@@ -30,37 +30,6 @@ def _esc(text):
     return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 
-def autofit_emu(lines):
-    """Estimate cx/cy in EMU for a text box containing the given lines.
-
-    Assumptions (Arial 8pt):
-      - line height: ~11pt (139700 EMU)
-      - avg char width: ~4.8pt (60960 EMU), bold ~5.2pt (66040 EMU)
-      - insets: lIns=91440, tIns=45720, rIns=91440, bIns=45720
-    Returns (cx, cy) in EMU.
-    """
-    _PT = 12700           # EMU per point
-    _LINE_H = 11 * _PT    # 139700 EMU per line
-    _CHAR_W = 3.3 * _PT   # 41910 EMU avg char
-    _BOLD_W = 3.6 * _PT   # 45720 EMU bold char
-    _L_INS = 91440; _R_INS = 91440
-    _T_INS = 45720; _B_INS = 45720
-
-    max_w = 0
-    for line in lines:
-        bold = line.startswith('**') and line.endswith('**')
-        text = line[2:-2] if bold else line
-        italic = text.startswith('_') and text.endswith('_')
-        if italic:
-            text = text[1:-1]
-        cw = _BOLD_W if bold else _CHAR_W
-        max_w = max(max_w, len(text) * cw)
-
-    cx = int(_L_INS + max_w + _R_INS)
-    cy = int(_T_INS + len(lines) * _LINE_H + _B_INS)
-    return cx, cy
-
-
 def _make_drawing_xml(shapes):
     """Build a complete wsDr drawing document containing rectangle shapes."""
     anchors = []
@@ -95,7 +64,16 @@ def _make_drawing_xml(shapes):
         fill = s.get('fill', 'FFFFF0')
         border = s.get('border', 'C0C0C0')
 
-        sp_xml = (
+        anchors.append(
+            f'<xdr:twoCellAnchor>'
+            f'<xdr:from>'
+            f'<xdr:col>{s["from_col"]}</xdr:col><xdr:colOff>57150</xdr:colOff>'
+            f'<xdr:row>{s["from_row"]}</xdr:row><xdr:rowOff>28575</xdr:rowOff>'
+            f'</xdr:from>'
+            f'<xdr:to>'
+            f'<xdr:col>{s["to_col"]}</xdr:col><xdr:colOff>0</xdr:colOff>'
+            f'<xdr:row>{s["to_row"]}</xdr:row><xdr:rowOff>0</xdr:rowOff>'
+            f'</xdr:to>'
             f'<xdr:sp macro="" textlink="">'
             f'<xdr:nvSpPr>'
             f'<xdr:cNvPr id="{i}" name="Note {i}"/>'
@@ -115,46 +93,9 @@ def _make_drawing_xml(shapes):
             f'{"".join(paras)}'
             f'</xdr:txBody>'
             f'</xdr:sp>'
+            f'<xdr:clientData/>'
+            f'</xdr:twoCellAnchor>'
         )
-
-        from_col_off = s.get('from_col_off', 57150)
-        from_row_off = s.get('from_row_off', 28575)
-
-        # Auto-compute dimensions from text if not explicit
-        if 'cx' not in s or 'cy' not in s:
-            acx, acy = autofit_emu(s.get('lines', ['']))
-            s.setdefault('cx', acx)
-            s.setdefault('cy', acy)
-
-        if 'cx' in s and 'cy' in s:
-            # oneCellAnchor with explicit extent (EMU)
-            anchors.append(
-                f'<xdr:oneCellAnchor>'
-                f'<xdr:from>'
-                f'<xdr:col>{s["from_col"]}</xdr:col><xdr:colOff>{from_col_off}</xdr:colOff>'
-                f'<xdr:row>{s["from_row"]}</xdr:row><xdr:rowOff>{from_row_off}</xdr:rowOff>'
-                f'</xdr:from>'
-                f'<xdr:ext cx="{s["cx"]}" cy="{s["cy"]}"/>'
-                f'{sp_xml}'
-                f'<xdr:clientData/>'
-                f'</xdr:oneCellAnchor>'
-            )
-        else:
-            # twoCellAnchor (original behavior)
-            anchors.append(
-                f'<xdr:twoCellAnchor>'
-                f'<xdr:from>'
-                f'<xdr:col>{s["from_col"]}</xdr:col><xdr:colOff>{from_col_off}</xdr:colOff>'
-                f'<xdr:row>{s["from_row"]}</xdr:row><xdr:rowOff>{from_row_off}</xdr:rowOff>'
-                f'</xdr:from>'
-                f'<xdr:to>'
-                f'<xdr:col>{s["to_col"]}</xdr:col><xdr:colOff>0</xdr:colOff>'
-                f'<xdr:row>{s["to_row"]}</xdr:row><xdr:rowOff>0</xdr:rowOff>'
-                f'</xdr:to>'
-                f'{sp_xml}'
-                f'<xdr:clientData/>'
-                f'</xdr:twoCellAnchor>'
-            )
 
     return (
         '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
